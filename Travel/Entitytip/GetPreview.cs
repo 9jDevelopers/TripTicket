@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entitytip
 {
-    public enum SceceType
+    class GetPreview
     {
-       city,
-       mountain
     }
 }

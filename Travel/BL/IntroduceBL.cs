@@ -9,9 +9,9 @@ namespace BL
 {
      public class IntroduceBL
     {
-        public bool transfer(string name,string TravelType,string home,string time,string lanuage,string ticketname,string sicketmoney,string TxTmessage)
+        public bool transfer(string name,string TravelType,string time,string lanuage,string ticketname,string ticketmoney,string TxTmessage)
         {
-           if (introduce.create(name, TravelType, home, time, language, ticketname, ticketmoney, TxTmessage) ==null)
+           if (introduce.create(name,TravelType,time,lanuage,ticketname,ticketmoney,TxTmessage) ==null)
             {
                 return false;
             }
