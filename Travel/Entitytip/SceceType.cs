@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entitytip
 {
-    enum SceceType
+    public enum SceceType
     {
        city,
        mountain
