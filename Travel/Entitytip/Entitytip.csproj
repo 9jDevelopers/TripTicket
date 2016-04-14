@@ -42,6 +42,7 @@
     <Compile Include="Account.cs" />
     <Compile Include="Ent.cs" />
     <Compile Include="Hjiangjie.cs" />
+    <Compile Include="introduce.cs" />
     <Compile Include="judgeing.cs" />
     <Compile Include="LoginDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
