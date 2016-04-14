@@ -20,7 +20,7 @@ namespace Travel
             //访问业务层 的验证逻辑 
             if (bt.Login(username, password))
             {
-                context.Response.Write("afkasdgkfgdsf");
+                context.Response.Write(username);
             }      
         }
         public bool IsReusable
