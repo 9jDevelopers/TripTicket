@@ -1,0 +1,75 @@
+﻿.Tail_div{
+    color:#787878;
+    text-align:center;
+    height:200px;
+}
+.Tail_div div
+{
+        margin-top:10px;
+}
+.Tail_span1
+{
+    margin-top:100px;
+    margin:0 auto;
+    width:600px;
+}
+.Tail_span2
+{
+    margin:0 auto;
+    width:300px;
+}
+.Tail_log9{
+    background-image: url(/Tail/images/log_9.png);
+    background-size:cover;
+    height:20px;
+    width:20px;
+    float:left;
+}
+.Tail_text {
+    float:left;
+}
+.Tail_log
+{
+    display:inline-block;
+    width:842px;
+    margin:0 auto;
+}
+.Tail_log div
+{
+    background-size:cover;
+    float:left;
+    height:34px;
+    margin-left:4px;
+}
+.Tail_log1{
+    background-image: url(/Tail/images/log_1.gif);
+     width:90px;
+}
+.Tail_log2{
+    background-image: url(/Tail/images/log_2.gif);
+     width:90px;
+}
+.Tail_log3{
+    background-image: url(/Tail/images/log_3.jpg);
+     width:90px;
+}
+.Tail_log4{
+    background-image: url(/Tail/images/log_4.gif);
+     width:90px;
+}
+.Tail_log5{
+    background-image: url(/Tail/images/log_5.gif);
+     width:90px;
+}
+.Tail_log6{
+    background-image: url(/Tail/images/log_6.gif);
+     width:90px;
+}
+.Tail_log7{
+    background-image: url(/Tail/images/log_7.gif);
+     width:90px;
+}
+.Tail_log8{
+    width:130px;
+    background-image: url(/Tail/images/log_8.png);   
+}

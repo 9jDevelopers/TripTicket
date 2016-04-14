@@ -1,0 +1,50 @@
+﻿<div id="Head">
+    <div id="Headbim">
+        <div class="Head_log">LOG</div>
+        <div class="Head_search">
+            <input class="easyui-searchbox" data-options="prompt:'想去哪，就搜哪',menu:'#mm',searcher:doSearch" style="width:100%;height:35px;"/>
+            <div id="mm">
+
+                <div data-options="name:'sports'"></div>
+            </div>
+            <script>
+		    function doSearch(value,name){
+			    alert('You input: ' + value+'('+name+')');
+		    }
+                </script>
+        </div>
+        <div class="phone">客服电话：10086-10010</div>        
+    </div>
+    <div id="nav">
+        <a href="#" class="item _item">新的体验</a>
+        <a href="#" class="item">旧地重游</a>
+        <a href="#" class="item">景点合作</a>
+        <a href="../judge/judge.aspx" class="item">体验交流</a>
+        <div><a id="btnl" href="#">登录</a>|<a>注册</a></div>
+
+    </div>
+    <!--登陆界面  begin-->
+    <div id="qbody">
+        <a id="btnclose" href="#">关闭</a>
+        <div class="ap">
+            <!--用户名 begin-->
+            <input type="text" id="txtusername" name="firstname" class="input" placeholder="用户名" />
+        </div><!--用户名 end-->
+
+        <div class="ap">
+            <!--密码 begin-->
+            <input type="password" id="txtpassword" name="firstname" class="input" placeholder="密码" />
+        </div><!--密码 end-->
+        <div class="btnlogin">
+            <!--登陆 begin-->
+            <a id="btnlogin"><div class="btnlogina">登录</div></a>
+        </div><!--登陆 end-->
+
+        <div class="passreg">
+            <!--忘记密码 begin-->
+            <a class="pass">忘记密码?</a>
+            <a class="reg">立即注册></a>
+        </div><!--忘记密码 end-->
+    </div>
+    <!--登陆界面  end-->
+</div>
