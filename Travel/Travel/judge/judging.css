@@ -1,15 +1,18 @@
 ﻿body {
 }
 .yi {
-    height:300px;
+    height:320px;
     width:1366px;
+    border-style:solid;
+    border-color:gray;
 }
 .first {
-    width:350px;
+    width:400px;
     height:250px;
 }
-img.big {
-     width:340px;
+.first img{
+    width:100%;
+    height:100%;
 }
 img.mid {
     height:48px;
@@ -22,6 +25,11 @@ img.small{
 .leftbox{
     height:268px;
     width:450px;
+    display:block;
+    float:left;
+}
+ .leftbox div {
+    padding:5px;
 }
 .centerbox{
     height:268px;
@@ -29,46 +37,120 @@ img.small{
     display:block;
     float:left;
 }
+.centerbox div{
+    padding:5px;
+}
 .rightbox {
     height:260px;
     width:150px;
     display:block;
     float:left;
 }
+.rightbox div{
+    padding:5px;
+}
+.r{
+    color:dodgerblue;
+}
+.q{
+    background-color:gainsboro;
+    margin-left:5px;
+}
 .downbox{
     width:1366px;
-    height:500px;
+    height:580px;
+    background-color:gainsboro;
 }
-.div {
-    height:50px;
-    width:100px;
-}
-table tr td {
-    font-size:20px
+.s{
+    float:right;
 }
 .circle{
     float:left;
+    margin-top:0px;
 }
 .price{
+    margin:5px;
     color:red;
     background-color:green;
 }
-
-.textbox {
+.textbox1 {
     height:130px;
     width:300px;
-    position:relative;
-    left:160px;
-    top:20px;
+}
+.textbox2{
+    height:90px;
+    width:300px;
+}
+.textbox3{
+    height:50px;
+    width:300px;
+}
+.e{
+    width:650px;
+    height:300px;
+    display:block;
+    float:left;
+    border-style:solid;
+    border-color:gainsboro;
+}
+.j1{
+    width:360px;
+    height:130px;
+    background-color:white;
+}
+.j2{
+    width:360px;
+    height:90px;
+    background-color:white;
+}
+.j3{
+    width:360px;
+    height:50px;
+        background-color:white;
+}
+.tx1{
+     border-color:gainsboro;
+    width:60px;
+    height:130px;
+    border-style:solid;
+    text-align:center center;
+}
+.tx2{
+     border-color:gainsboro;
+    width:60px;
+    height:90px;
+    border-style:solid;
+    text-align:center;
+}
+.tx3{
+    border-color:gainsboro;
+    float:left;
+    width:60px;
+    height:50px;
+    border-style:solid;
+    text-align:center;
+}
+.f{
+    margin:5px;
 }
 .submit {
+    float:left;
+    position:absolute;
+    left:500px;
     background-color:red;
 }
 .boxthree {
-    height:80px;
-    width:768px;
+    height:20px;
+    width:1366px;
+    border-style:solid;
+    background-color:gainsboro;
 }
-.e{
+.l{
     float:left;
 }
-
+.c{
+    float:right;
+}
+a{
+    text-decoration:none;
+}
