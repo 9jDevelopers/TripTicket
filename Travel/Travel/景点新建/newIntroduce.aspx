@@ -57,10 +57,7 @@
                         </select>
 	    			</td>
 	    		</tr>
-                <tr>
-	    			<td>出发地:</td>
-	    			<td><input class="easyui-textbox" type="text" id="home" name="home" data-options="required:true"></input></td>
-	    		</tr>
+               
 	    		<tr>
 	    			<td>游玩时长:</td>
 	    			<td><input class="easyui-textbox" type="text" id="time" name="time" data-options="required:true"></input></td>
