@@ -787,6 +787,7 @@
     <Content Include="easyui\themes\metro\window.css" />
     <Content Include="easyui\themes\mobile.css" />
     <Content Include="Head\Head.js" />
+    <Content Include="judge\images\star.jpg" />
     <Content Include="References\bootstrap-3.3.5-dist\css\bootstrap-theme.css.map" />
     <Content Include="References\bootstrap-3.3.5-dist\css\bootstrap.css.map" />
     <Content Include="References\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.eot" />
