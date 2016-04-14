@@ -873,7 +873,6 @@
     <Content Include="景点新建\image\景点简介_03.gif" />
     <Content Include="景点新建\image\景点简介_03_02.gif" />
     <Content Include="景点新建\css\newInteoduce.css" />
-    <Content Include="景点新建\js\NI.js" />
     <Content Include="景点新建\newIntroduce.aspx" />
     <Content Include="景点新建\tu\add.css" />
     <Content Include="景点新建\tu\add.js" />

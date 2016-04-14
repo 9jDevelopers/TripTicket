@@ -197,6 +197,39 @@
 		function clearForm(){
 			$('#ff').form('clear');
 		}
+
+		$("#TJ").click
+    (
+        function () {
+            var name = $("#name").val();
+            var TravelType = $("#TravelType").val();
+            var time = $("#time").val();
+            var language = $("#language").val();
+            var ticketname = $("#ticketname").val();
+            var ticketmoney = $("#ticketmoney").val();
+            var TxTmessage = $("#TxTmessage").val();
+
+            alert("这是" + name+"景点");
+
+            $.post
+            (
+            "NewIntroduce.ashx",
+            {
+                name: $("#name").val(),
+                TravelType: $("#TravelType").val(),
+                time: $("#time").val(),
+                language: $("#language").val(),
+                ticketname: $("#ticketname").val(),
+                ticketmoney: $("#ticketmoney").val(),
+                TxTmessage: $("#TxTmessage").val(),
+            },
+             function (data) {
+                 alert(data);
+                 
+             }
+            )
+        }
+    )
 	</script>
 </body>
   <!--#include virtual="../Tail/Tail.html"-->

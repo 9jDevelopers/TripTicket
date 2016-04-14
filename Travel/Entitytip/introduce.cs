@@ -28,25 +28,29 @@ namespace Entitytip
 
         public SceceType Stype;
 
-        public static introduce create(string name,string TravelType,string time,string lanuage,string ticketname,string sicketmoney,string TxTmessage)
+        public static introduce create(string name,string TravelType,string time,string language, string ticketname,string sicketmoney,string TxTmessage)
         {
             DbHelper db = new DbHelper();
             DbCommand cmd = db.GetSqlStringCommond("insert into NewIntroduce(name,TravelType,time,language,ticketname,ticketmoney,TxTmessage)values(@name,@TravelType,@time,@language,@ticketname,@ticketmoney,@TxTmessage)");
             db.AddInParameter(cmd,"@name", DbType.String,name);
             db.AddInParameter(cmd, "@TravelType", DbType.String,TravelType);
             db.AddInParameter(cmd, "@time", DbType.String,time);
-            db.AddInParameter(cmd, "@lanuage", DbType.String, lanuage);
+            db.AddInParameter(cmd, "@language", DbType.String, language);
             db.AddInParameter(cmd, "@ticketname", DbType.String, ticketname);
             db.AddInParameter(cmd, "@ticketmoney", DbType.String, sicketmoney);
             db.AddInParameter(cmd, "@TxTmessage", DbType.String, TxTmessage);
+            cmd.Connection.Open();
+           
             int result = cmd.ExecuteNonQuery();
+            cmd.Connection.Close();
             if(result>0)
             {
                 introduce al = new introduce();
                 return al;
             }
-            else
+        
             return null;
+            
         }
        
 
