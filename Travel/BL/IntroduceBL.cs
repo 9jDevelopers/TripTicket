@@ -11,7 +11,7 @@ namespace BL
     {
         public bool transfer(string name,string TravelType,string home,string time,string lanuage,string ticketname,string sicketmoney,string TxTmessage)
         {
-           if (introduce.create(name, TravelType, home, time, language, ticketname, ticketmoney, TxTmessage) ==null)
+           if (introduce.create(name, TravelType, home, time, lanuage, ticketname, sicketmoney, TxTmessage) ==null)
             {
                 return false;
             }
