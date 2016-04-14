@@ -38,7 +38,7 @@
                       <a target="_blank" href="/i/tulip_ballade.jpg">
                       <img src="/Preview/img/dde448f3fd9b9343.jpg" />
                       </a>
-                      <div class="desca">台湾8日7晚更团游</div>
+                      <div class="desca"><%=t %></div>
                       <div class="descb">
                           描述
                           <br/><div class ="b">4.8↑</div>
