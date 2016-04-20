@@ -1,4 +1,4 @@
-﻿<div id="Head">11111
+﻿<div id="Head">
     <div id="Headbim">
         <div class="Head_log">LOG</div>
         <div class="Head_search">
@@ -25,26 +25,54 @@
     </div>
     <!--登陆界面  begin-->
     <div id="qbody">
-        <a id="btnclose" href="#">关闭</a>
-        <div class="ap">
-            <!--用户名 begin-->
-            <input type="text" id="txtusername" name="firstname" class="input" placeholder="用户名" />
-        </div><!--用户名 end-->
-
-        <div class="ap">
-            <!--密码 begin-->
-            <input type="password" id="txtpassword" name="firstname" class="input" placeholder="密码" />
-        </div><!--密码 end-->
-        <div class="btnlogin">
-            <!--登陆 begin-->
-            <a id="btnlogin"><div class="btnlogina">登录</div></a>
-        </div><!--登陆 end-->
-
-        <div class="passreg">
-            <!--忘记密码 begin-->
-            <a class="pass">忘记密码?</a>
-            <a class="reg">立即注册></a>
-        </div><!--忘记密码 end-->
+        <div class="easyui-panel" title="登录窗口" style="height:185px;width:400px;padding:30px 70px 20px 70px">
+            <i id="btnclose">×</i>
+            <div class="bdiv">
+                <input id="txtusername" class="incss easyui-textbox" data-options="prompt:'请输入用户名',iconCls:'icon-man',iconWidth:38">
+            </div>
+            <div class="bdiv">
+                <input id="txtpassword" class="incss easyui-textbox" type="password" data-options="prompt:'请输入密码',iconCls:'icon-lock',iconWidth:38">
+            </div>
+            <div>
+                <a href="#" id="btnlogin" class="easyui-linkbutton" data-options="iconCls:'icon-ok'">
+                    <span style="font-size:10px;">登录</span>
+                </a>
+            </div>
+        </div>
     </div>
     <!--登陆界面  end-->
 </div>
+<script>
+    $(document).ready(function () {
+        $("#btnclose").click(function () {
+            $("#qbody").hide();
+        });
+        $("#btnl").click(function () {
+            $("#qbody").show();
+        });
+        $("#btnlogin").click(function () {
+            var u = $("#txtusername").val();
+            var p = $("#txtpassword").val();
+            $.post(
+                   "../LoginHandler.ashx",
+                    { userName: $("#txtusername").val(), passWord: $("#txtpassword").val() },
+                    function (data) {
+                        if (data == "") {
+                            alert("账户名或密码错误");
+                        }
+                        else {
+                            //document.getElementById('btnl').innerHTML = "Hello，" + data;
+                            var btn = document.getElementById('btnl');
+                            btn.id = 'user';
+                            btn.style.fontSize = "10px";
+                            btn.innerHTML = "Hello，" + data;
+
+                            $("#qbody").hide();
+                        }
+                    }
+            );
+        });
+    });
+
+
+</script>

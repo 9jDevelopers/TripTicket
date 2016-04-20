@@ -786,7 +786,8 @@
     <Content Include="easyui\themes\metro\validatebox.css" />
     <Content Include="easyui\themes\metro\window.css" />
     <Content Include="easyui\themes\mobile.css" />
-    <Content Include="Head\Head.js" />
+    <Content Include="Head\PI.aspx" />
+    <Content Include="Head\PI.css" />
     <Content Include="References\bootstrap-3.3.5-dist\css\bootstrap-theme.css.map" />
     <Content Include="References\bootstrap-3.3.5-dist\css\bootstrap.css.map" />
     <Content Include="References\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.eot" />
@@ -1270,6 +1271,13 @@
     </Compile>
     <Compile Include="BuyTicket\BuyTicket.aspx.designer.cs">
       <DependentUpon>BuyTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Head\PI.aspx.cs">
+      <DependentUpon>PI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Head\PI.aspx.designer.cs">
+      <DependentUpon>PI.aspx</DependentUpon>
     </Compile>
     <Compile Include="judge\judge.aspx.cs">
       <DependentUpon>judge.aspx</DependentUpon>

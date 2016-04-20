@@ -18,7 +18,7 @@
 
       <div class="yi">
               <div class="leftbox">
-                        <div class="first"><a href=""><img src="images/er'r.jpg"/></a></div> 
+                        <div class="first"><a herf=""><img src="images/er'r.jpg"/></a></div> 
                         <div class="circle"><a href=""><img class="mid" src="images/e.jpg"/></a></div>
                         <div class="circle"><a href=""><img class="mid" src="images/er'r.jpg"/></a></div>
                         <div class="circle"><a href=""><img class="mid" src="images/er.jpg" /></a></div>
@@ -68,25 +68,31 @@
                     
 
                     <div class="e">
-                          <div>描述相符&nbsp;
-                              <img class="small" src="images/xing.jpg" />
-                              <img class="small" src="images/xing.jpg" />
-                              <img class="small" src="images/xing.jpg" />
-                              <img class="small" src="images/xing.jpg" />
-                              <img class="small" src="images/xing.jpg" /></div>
-                          <div>卖家服务<img class="small" src="images/xing.jpg" />
-                              <img class="small" src="images/xing.jpg" />
-                              <img class="small" src="images/xing.jpg" />
-                              <img class="small" src="images/xing.jpg" />
-                              <img class="small" src="images/xing.jpg" /></div>
-                          <div>物流服务<img class="small" src="images/xing.jpg" />
-                              <img class="small" src="images/xing.jpg" />
-                              <img class="small" src="images/xing.jpg" />
-                              <img class="small" src="images/xing.jpg" />
-                              <img class="small" src="images/xing.jpg" /></div>
+                          <div>描述相符
+                             <div class="star_bg">
+                             <a class="star star_1"></a>
+                             <a class="star star_2"></a>
+                             <a class="star star_3"></a>
+                             <a class="star star_4"></a>
+                              <a class="star star_5"></a>
+                           </div></div>
+                          <div>卖家服务<div class="star_bg">
+                             <a class="star star_1"></a>
+                             <a class="star star_2"></a>
+                             <a class="star star_3"></a>
+                             <a class="star star_4"></a>
+                              <a class="star star_5"></a>
+                           </div></div>
+                          <div>物流服务<div class="star_bg">
+                             <a class="star star_1"></a>
+                             <a class="star star_2"></a>
+                             <a class="star star_3"></a>
+                             <a class="star star_4"></a>
+                              <a class="star star_5"></a>
+                           </div></div>
                      </div>
                     </div>
-                  
+
                    <div>
                    <div>
                       
