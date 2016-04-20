@@ -788,6 +788,14 @@
     <Content Include="easyui\themes\mobile.css" />
     <Content Include="Head\PI.aspx" />
     <Content Include="Head\PI.css" />
+    <Content Include="Preview\img\18cc33a0080a03a5.jpg" />
+    <Content Include="Preview\img\276197720360c2be.jpg" />
+    <Content Include="Preview\img\497f685f04c0ab8b.jpg" />
+    <Content Include="Preview\img\a5cd781a08f8c1f1.jpg" />
+    <Content Include="Preview\img\c9c81519a9c61128.jpg" />
+    <Content Include="Preview\img\d551dc3dd22a77db.jpg" />
+    <Content Include="Preview\img\e748df4857078110.jpg" />
+    <Content Include="Preview\img\e8cd55da374aba56.jpg" />
     <Content Include="References\bootstrap-3.3.5-dist\css\bootstrap-theme.css.map" />
     <Content Include="References\bootstrap-3.3.5-dist\css\bootstrap.css.map" />
     <Content Include="References\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.eot" />
