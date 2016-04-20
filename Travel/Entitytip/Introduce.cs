@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entitytip
 {
-    class Hjiangjie
+    class Introduce
     {
 
         //景点ID
