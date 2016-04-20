@@ -4,16 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entitytip
+namespace BL
 {
     class GetPreview
     {
-        static public string getp(string name)
-        {
-
-
-
-            return null;
-        }
     }
 }

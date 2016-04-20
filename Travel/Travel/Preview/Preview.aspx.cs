@@ -15,7 +15,7 @@ namespace Travel.Preview
 
 
 
-            t = "台湾8日7晚更团游1111";
+            t = "台湾8日7晚更团游";
         }
     }
 }
