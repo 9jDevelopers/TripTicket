@@ -28,7 +28,7 @@ namespace Entitytip
 
         public SceceType Stype;
         
-        public static Introduce create(string name,)
+        public static Introduce create(string name)
         {
             DbHelper db = new DbHelper();
             DbCommand cmd = db.GetSqlStringCommond("select * form Introduce where SceneName=@SceneName");
