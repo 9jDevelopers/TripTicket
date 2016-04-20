@@ -22,7 +22,7 @@ namespace Travel.Head
         {
             string userID = "2";
             BGetInfo getif = new BGetInfo();
-            
+
             getif.BGI(userID, out phone, out email, out username, out name, out sex, out birthday, out home);
 
 

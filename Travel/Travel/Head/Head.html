@@ -44,6 +44,7 @@
 </div>
 <script>
     $(document).ready(function () {
+        var btn = document.getElementById('btnl');
         $("#btnclose").click(function () {
             $("#qbody").hide();
         });
@@ -62,15 +63,12 @@
                         }
                         else {
                             //document.getElementById('btnl').innerHTML = "Hello，" + data;
-                            var btn = document.getElementById('btnl');
-                            btn.id = 'user';
+                            
                             btn.style.fontSize = "10px";
                             btn.innerHTML = "Hello，" + data;
-
                             $("#qbody").hide();
                         }
-                    }
-            );
+                    });
         });
     });
 
