@@ -31,6 +31,11 @@ namespace Entitytip
             else
                 return null;
         }
+        public static Account GetInfo(string username)
+        {
+
+            return null;
+        }
         public static Account Get(string username, string password)
         {
             DbHelper db = new DbHelper();

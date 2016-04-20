@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>个人信息</title>
+    <link href="PI.css" rel="stylesheet" />
     <link href="../easyui/themes/default/easyui.css" rel="stylesheet" />
     <link href="../easyui/themes/icon.css" rel="stylesheet" />
     <link href="../easyui/demo/demo.css" rel="stylesheet" />
@@ -15,8 +16,8 @@
 <body>
 	
 	<div id="log" class="easyui-panel" title="个人信息" style="height:250px;padding:10px">
-        <div class="lname"></div><div class="rinf"></div>
-        <div class="lname"></div><div class="rinf"></div>
+        <div class="lname">手机</div><div class="rinf"><%=contact%></div>
+        <div class="lname">邮箱</div><div class="rinf"></div>
         <div class="lname"></div><div class="rinf"></div>
         <div class="lname"></div><div class="rinf"></div>
         <div class="lname"></div><div class="rinf"></div>

@@ -9,9 +9,10 @@ namespace Travel.Head
 {
     public partial class PI : System.Web.UI.Page
     {
+        public string contact;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            contact = "14747584027";
         }
     }
 }

@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BGetInfo.cs" />
     <Compile Include="BLogin.cs" />
     <Compile Include="IntroduceBL.cs" />
     <Compile Include="MemberFunction.cs" />
