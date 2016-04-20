@@ -8,7 +8,7 @@ using MSSQLDAL;
 using System.Data;
 namespace Entitytip
 {
-    public class introduce
+    class Introduce
     {
 
         //景点ID
@@ -27,29 +27,13 @@ namespace Entitytip
         
 
         public SceceType Stype;
-
-        public static introduce create(string name,string TravelType,string home,string time,string lanuage,string ticketname,string sicketmoney,string TxTmessage)
+        
+        public static Introduce create(string name,)
         {
             DbHelper db = new DbHelper();
-            DbCommand cmd = db.GetSqlStringCommond("insert into NewIntroduce(name,TravelType,home,time,language,ticketname,ticketmoney,TxTmessage)values(@name,@TravelType,@home,@time,@language,@ticketname,@ticketmoney,@TxTmessage)");
-            db.AddInParameter(cmd,"@name", DbType.String,name);
-            db.AddInParameter(cmd, "@TravelType", DbType.String,TravelType);
-            db.AddInParameter(cmd, "@home", DbType.String,home);
-            db.AddInParameter(cmd, "@time", DbType.String,time);
-            db.AddInParameter(cmd, "@lanuage", DbType.String, lanuage);
-            db.AddInParameter(cmd, "@ticketname", DbType.String, ticketname);
-            db.AddInParameter(cmd, "@sicketmoney", DbType.String, sicketmoney);
-            db.AddInParameter(cmd, "@TxTmessage", DbType.String, TxTmessage);
-            int result = cmd.ExecuteNonQuery();
-            if(result>0)
-            {
-                introduce al = new introduce();
-                return al;
-            }
-            else
+            DbCommand cmd = db.GetSqlStringCommond("select * form Introduce where SceneName=@SceneName");
+
             return null;
         }
-       
-
     }
 }

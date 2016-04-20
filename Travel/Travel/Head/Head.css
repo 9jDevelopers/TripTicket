@@ -96,85 +96,39 @@
 }
 #qbody{
     display:none;
-    width:440px;
-    height:300px;
+    width:402px;
+    height:200px;
     background-color:white;
-    border:1px solid #aeaeae;
-    padding-left:10px;
-    position: absolute;top:50%;left:50%;margin-left:-220px; margin-top:-150px;
+    position: absolute;top:50%;left:50%;margin-left:-201px; margin-top:-100px;
 }
-.apss
-{
-    line-height:40px;
-    float:right;
-    }
-.textop
-{
-    color:Red;
-    font-size:50px;
-    }
-.ap
-{
-    width:400px;
-    height:40px;
-    border:2px solid #E3E3E3;
-    float:left;
-    margin-top:30px;
-    }
-.aps
-{
-    margin-top:10px;
-    font-size:20px;
-    float:left;
-    margin-left:5px;
-    }
-.input
-{
-    width:350px;
-    margin-left:5px;
-    float:left;
-    height:33px;
-    border-style:none;
-    margin-top:1px;
-    outline:none;
-    }
-.btnlogin
-{
-    float:left;
-    margin-top:10px;
-    width:400px;
-    text-decoration:NONE;
-    }
-    .btnlogina
-    {
-         width:360px;
-         height:40px;
-         background-color:#ff9913;
-         text-align:center;
-         margin:0 auto;
-         font-size:20px;
-         color:White;
-         line-height:40px;
-         border-radius:7px;
 
-        }
-.passreg
+.incss
 {
-    float:left;
-    width:400px;
-    margin-top:10px;
+    width:260px;
+    padding:12px;
 }
-.pass
+.bdiv{
+    margin-bottom:20px;
+}
+#btnlogin
 {
-    float:left;
-    margin-left:20px;
-    }
-.reg
-{
-    float:right;
-    margin-right:20px;
-    }
+    padding:0px 0px;
+    width:70px;
+    /*text-align:center;
+    width:70px;
+    height:28px;*/
+    position: absolute;top:50%;left:50%;margin-left:-35px; margin-top:45px;
+}
 #btnclose{
-    text-decoration: NONE;
+    width:18px;
+    height:18px;
+    /*color:#aeaeae;*/
+    border:1px solid #aeaeae;
+    font-size:20px;
     color:#aeaeae;
+    position: absolute;
+    right:5px;
+    top:3px;
+    text-align:center;
+    line-height:18px;
 }

@@ -10,11 +10,13 @@
     <script src="../References/jquery-1.8.3.min.js"></script>
     <script src="../Head/Head.js"></script>
     <link href="../Tail/Tail.css" rel="stylesheet" />
+    <%-----------------------------------------------------------%>
     <link href="../easyui/themes/default/easyui.css" rel="stylesheet" />
-	<link rel="stylesheet" type="text/css" href="../themes/icon.css"/>
+    <link href="../easyui/themes/icon.css" rel="stylesheet" />
     <link href="../easyui/demo/demo.css" rel="stylesheet" />
     <script src="../easyui/jquery.min.js"></script>
-	<script type="text/javascript" src="../jquery.easyui.min.js"></script>
+    <script src="../easyui/jquery.easyui.min.js"></script>
+
 </head>
 <body>
     <!--#include virtual="../Head/Head.html"-->

@@ -31,21 +31,32 @@ namespace Entitytip
             else
                 return null;
         }
+        public static void GetInfo(string userID,out string phone,out string email,out string username,out string name,out string sex,out string birthday,out string home)
+        {
+
+            DbHelper db = new DbHelper();
+            DbCommand cmd = db.GetSqlStringCommond("select * from Account where userID=@userID");
+            db.AddInParameter(cmd, "@userID", DbType.String, userID);
+
+            DataTable dt = db.ExecuteDataTable(cmd);
+            phone = dt.Rows[0]["Phone"].ToString();
+            email = dt.Rows[0]["email"].ToString();
+            username = dt.Rows[0]["username"].ToString();
+            name = dt.Rows[0]["name"].ToString();
+            sex = dt.Rows[0]["sex"].ToString();
+            birthday = dt.Rows[0]["birthday"].ToString();
+            home = dt.Rows[0]["home"].ToString();
+
+
+
+        }
         public static Account Get(string username, string password)
         {
             DbHelper db = new DbHelper();
             DbCommand cmd = db.GetSqlStringCommond("select * from Account where username=@LoginName and userpassword=@Password");
             db.AddInParameter(cmd, "@LoginName", DbType.String, username);
             db.AddInParameter(cmd, "@Password", DbType.String, password);
-            //db.AddOutParameter(cmd, "@error_message", DbType.String, 500);
-            //db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
-
             DataTable dt = db.ExecuteDataTable(cmd);
-
-            //ErrorMessage = cmd.Parameters["@error_message"].Value.ToString();
-
-
-
             if (dt.Rows.Count > 0)
                 //登陆成功
                 return new Account(username);
@@ -54,12 +65,20 @@ namespace Entitytip
         }
         //用户ID
         public string userID;
-        //用户名
+        //用户名 昵称
         public String username;
-        //联系方式
-        public int Contact;
+        //联系方式 手机号 登录名
+        public int Phone;
         //邮箱
         public String Email;
+        //姓名
+        public string name;
+        //性别
+        public string sex;
+        //生日
+        public DateTime birthday;
+        //常住城市
+        public string home;
         //会员
         public int VIP;
         //权限

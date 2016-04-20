@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLogin.cs" />
-    <Compile Include="Comment.cs" />
     <Compile Include="GetPreview.cs" />
     <Compile Include="IntroduceBL.cs" />
     <Compile Include="MemberFunction.cs" />

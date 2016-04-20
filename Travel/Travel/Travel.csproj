@@ -786,15 +786,8 @@
     <Content Include="easyui\themes\metro\validatebox.css" />
     <Content Include="easyui\themes\metro\window.css" />
     <Content Include="easyui\themes\mobile.css" />
-    <Content Include="Head\Head.js" />
-    <Content Include="Preview\img\18cc33a0080a03a5.jpg" />
-    <Content Include="Preview\img\276197720360c2be.jpg" />
-    <Content Include="Preview\img\497f685f04c0ab8b.jpg" />
-    <Content Include="Preview\img\a5cd781a08f8c1f1.jpg" />
-    <Content Include="Preview\img\c9c81519a9c61128.jpg" />
-    <Content Include="Preview\img\d551dc3dd22a77db.jpg" />
-    <Content Include="Preview\img\e748df4857078110.jpg" />
-    <Content Include="Preview\img\e8cd55da374aba56.jpg" />
+    <Content Include="Head\PI.aspx" />
+    <Content Include="Head\PI.css" />
     <Content Include="References\bootstrap-3.3.5-dist\css\bootstrap-theme.css.map" />
     <Content Include="References\bootstrap-3.3.5-dist\css\bootstrap.css.map" />
     <Content Include="References\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.eot" />
@@ -847,6 +840,7 @@
     <Content Include="easyui\demo\tree\tree_data1.json" />
     <Content Include="easyui\demo\tree\tree_data2.json" />
     <Content Include="easyui\themes\material\images\Thumbs.db" />
+    <Content Include="Reg\网页注册.html" />
     <Content Include="Test\test.aspx" />
     <Content Include="景点合作\HtmlPage.html" />
     <Content Include="景点合作\imges\01.jpg" />
@@ -881,7 +875,6 @@
     <Content Include="景点新建\image\景点简介_03.gif" />
     <Content Include="景点新建\image\景点简介_03_02.gif" />
     <Content Include="景点新建\css\newInteoduce.css" />
-    <Content Include="景点新建\js\NI.js" />
     <Content Include="景点新建\newIntroduce.aspx" />
     <Content Include="景点新建\tu\add.css" />
     <Content Include="景点新建\tu\add.js" />
@@ -1280,6 +1273,13 @@
     <Compile Include="BuyTicket\BuyTicket.aspx.designer.cs">
       <DependentUpon>BuyTicket.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Head\PI.aspx.cs">
+      <DependentUpon>PI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Head\PI.aspx.designer.cs">
+      <DependentUpon>PI.aspx</DependentUpon>
+    </Compile>
     <Compile Include="judge\judge.aspx.cs">
       <DependentUpon>judge.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1333,6 +1333,10 @@
     <ProjectReference Include="..\BL\BL.csproj">
       <Project>{611887a4-e26c-4c35-975d-8dae23b07232}</Project>
       <Name>BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entitytip\Entitytip.csproj">
+      <Project>{3e2762ce-e5a1-4c75-ac23-88b107835986}</Project>
+      <Name>Entitytip</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

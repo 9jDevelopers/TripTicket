@@ -52,15 +52,12 @@
 	    			<td>景点类型:</td>
 	    			<td>
                         <select class="easyui-combobox" id="TravelType" name="TravelType">
-                            <option value="ciyt" selected="selected">城市观光</option>
-                            <option value="mountain">自然景观</option>
+                            <option value="城市观光" selected="selected">城市观光</option>
+                            <option value="自然景观">自然景观</option>
                         </select>
 	    			</td>
 	    		</tr>
-                <tr>
-	    			<td>出发地:</td>
-	    			<td><input class="easyui-textbox" type="text" id="home" name="home" data-options="required:true"></input></td>
-	    		</tr>
+               
 	    		<tr>
 	    			<td>游玩时长:</td>
 	    			<td><input class="easyui-textbox" type="text" id="time" name="time" data-options="required:true"></input></td>
@@ -69,22 +66,22 @@
 	    			<td>服务语言:</td>
 	    			<td>
 	    				<select class="easyui-combobox" id="language" name="language">
-                            <option value="ar">Arabic</option>
-                            <option value="bg">Bulgarian</option>
-                            <option value="ca">Catalan</option>
-                            <option value="zh-cht" selected="selected">中文</option>
-                            <option value="cs">Czech</option>
-                            <option value="da">Danish</option>
-                            <option value="nl">Dutch</option>
-                            <option value="en" >English</option>
-                            <option value="et">Estonian</option>
-                            <option value="fi">Finnish</option>
-                            <option value="fr">French</option>
-                            <option value="de">German</option>
-                            <option value="el">Greek</option>
-                            <option value="ht">Haitian Creole</option>
-                            <option value="he">Hebrew</option>
-                            <option value="hi">Hindi</option>
+                            <option>Arabic</option>
+                            <option>Bulgarian</option>
+                            <option>Catalan</option>
+                            <option  selected="selected">中文</option>
+                            <option>Czech</option>
+                            <option>Danish</option>
+                            <option>Dutch</option>
+                            <option>English</option>
+                            <option>Estonian</option>
+                            <option>Finnish</option>
+                            <option>French</option>
+                            <option>German</option>
+                            <option>Greek</option>
+                            <option>Haitian Creole</option>
+                            <option>Hebrew</option>
+                            <option>Hindi</option>
                             <option value="mww">Hmong Daw</option>
                             <option value="hu">Hungarian</option>
                             <option value="id">Indonesian</option>
@@ -167,7 +164,7 @@
             <p><a name="A2"><img src="image/景点简介222_06.gif" /></a></p>
                 <p><h2>文字叙述</h2></p>
                 <p>
-                    <input class="easyui-textbox" id="TxTmessage" name="TxTmessage" data-options="multiline:true" style="height:95px; width: 434px;"></input>
+                    <input class="easyui-textbox" id="TxTmessage" name="TxTmessage" data-options="multiline:true" style="height:95px; width: 434px;"/>
                 </p>
             <%-- 添加图片 --%>
                 <div id="images">
@@ -185,13 +182,12 @@
          </div>
         <%-- 系统推荐 --%>
         <div class="XD">
-            
+          <input type="button" id="TJ" value="确认" name="TJ" /><input type="file" class="file-up" onchange=" previewImages()" name="btnim0" style="display:none;"/>
         </div>
         </div>
-        <input type="button" id="TJ" value="确认" name="TJ" /><input type="file" class="file-up" onchange=" previewImages()" name="btnim0" style="display:none;"/>
+        
      </div>
-
-    </form>
+        </form>
     <script src="js/NI.js"></script>
     <script>
 		function submitForm(){
@@ -200,6 +196,39 @@
 		function clearForm(){
 			$('#ff').form('clear');
 		}
+
+		$("#TJ").click
+    (
+        function () {
+            var name = $("#name").val();
+            var TravelType = $("#TravelType").val();
+            var time = $("#time").val();
+            var language = $("#language").val();
+            var ticketname = $("#ticketname").val();
+            var ticketmoney = $("#ticketmoney").val();
+            var TxTmessage = $("#TxTmessage").val();
+
+            //alert("这是" + name+"景点");
+
+            $.post
+            (
+            "NewIntroduce.ashx",
+            {
+                name: $("#name").val(),
+                TravelType: $("#TravelType").val(),
+                time: $("#time").val(),
+                language: $("#language").val(),
+                ticketname: $("#ticketname").val(),
+                ticketmoney: $("#ticketmoney").val(),
+                TxTmessage: $("#TxTmessage").val(),
+            },
+             function (data) {
+                 alert(data);
+                 
+             }
+            )
+        }
+    )
 	</script>
 </body>
   <!--#include virtual="../Tail/Tail.html"-->
