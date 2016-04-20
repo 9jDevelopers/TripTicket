@@ -840,6 +840,7 @@
     <Content Include="easyui\demo\tree\tree_data1.json" />
     <Content Include="easyui\demo\tree\tree_data2.json" />
     <Content Include="easyui\themes\material\images\Thumbs.db" />
+    <Content Include="Reg\网页注册.html" />
     <Content Include="Test\test.aspx" />
     <Content Include="景点合作\HtmlPage.html" />
     <Content Include="景点合作\imges\01.jpg" />
