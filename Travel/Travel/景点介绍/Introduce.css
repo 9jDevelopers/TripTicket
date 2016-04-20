@@ -41,7 +41,11 @@
     font-weight:600;
     font-size:170%;
     line-height: 40px;
+    border:none;
+    width:300px;
+    height:50px;
     }
+
 .wen .c{
     color:#808080;
 }

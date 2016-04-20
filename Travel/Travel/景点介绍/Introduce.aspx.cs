@@ -5,13 +5,16 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 namespace 游游旅游
 {
     public partial class Introduce : System.Web.UI.Page
     {
+
+        public string name; 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

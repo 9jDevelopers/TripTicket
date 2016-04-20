@@ -164,7 +164,7 @@
             <p><a name="A2"><img src="image/景点简介222_06.gif" /></a></p>
                 <p><h2>文字叙述</h2></p>
                 <p>
-                    <input class="easyui-textbox" id="TxTmessage" name="TxTmessage" data-options="multiline:true" style="height:95px; width: 434px;"></input>
+                    <input class="easyui-textbox" id="TxTmessage" name="TxTmessage" data-options="multiline:true" style="height:95px; width: 434px;"/>
                 </p>
             <%-- 添加图片 --%>
                 <div id="images">
