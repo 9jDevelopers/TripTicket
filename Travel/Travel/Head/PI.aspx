@@ -6,7 +6,13 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>个人信息</title>
+    <link href="../Head/Head.css" rel="stylesheet" />  
+    <script src="../References/jquery-1.8.3.min.js"></script>
+    <script src="../Head/Head.js"></script>
+    <link href="../Tail/Tail.css" rel="stylesheet" />
+
     <link href="PI.css" rel="stylesheet" />
+
     <link href="../easyui/themes/default/easyui.css" rel="stylesheet" />
     <link href="../easyui/themes/icon.css" rel="stylesheet" />
     <link href="../easyui/demo/demo.css" rel="stylesheet" />
@@ -14,8 +20,8 @@
     <script src="../easyui/jquery.easyui.min.js"></script>
 </head>
 <body>
-	
-	<div id="log" class="easyui-panel" title="个人信息" style="height:300px;padding:10px;width:100%">
+	<!--#include virtual="../Head/Head.html"-->
+	<div id="log" class="easyui-panel" title="个人信息" style="height:320px;padding:10px;width:100%">
         <div class="lname">手机</div><div class="rinf"><%=phone%></div>
         <div class="lname">邮箱</div><div class="rinf"><%=email%></div>
         <div class="lname">昵称</div><div class="rinf"><%=username%></div>
@@ -23,7 +29,10 @@
         <div class="lname">性别</div><div class="rinf"><%=sex%></div>
         <div class="lname">生日</div><div class="rinf"><%=birthday%></div>
         <div class="lname">常住城市</div><div class="rinf"><%=home%></div>
+        <div class="lname"><a href="#" class="submit easyui-linkbutton">编辑</a></div>
+        
 	</div>
+    <!--#include virtual="../Tail/Tail.html"-->
 	<script>
 		function menuHandler(item){
 			$('#log').prepend('<p>Click Item: '+item.name+'</p>');
