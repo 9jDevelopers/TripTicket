@@ -7,11 +7,11 @@ using Entitytip;
 
 namespace BL
 {
-     public class IntroduceBL
+     public class NEWIntroduceBL
     {
         public bool transfer(string name,string TravelType,string time,string lanuage,string ticketname,string ticketmoney,string TxTmessage)
         {
-           if (introduce.create(name,TravelType,time,lanuage,ticketname,ticketmoney,TxTmessage) ==null)
+           if (NEWintroduce.create(name,TravelType,time,lanuage,ticketname,ticketmoney,TxTmessage) ==null)
             {
                 return false;
             }

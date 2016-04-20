@@ -43,7 +43,7 @@
     <Compile Include="Ent.cs" />
     <Compile Include="GetPreview.cs" />
     <Compile Include="Hjiangjie.cs" />
-    <Compile Include="introduce.cs" />
+    <Compile Include="NEWintroduce.cs" />
     <Compile Include="judgeing.cs" />
     <Compile Include="LoginDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

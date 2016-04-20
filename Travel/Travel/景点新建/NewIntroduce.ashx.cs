@@ -50,7 +50,7 @@ namespace Travel.景点新建
             //conn.Close();
             //context.Response.Write(tip);
             //调用业务成 通过景点名称 景点类型 创建新景点
-            IntroduceBL CZ = new IntroduceBL();
+            NEWIntroduceBL CZ = new NEWIntroduceBL();
             if (CZ.transfer(name, TravelType, time, language, ticketname, ticketmoney, TxTmessage))
             {
                 context.Response.Write("添加完成");

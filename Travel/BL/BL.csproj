@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="BGetInfo.cs" />
     <Compile Include="BLogin.cs" />
-    <Compile Include="IntroduceBL.cs" />
+    <Compile Include="NEWIntroduceBL.cs" />
     <Compile Include="MemberFunction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

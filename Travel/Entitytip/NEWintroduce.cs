@@ -8,7 +8,7 @@ using MSSQLDAL;
 using System.Data;
 namespace Entitytip
 {
-    public class introduce
+    public class NEWintroduce
     {
 
         //景点ID
@@ -28,7 +28,7 @@ namespace Entitytip
 
         public SceceType Stype;
 
-        public static introduce create(string name,string TravelType,string time,string language, string ticketname,string sicketmoney,string TxTmessage)
+        public static NEWintroduce create(string name,string TravelType,string time,string language, string ticketname,string sicketmoney,string TxTmessage)
         {
             DbHelper db = new DbHelper();
             DbCommand cmd = db.GetSqlStringCommond("insert into NewIntroduce(name,TravelType,time,language,ticketname,ticketmoney,TxTmessage)values(@name,@TravelType,@time,@language,@ticketname,@ticketmoney,@TxTmessage)");
@@ -45,7 +45,7 @@ namespace Entitytip
             cmd.Connection.Close();
             if(result>0)
             {
-                introduce al = new introduce();
+                NEWintroduce al = new NEWintroduce();
                 return al;
             }
         
