@@ -1333,6 +1333,10 @@
       <Project>{611887a4-e26c-4c35-975d-8dae23b07232}</Project>
       <Name>BL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Entitytip\Entitytip.csproj">
+      <Project>{3e2762ce-e5a1-4c75-ac23-88b107835986}</Project>
+      <Name>Entitytip</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

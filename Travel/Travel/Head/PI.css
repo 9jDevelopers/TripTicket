@@ -1,17 +1,17 @@
 ﻿#log{
-    font-size:13px;
+    font-size:14px;
     color:#aeaeae;
 }
 .lname{
     float:left;
     text-align:right;
     width:20%;
-    margin-top:10px;
+    margin-top:15px;
 }
 .rinf{
     float:left;
     text-align:left;
     margin-left:20px;
-    margin-top:10px;
+    margin-top:15px;
     width:70%;
 }
