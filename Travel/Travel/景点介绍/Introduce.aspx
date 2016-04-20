@@ -13,6 +13,8 @@
     <link href="../References/icomoon/fontIconStyle.css" rel="stylesheet" />
     <link href="../References/Swiper-3.2.0/dist/css/swiper.css" rel="stylesheet" />
     <link href="gundong.css" rel="stylesheet" />
+
+    
     <title>景点介绍</title>
 </head>
 <body>
@@ -38,7 +40,11 @@
             </div>
 
             <div class="wen">
-                <p class="FT">【当月特价】【赠送含5000韩币T-money】首尔景福宫+仁寺宫市区经典一日游</p>
+                <%--<p><input class="FT" type="text" value="【当月特价】【赠送含5000韩币T-money】首尔景福宫+仁寺宫市区经典一日游" readonly="readonly" /></p>--%>
+                <%--<p class="FT">【当月特价】【赠送含5000韩币T-money】首尔景福宫+仁寺宫市区经典一日游</p>--%>
+                <%--<p><input class="easyui-textbox" id="TxTmessage" name="TxTmessage" data-options="multiline:true" style="height:95px; width: 434px;"/></p>--%>
+                <%--<p><textarea class="FT" name="textarea" style="border:none;" readonly="readonly">【当月特价】【赠送含5000韩币T-money】首尔景福宫+仁寺宫市区经典一日游</textarea></p>--%>
+                 <p><div><%=name%></div></p>
                 <p class="c">
                     <img src="image/景点简介_03_02.gif" />月销999份&nbsp;<i class="PingFen">4.9</i>分&nbsp;已有508人评价</p>
                 <p><div class="GuanGuang">城市观光</div></p>           
@@ -102,7 +108,7 @@
              </table>
 
          </div>
-
+        </div>
  <%-- 详细信息 --%>
  <div class="F">         
         <div class="FD">

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>会员注册</title>
+    <link href="../easyui/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../easyui/themes/icon.css" rel="stylesheet" />
+    <link href="../easyui/demo/demo.css" rel="stylesheet" />
+    <script src="../easyui/jquery.min.js"></script>
+    <script src="../easyui/jquery.easyui.min.js"></script>
+    <style>
+        a {
+            TEXT-DECORATION: none;
+        }
+    </style> 
+</head>
+<body>
+    <h2>会员注册</h2>
+    <p>注册成功后可获1000积分+返现特权!</p>
+    <div style="margin:20px 0;"></div>
+    <div class="easyui-panel" title="Register" style="width:400px;padding:30px 60px">
+        <div style="margin-bottom:20px">
+            <div>手机号：</div>
+            <input class="easyui-textbox" data-options="prompt:'Enter a email address...',validType:'email'" style="width:100%;height:32px">
+        </div>
+        <div style="margin-bottom:20px">
+            <div>Email:（填写Email并通过验证，可额外获得200积分！）</div>
+            <input class="easyui-textbox" style="width:100%;height:32px">
+        </div>
+        <div style="margin-bottom:20px">
+            <div>密码:</div>
+            <input class="easyui-textbox" style="width:100%;height:32px">
+        </div>
+        <div style="margin-bottom:20px">
+            <div>确认密码:</div>
+            <input class="easyui-textbox" style="width:100%;height:32px">
+        </div>
+        <div>
+            <input name="confirm" type="checkbox" onclick="agree();" id="cb" />同意《携程旅行网服务协议》
+        </div>
+        <br>
+        <div style="padding:5px;background:#ffb000;width:17%;border:1px solid #e77c00">
+            <a href="#" class="easyui-linkbutton"  iconCls="icon-cancel" style="width:20%;height:5px">完成注册</a>
+        </div>
+        <br>
+        <div>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-cancel" style="width:20%;height:5px">注册遇到问题？</a>
+        </div>
+    </div>
+</body>
+</html>
