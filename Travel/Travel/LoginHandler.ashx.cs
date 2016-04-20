@@ -18,7 +18,7 @@ namespace Travel
             string username = context.Request.Form["userName"];
             string password = context.Request.Form["passWord"];
             //访问业务层 的验证逻辑 
-            if (bt.Login(username, password))
+            if (bt.Login(username, password)!=null)
             {
                 context.Response.Write(username);
             }      
