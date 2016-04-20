@@ -163,18 +163,24 @@ hr{
     margin-left:100px;
     color:#907373;
     font-size:15px;
-    line-height;20px;
+    line-height:20px;
 }
 /*系统推荐*/
 .XD {
-    /*border: solid 1px red;*/
-    width: 270px;
-    height:300px;
     float: right;
-    margin-right:80px;
+    padding-left:150px;
+    margin-bottom:20px;
+    margin-top:10px;
+    width:410px;
     /*border:solid red 1px;*/
 }
-
+#TJ{
+    width:200px;
+    background-color:#ff7e00;
+    font-size:30px;
+    color:#dddddd;
+    border:none;
+}
 
 
 
@@ -183,3 +189,4 @@ hr{
     width:65px;
     height:65px;
 }
+
