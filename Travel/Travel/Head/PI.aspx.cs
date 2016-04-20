@@ -13,8 +13,12 @@ namespace Travel.Head
         public string contact;
         protected void Page_Load(object sender, EventArgs e)
         {
+            string username = "lilei";
             BGetInfo getif = new BGetInfo();
-            contact = "14747584027";
+
+            getif.BGI(username, out contact);
+
+
         }
     }
 }

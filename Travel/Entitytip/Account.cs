@@ -31,10 +31,18 @@ namespace Entitytip
             else
                 return null;
         }
-        public static Account GetInfo(string username)
+        public static void GetInfo(string username,out string contact)
         {
 
-            return null;
+            DbHelper db = new DbHelper();
+            DbCommand cmd = db.GetSqlStringCommond("select * from Account where username=@LoginName");
+            db.AddInParameter(cmd, "@LoginName", DbType.String, username);
+
+            DataTable dt = db.ExecuteDataTable(cmd);
+            contact = dt.Rows[0]["contact"].ToString();
+
+
+
         }
         public static Account Get(string username, string password)
         {
@@ -42,15 +50,7 @@ namespace Entitytip
             DbCommand cmd = db.GetSqlStringCommond("select * from Account where username=@LoginName and userpassword=@Password");
             db.AddInParameter(cmd, "@LoginName", DbType.String, username);
             db.AddInParameter(cmd, "@Password", DbType.String, password);
-            //db.AddOutParameter(cmd, "@error_message", DbType.String, 500);
-            //db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
-
             DataTable dt = db.ExecuteDataTable(cmd);
-
-            //ErrorMessage = cmd.Parameters["@error_message"].Value.ToString();
-
-
-
             if (dt.Rows.Count > 0)
                 //登陆成功
                 return new Account(username);
