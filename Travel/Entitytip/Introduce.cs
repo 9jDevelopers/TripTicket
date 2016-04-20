@@ -8,13 +8,13 @@ using MSSQLDAL;
 using System.Data;
 namespace Entitytip
 {
-    class Introduce
+    public class Introduce
     {
 
         //景点ID
         public string sceneID;
         //景点名称
-        public string sceneName;
+        public string SceneName;
         //景点
         public string TravelType;
 
@@ -28,12 +28,26 @@ namespace Entitytip
 
         public SceceType Stype;
         
-        public static Introduce create(string name,)
+        public static Introduce create(string ID)
+        {
+            //DbHelper db = new DbHelper();
+            //DbCommand cmd = db.GetSqlStringCommond("select * form Introduce where ID=@ID");
+            //db.AddInParameter(cmd, "@ID",DbType.String,ID);
+            //DataTable dt = db.ExecuteDataTable(cmd);
+            //if (dt.Rows.Count > 0)
+            //    return new Introduce();
+            //else
+            return null;
+        }
+            
+        public static void Give(string ID, string SceneName)
         {
             DbHelper db = new DbHelper();
-            DbCommand cmd = db.GetSqlStringCommond("select * form Introduce where SceneName=@SceneName");
+            DbCommand cmd = db.GetSqlStringCommond("select * from Introduce where SceneID=@SceneID");
+            db.AddInParameter(cmd, "@SceneID", DbType.String,ID);
 
-            return null;
+            DataTable dt = db.ExecuteDataTable(cmd);
+            SceneName = dt.Rows[0]["SceneName"].ToString();
         }
     }
 }

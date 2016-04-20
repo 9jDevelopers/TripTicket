@@ -44,7 +44,8 @@
                 <%--<p class="FT">【当月特价】【赠送含5000韩币T-money】首尔景福宫+仁寺宫市区经典一日游</p>--%>
                 <%--<p><input class="easyui-textbox" id="TxTmessage" name="TxTmessage" data-options="multiline:true" style="height:95px; width: 434px;"/></p>--%>
                 <%--<p><textarea class="FT" name="textarea" style="border:none;" readonly="readonly">【当月特价】【赠送含5000韩币T-money】首尔景福宫+仁寺宫市区经典一日游</textarea></p>--%>
-                 <p><div><%=name%></div></p>
+                 <p><div><%=SceneName%></div></p>
+
                 <p class="c">
                     <img src="image/景点简介_03_02.gif" />月销999份&nbsp;<i class="PingFen">4.9</i>分&nbsp;已有508人评价</p>
                 <p><div class="GuanGuang">城市观光</div></p>           
