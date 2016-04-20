@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Data.Common;
+using MSSQLDAL;
+using System.Data;
 namespace Entitytip
 {
     class Introduce
@@ -26,6 +28,12 @@ namespace Entitytip
 
         public SceceType Stype;
         
+        public static Introduce create(string name,)
+        {
+            DbHelper db = new DbHelper();
+            DbCommand cmd = db.GetSqlStringCommond("select * form Introduce where SceneName=@SceneName");
 
+            return null;
+        }
     }
 }
