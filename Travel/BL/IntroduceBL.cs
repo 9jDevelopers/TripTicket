@@ -10,7 +10,7 @@ namespace BL
     {
         public void Message(string SceneID,string SceneName)
         {
-            Introduce.Give(SceneID, SceneID);
+            //Introduce.Give(SceneID, SceneID);
         }
     }
 }
