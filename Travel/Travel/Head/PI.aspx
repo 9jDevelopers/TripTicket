@@ -15,12 +15,14 @@
 </head>
 <body>
 	
-	<div id="log" class="easyui-panel" title="个人信息" style="height:250px;padding:10px">
-        <div class="lname">手机</div><div class="rinf"><%=contact%></div>
-        <div class="lname">邮箱</div><div class="rinf"></div>
-        <div class="lname"></div><div class="rinf"></div>
-        <div class="lname"></div><div class="rinf"></div>
-        <div class="lname"></div><div class="rinf"></div>
+	<div id="log" class="easyui-panel" title="个人信息" style="height:300px;padding:10px;width:100%">
+        <div class="lname">手机</div><div class="rinf"><%=phone%></div>
+        <div class="lname">邮箱</div><div class="rinf"><%=email%></div>
+        <div class="lname">昵称</div><div class="rinf"><%=username%></div>
+        <div class="lname">姓名</div><div class="rinf"><%=name%></div>
+        <div class="lname">性别</div><div class="rinf"><%=sex%></div>
+        <div class="lname">生日</div><div class="rinf"><%=birthday%></div>
+        <div class="lname">常住城市</div><div class="rinf"><%=home%></div>
 	</div>
 	<script>
 		function menuHandler(item){
