@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>个人信息</title>
     <link href="../Head/Head.css" rel="stylesheet" />  
-    <script src="../References/jquery-1.8.3.min.js"></script>
+
     <link href="../Tail/Tail.css" rel="stylesheet" />
 
     <link href="PI.css" rel="stylesheet" />
@@ -17,6 +17,7 @@
     <link href="../easyui/demo/demo.css" rel="stylesheet" />
     <script src="../easyui/jquery.min.js"></script>
     <script src="../easyui/jquery.easyui.min.js"></script>
+    <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
 </head>
 <body>
 	<!--#include virtual="../Head/Head.html"-->
@@ -33,6 +34,14 @@
 	</div>
     <!--#include virtual="../Tail/Tail.html"-->
 	<script>
+	    window.onload = function () {
+	        alert($.cookie('phone'));
+	        $.post(
+                   "PI.aspx.cs",
+                    {
+                        phone:$.cookie('phone')
+                    });
+	    }
 		function menuHandler(item){
 			$('#log').prepend('<p>Click Item: '+item.name+'</p>');
 		}
@@ -45,6 +54,6 @@
 				});
 			});
 		});
-	</script>
+    </script>
 </body>
 </html>

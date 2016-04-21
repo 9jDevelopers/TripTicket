@@ -31,15 +31,14 @@ namespace Entitytip
             else
                 return null;
         }
-        public static void GetInfo(string userID,out string phone,out string email,out string username,out string name,out string sex,out string birthday,out string home)
+        public static void GetInfo(string phone,out string email,out string username,out string name,out string sex,out string birthday,out string home)
         {
-
+            int p = Int32.Parse(phone);
             DbHelper db = new DbHelper();
-            DbCommand cmd = db.GetSqlStringCommond("select * from Account where userID=@userID");
-            db.AddInParameter(cmd, "@userID", DbType.String, userID);
+            DbCommand cmd = db.GetSqlStringCommond("select * from Account where Phone=@p");
+            db.AddInParameter(cmd, "@p", DbType.Int32, p);
 
             DataTable dt = db.ExecuteDataTable(cmd);
-            phone = dt.Rows[0]["Phone"].ToString();
             email = dt.Rows[0]["email"].ToString();
             username = dt.Rows[0]["username"].ToString();
             name = dt.Rows[0]["name"].ToString();
@@ -50,18 +49,18 @@ namespace Entitytip
 
 
         }
-        public static Account Get(string username, string password)
+        public static void Get(string phone, string password,out string username)
         {
             DbHelper db = new DbHelper();
             DbCommand cmd = db.GetSqlStringCommond("select * from Account where username=@LoginName and userpassword=@Password");
-            db.AddInParameter(cmd, "@LoginName", DbType.String, username);
+            db.AddInParameter(cmd, "@LoginName", DbType.String, phone);
             db.AddInParameter(cmd, "@Password", DbType.String, password);
             DataTable dt = db.ExecuteDataTable(cmd);
             if (dt.Rows.Count > 0)
                 //登陆成功
-                return new Account(username);
+                username = dt.Rows[0]["username"].ToString();
             else
-                return null;
+                username = null;
         }
         //用户ID
         public string userID;

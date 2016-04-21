@@ -13,15 +13,14 @@ namespace Travel
 
         public void ProcessRequest(HttpContext context)
         {
+            string username = "";
             BLogin bt = new BLogin();
             //BTourist bt = new BTourist();
-            string username = context.Request.Form["userName"];
-            string password = context.Request.Form["passWord"];
+            string phone = context.Request.Form["phone"];
+            string password = context.Request.Form["password"];
             //访问业务层 的验证逻辑 
-            if (bt.Login(username, password))
-            {
-                context.Response.Write(username);
-            }      
+            bt.Login(phone, password, out username);
+            context.Response.Write(username);
         }
         public bool IsReusable
         {

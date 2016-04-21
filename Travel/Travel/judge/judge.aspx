@@ -19,7 +19,7 @@
 
              <div class="dh">  
               <div class="leftbox">
-                         <div class="first"><a href="#"><div class="ga"><img src="images/er'r.jpg"/></div></a></div> 
+                         <div class="first"><div class="ga"><a href="#"><img src="images/er'r.jpg"/></a></div></div> 
                          <div class="se">
                          <div class="tu"><a><</a></div>
                          <div class="io"><a href="#"><img class="" src="images/e.jpg"/></a></div>
@@ -31,7 +31,7 @@
                </div>
 
                <div class="centerbox"> <!--产品介绍-->
-                  <div> <h3><a href="">【上海-台湾】台湾环岛7晚8日经典跟团游
+                  <div> <h3><a href="#">【上海-台湾】台湾环岛7晚8日经典跟团游
                  （免费升等2晚五花酒店，囊括经典环岛路线）“去台湾，正当时！一去就爱上”【处境特卖】</a></h3></div>
                   <div> 台湾经典环岛游，最全的环岛路线！</div>
                   <div>出发地：上海</div>
@@ -63,14 +63,14 @@
         <!--表二-->
                 <div class="downbox">
                     <div class="s">认真写评价最多可获得天猫达人成长值20点！</div>
-                   <div><h2>其他买家，需要你的建议哦！</h2></div>
+                   <div class="ty"><h2>其他买家，需要你的建议哦！</h2></div>
 
                    <div class="sd">
                     <div class="e">
-                         <div class="j1"><div class="tx1">评价商品</div>
+                         <div class="j1"><div class="tx1">景点评价</div>
                           <div class="b1">
                               <asp:TextBox ID="TextBox1" runat="server" Height="130px" Width="100%"></asp:TextBox></div></div>
-                          <div class="j2"><div class="tx2">评价服务</div>
+                          <div class="j2"><div class="tx2">服务评价</div>
                           <div class="b2">
                               <asp:TextBox ID="TextBox2" runat="server" Height="90px" Width="100%"></asp:TextBox></div></div>
                           <div class="j3"><div class="tx3">晒图片</div>
@@ -80,8 +80,8 @@
                      </div>
                     
 
-                    <div class="e">
-                          <div>描述相符
+                    <div class="ee">
+                          <div><div>描述相符</div>
                              <div class="star_bg">
                              <a class="star star_1"></a>
                              <a class="star star_2"></a>
@@ -90,7 +90,7 @@
                               <a class="star star_5"></a>
                            </div>
                           </div>
-                          <div>卖家服务<div class="star_bg">
+                          <div><div>卖家服务</div><div class="star_bg">
                              <a class="star star_1"></a>
                              <a class="star star_2"></a>
                              <a class="star star_3"></a>
@@ -98,7 +98,8 @@
                               <a class="star star_5"></a>
                            </div>
                           </div>
-                          <div>物流服务<div class="star_bg">
+                          <div>
+                              <div>物流服务</div><div class="star_bg">
                              <a class="star star_1"></a>
                              <a class="star star_2"></a>
                              <a class="star star_3"></a>

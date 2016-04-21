@@ -9,10 +9,10 @@ namespace BL
 {
     public class BGetInfo
     {
-        public void BGI(string userID, out string phone, out string email, out string username, out string name, out string sex, out string birthday, out string home)
+        public void BGI(string phone, out string email, out string username, out string name, out string sex, out string birthday, out string home)
         {
             //// return ld.Login(LoginName, Password);
-            Account.GetInfo(userID, out phone, out email, out username, out name, out sex, out birthday, out home);
+            Account.GetInfo(phone, out email, out username, out name, out sex, out birthday, out home);
         }
     }
 }
