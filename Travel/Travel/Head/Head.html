@@ -28,7 +28,7 @@
         <div class="easyui-panel" title="登录窗口" style="height:185px;width:400px;padding:30px 70px 20px 70px">
             <i id="btnclose">×</i>
             <div class="bdiv">
-                <input id="txtusername" class="incss easyui-textbox" data-options="prompt:'请输入用户名',iconCls:'icon-man',iconWidth:38">
+                <input id="txtphone" class="incss easyui-textbox" data-options="prompt:'请输入手机号',iconCls:'icon-man',iconWidth:38">
             </div>
             <div class="bdiv">
                 <input id="txtpassword" class="incss easyui-textbox" type="password" data-options="prompt:'请输入密码',iconCls:'icon-lock',iconWidth:38">
@@ -50,13 +50,9 @@
             $("#qbody").hide();
         });
         $("#btnl").click(function () {
-            //alert($.cookie('usernamec'));
-            if ($.cookie('usernamec') != null) {
-                //window.location.href = "../Head/PI.aspx";
-                $.post(
-                   "../LoginHandler.ashx",
-                    { userID: $("#txtusername").val() });
-
+            alert($.cookie('phone'));
+            if ($.cookie('phone') != null) {
+                window.location.href = "../Head/PI.aspx";
             }
             else
                 {
@@ -69,14 +65,14 @@
             var p = $("#txtpassword").val();
             $.post(
                    "../LoginHandler.ashx",
-                    { userName: $("#txtusername").val(), passWord: $("#txtpassword").val() },
+                    { phone: $("#txtphone").val(), password: $("#txtpassword").val() },
                     function (data) {
                         if (data == "") {
                             alert("账户名或密码错误");
                         }
                         else {
                             //document.getElementById('btnl').innerHTML = "Hello，" + data;
-                            $.cookie('usernamec',data);
+                            $.cookie('phone',$("#txtphone").val());
                             btn.style.fontSize = "10px";
                             btn.innerHTML = "Hello，" + data;
                             $("#qbody").hide();
