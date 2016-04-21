@@ -130,7 +130,7 @@
         </div>      
 
  <%-- 详细信息 --%>
-        <div style="height:500px;width:500px">
+<%--        <div style="height:500px;width:500px">--%>
        <div class="F">         
         <div class="FD">
             <%-- 细节介绍 --%>
@@ -179,14 +179,16 @@
                   
                 
             </div>
-         </div>
+         
         <%-- 系统推荐 --%>
         <div class="XD">
           <input type="button" id="TJ" value="确认" name="TJ" /><input type="file" class="file-up" onchange=" previewImages()" name="btnim0" style="display:none;"/>
         </div>
+
         </div>
-        
-     </div>
+
+        </div>
+  
         </form>
     <script src="js/NI.js"></script>
     <script>

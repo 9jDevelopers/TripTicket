@@ -788,6 +788,7 @@
     <Content Include="easyui\themes\mobile.css" />
     <Content Include="Head\PI.aspx" />
     <Content Include="Head\PI.css" />
+    <Content Include="judge\js\judge.js" />
     <Content Include="Preview\img\18cc33a0080a03a5.jpg" />
     <Content Include="Preview\img\276197720360c2be.jpg" />
     <Content Include="Preview\img\497f685f04c0ab8b.jpg" />
@@ -916,7 +917,7 @@
     <Content Include="judge\images\f.jpg" />
     <Content Include="judge\images\xing.jpg" />
     <Content Include="judge\judge.aspx" />
-    <Content Include="judge\judging.css" />
+    <Content Include="judge\css\judging.css" />
     <Content Include="Preview\css\Preview.css" />
     <Content Include="Preview\img\dde448f3fd9b9343.jpg" />
     <Content Include="Preview\Preview.aspx" />
