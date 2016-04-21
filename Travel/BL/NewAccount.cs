@@ -12,12 +12,12 @@ namespace BL
        //数据ku--》
        public bool login(string name,string TravelType)
         {
-            if (ToAccount.Get(name)==null)
-            {
-                return false;
-            }
-            else
-                return true;
+            //if (ToAccount.Get(name)==null)
+            //{
+            //    return false;
+            //}
+            //else
+            return true;
         }       
     }
 }

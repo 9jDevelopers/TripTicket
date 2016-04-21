@@ -8,5 +8,12 @@ namespace Entitytip
 {
     class GetPreview
     {
+        static public string getp(string name)
+        {
+
+
+
+            return null;
+        }
     }
 }

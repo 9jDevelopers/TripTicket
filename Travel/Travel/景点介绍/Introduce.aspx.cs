@@ -11,10 +11,10 @@ namespace 游游旅游
     public partial class Introduce : System.Web.UI.Page
     {
 
-        public string name; 
+        public string SceneName; 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            string SceneID = "1";
         }
     }
 }

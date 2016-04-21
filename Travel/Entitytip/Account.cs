@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.Data;
- using MSSQLDAL;
+using MSSQLDAL;
 namespace Entitytip
 {
   public  class Account

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entitytip
+namespace BL
 {
-    class Introduce
+    class GetPreview
     {
     }
 }
