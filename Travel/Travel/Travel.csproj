@@ -887,6 +887,7 @@
     <Content Include="景点新建\newIntroduce.aspx" />
     <Content Include="景点新建\tu\add.css" />
     <Content Include="景点新建\tu\add.js" />
+    <Content Include="Head\PI.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1281,6 +1282,9 @@
     </Compile>
     <Compile Include="BuyTicket\BuyTicket.aspx.designer.cs">
       <DependentUpon>BuyTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Head\PI.ashx.cs">
+      <DependentUpon>PI.ashx</DependentUpon>
     </Compile>
     <Compile Include="Head\PI.aspx.cs">
       <DependentUpon>PI.aspx</DependentUpon>

@@ -20,11 +20,12 @@ namespace Travel.Head
         public string home;
         protected void Page_Load(object sender, EventArgs e)
         {
-            string userID = "2";
+            //phone = "1234567890";
+            string phone = Request.Form["phone"];
             BGetInfo getif = new BGetInfo();
             
 
-            getif.BGI(userID, out phone, out email, out username, out name, out sex, out birthday, out home);
+            getif.BGI(phone, out email, out username, out name, out sex, out birthday, out home);
 
 
         }
