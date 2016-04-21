@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entitytip
 {
-    class Introduce
+    public class Introduce
     {
     }
 }
