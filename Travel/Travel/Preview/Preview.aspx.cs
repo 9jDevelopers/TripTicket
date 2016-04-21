@@ -18,8 +18,6 @@ namespace Travel.Preview
 
             getif.BGI(id, out name);
 
-
-            //t = "台湾8日7晚更团游";
         }
     }
 }
