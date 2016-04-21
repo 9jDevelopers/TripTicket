@@ -42,7 +42,6 @@
     <Compile Include="Account.cs" />
     <Compile Include="Ent.cs" />
     <Compile Include="GetPreview.cs" />
-    <Compile Include="Introduce.cs" />
     <Compile Include="NEWintroduce.cs" />
     <Compile Include="judgeing.cs" />
     <Compile Include="LoginDal.cs" />
