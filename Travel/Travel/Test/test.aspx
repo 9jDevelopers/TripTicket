@@ -8,7 +8,6 @@
     <title>Test</title>
     <link href="../Head/Head.css" rel="stylesheet" />  
     <script src="../References/jquery-1.8.3.min.js"></script>
-    <script src="../Head/Head.js"></script>
     <link href="../Tail/Tail.css" rel="stylesheet" />
     <%-----------------------------------------------------------%>
     <link href="../easyui/themes/default/easyui.css" rel="stylesheet" />
