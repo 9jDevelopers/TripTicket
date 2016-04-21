@@ -35,9 +35,9 @@
     <!--#include virtual="../Tail/Tail.html"-->
 	<script>
 	    window.onload = function () {
-	        alert($.cookie('phone'));
+	        //alert($.cookie('phone'));
 	        $.post(
-                   "PI.aspx.cs",
+                   "PI.ashx",
                     {
                         phone:$.cookie('phone')
                     });
