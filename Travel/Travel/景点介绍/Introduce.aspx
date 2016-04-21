@@ -44,10 +44,10 @@
                 <%--<p class="FT">【当月特价】【赠送含5000韩币T-money】首尔景福宫+仁寺宫市区经典一日游</p>--%>
                 <%--<p><input class="easyui-textbox" id="TxTmessage" name="TxTmessage" data-options="multiline:true" style="height:95px; width: 434px;"/></p>--%>
                 <%--<p><textarea class="FT" name="textarea" style="border:none;" readonly="readonly">【当月特价】【赠送含5000韩币T-money】首尔景福宫+仁寺宫市区经典一日游</textarea></p>--%>
-                 <p><div><%=SceneName%></div></p>
+                 <p><div class="FT"><%=SceneName%></div></p>
 
                 <p class="c">
-                    <img src="image/景点简介_03_02.gif" />月销999份&nbsp;<i class="PingFen">4.9</i>分&nbsp;已有508人评价</p>
+                    <img src="image/景点简介_03_02.gif" />月销<%=Data%>份&nbsp;<i class="PingFen"><%=Score%></i>分&nbsp;已有<%=Number%>人评价</p>
                 <p><div class="GuanGuang">城市观光</div></p>           
                 <p><font color="#808080">出&nbsp;发&nbsp;地:</font>韩国&middot;首尔</p>
                 <p><font color="#808080">游玩时长&nbsp;：</font>10小时&nbsp;&nbsp;<font color="#808080">服务语言：</font>中文、韩语</p>
