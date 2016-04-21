@@ -39,19 +39,15 @@
                
             </div>
 
-            <div class="wen">
-                <%--<p><input class="FT" type="text" value="【当月特价】【赠送含5000韩币T-money】首尔景福宫+仁寺宫市区经典一日游" readonly="readonly" /></p>--%>
-                <%--<p class="FT">【当月特价】【赠送含5000韩币T-money】首尔景福宫+仁寺宫市区经典一日游</p>--%>
-                <%--<p><input class="easyui-textbox" id="TxTmessage" name="TxTmessage" data-options="multiline:true" style="height:95px; width: 434px;"/></p>--%>
-                <%--<p><textarea class="FT" name="textarea" style="border:none;" readonly="readonly">【当月特价】【赠送含5000韩币T-money】首尔景福宫+仁寺宫市区经典一日游</textarea></p>--%>
-                 <p><div class="FT"><%=SceneName%></div></p>
+            <div class="wen">            
+                <p><div class="FT"><%=SceneName%></div></p>
 
                 <p class="c">
                     <img src="image/景点简介_03_02.gif" />月销<%=Data%>份&nbsp;<i class="PingFen"><%=Score%></i>分&nbsp;已有<%=Number%>人评价</p>
                 <p><div class="GuanGuang">城市观光</div></p>           
                 <p><font color="#808080">出&nbsp;发&nbsp;地:</font>韩国&middot;首尔</p>
                 <p><font color="#808080">游玩时长&nbsp;：</font>10小时&nbsp;&nbsp;<font color="#808080">服务语言：</font>中文、韩语</p>
-                <div><img src="image/景点简介_03.gif" /> <a href="../BuyTicket/BuyTicket.aspx" class="Yuyue">立刻预约</a></div>
+                <p><img src="image/景点简介_03.gif" /> <a href="../BuyTicket/BuyTicket.aspx" class="Yuyue">立刻预约</a></p>
                 <div class="XX">
                     <div class="DW">玩乐亮点</div>
                     <p>
