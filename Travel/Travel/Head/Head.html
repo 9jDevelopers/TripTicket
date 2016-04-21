@@ -45,12 +45,25 @@
 <script>
     $(document).ready(function () {
         var btn = document.getElementById('btnl');
+        
         $("#btnclose").click(function () {
             $("#qbody").hide();
         });
         $("#btnl").click(function () {
-            $("#qbody").show();
+            //alert($.cookie('usernamec'));
+            if ($.cookie('usernamec') != null) {
+                //window.location.href = "../Head/PI.aspx";
+                $.post(
+                   "../LoginHandler.ashx",
+                    { userID: $("#txtusername").val() });
+
+            }
+            else
+                {
+                $("#qbody").show();
+            }
         });
+
         $("#btnlogin").click(function () {
             var u = $("#txtusername").val();
             var p = $("#txtpassword").val();
@@ -63,7 +76,7 @@
                         }
                         else {
                             //document.getElementById('btnl').innerHTML = "Hello，" + data;
-                            
+                            $.cookie('usernamec',data);
                             btn.style.fontSize = "10px";
                             btn.innerHTML = "Hello，" + data;
                             $("#qbody").hide();

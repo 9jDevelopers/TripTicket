@@ -1,6 +1,6 @@
 ﻿.back{
     /*background-color:#f2f5f7;*/
-    width:1366px;
+    width:100%;
     /*height:2000px;*/
     /*border:solid 1px #808080;*/
     margin-bottom:30px;
@@ -43,7 +43,8 @@
     line-height: 40px;
     border:none;
     width:300px;
-    height:50px;
+    
+    /*border:solid red 1px;*/
     }
 
 .wen .c{
@@ -90,7 +91,9 @@
 
 /*快乐预定*/
 .book{
+    width:88%;
     margin-top:20px;
+    /*margin-left:10%;*/
     height:143px;
     border-top:solid 4px #45c3da;
     border-bottom:solid 3px #dddddd;
@@ -105,6 +108,7 @@
 }
 
 .tr1{
+    /*margin-left:10%;*/
     background-color:#e5e7ea;
     font-size:25px;
 }
@@ -156,15 +160,16 @@
 .F{
     margin-top:21px;
     /*border:solid 1px red;*/
-    /*height:3023px;*/
+    height:2100px;
+    width:100%
    
 }
 /*详细信息*/
 .FD{
     /*border:solid 1px red;*/
-     width:880px;
+     width:68%;
      height:2000px;
-      margin-left:80px;
+     margin-left:80px;
       /*margin-bottom:20px;*/
      float:left;
      padding:0px;
@@ -227,9 +232,10 @@ hr{
 /*系统推荐*/
 .XD {
     /*border: solid 1px red;*/
-    width: 270px;
+    width:20%;
     float: right;
     margin-right:80px;
+
 }
 .XD a{
     border-bottom:solid 2px #45c3da;
