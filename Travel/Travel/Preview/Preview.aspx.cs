@@ -4,18 +4,22 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using BL;
 
 namespace Travel.Preview
 {
     public partial class Preview : System.Web.UI.Page
     {
-        public string t;
+        public string name;
         protected void Page_Load(object sender, EventArgs e)
         {
+            string id = "1";
+            GetPreviews getif = new GetPreviews();
+
+            getif.BGI(id, out name);
 
 
-
-            t = "台湾8日7晚更团游";
+            //t = "台湾8日7晚更团游";
         }
     }
 }
