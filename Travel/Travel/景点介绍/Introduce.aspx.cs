@@ -14,13 +14,16 @@ namespace 游游旅游
     {
 
         public string SceneName;
+        public string Data;
+        public string Score;
+        public string Number;
         protected void Page_Load(object sender, EventArgs e)
         {
-            string SceneID = "1";
+            string SceneID = "2";
 
             IntroduceBL giveme = new IntroduceBL();
 
-            giveme.Message(SceneID, out SceneName);
+            giveme.Message(SceneID, out SceneName, out Data, out Score, out Number);
         }
     }
 }

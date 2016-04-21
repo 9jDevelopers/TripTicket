@@ -11,7 +11,7 @@ namespace Entitytip
 {
     public class Introduce
     {
-        public static void Give(string SceneID,out string SceneName)
+        public static void Give(string SceneID,out string SceneName,out string Data,out string Score,out string Number)
         {
             DbHelper db = new DbHelper();
             DbCommand cmd = db.GetSqlStringCommond("select * from Introduce where SceneID=@SceneID ");
@@ -19,6 +19,11 @@ namespace Entitytip
 
             DataTable dt = db.ExecuteDataTable(cmd);
             SceneName = dt.Rows[0]["SceneName"].ToString();
+            Data = dt.Rows[0]["Data"].ToString();
+            Score = dt.Rows[0]["Score"].ToString();
+            Number = dt.Rows[0]["Number"].ToString();
+
+
         }
     }
 }
