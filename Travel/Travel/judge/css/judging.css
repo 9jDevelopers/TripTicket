@@ -1,0 +1,262 @@
+﻿.da{
+    width:100%;
+    height:1500px;
+}
+.yu {
+    height:400px;
+    width:90%;
+    margin-left:7%;
+    margin-right:3%;
+    margin-top:40px;
+}
+.dh{
+    border:1px solid gray;
+    float:left;
+    width:85%;
+}
+.first {
+    height:80%;
+    width:100%;
+}
+.ga img{
+    width:100%;
+    height:100%;
+}
+.se{
+    width:100%;
+    height:18%;
+    padding:1%;
+    margin-bottom:0;
+}
+.tu{
+    width:5%;
+    height:100%;
+    float:left;
+}
+.tu a{
+    text-align:center;
+    line-height:100%;
+}
+.io{
+    width:20%;
+    height:100%;
+    float:left;
+}
+.io img{
+    width:100%;
+    height:100%;
+}
+.leftbox{
+    height:400px;
+    width:40%;
+    float:left;
+}
+.centerbox{
+    width:60%;
+    height:400px;
+    float:left;
+}
+.centerbox div{
+    padding:2%;
+}
+.rightbox {
+    width:14%;
+    height:400px;
+    float:left;
+    border:1px solid gray;
+}
+.rightbox div{
+    padding:2%;
+}
+.rightbox img{
+    width:40%;
+    height:10%;
+}
+.rightbox div{
+    padding:2%;
+}
+.r{
+    color:dodgerblue;
+}
+.q{
+    background-color:gainsboro;
+    margin-left:15px;
+    margin-bottom:10px;
+}
+.downbox{
+    width:90%;
+    height:840px;
+    margin-left:7%;
+    margin-right:3%;
+    background-color:gainsboro;
+    margin-top:10px;
+    border-style:solid;
+    border-color:gray;
+}
+.s{
+    float:right;
+}
+.price{
+    width:90%;
+    height:40px;
+    background-color:lightpink;
+    line-height:40px;
+    color:red;
+}
+
+.sd{
+    width:90%;
+    height:300px;
+    margin-left:5%;
+    margin-right:5%;
+}
+.e{
+    border:1px;
+    width:48%;
+    height:100%;
+    float:left;
+    border-style:solid;
+    border-color:gainsboro;
+}
+.j1{
+    width:100%;
+    height:130px;
+    background-color:white;
+}
+.j2{
+    width:100%;
+    height:90px;
+    background-color:white;
+}
+.j3{
+    width:100%;
+    height:60px;
+    background-color:white;
+}
+.tx1{
+    width:20%;
+    border-color:gainsboro;
+    float:left;
+    border-style:solid;
+    text-align:center;
+    line-height:130px;
+}
+.tx2{
+    width:20%;
+    border-color:gainsboro;
+    float:left;
+    border-style:solid;
+    text-align:center;
+    line-height:90px;
+}
+.tx3{
+    width:20%;
+    border-color:gainsboro;
+    float:left;
+    border-style:solid;
+    text-align:center;
+    line-height:60px;
+}
+.b1{
+    width:78%;
+    float:left;
+}
+.b2{
+    width:78%;
+    float:left;
+}.b3{
+     width:78%;
+     float:left;
+ }
+.b3 img{
+     width:10%;
+     height:10%;
+     float:left;
+     line-height:100%;
+}
+.pic{
+    float:left;
+    text-align:center;
+    line-height:100%;
+}
+.f{
+    margin:3%;
+}
+.fu{
+    width:90%;
+    margin-right:5%;
+    margin-left:5%;
+    margin-top:2%;
+}
+.submit {
+    text-align:center;
+    line-height:100%;
+}
+.qwe{
+    height:3%;
+    width:100%;
+    background-color:white;
+    margin-bottom:0;
+}
+.gy{
+    text-align:center;
+    line-height:30px;
+}
+.boxthree {
+    width:90%;
+    height:20px;
+    border-style:solid;
+    border-color:gray;
+    background-color:gainsboro;
+    margin-left:7%;
+    margin-right:3%;
+    margin-top:2%;
+}
+.l{
+    float:left;
+    height: 100%;
+    width: 15%;
+}
+.c{
+    float:right;
+    width:10%;
+}
+a{
+    text-decoration:none;
+}
+.red{
+    background-color:red;
+}
+
+
+
+/* 灰色背景星星5个平铺 */
+.star_bg {
+    width: 200px; height: 50px;
+    background:url(/judge/images/star.jpg) repeat-x;
+    position: relative;
+    overflow: hidden;
+}
+/* 这是5个小星星们的默认状态的定位 */
+.star {
+    height: 40px; width: 40px;
+    line-height: 2em;
+    position: absolute;
+    z-index: 3;
+}
+.star_1 { left: 0px; }
+.star_2 { left: 40px; }
+.star_3 { left: 80px; }
+.star_4 { left: 120px; }
+.star_5 { left: 160px; }
+
+/* 鼠标hover效果实现，分别显示背景与定宽 */
+.star:hover {    
+    background:url(/judge/images/star.jpg) repeat-x 0 -20px;
+    left: 0; z-index: 2;
+}
+.star_1:hover { width: 40px; }
+.star_2:hover { width: 80px; }
+.star_3:hover { width: 120px; }
+.star_4:hover { width: 160px; }
+.star_5:hover { width: 200px; }
