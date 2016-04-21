@@ -25,15 +25,15 @@
 
 .tu{
     /*border:solid 1px red;*/
-    width:650px;
+    width:50%;
     float:left;
-    margin:20px;
+    margin:2%;
 }
 
 .wen{
     /*border:solid 1px red;*/
-    width:460px;
-    margin:20px;
+    width:36%;
+    margin:2%;
     float:right;
 }
 .wen .FT{
@@ -63,13 +63,13 @@
     color:#6fdef3;
 }
 .wen .Yuyue{
-    float:right;
+    
     border-radius:8px;
     border:solid 1px #ff7e00;
     background-color:#ff7e00;
     font-weight:400;
     color:#ffffff;
-    padding:13px 28px;
+    padding:3% 2% 3% 2%;
     margin-right:250px;
   }
 .wen .XX{

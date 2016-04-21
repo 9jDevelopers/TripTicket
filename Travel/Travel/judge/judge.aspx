@@ -8,6 +8,10 @@
     <link href="css/judging.css" rel="stylesheet" />
     <link href="../Head/Head.css" rel="stylesheet" />
     <link href="../Tail/Tail.css" rel="stylesheet" />
+    <script src="../easyui/easyloader.js"></script>
+    <script src="../easyui/jquery.easyui.min.js"></script>
+    <script src="../easyui/jquery.easyui.mobile.js"></script>
+    <script src="../easyui/jquery.min.js"></script>
     <title></title>
     </head>
 <body>
@@ -68,11 +72,11 @@
                    <div class="sd">
                     <div class="e">
                          <div class="j1"><div class="tx1">景点评价</div>
-                          <div class="b1">
-                              <asp:TextBox ID="TextBox1" runat="server" Height="130px" Width="100%"></asp:TextBox></div></div>
+                          <div class="b1"> <input class="easyui-textbox" id="TxTmessage" name="TxTmessage" data-options="multiline:true" style="height:130px; width: 100%;"/>
+                           </div></div>
                           <div class="j2"><div class="tx2">服务评价</div>
-                          <div class="b2">
-                              <asp:TextBox ID="TextBox2" runat="server" Height="90px" Width="100%"></asp:TextBox></div></div>
+                          <div class="b2"><input class="easyui-textbox" id="TxTmessagef" name="TxTmessage" data-options="multiline:true" style="height:90px; width: 100%;"/>
+                          </div></div>
                           <div class="j3"><div class="tx3">晒图片</div>
                               <div class="b3">
                           <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add'">
@@ -87,7 +91,7 @@
                              <a class="star star_2"></a>
                              <a class="star star_3"></a>
                              <a class="star star_4"></a>
-                              <a class="star star_5"></a>
+                              <a class="star star_5"></a>  
                            </div>
                           </div>
                           <div><div>卖家服务</div><div class="star_bg">
