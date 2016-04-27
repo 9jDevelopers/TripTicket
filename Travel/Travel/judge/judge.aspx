@@ -35,8 +35,8 @@
                </div>
 
                <div class="centerbox"> <!--产品介绍-->
-                  <div> <h3><a href="#">【上海-台湾】台湾环岛7晚8日经典跟团游
-                 （免费升等2晚五花酒店，囊括经典环岛路线）“去台湾，正当时！一去就爱上”【处境特卖】</a></h3></div>
+                  <div> <h3><a href="#"><%=titlename %><%--【上海-台湾】台湾环岛7晚8日经典跟团游
+                 （免费升等2晚五花酒店，囊括经典环岛路线）“去台湾，正当时！一去就爱上”【处境特卖】--%></a></h3></div>
                   <div> 台湾经典环岛游，最全的环岛路线！</div>
                   <div>出发地：上海</div>
                   <div>目的地：台湾  台北  高雄  花莲市</div>
@@ -72,10 +72,10 @@
                    <div class="sd">
                     <div class="e">
                          <div class="j1"><div class="tx1">景点评价</div>
-                          <div class="b1"> <input class="easyui-textbox" id="TxTmessage" name="TxTmessage" data-options="multiline:true" style="height:130px; width: 100%;"/>
+                          <div class="b1"> <input class="easyui-textbox" id="TxTmessage1" name="TxTmessage" data-options="multiline:true" style="height:130px; width: 100%;"/>
                            </div></div>
                           <div class="j2"><div class="tx2">服务评价</div>
-                          <div class="b2"><input class="easyui-textbox" id="TxTmessagef" name="TxTmessage" data-options="multiline:true" style="height:90px; width: 100%;"/>
+                          <div class="b2"><input class="easyui-textbox" id="TxTmessage2" name="TxTmessage" data-options="multiline:true" style="height:90px; width: 100%;"/>
                           </div></div>
                           <div class="j3"><div class="tx3">晒图片</div>
                               <div class="b3">
