@@ -24,13 +24,13 @@
 <body>
 	<!--#include virtual="../Head/Head.html"-->
 	<div id="log" class="easyui-panel" title="个人信息" style="height:320px;padding:10px;width:100%">
-        <div class="lname">手机</div><div id="phone" class="rinf">1</div>
-        <div class="lname">邮箱</div><div id="email" class="rinf">1</div>
-        <div class="lname">昵称</div><div id="username" class="rinf">1</div>
-        <div class="lname">姓名</div><div id="name" class="rinf">1</div>
-        <div class="lname">性别</div><div id="sex" class="rinf">1</div>
-        <div class="lname">生日</div><div id="birthday" class="rinf">1</div>
-        <div class="lname">常住城市</div><div id="home" class="rinf">1</div>
+        <div class="lname">手机</div><div id="phone" class="rinf"></div>
+        <div class="lname">邮箱</div><div id="email" class="rinf"></div>
+        <div class="lname">昵称</div><div id="username" class="rinf"></div>
+        <div class="lname">姓名</div><div id="name" class="rinf"></div>
+        <div class="lname">性别</div><div id="sex" class="rinf"></div>
+        <div class="lname">生日</div><div id="birthday" class="rinf"></div>
+        <div class="lname">常住城市</div><div id="home" class="rinf"></div>
         <div class="lname"><a href="#" class="submit easyui-linkbutton">编辑</a></div>       
 	</div>
     <!--#include virtual="../Tail/Tail.html"-->

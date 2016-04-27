@@ -19,9 +19,6 @@
 </head>
 <body>
     <!--#include virtual="../Head/Head.html"-->
-
-
-
     <!--#include virtual="../Tail/Tail.html"-->
 </body>
 </html>

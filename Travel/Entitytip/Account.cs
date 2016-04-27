@@ -45,14 +45,11 @@ namespace Entitytip
             sex = dt.Rows[0]["sex"].ToString();
             birthday = dt.Rows[0]["birthday"].ToString();
             home = dt.Rows[0]["home"].ToString();
-
-
-
         }
         public static void Get(string phone, string password,out string username)
         {
             DbHelper db = new DbHelper();
-            DbCommand cmd = db.GetSqlStringCommond("select * from Account where username=@LoginName and userpassword=@Password");
+            DbCommand cmd = db.GetSqlStringCommond("select * from Account where Phone=@LoginName and userpassword=@Password");
             db.AddInParameter(cmd, "@LoginName", DbType.String, phone);
             db.AddInParameter(cmd, "@Password", DbType.String, password);
             DataTable dt = db.ExecuteDataTable(cmd);

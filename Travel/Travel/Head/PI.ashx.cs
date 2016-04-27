@@ -23,22 +23,32 @@ namespace Travel.Head
             string birthday;
             string home;
             //phone = "1234567890";
-            string t = "1";
             string p = context.Request.Form["phone"];
-            phone =Convert.ToInt32(t);
+            phone =Convert.ToInt32(p);
             BGetInfo getif = new BGetInfo();
             getif.BGI(phone, out email, out username, out name, out sex, out birthday, out home);
-
+            analyze(ref email);
+            analyze(ref username);
+            analyze(ref sex);
+            analyze(ref name);
+            analyze(ref birthday);
+            analyze(ref home);
             string _email="{\"email\":\""+email+"\",";
             string _username = "\"username\":\"" + username + "\",";
             string _name = "\"name\":\"" + name + "\","; ;
             string _sex = "\"sex\":\"" + sex + "\","; ;
             string _birthday = "\"birthday\":\"" + birthday + "\","; ;
             string _home = "\"home\":\"" + home + "\"}"; ;
-
             context.Response.Write(_email+_username+_name+_sex+_birthday+_home);
         }
 
+        public void analyze(ref string text)
+        {
+            if(text==null||text=="")
+            {
+                text = "未设置";
+            }
+        }
         public bool IsReusable
         {
             get
