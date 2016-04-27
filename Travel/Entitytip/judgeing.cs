@@ -14,7 +14,7 @@ namespace Entitytip
         public string GET(int id)
         {
             DbHelper db = new DbHelper();
-            DbCommand cmd = db.GetSqlStringCommond("select TicketNmae from Tickets where TicketID=@TicketID");
+            DbCommand cmd = db.GetSqlStringCommond("select TicketName from Tickets where TicketID=@TicketID");
             db.AddInParameter(cmd, "@TicketID", DbType.String, id);
             DataTable dt = db.ExecuteDataTable(cmd);
             if (dt.Rows.Count > 0)
