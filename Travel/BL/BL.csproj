@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BBuyTicket.cs" />
     <Compile Include="BGetInfo.cs" />
     <Compile Include="Bjudge.cs" />
     <Compile Include="BLogin.cs" />

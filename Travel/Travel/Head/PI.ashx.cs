@@ -15,7 +15,7 @@ namespace Travel.Head
         public void ProcessRequest(HttpContext context)
         {
             string photo;//后期完善
-            string phone;
+            int phone;
             string email;
             string username;
             string name;
@@ -23,7 +23,9 @@ namespace Travel.Head
             string birthday;
             string home;
             //phone = "1234567890";
-            phone = context.Request.Form["phone"];
+            string t = "1";
+            string p = context.Request.Form["phone"];
+            phone =Convert.ToInt32(t);
             BGetInfo getif = new BGetInfo();
             getif.BGI(phone, out email, out username, out name, out sex, out birthday, out home);
             context.Response.Write("456");

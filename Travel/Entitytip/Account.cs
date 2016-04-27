@@ -31,9 +31,9 @@ namespace Entitytip
             else
                 return null;
         }
-        public static void GetInfo(string phone,out string email,out string username,out string name,out string sex,out string birthday,out string home)
+        public static void GetInfo(int phone,out string email,out string username,out string name,out string sex,out string birthday,out string home)
         {
-            int p = Int32.Parse(phone);
+            int p = phone;
             DbHelper db = new DbHelper();
             DbCommand cmd = db.GetSqlStringCommond("select * from Account where Phone=@p");
             db.AddInParameter(cmd, "@p", DbType.Int32, p);

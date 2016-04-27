@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entitytip
 {
-    enum TicketStatus
+    public enum TicketStatus
     {
         
         //已使用
