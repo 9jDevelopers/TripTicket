@@ -3,14 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MSSQLDAL;
+using System.Data.Common;
+using System.Data;
 
 namespace Entitytip
 {
-    class judgeing
+    public class judgeing
     {
-        public string GET(string id)
+        public string GET(int id)
         {
-
+            DbHelper db = new DbHelper();
+            DbCommand cmd = db.GetSqlStringCommond("select TicketNmae from Tickets where TicketID=@TicketID");
+            db.AddInParameter(cmd, "@TicketID", DbType.String, id);
+            DataTable dt = db.ExecuteDataTable(cmd);
+            if (dt.Rows.Count > 0)
+            {
+                return dt.Rows[0][0].ToString();
+            }
+            else
+            {
+                return null;
+            }
         }
         public string userID;
         public string Evaluationofgood;           //评价商品
