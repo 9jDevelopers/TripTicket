@@ -11,12 +11,12 @@ namespace Travel.judge
     public partial class judge : System.Web.UI.Page
     {
         public int userid=1;
-        public string viewid;
+        public int viewid=1;
         public string titlename; 
         protected void Page_Load(object sender, EventArgs e)
         {
             Bjudge bj = new Bjudge();
-            bj.get(viewid);
+            titlename=bj.get(viewid);
             
              //string userID = Context.Request.Form["userID"];
              //string Evaluationofgood = Context.Request.Form["Evaluationofgood"];         
