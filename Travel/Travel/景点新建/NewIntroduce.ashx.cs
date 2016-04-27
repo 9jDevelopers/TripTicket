@@ -31,6 +31,15 @@ namespace Travel.景点新建
                 context.Response.Write("name");
             }
 
+            HttpPostedFile postedFile = context.Request.Files[0];
+            string savePath = "image/";
+            string path = context.Server.MapPath(savePath);
+
+            Random ro = new Random();
+            int number = ro.Next(0, 999999999);
+
+            string filename = ".jpg";
+            postedFile.SaveAs(path + number + filename);
 
         }
 
