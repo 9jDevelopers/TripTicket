@@ -855,6 +855,7 @@
     <Content Include="景点合作\imges\01.jpg" />
     <Content Include="景点合作\imges\02.jpg" />
     <Content Include="LoginHandler.ashx" />
+    <Content Include="景点新建\css\ajaxupload.3.9.js" />
     <Content Include="景点新建\image\0景点简介_03 - 副本.gif" />
     <Content Include="景点新建\image\0景点简介_05 - 副本.gif" />
     <Content Include="景点新建\image\0景点简介_09 - 副本.gif" />
