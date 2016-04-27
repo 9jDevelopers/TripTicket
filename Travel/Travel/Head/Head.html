@@ -65,14 +65,16 @@
             var p = $("#txtpassword").val();
             $.post(
                    "../LoginHandler.ashx",
-                    { phone: $("#txtphone").val(), password: $("#txtpassword").val() },
+                    { action:"Login", phone: $("#txtphone").val(), password: $("#txtpassword").val() },
                     function (data) {
                         if (data == "") {
                             alert("账户名或密码错误");
                         }
                         else {
+                            
+                            alert(1);
                             //document.getElementById('btnl').innerHTML = "Hello，" + data;
-                            $.cookie('phone',$("#txtphone").val());
+                            $.cookie('phone', $("#txtphone").val(), { path:'/'});
                             btn.style.fontSize = "10px";
                             btn.innerHTML = "Hello，" + data;
                             $("#qbody").hide();

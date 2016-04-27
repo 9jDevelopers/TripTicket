@@ -23,6 +23,8 @@
 
     <script src="../easyui/jquery.min.js"></script>
     <script src="../easyui/jquery.easyui.min.js"></script>
+
+    <script src="css/ajaxupload.3.9.js"></script>
     <style type="text/css">
         .easyui-combobox {
             width: 151px;
