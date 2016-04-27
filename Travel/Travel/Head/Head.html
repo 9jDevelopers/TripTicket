@@ -65,7 +65,7 @@
             var p = $("#txtpassword").val();
             $.post(
                    "../LoginHandler.ashx",
-                    { phone: $("#txtphone").val(), password: $("#txtpassword").val() },
+                    { action:"Login", phone: $("#txtphone").val(), password: $("#txtpassword").val() },
                     function (data) {
                         if (data == "") {
                             alert("账户名或密码错误");
