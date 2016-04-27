@@ -71,8 +71,10 @@
                             alert("账户名或密码错误");
                         }
                         else {
+                            
+                            alert(1);
                             //document.getElementById('btnl').innerHTML = "Hello，" + data;
-                            $.cookie('phone',$("#txtphone").val());
+                            $.cookie('phone', $("#txtphone").val(), { path:'/'});
                             btn.style.fontSize = "10px";
                             btn.innerHTML = "Hello，" + data;
                             $("#qbody").hide();

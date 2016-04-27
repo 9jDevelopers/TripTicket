@@ -23,6 +23,8 @@
 
     <script src="../easyui/jquery.min.js"></script>
     <script src="../easyui/jquery.easyui.min.js"></script>
+
+    <script src="css/ajaxupload.3.9.js"></script>
     <style type="text/css">
         .easyui-combobox {
             width: 151px;
@@ -171,9 +173,9 @@
                         <a id="btnimage"  onclick="test()" class="icon-googleplus" style="margin-left:20px;"></a>  
                         <div id="fileups">               
                             
-                        <input type="file" class="file-up" name="btnim1"onchange=" previewImages()" style="display:none;"/>
-                        <input type="file" class="file-up" name="btnim2" onchange=" previewImages()" style="display:none;"/>
-                        <input type="file" class="file-up" name="btnim3" onchange=" previewImages()" style="display:none;"/>
+                        <input type="file"  class="file-up btnUp" name="btnim1"onchange=" previewImages()" style="display:none;"/>
+                        <input type="file"  class="file-up btnUp" name="btnim2" onchange=" previewImages()" style="display:none;"/>
+                        <input type="file"  class="file-up btnUp" name="btnim3" onchange=" previewImages()" style="display:none;"/>
                         </div>
                 </div>
                   
@@ -182,7 +184,7 @@
          
         <%-- 系统推荐 --%>
         <div class="XD">
-          <input type="button" id="TJ" value="确认" name="TJ" /><input type="file" class="file-up" onchange=" previewImages()" name="btnim0" style="display:none;"/>
+          <input class="shubiao" type="button" id="TJ" value="确认" name="TJ" /><input type="file" class="file-up" onchange=" previewImages()" name="btnim0" style="display:none;"/>
         </div>
 
         </div>
@@ -191,7 +193,8 @@
   
         </form>
     <script src="js/NI.js"></script>
-    <script>
+    <script  type="text/javascript">
+
 		function submitForm(){
 			$('#ff').form('submit');
 		}
@@ -231,6 +234,7 @@
             )
         }
     )
+		
 	</script>
 </body>
   <!--#include virtual="../Tail/Tail.html"-->
