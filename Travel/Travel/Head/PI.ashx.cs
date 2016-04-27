@@ -28,7 +28,15 @@ namespace Travel.Head
             phone =Convert.ToInt32(t);
             BGetInfo getif = new BGetInfo();
             getif.BGI(phone, out email, out username, out name, out sex, out birthday, out home);
-            context.Response.Write("456");
+
+            string _email="{\"email\":\""+email+"\",";
+            string _username = "\"username\":\"" + username + "\",";
+            string _name = "\"name\":\"" + name + "\","; ;
+            string _sex = "\"sex\":\"" + sex + "\","; ;
+            string _birthday = "\"birthday\":\"" + birthday + "\","; ;
+            string _home = "\"home\":\"" + home + "\"}"; ;
+
+            context.Response.Write(_email+_username+_name+_sex+_birthday+_home);
         }
 
         public bool IsReusable
