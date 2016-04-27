@@ -31,9 +31,9 @@ namespace Travel
                     string pf = context.Request.Form["jsticketprice"];
                     string dt = context.Request.Form["jsdate"];
                     string th = context.Request.Form["jsticketholder"];
-                    int icn = int.Parse(context.Request.Form["jsidcardno"]);
-                    int tn = int.Parse(context.Request.Form["jstelenum"]);
-                    int sf = int.Parse(context.Request.Form["jssafe"]);
+                    string icn = context.Request.Form["jsidcardno"];
+                    string tn = context.Request.Form["jstelenum"];
+                    string sf = context.Request.Form["jssafe"];
                     BBuyTicket bbt1 = new BBuyTicket();
                     bbt1.Set(tname, pf, dt, th, icn, tn, sf);
                     break;

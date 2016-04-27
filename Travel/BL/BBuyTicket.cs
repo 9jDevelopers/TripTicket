@@ -22,9 +22,9 @@ namespace BL
                 return null;
             }
         }
-        public string Set(string Bticketname,string Bticketprice,string Bdate, string Bticketholder, int Bidcardno, int Btelenum,int Bsafe)
+        public string Set(string Bticketname,string Bticketprice,string Bdate, string Bticketholder, string Bidcardno, string Btelenum,string Bsafe)
         {
-            if (Bticketname != "" && Bticketprice != "" && Bdate != "" && Bticketholder != "" && Bidcardno != null && Btelenum != null && Bsafe != null)
+            if (Bticketname != "" && Bticketprice != "" && Bdate != "" && Bticketholder != "" && Bidcardno != "" && Btelenum != "" && Bsafe != "")
             {
                 Tickets tkts = new Tickets();
                 tkts.SET(Bticketname, Bticketprice, Bdate, Bticketholder, Bidcardno, Btelenum, Bsafe);

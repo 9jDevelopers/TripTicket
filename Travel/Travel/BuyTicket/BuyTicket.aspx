@@ -13,6 +13,22 @@
     <link href="../easyui/demo/demo.css" rel="stylesheet" />
     <script src="../easyui/jquery.min.js"></script>
     <script src="../easyui/jquery.easyui.min.js"></script>
+    <script>
+        $(function(){
+            $.post("../ByTkt.ashx", {action:"GetPrice"   }, function (data) {
+                if (data == "") {
+                    alert("失败");
+                }
+                else {
+                
+                    payfor = data;
+                    vp.value = payfor;                    
+                    pri.innerHTML = 0;                                  
+                }
+            });
+        }
+        )
+    </script>
 </head>
 <body>
     <!--#include virtual="../Head/Head.html"-->
@@ -22,7 +38,9 @@
             <div class="Title">预订信息</div>
             <div class="line"></div>
             <div class="Ticketintroduce">
-                <label><%=tktname %></label>
+                
+               
+                <div id="ticname"><%=tktname %></div>
                 <input type="text" readonly="true" id="updown" value="详情▼" class="packupdown" />
                 <div class="details" id="detailsupdown">
                     提前预订时间  &nbsp<span class="wcolor">您最晚要在当天12：00前下单，请尽早预订，以免耽误行程</span><br />
@@ -38,7 +56,7 @@
                     <div class="d2">
                         <span class="colorred">&nbsp&nbsp&nbsp* </span><span class="txtsty">日期:</span>
                     </div>
-                    <input class="easyui-datetimebox" value="10/11/2012 2:3:56" style="width:200px; height:28px;line-height:28px;"/>
+                    <input class="easyui-datetimebox" id="dt" value="" style="width:200px; height:28px;line-height:28px;"/>
                     <%-- <div class="d1">
                         <a href="" id="calendar"><img src="img/日历.png" /></a>
                     </div>--%>
@@ -50,7 +68,7 @@
 
                     </div>
                     <div class="d2">
-                        <input class="easyui-numberspinner" value="1" data-options="increment:1" style="width:60px;height:28px"/>
+                        <input class="easyui-numberspinner" value="0" id="num" data-options="increment:1" style="width:60px;height:28px"/>
                         <%--<a href="">
                             <img src="img/-.png" /></a>
                         <input class="num" type="text" readonly="true" placeholder="1" />
@@ -68,7 +86,7 @@
                         <input type="radio" name="s" value="2" /><span class="ncolor">￥10</span><span class="wcolor">/人平安景区门票保险 尊贵型</span>&nbsp<a class="packupdown">详情</a><br />
                         <input type="radio" name="s" value="3" /><span class="ncolor">￥5</span><span class="wcolor">/人平安景区门票保险 经典型</span>&nbsp<a class="packupdown">详情</a><br />
                         <input type="radio" name="s" value="4" /><span class="ncolor">￥3</span><span class="wcolor">/人平安景区门票保险 普通型</span>&nbsp<a class="packupdown">详情</a><br />
-                        <input type="radio" name="s" value="5" /><span class="wcolor">不需要保险</span>
+                        <input type="radio" name="s" value="5" checked="checked"/><span class="wcolor">不需要保险</span>
                     </div>
                 </div>
 
@@ -91,9 +109,9 @@
             <div class="line2"></div>
             <span class="oftenuser">出行人1（取票人、被保险人）</span><span class="wtype">接收确认信息</span>
             <div class="confirminfo">
-                <div class="info"><span class="colorred">*</span>中文姓名：<input type="text" class="tx" placeholder="中文姓名" />&nbsp<a class="packupdown">填写说明</a></div>
-                <div class="info"><span class="colorred">*</span>身份证号：<input type="text" class="tx" placeholder="取票时必须出示身份证" /></div>
-                <div class="info"><span class="colorred">*</span>手机号码：<input type="text" class="tx" placeholder="接收确认信息" /></div>
+                <div class="info"><span class="colorred">*</span>中文姓名：<input type="text" id="N" class="tx" placeholder="中文姓名" />&nbsp<a class="packupdown">填写说明</a></div>
+                <div class="info"><span class="colorred">*</span>身份证号：<input type="text" id="I" class="tx" placeholder="取票时必须出示身份证" /></div>
+                <div class="info"><span class="colorred">*</span>手机号码：<input type="text" id="P" class="tx" placeholder="接收确认信息" /></div>
             </div>
             <div class="Touristagree">
                 <asp:CheckBox ID="CheckBox3" runat="server" />同意 <a class="packupdown">梅岭国家级风景名胜区协议</a>
@@ -103,10 +121,10 @@
         </div>
         <div class="payfor">
             <div class="pageend">
-                <div class="money">订单总金额：<span class="Title">￥0</span></div>
-                <a href="">
-                    <div class="pay">去支付</div>
-                </a>
+                <div class="money">订单总金额：<span class="Title">￥</span><span id="price" class="price">0</span></div>
+                    <input id="pay" class="pay" type="button" value="去支付"/>
+                    <input type="hidden" id="vp"  />
+                
 
             </div>
         </div>
@@ -114,5 +132,6 @@
         <script src="../References/jquery-1.8.3.min.js"></script>
         <script src="../Head/Head.js"></script>
     </form>
+    
 </body>
 </html>

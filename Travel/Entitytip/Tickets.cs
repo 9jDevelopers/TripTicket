@@ -30,10 +30,10 @@ namespace Entitytip
                 return null;
             }
         }
-        public string SET(string ticketname, string ticketprice, string date, string ticketholder, int idcardno, int telenum, int safe)
+        public string SET(string ticketname, string ticketprice, string date, string ticketholder, string idcardno, string telenum, string safe)
         {
             string safetype;
-            if (safe > 0 && safe < 6)
+            if (int.Parse(safe) > 0 && int.Parse(safe) < 6)
             {
                 safetype = "1";
             }
@@ -42,7 +42,7 @@ namespace Entitytip
                 safetype = "2";
             }
             DbHelper db = new DbHelper();
-            DbCommand cmd = db.GetSqlStringCommond("insert into Tickets values(2,@TicketNmae,@TicketPrice,@TicketUser ,@TicketUserIDcard,@Phone ,@TicketDate ,@TicketSafe)");
+            DbCommand cmd = db.GetSqlStringCommond("insert into Tickets values(@TicketNmae,@TicketPrice,@TicketUser ,@TicketUserIDcard,@Phone ,@TicketDate ,@TicketSafe)");
             db.AddInParameter(cmd, "@TicketNmae", DbType.String, ticketname);
             db.AddInParameter(cmd, "@TicketPrice", DbType.String, ticketprice);
             db.AddInParameter(cmd, "@TicketUser", DbType.String, ticketholder);
