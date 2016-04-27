@@ -24,25 +24,38 @@
 <body>
 	<!--#include virtual="../Head/Head.html"-->
 	<div id="log" class="easyui-panel" title="个人信息" style="height:320px;padding:10px;width:100%">
-        <div class="lname">手机</div><div class="rinf">1</div>
-        <div class="lname">邮箱</div><div class="rinf">1</div>
-        <div class="lname">昵称</div><div class="rinf">1</div>
-        <div class="lname">姓名</div><div class="rinf">1</div>
-        <div class="lname">性别</div><div class="rinf">1</div>
-        <div class="lname">生日</div><div class="rinf">1</div>
-        <div class="lname">常住城市</div><div class="rinf">1</div>
+        <div class="lname">手机</div><div id="phone" class="rinf">1</div>
+        <div class="lname">邮箱</div><div id="email" class="rinf">1</div>
+        <div class="lname">昵称</div><div id="username" class="rinf">1</div>
+        <div class="lname">姓名</div><div id="name" class="rinf">1</div>
+        <div class="lname">性别</div><div id="sex" class="rinf">1</div>
+        <div class="lname">生日</div><div id="birthday" class="rinf">1</div>
+        <div class="lname">常住城市</div><div id="home" class="rinf">1</div>
         <div class="lname"><a href="#" class="submit easyui-linkbutton">编辑</a></div>       
 	</div>
     <!--#include virtual="../Tail/Tail.html"-->
 	<script>
 	    window.onload = function () {
-	        var t = $.cookie('phone');
-	        alert("跳转"+t);
+	        var phone = document.getElementById('phone');
+	        var email = document.getElementById('email');
+	        var username = document.getElementById('username');
+	        var name = document.getElementById('name');
+	        var sex = document.getElementById('sex');
+	        var birthday = document.getElementById('birthday');
+	        var home = document.getElementById('home');        
 	        $.post(
                    "PI.ashx",
                     { phone: $.cookie('phone') },
                     function (data) {
-                        alert(data);
+                        alert('开始获取::' + data);
+                        var obj = $.parseJSON(data);
+                        phone.innerHTML = $.cookie('phone');
+                        email.innerHTML = obj.email;
+                        username.innerHTML = obj.username;
+                        name.innerHTML = obj.name;
+                        sex.innerHTML = obj.sex;
+                        birthday.innerHTML = obj.birthday;
+                        home.innerHTML = obj.home;
                     });
 	    }
 		function menuHandler(item){
