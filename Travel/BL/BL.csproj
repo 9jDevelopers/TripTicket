@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BGetInfo.cs" />
+    <Compile Include="Bjudge.cs" />
     <Compile Include="BLogin.cs" />
     <Compile Include="GetPreviews.cs" />
     <Compile Include="IntroduceBL.cs" />
