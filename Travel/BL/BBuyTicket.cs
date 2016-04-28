@@ -27,11 +27,11 @@ namespace BL
             if (Bticketname != "" && Bticketprice != "" && Bdate != "" && Bticketholder != "" && Bidcardno != "" && Btelenum != "" && Bsafe != "")
             {
                 Tickets tkts = new Tickets();
-                tkts.SET(Bticketname, Bticketprice, Bdate, Bticketholder, Bidcardno, Btelenum, Bsafe);
-                return null;
+                return tkts.SET(Bticketname, Bticketprice, Bdate, Bticketholder, Bidcardno, Btelenum, Bsafe);
+                
             }
             else {
-                return null;
+                return "逻辑层传值失败";
             }
         }
     }

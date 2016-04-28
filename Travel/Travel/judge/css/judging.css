@@ -8,6 +8,7 @@
     margin-left:7%;
     margin-right:3%;
     margin-top:40px;
+    font-size:18px;
 }
 .dh{
     border:1px solid gray;
@@ -91,6 +92,7 @@
     margin-top:10px;
     border:1px solid;
     border-color:gray;
+    font-size:18px;
 }
 .s{
     float:right;
@@ -150,7 +152,9 @@
     float:left;
     border-style:solid;
     text-align:center;
-    line-height:130px;
+    line-height:128px;
+    height:128px;
+    border:1px solid gray;
 }
 .tx2{
     width:20%;
@@ -159,6 +163,8 @@
     border-style:solid;
     text-align:center;
     line-height:90px;
+    height:88px;
+    border:1px solid gray;
 }
 .tx3{
     width:20%;
@@ -167,6 +173,8 @@
     border-style:solid;
     text-align:center;
     line-height:60px;
+    height:60px;
+    border:1px solid gray;
 }
 .b1{
     width:78%;
@@ -178,19 +186,20 @@
     float:left;
     border:0;
 }.b3{
+     height:60px;
+     line-height:60px;  
      width:78%;
      float:left;
+     border:1px;
  }
 .b3 img{
      width:10%;
-     height:10%;
+     height:80%;
+     display:block;
      float:left;
-     line-height:100%;
 }
 .pic{
     float:left;
-    text-align:center;
-    padding-top:5%;
 }
 .f{
     margin:3%;
@@ -204,6 +213,7 @@
 .submit {
     text-align:center;
     line-height:100%;
+    font-size:18px;
 }
 .qwe{
     height:3%;
@@ -224,6 +234,7 @@
     margin-left:7%;
     margin-right:3%;
     margin-top:2%;
+    font-size:18px;
 }
 .l{
     float:left;

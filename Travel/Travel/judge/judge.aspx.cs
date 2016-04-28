@@ -1,4 +1,4 @@
-﻿using System;
+﻿                               using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,16 +17,16 @@ namespace Travel.judge
         {
             Bjudge bj = new Bjudge();
             titlename=bj.get(viewid);
-            
-             //string userID = Context.Request.Form["userID"];
-             //string Evaluationofgood = Context.Request.Form["Evaluationofgood"];         
-             //string Evaluationservice = Context.Request.Form["Evaluationservice"];      
-             //string SunPhoto = Context.Request.Form["SunPhoto"];               
-             //string onservice = Context.Request.Form["onservice"];                
-             //string Chaseratings = Context.Request.Form["Chaseratings"];              
-             //string describe = Context.Request.Form["describe"];               
-             //string Sellerservice = Context.Request.Form["Sellerservice"];         
-             //string logisticsservice = Context.Request.Form["logisticsservice"]; 
+
+            string userID = Context.Request.Form["userID"];
+            string Evaluationofgood = Context.Request.Form["Evaluationofgood"];
+            string Evaluationservice = Context.Request.Form["Evaluationservice"];
+            string SunPhoto = Context.Request.Form["SunPhoto"];
+            string onservice = Context.Request.Form["onservice"];
+            string Chaseratings = Context.Request.Form["Chaseratings"];
+            string describe = Context.Request.Form["describe"];
+            string Sellerservice = Context.Request.Form["Sellerservice"];
+            string logisticsservice = Context.Request.Form["logisticsservice"];
         }
     }
 }
