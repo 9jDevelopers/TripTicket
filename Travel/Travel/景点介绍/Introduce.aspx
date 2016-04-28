@@ -3,6 +3,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
+    <script src="../References/jquery-1.8.3.min.js"></script>
+
     <script type="text/javascript" src="http://api.map.baidu.com/api
 　　key=&v=1.1&services=true"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -49,6 +52,7 @@
                 <p><font color="#808080">游玩时长&nbsp;：</font>10小时&nbsp;&nbsp;<font color="#808080">服务语言：</font>中文、韩语</p>
                 <p><img src="image/景点简介_03.gif" /> <a href="../BuyTicket/BuyTicket.aspx" class="Yuyue">立刻预约</a></p>
                 <div class="XX">
+                    
                     <div class="DW">玩乐亮点</div>
                     <p>
                         &nbsp;<img src="image/景点简介-恢复的_03.gif" /></p>
@@ -185,7 +189,8 @@
 
 </html>
 <script type="text/javascript">
-    $(".Yunyue").onclick(function () {
-        $.cookie('ticket', '2', { path: '/' });      
+    $(".Yuyue").click(function () { 
+        $.cookie('ticket', '2', { path: '/' });
+        
     });
 </script>
