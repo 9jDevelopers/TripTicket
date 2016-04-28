@@ -16,12 +16,11 @@
     <script src="../easyui/jquery.easyui.min.js"></script>
     <script>
         $(function () {
-            var id = 1;
-            alert("111");            
+            var payfor;
+            alert();
             var id = $.cookie('ticket');
             alert(id);
-            var payfor;
-            $.post("../ByTkt.ashx", { action: "GetPrice", ticketID: id }, function (data) {
+            $.post("../ByTkt.ashx", { action: "GetPrice", ticketID: $.cookie('ticket') }, function (data) {
                 if (data == "") {
                     alert("失败");
                 }

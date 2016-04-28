@@ -9,7 +9,7 @@
     <link href="Introduce.css" rel="stylesheet" />
     <link href="../Head/Head.css" rel="stylesheet" />
     <link href="../Tail/Tail.css" rel="stylesheet" />
-    
+    <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
     <link href="../References/icomoon/fontIconStyle.css" rel="stylesheet" />
     <link href="../References/Swiper-3.2.0/dist/css/swiper.css" rel="stylesheet" />
     <link href="gundong.css" rel="stylesheet" />
