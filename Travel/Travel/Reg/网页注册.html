@@ -15,16 +15,16 @@
     </style>
     <script>
         $(document).ready(function () {
-            $("#btnEnter").click(function () {
+            $("#btnReg").click(function () {
               $.post(
                        "Reg.ashx",
                         { action: "Reg",usename:$("#usename").val(),phone: $("#phone").val(),email:$("#email").val(),password:$("#password").val()},
                         function (data) {
-                            if (data == "") {
-                                alert("不能为空");
+                            if (data != ""||data!=null) {
+                                alert('成功');
                             }
                             else {
-                                alert(data);
+                                alert('失败');
                             }
                         });
             });
@@ -59,7 +59,7 @@
                 <input class="easyui-textbox" style="width:100%;height:32px">
             </div>
             <div style="margin-left:110px">
-                <a id="btnEnter" class="easyui-linkbutton">完成注册</a>
+                <a id="btnReg" class="easyui-linkbutton">完成注册</a>
             </div>
 
         </div>
