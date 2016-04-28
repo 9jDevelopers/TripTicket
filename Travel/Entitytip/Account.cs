@@ -59,6 +59,23 @@ namespace Entitytip
             else
                 username = null;
         }
+        public static bool Reg(string phone,string username)
+        {
+            DbHelper db = new DbHelper();
+            DbCommand cmd = db.GetSqlStringCommond("INSERT INTO Account(Phone,username) VALUES (@phone,@username)");
+            db.AddInParameter(cmd, "@phone", DbType.String, phone);
+            db.AddInParameter(cmd, "@username", DbType.String, username);
+            cmd.Connection.Open();
+            int result = cmd.ExecuteNonQuery();
+            if(result>0)
+            {
+                return true;
+            }
+            else
+            { 
+                return false;
+            }
+        }
         //用户ID
         public string userID;
         //用户名 昵称

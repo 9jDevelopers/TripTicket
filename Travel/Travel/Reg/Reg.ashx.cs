@@ -13,8 +13,14 @@ namespace Travel.Reg
 
         public void ProcessRequest(HttpContext context)
         {
-            context.Response.ContentType = "text/plain";
-            context.Response.Write("Hello World");
+            string phone = context.Request.Form["phone"];
+            string email = context.Request.Form["email"];
+            string password = context.Request.Form["password"];
+            string usename = context.Request.Form["usename"];
+            //bool a ;
+            //传到BL>ent>sql
+            context.Response.Write(usename+phone+email+password);
+
         }
 
         public bool IsReusable
