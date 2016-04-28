@@ -8,6 +8,7 @@
     <link href="css/judging.css" rel="stylesheet" />
     <link href="../Head/Head.css" rel="stylesheet" />
     <link href="../Tail/Tail.css" rel="stylesheet" />
+    <script src="js/judge.js"></script>
     <script src="../easyui/jquery.min.js"></script>
     <link href="../easyui/themes/default/easyui.css" rel="stylesheet" />
     <link href="../easyui/themes/icon.css" rel="stylesheet" />
@@ -110,7 +111,7 @@
 
 
                     <div class="ee">
-                        <div>
+                        <%--<div>
                             <div>描述相符</div>
                             <div class="star_bg">
                                 <a class="star star_1"></a>
@@ -139,7 +140,7 @@
                                 <a class="star star_4"></a>
                                 <a class="star star_5"></a>
                             </div>
-                        </div>
+                        </div>--%>
                     </div>
                 </div>
 
@@ -166,10 +167,8 @@
                 </div>
 
                 <div class="qwe">
-                    <div class="l">
-                        <input type="checkbox" />匿名评价</div>
-                    <div class="submit"><a href="#" id="submitbox" onclick="submitbox">
-                        <input id="submit" type="submit" class="red" value="提交评价" /></a></div>
+                    <div class="l"><input type="checkbox" />匿名评价</div>
+                    <div class="submit"><a href="javascript:judge" class="red" id="submitbox" onclick="submitbox()">提交评价</a></div>
                 </div>
             </div>
 
