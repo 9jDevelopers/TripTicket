@@ -17,13 +17,13 @@ namespace Travel.Reg
             string phone = context.Request.Form["phone"];
             string email = context.Request.Form["email"];
             string password = context.Request.Form["password"];
-            string username = context.Request.Form["usename"];
+            string username = context.Request.Form["username"];
             //bool a ;
             //传到BL>ent>sql
             //Reg Reg = new Reg();
             //Reg.
             BReg br = new BReg();
-            if(br.Reg(phone,username))
+            if(br.Reg(phone,username,email,password))
             {
                 context.Response.Write(username);
             }
