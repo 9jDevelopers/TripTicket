@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using BL;
 
 namespace Travel.Reg
 {
@@ -19,6 +20,9 @@ namespace Travel.Reg
             string usename = context.Request.Form["usename"];
             //bool a ;
             //传到BL>ent>sql
+            //Reg Reg = new Reg();
+            //Reg.
+
             context.Response.Write(usename+phone+email+password);
 
         }
