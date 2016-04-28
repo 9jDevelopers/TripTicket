@@ -3,20 +3,22 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
-    <script src="../References/jquery-1.8.3.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
 
-    <script type="text/javascript" src="http://api.map.baidu.com/api
-　　key=&v=1.1&services=true"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="Introduce.css" rel="stylesheet" />
+    <script src="Introduce.js"></script>
     <link href="../Head/Head.css" rel="stylesheet" />
     <link href="../Tail/Tail.css" rel="stylesheet" />
-    <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
+    
     <link href="../References/icomoon/fontIconStyle.css" rel="stylesheet" />
     <link href="../References/Swiper-3.2.0/dist/css/swiper.css" rel="stylesheet" />
     <link href="gundong.css" rel="stylesheet" />
-
+       
+    <script src="../References/Swiper-3.2.0/dist/js/swiper.js"></script>
+    <script src="../References/jquery-1.8.3.min.js"></script>
+    <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
+    <script src="JScript1.js"></script>
     
     <title>景点介绍</title>
 </head>
@@ -50,7 +52,7 @@
                 <p><div class="GuanGuang">城市观光</div></p>           
                 <p><font color="#808080">出&nbsp;发&nbsp;地:</font>韩国&middot;首尔</p>
                 <p><font color="#808080">游玩时长&nbsp;：</font>10小时&nbsp;&nbsp;<font color="#808080">服务语言：</font>中文、韩语</p>
-                <p><img src="image/景点简介_03.gif" /> <a href="../BuyTicket/BuyTicket.aspx" class="Yuyue">立刻预约</a></p>
+                <p><img src="image/景点简介_03.gif" /> <a class="Yuyue">立刻预约</a></p>
                 <div class="XX">
                     
                     <div class="DW">玩乐亮点</div>
@@ -180,17 +182,16 @@
  
     </form>
      <!--#include virtual="../Tail/Tail.html"-->
-    <script src="Introduce.js"></script>
-    <script src="../References/Swiper-3.2.0/dist/js/swiper.js"></script>
-    <script src="../References/jquery-2.1.1.min.js"></script>
-    <script src="../References/jquery-1.8.3.min.js"></script>
-    <script src="JScript1.js"></script>
+ 
 </body>
 
 </html>
 <script type="text/javascript">
-    $(".Yuyue").click(function () { 
+    $(".Yuyue").click(function () {
+      
         $.cookie('ticket', '2', { path: '/' });
         
+        //alert("123456");
+        window.location.href = "../BuyTicket/BuyTicket.aspx";
     });
 </script>
