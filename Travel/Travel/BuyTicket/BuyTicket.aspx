@@ -15,16 +15,23 @@
     <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
     <script src="../easyui/jquery.easyui.min.js"></script>
     <script>
-        $(function(){
-            $.post("../ByTkt.ashx", {action:"GetPrice"   }, function (data) {
+        $(function () {
+            var id = 1;
+            alert("111");            
+            var id = $.cookie('ticket');
+            alert(id);
+            var payfor;
+            $.post("../ByTkt.ashx", { action: "GetPrice", ticketID: id }, function (data) {
                 if (data == "") {
                     alert("失败");
                 }
                 else {
-                
-                    payfor = data;
-                    vp.value = payfor;                    
-                    pri.innerHTML = 0;                                  
+                    alert(data);
+                    var dt = data.split('$');
+                    payfor = dt[1];
+                    alert(payfor);
+                    $("#ticname").html(dt[0]);
+                    vp.value = payfor;
                 }
             });
         }
@@ -41,7 +48,7 @@
             <div class="Ticketintroduce">
                 
                
-                <div id="ticname"><%=tktname %></div>
+                <div id="ticname"></div>
                 <input type="text" readonly="true" id="updown" value="详情▼" class="packupdown" />
                 <div class="details" id="detailsupdown">
                     提前预订时间  &nbsp<span class="wcolor">您最晚要在当天12：00前下单，请尽早预订，以免耽误行程</span><br />
