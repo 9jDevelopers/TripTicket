@@ -786,6 +786,7 @@
     <Content Include="easyui\themes\metro\validatebox.css" />
     <Content Include="easyui\themes\metro\window.css" />
     <Content Include="easyui\themes\mobile.css" />
+    <Content Include="Head\EditPI.html" />
     <Content Include="Head\PI.aspx" />
     <Content Include="Head\PI.css" />
     <Content Include="judge\js\judge.js" />

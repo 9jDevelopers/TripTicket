@@ -12,6 +12,7 @@
     <link href="../easyui/themes/icon.css" rel="stylesheet" />
     <link href="../easyui/demo/demo.css" rel="stylesheet" />
     <script src="../easyui/jquery.min.js"></script>
+    <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
     <script src="../easyui/jquery.easyui.min.js"></script>
     <script>
         $(function(){

@@ -51,6 +51,7 @@
     <Compile Include="NewAccount.cs" />
     <Compile Include="NEWIntroduceBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BReg.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entitytip\Entitytip.csproj">
