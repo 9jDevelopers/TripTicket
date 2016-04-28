@@ -11,8 +11,7 @@ namespace Travel
     /// </summary>
     public class ByTkt : IHttpHandler
     {
-        public int tktid = 1;
-
+        public string tktname;
         public double tktprice;
         public void ProcessRequest(HttpContext context)
         {
@@ -20,11 +19,11 @@ namespace Travel
             switch (action)
             {
                 case "GetPrice":
+                    int tktid = int.Parse(context.Request.Form["ticketID"]);
                     BBuyTicket bbt = new BBuyTicket();
                     string np = bbt.Gettktname(tktid);
-                    string[] npArray = np.Split('$');
-                    tktprice = double.Parse(npArray[1]);
-                    context.Response.Write(tktprice);
+                    
+                    context.Response.Write(np);
                     break;
                 case "Set":
                     string tname = context.Request.Form["jsticketname"];
@@ -34,8 +33,10 @@ namespace Travel
                     string icn = context.Request.Form["jsidcardno"];
                     string tn = context.Request.Form["jstelenum"];
                     string sf = context.Request.Form["jssafe"];
+                    string txt;
                     BBuyTicket bbt1 = new BBuyTicket();
-                    bbt1.Set(tname, pf, dt, th, icn, tn, sf);
+                    txt=bbt1.Set(tname, pf, dt, th, icn, tn, sf);
+                    context.Response.Write(txt);
                     break;
 
                 default: break;

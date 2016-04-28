@@ -9,9 +9,9 @@ namespace BL
 {
     public class BReg
     {
-       public bool Reg(string phone,string username)
+       public bool Reg(string phone,string username,string email,string password)
         {
-            if(Account.Reg(phone,username))
+            if(Account.Reg(phone,username,email,password))
             {
                 return true;
             }

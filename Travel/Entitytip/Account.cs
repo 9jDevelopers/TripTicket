@@ -59,13 +59,15 @@ namespace Entitytip
             else
                 username = null;
         }
-        public static bool Reg(string phone,string username)
+        public static bool Reg(string phone,string username, string email, string password)
         {
             int p = Convert.ToInt32(phone);
             DbHelper db = new DbHelper();
-            DbCommand cmd = db.GetSqlStringCommond("INSERT INTO Account(Phone,username) VALUES (@phone,@username)");
+            DbCommand cmd = db.GetSqlStringCommond("INSERT INTO Account(Phone,username,email,password) VALUES (@phone,@username,@email,@password)");
             db.AddInParameter(cmd, "@phone", DbType.String,p);
             db.AddInParameter(cmd, "@username", DbType.String, username);
+            db.AddInParameter(cmd, "@email", DbType.String, email);
+            db.AddInParameter(cmd, "@password", DbType.String, password);
             cmd.Connection.Open();
             int result = cmd.ExecuteNonQuery();
              if(result>0)

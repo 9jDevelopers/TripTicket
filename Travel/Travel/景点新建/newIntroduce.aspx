@@ -173,9 +173,9 @@
                         <a id="btnimage"  onclick="test()" class="icon-googleplus" style="margin-left:20px;"></a>  
                         <div id="fileups">               
                             
-                        <input type="file"  class="file-up btnUp" name="btnim1"onchange=" previewImages()" style="display:none;"/>
-                        <input type="file"  class="file-up btnUp" name="btnim2" onchange=" previewImages()" style="display:none;"/>
-                        <input type="file"  class="file-up btnUp" name="btnim3" onchange=" previewImages()" style="display:none;"/>
+                        <input type="file"  class="file-up " name="btnim1"onchange=" previewImages()" style="display:none;"/>
+                        <input type="file"  class="file-up " name="btnim2" onchange=" previewImages()" style="display:none;"/>
+                        <input type="file"  class="file-up " name="btnim3" onchange=" previewImages()" style="display:none;"/>
                         </div>
                 </div>
                   

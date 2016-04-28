@@ -76,10 +76,10 @@
  //    });
  //});
 
- $(function () {
-     var button = $('.btnUp');
-     new AjaxUpload(button, {
-         action: 'NewIntroduce.aspx',
-         name: 'myfile'
-     })
- })
+ //$(function () {
+ //    var button = $('.btnUp');
+ //    new AjaxUpload(button, {
+ //        action: 'NewIntroduce.aspx',
+ //        name: 'myfile'
+ //    })
+ //})
