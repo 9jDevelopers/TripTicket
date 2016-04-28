@@ -1,9 +1,9 @@
-﻿function submitbox() {
+﻿function submitbox() {            //函数名需要和前台onclick一样
     $('#sf').form('submit');
-    $("submitbox").click(
-        function (){
+    $("#submitbox").click(
+        function () {
             $.post(
-                         "../../../judge.aspx",
+                         "judge.ashx",
                  {
                      //Evaluationofgood: $("#mement1").val(),    把前台"#id名"赋给后台id
                      Evaluationofgood:$("#mement1").val(),
