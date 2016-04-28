@@ -16,8 +16,9 @@
     <title></title>
 </head>
 <body>
-
+    
     <!--#include virtual="../Head/Head.html"-->
+     <form id="sf" method="post" runat="server">
         <div class="da">
 
             <div class="yu">
@@ -89,13 +90,13 @@
                         <div class="j1">
                             <div class="tx1">景点评价</div>
                             <div class="b1">
-                                <input class="easyui-textbox" data-options="multiline:true" value="" style="width:100%;height:130px"/>
+                                <input id="mement1" class="easyui-textbox" data-options="multiline:true" value="" style="width:100%;height:130px"/>
                                </div>
                         </div>
                         <div class="j2">
                             <div class="tx2">服务评价</div>
                             <div class="b2">
-                                <input class="easyui-textbox" data-options="multiline:true" value="" style="width:100%;height:90px"/>
+                                <input id="mement2" class="easyui-textbox" data-options="multiline:true" value="" style="width:100%;height:90px"/>
                             </div>
                         </div>
                         <div class="j3">
@@ -167,8 +168,8 @@
                 <div class="qwe">
                     <div class="l">
                         <input type="checkbox" />匿名评价</div>
-                    <div class="submit"><a href="#">
-                        <input type="submit" class="red" value="提交评价" /></a></div>
+                    <div class="submit"><a href="#" id="submitbox" onclick="submitbox">
+                        <input id="submit" type="submit" class="red" value="提交评价" /></a></div>
                 </div>
             </div>
 
@@ -197,7 +198,9 @@
                 </div>
             </div>
         </div>
-
+       </form>
     <!--#include virtual="../Tail/Tail.html"-->
+
 </body>
+ 
 </html>

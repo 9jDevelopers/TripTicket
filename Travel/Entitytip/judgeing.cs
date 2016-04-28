@@ -26,6 +26,8 @@ namespace Entitytip
                 return null;
             }
         }
+      
+
         public string userID;
         public string Evaluationofgood;           //评价商品
         public string Evaluationservice;          //评价服务
@@ -35,5 +37,7 @@ namespace Entitytip
         public string describe;                   //描述
         public string Sellerservice;              //卖家服务
         public string logisticsservice;           //物流服务
+
+       
     }
 }
