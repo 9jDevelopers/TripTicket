@@ -184,3 +184,8 @@
 </body>
 
 </html>
+<script type="text/javascript">
+    $(".Yunyue").onclick(function () {
+        $.cookie('ticket', '2', { path: '/' });      
+    });
+</script>
