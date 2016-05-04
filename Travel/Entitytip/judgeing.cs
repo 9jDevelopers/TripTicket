@@ -14,12 +14,12 @@ namespace Entitytip
         public string GET(int id)
         {
             DbHelper db = new DbHelper();
-            DbCommand cmd = db.GetSqlStringCommond("select TicketName from Tickets where TicketID=@TicketID");
-            db.AddInParameter(cmd, "@TicketID", DbType.String, id);
+            DbCommand cmd = db.GetSqlStringCommond("select SceneName,Score from Introduce where SceneID=@SceneID");
+            db.AddInParameter(cmd, "@SceneID", DbType.String, id);
             DataTable dt = db.ExecuteDataTable(cmd);
             if (dt.Rows.Count > 0)
             {
-                return dt.Rows[0][0].ToString();
+                return dt.Rows[0][0].ToString()+"$"+ dt.Rows[0][1].ToString();
             }
             else
             {
