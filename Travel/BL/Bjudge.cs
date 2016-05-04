@@ -18,8 +18,7 @@ namespace BL
                 return jd.GET(vid);
             }
             else return null;
-
-
+           
         }
     }
 }
