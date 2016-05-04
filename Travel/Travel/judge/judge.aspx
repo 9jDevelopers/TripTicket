@@ -154,15 +154,15 @@
                         <div class="f">
                             <input type="text" placeholder="快递员：服务态度" /></div>
                         <div class="f">
-                            <input type="radio" name="identity" value="" checked="checked" />失望</div>
+                            <input type="radio" name="identity" value="失望" checked="checked" />失望</div>
                         <div class="f">
-                            <input type="radio" name="identity" value="" />不满</div>
+                            <input type="radio" name="identity" value="不满" />不满</div>
                         <div class="f">
-                            <input type="radio" name="identity" value="" />一般</div>
+                            <input type="radio" name="identity" value="一般" />一般</div>
                         <div class="f">
-                            <input type="radio" name="identity" value="" />满意</div>
+                            <input type="radio" name="identity" value="满意" />满意</div>
                         <div class="f">
-                            <input type="radio" name="identity" value="" />惊喜</div>
+                            <input type="radio" name="identity" value="惊喜" />惊喜</div>
                     </div>
                 </div>
 
