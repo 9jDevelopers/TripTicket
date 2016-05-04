@@ -10,13 +10,13 @@ namespace Travel.judge
 {
     public partial class judge : System.Web.UI.Page
     {
-        public int userid=1;
-        public int viewid=1;
-        public string titlename;
+        //public int userid=1;
+        //public int viewid=1;
+        //public string titlename;
         protected void Page_Load(object sender, EventArgs e)
         {
-            Bjudge bj = new Bjudge();
-            titlename = bj.get(viewid);
+            //Bjudge bj = new Bjudge();
+            //titlename = bj.get(viewid);
 
 
         }
