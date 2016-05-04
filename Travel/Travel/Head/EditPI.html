@@ -49,14 +49,16 @@
     <script>
         $(document).ready(function () {
             $("#btnsave").click(function () {
-                alert(1);
+                var btn = document.getElementById('textphone');
+                var textphone = btn.innerText;
+                
                 $.post(
-                         "Reg.ashx",
-                          { action: "editpi",phone: $("#textphone").val(),email:$("#textemail").val()},
+                         "PI.ashx",
+                          { action: "editpi",phone: textphone,email:$("#textemail").val(),username:$("#textusername").val(),name:$("#textname").val(),sex:$("#textsex").val(),birthday:$("#textbirthday").val(),home:$("#texthome").val()},
                           function (data) {
                               alert(data);
                               if (data != "" || data != null) {
-                                  alert('成功');
+                                  alert(data);
                               }
                               else {
                                   alert('失败');
