@@ -15,12 +15,13 @@
     <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
     <script src="../easyui/jquery.easyui.min.js"></script>
     <script>
+        
         $(function () {
             var payfor;
             alert();
             var id = $.cookie('ticket');
             alert(id);
-            $.post("../ByTkt.ashx", { action: "GetPrice", ticketID: $.cookie('ticket') }, function (data) {
+            $.post("../ByTkt.ashx", { action: "GetPrice", ticketID:id}, function (data) {
                 if (data == "") {
                     alert("失败");
                 }
@@ -136,7 +137,6 @@
             </div>
         </div>
         <script src="js/BuyTicket.js" type="text/javascript"></script>
-        <script src="../References/jquery-1.8.3.min.js"></script>
         <script src="../Head/Head.js"></script>
     </form>
     
