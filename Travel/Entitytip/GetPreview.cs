@@ -22,7 +22,6 @@ namespace Entitytip
             DataTable dt = db.ExecuteDataTable(cmd);
             name = dt.Rows[0]["name"].ToString();
 
-            //return null;
         }
     }
 }
