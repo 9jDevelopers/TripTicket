@@ -32,7 +32,7 @@ namespace Entitytip
                 return null;
         }
         public static void GetInfo(int phone,out string email,out string username,out string name,out string sex,out string birthday,out string home)
-        {
+        {//个人信息页面获取数据
             int p = phone;
             DbHelper db = new DbHelper();
             DbCommand cmd = db.GetSqlStringCommond("select * from Account where Phone=@p");
@@ -60,7 +60,7 @@ namespace Entitytip
                 username = null;
         }
         public static bool Reg(string phone,string username, string email, string password)
-        {
+        {//注册页面
             int p = Convert.ToInt32(phone);
             DbHelper db = new DbHelper();
             DbCommand cmd = db.GetSqlStringCommond("INSERT INTO Account(Phone,username,email,password) VALUES (@phone,@username,@email,@password)");
@@ -76,6 +76,28 @@ namespace Entitytip
             }
             else
             { 
+                return false;
+            }
+        }
+        public static bool EditPI(string phone, string email, string username,string name,string sex,string birthday,string home)
+        {//编辑个人信息
+            DbHelper db = new DbHelper();
+            DbCommand cmd = db.GetSqlStringCommond("UPDATE Account SET email=@email,username =@username,name=@name,sex=@sex,birthday=@birthday,home=@home WHERE Phone =@phone");
+            db.AddInParameter(cmd, "@phone", DbType.Int32,phone);
+            db.AddInParameter(cmd, "@email", DbType.String, email);
+            db.AddInParameter(cmd, "@username", DbType.String, username);
+            db.AddInParameter(cmd, "@name", DbType.String, name);
+            db.AddInParameter(cmd, "@sex", DbType.String,sex);
+            db.AddInParameter(cmd, "@birthday", DbType.Date,birthday);
+            db.AddInParameter(cmd, "@home", DbType.String, home);
+            cmd.Connection.Open();
+            int result = cmd.ExecuteNonQuery();
+            if (result > 0)
+            {
+                return true;
+            }
+            else
+            {
                 return false;
             }
         }

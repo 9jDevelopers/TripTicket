@@ -15,6 +15,26 @@
     <link href="../easyui/demo/demo.css" rel="stylesheet" />
     <script src="../easyui/jquery.easyui.min.js"></script>
     <title></title>
+    <script type="text/javascript">
+        $(function () {
+            var id = 2;
+            $.post("judge.ashx", { jgid: id }, function (data)
+            {
+                if (data != "") {
+                    var ns=data.split("$");
+                    $("#yh").text(ns[0]);
+                    $("#hd").html(ns[1]);
+
+                }
+                else {
+                    alert();
+                }
+            })
+        })
+
+    </script>
+
+
 </head>
 <body>
     
@@ -47,11 +67,12 @@
                     <div class="centerbox">
                         <!--产品介绍-->
                         <div>
-                            <h3><a href="#"><%=titlename %><%--【上海-台湾】台湾环岛7晚8日经典跟团游
+                            <h3 id="yh"><a href="#">
+                                <%--<%=titlename %>--%><%--【上海-台湾】台湾环岛7晚8日经典跟团游
                  （免费升等2晚五花酒店，囊括经典环岛路线）“去台湾，正当时！一去就爱上”【处境特卖】--%></a></h3>
                         </div>
                         <div>台湾经典环岛游，最全的环岛路线！</div>
-                        <div>出发地：上海</div>
+                        <div>出发地：上海</div><div id="hd"></div>
                         <div>目的地：台湾  台北  高雄  花莲市</div>
                         <div>出行日期：2016.10.15</div>
                         <div class="price">￥ 3580起  6.8折  <s>￥5280</s></div>
