@@ -55,12 +55,11 @@ namespace Entitytip
             //DataTable dt = db.ExecuteDataTable(cmd);
             if (result > 0)
             {
-                Console.WriteLine("成功");
-                return null;
+                return "购票成功";
             }
             else
             {
-                return null;
+                return "购票失败";
             }
 
         }

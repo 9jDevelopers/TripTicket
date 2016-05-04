@@ -59,7 +59,6 @@ $('#dt').datetimebox({
 var v = $('#dt').datetimebox('getValue');
 
 
-
 $("#pay").click(function () {
     var ticketprice = vp.value;
     var ticketname = $("#ticname").html();
@@ -79,7 +78,16 @@ $("#pay").click(function () {
         $.post(
             "../ByTkt.ashx",
             { action: "Set", jsticketname: $("#ticname").html(), jsticketprice: vp.value, jsdate: date, jsticketholder: $("#N").val(), jsidcardno: $("#I").val(), jstelenum: $("#P").val(), jssafe: intHot },
-            function () { }
+            function (data)
+            {
+                if (data != "") {
+                    alert(data);
+                }
+                else
+                {
+                    alert("data为空");
+                }
+            }
             );
     }
 });
