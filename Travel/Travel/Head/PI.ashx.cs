@@ -21,11 +21,19 @@ namespace Travel.Head
                 string phone = context.Request.Form["phone"];
                 string email = context.Request.Form["email"];
                 string username = context.Request.Form["username"];
-                string name = context.Request.Form["name"];
+                string name = context.Request.Form["textname"];
                 string sex = context.Request.Form["sex"];
                 string birthday = context.Request.Form["birthday"];
                 string home = context.Request.Form["home"];
-                context.Response.Write(phone+email+username+name+sex+birthday+home);
+                EditPI ep = new EditPI();
+                if (ep.Beditpi(phone, email, username, name, sex, birthday, home))
+                {
+                    context.Response.Write("修改成功");
+                }
+                else
+                {
+                    context.Response.Write("修改失败");
+                }
             }
 
             //string photo;//后期完善

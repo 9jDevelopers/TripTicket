@@ -51,18 +51,14 @@
             $("#btnsave").click(function () {
                 var btn = document.getElementById('textphone');
                 var textphone = btn.innerText;
-                
+                //var n = $("#textname").val().toString();
+                //var a = $("#sex").val().toString();
+                //alert(a+n);
                 $.post(
                          "PI.ashx",
-                          { action: "editpi",phone: textphone,email:$("#textemail").val(),username:$("#textusername").val(),name:$("#textname").val(),sex:$("#textsex").val(),birthday:$("#textbirthday").val(),home:$("#texthome").val()},
+                          { action: "editpi",phone: textphone,email:$("#textemail").val(),username:$("#textusername").val(),textname:$("#textname").val(),sex:$("#textsex").val(),birthday:$("#textbirthday").val(),home:$("#texthome").val()},
                           function (data) {
                               alert(data);
-                              if (data != "" || data != null) {
-                                  alert(data);
-                              }
-                              else {
-                                  alert('失败');
-                              }
                           });
             });
 
