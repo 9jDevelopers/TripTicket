@@ -23,7 +23,7 @@
     <!--#include virtual="../Head/Head.html"-->
     <div id="log" class="easyui-panel" title="个人信息" style="height:340px;padding:10px;width:100%">
         <div class="lname">手机</div><div id="phone" class="rinf">        
-            <div id="textphone" >7</div>
+            <div id="textphone" >未获取到</div>
         </div>
         <div class="lname">邮箱</div><div id="email" class="rinf">
             <input id="textemail"class="easyui-textbox" style="width:200px;height:20px" />
@@ -32,13 +32,13 @@
             <input id="textusername" class="easyui-textbox"  style="width:200px;height:20px" />
         </div>
         <div class="lname">姓名</div><div id="name" class="rinf">
-            <input id="textname "class="easyui-textbox"  style="width:200px;height:20px" />
+            <input id="textname"class="easyui-textbox"  style="width:200px;height:20px" />
         </div>
         <div class="lname">性别</div><div id="sex" class="rinf">
             <input id="textsex" class="easyui-textbox"  style="width:200px;height:20px" />
         </div>
         <div class="lname">生日</div><div id="birthday" class="rinf">
-            <input id="textbirthday" class="easyui-textbox"  style="width:200px;height:20px" />
+            <input class="easyui-datetimebox" id="textbirthday" value="" style="width:200px; height:28px;line-height:28px;" />
         </div>
         <div class="lname">常住城市</div><div id="home" class="rinf">
             <input id="texthome" class="easyui-textbox"  style="width:200px;height:20px" />
@@ -47,26 +47,56 @@
     </div>
     <!--#include virtual="../Tail/Tail.html"-->
     <script>
+        window.onload = function () {
+            alert($.cookie('objs'));
+            var obj = $.parseJSON($.cookie('objs'));
+            alert(obj.phone);
+            $('#textphone').text(obj.phone);
+            $('#textemail').val(obj.email);            
+            $('#textusername').val(obj.username);  
+            $('#textname').val(obj.name);
+            $('#textsex').val(obj.sex);
+            $('textbirthday').val(obj.birthday);
+            $('texthome').val(obj.home);
+        }
         $(document).ready(function () {
             $("#btnsave").click(function () {
-                var btn = document.getElementById('textphone');
-                var textphone = btn.innerText;
-                //var n = $("#textname").val().toString();
-                //var a = $("#sex").val().toString();
-                //alert(a+n);
+                var p = document.getElementById('textphone');
+                var textphone = p.innerText;
+                $('#dt').datetimebox({
+                    value: '3/4/2010 2:3',
+                    required: true,
+                    showSeconds: false
+                });
+
+                var birthday= $('#textbirthday').datetimebox('getValue');
                 $.post(
                          "PI.ashx",
-                          { action: "editpi",phone: textphone,email:$("#textemail").val(),username:$("#textusername").val(),textname:$("#textname").val(),sex:$("#textsex").val(),birthday:$("#textbirthday").val(),home:$("#texthome").val()},
+                          {
+                              action: "editpi",
+                              phone: textphone,
+                              email: $("#textemail").val(),
+                              username: $("#textusername").val(),
+                              textname: $("#textname").val(),
+                              sex: $("#textsex").val(),
+                              birthday:birthday,
+                              home: $("#texthome").val()
+                          },
                           function (data) {
-                              alert(data);
+                              if (data == 1)
+                              {
+                                  alert('修改成功');
+                                  window.location.href = "PI.aspx";
+                              }
+                              else
+                              {
+                                  alert('修改失败');
+                              }
+                              
                           });
             });
 
         });
-
-
-
-
 
 		function menuHandler(item){
 			$('#log').prepend('<p>Click Item: '+item.name+'</p>');
