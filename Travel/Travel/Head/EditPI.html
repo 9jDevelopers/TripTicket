@@ -49,10 +49,12 @@
     <script>
         $(document).ready(function () {
             $("#btnsave").click(function () {
+                alert(1);
                 $.post(
                          "Reg.ashx",
-                          { action: "editpi",phone: $("#textphone").val(),email:$("#textemail").val(),},
+                          { action: "editpi",phone: $("#textphone").val(),email:$("#textemail").val()},
                           function (data) {
+                              alert(data);
                               if (data != "" || data != null) {
                                   alert('成功');
                               }
