@@ -21,19 +21,53 @@
 </head>
 <body>
     <!--#include virtual="../Head/Head.html"-->
-    <div id="log" class="easyui-panel" title="个人信息" style="height:320px;padding:10px;width:100%">
-        <div class="lname">手机</div><div id="phone" class="rinf"><input class="easyui-textbox" data-options="prompt:'Enter a email address...',validType:'email'" style="width:200px;height:20px"/></div>
-        <div class="lname">邮箱</div><div id="email" class="rinf"><input class="easyui-textbox" data-options="prompt:'Enter a email address...',validType:'email'" style="width:200px;height:20px" /></div>
-        <div class="lname">昵称</div><div id="username" class="rinf"><input class="easyui-textbox" data-options="prompt:'Enter a email address...',validType:'email'" style="width:200px;height:20px" /></div>
-        <div class="lname">姓名</div><div id="name" class="rinf"><input class="easyui-textbox" data-options="prompt:'Enter a email address...',validType:'email'" style="width:200px;height:20px" /></div>
-        <div class="lname">性别</div><div id="sex" class="rinf"><input class="easyui-textbox" data-options="prompt:'Enter a email address...',validType:'email'" style="width:200px;height:20px" /></div>
-        <div class="lname">生日</div><div id="birthday" class="rinf"><input class="easyui-textbox" data-options="prompt:'Enter a email address...',validType:'email'" style="width:200px;height:20px" /></div>
-        <div class="lname">常住城市</div><div id="home" class="rinf"><input class="easyui-textbox" data-options="prompt:'Enter a email address...',validType:'email'" style="width:200px;height:20px" /></div>
-        <div class="lname"><a href="#" class="submit easyui-linkbutton">编辑</a></div>
+    <div id="log" class="easyui-panel" title="个人信息" style="height:340px;padding:10px;width:100%">
+        <div class="lname">手机</div><div id="phone" class="rinf">        
+            <div id="textphone" >7</div>
+        </div>
+        <div class="lname">邮箱</div><div id="email" class="rinf">
+            <input id="textemail"class="easyui-textbox" style="width:200px;height:20px" />
+        </div>
+        <div class="lname">昵称</div><div id="username" class="rinf">
+            <input id="textusername" class="easyui-textbox"  style="width:200px;height:20px" />
+        </div>
+        <div class="lname">姓名</div><div id="name" class="rinf">
+            <input id="textname "class="easyui-textbox"  style="width:200px;height:20px" />
+        </div>
+        <div class="lname">性别</div><div id="sex" class="rinf">
+            <input id="textsex" class="easyui-textbox"  style="width:200px;height:20px" />
+        </div>
+        <div class="lname">生日</div><div id="birthday" class="rinf">
+            <input id="textbirthday" class="easyui-textbox"  style="width:200px;height:20px" />
+        </div>
+        <div class="lname">常住城市</div><div id="home" class="rinf">
+            <input id="texthome" class="easyui-textbox"  style="width:200px;height:20px" />
+        </div>
+        <div class="lname"><a id="btnsave" class="submit easyui-linkbutton">保存</a></div>
     </div>
     <!--#include virtual="../Tail/Tail.html"-->
     <script>
-	    
+        $(document).ready(function () {
+            $("#btnsave").click(function () {
+                $.post(
+                         "Reg.ashx",
+                          { action: "editpi",phone: $("#textphone").val(),email:$("#textemail").val(),},
+                          function (data) {
+                              if (data != "" || data != null) {
+                                  alert('成功');
+                              }
+                              else {
+                                  alert('失败');
+                              }
+                          });
+            });
+
+        });
+
+
+
+
+
 		function menuHandler(item){
 			$('#log').prepend('<p>Click Item: '+item.name+'</p>');
 		}
