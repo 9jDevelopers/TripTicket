@@ -791,6 +791,7 @@
     <Content Include="Head\PI.aspx" />
     <Content Include="Head\PI.css" />
     <Content Include="judge\js\judge.js" />
+    <Content Include="Orderform\Orderform.aspx" />
     <Content Include="Preview\img\18cc33a0080a03a5.jpg" />
     <Content Include="Preview\img\276197720360c2be.jpg" />
     <Content Include="Preview\img\497f685f04c0ab8b.jpg" />
@@ -1314,6 +1315,13 @@
     </Compile>
     <Compile Include="LoginHandler.ashx.cs">
       <DependentUpon>LoginHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Orderform\Orderform.aspx.cs">
+      <DependentUpon>Orderform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Orderform\Orderform.aspx.designer.cs">
+      <DependentUpon>Orderform.aspx</DependentUpon>
     </Compile>
     <Compile Include="Preview\Preview.aspx.cs">
       <DependentUpon>Preview.aspx</DependentUpon>
