@@ -171,8 +171,7 @@
             <%-- 添加图片 --%>
                 <div id="images">
                          
-                    <div id="btnUp1" class="q">
-                       <a class="icon-cancel-circle a"></a>
+                    <div id="btnUp1" class="q">                      
                        <i class="tu1 w icon-googleplus" ></i> 
                        <img id="ig1"  src=""/>         
                    </div>
@@ -207,49 +206,6 @@
   
         </form>
     <script src="js/NI.js"></script>
-    <script  type="text/javascript">
-
-		function submitForm(){
-			$('#ff').form('submit');
-		}
-		function clearForm(){
-			$('#ff').form('clear');
-		}
-
-		$("#TJ").click
-    (
-        function () {
-            var name = $("#name").val();
-            var TravelType = $("#TravelType").val();
-            var time = $("#time").val();
-            var language = $("#language").val();
-            var ticketname = $("#ticketname").val();
-            var ticketmoney = $("#ticketmoney").val();
-            var TxTmessage = $("#TxTmessage").val();
-
-            //alert("这是" + name+"景点");
-
-            $.post
-            (
-            "NewIntroduce.ashx",
-            {
-                name: $("#name").val(),
-                TravelType: $("#TravelType").val(),
-                time: $("#time").val(),
-                language: $("#language").val(),
-                ticketname: $("#ticketname").val(),
-                ticketmoney: $("#ticketmoney").val(),
-                TxTmessage: $("#TxTmessage").val(),
-            },
-             function (data) {
-                 alert(data);
-                 
-             }
-            )
-        }
-    )
-		
-	</script>
       <script type="text/javascript">
         var button1 = $('#btnUp1');
         var image1 = $('#ig1');
@@ -292,6 +248,44 @@
             })
         }
     </script>
+
+    <script  type="text/javascript">
+		$("#TJ").click
+    (
+        function () {
+            var name = $("#name").val();
+            var TravelType = $("#TravelType").val();
+            var time = $("#time").val();
+            var language = $("#language").val();
+            var ticketname = $("#ticketname").val();
+            var ticketmoney = $("#ticketmoney").val();
+            var TxTmessage = $("#TxTmessage").val();
+
+            //alert("这是" + name+"景点");
+
+            $.post
+            (
+            "NewIntroduce.ashx",
+            {
+                shuju:'newshuju',
+                name: $("#name").val(),
+                TravelType: $("#TravelType").val(),
+                time: $("#time").val(),
+                language: $("#language").val(),
+                ticketname: $("#ticketname").val(),
+                ticketmoney: $("#ticketmoney").val(),
+                TxTmessage: $("#TxTmessage").val(),
+            },
+             function (data) {
+                 alert(data);
+                 
+             }
+            )
+        }
+    )
+		
+	</script>
+    
 </body>
   <!--#include virtual="../Tail/Tail.html"-->
 </html>

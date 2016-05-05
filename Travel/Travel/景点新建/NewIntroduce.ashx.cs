@@ -34,24 +34,29 @@ namespace Travel.景点新建
             context.Response.Write(Result + filename);
 
 
-            //传数据
-            NEWIntroduceBL NI = new NEWIntroduceBL();
 
-            string name = context.Request.Form["name"];
-            string TravelType = context.Request.Form["TravelType"];
-            string time = context.Request.Form["time"];
-            string language = context.Request.Form["language"];
-            string ticketname = context.Request.Form["ticketname"];
-            string ticketmoney = context.Request.Form["ticketmoney"];
-            string TxTmessage = context.Request.Form["TxTmessage"];
+            string acction = context.Request.Form["shuju"];
+            if (acction =="newshuju") {
+                //传数据
+                NEWIntroduceBL NI = new NEWIntroduceBL();
 
-            if (NI.transfer (name, TravelType, time,language, ticketname, ticketmoney, TxTmessage))
-             {
-                context.Response.Write("name");
+                string name = context.Request.Form["name"];
+                string TravelType = context.Request.Form["TravelType"];
+                string time = context.Request.Form["time"];
+                string language = context.Request.Form["language"];
+                string ticketname = context.Request.Form["ticketname"];
+                string ticketmoney = context.Request.Form["ticketmoney"];
+                string TxTmessage = context.Request.Form["TxTmessage"];
+
+                if (NI.transfer(name, TravelType, time, language, ticketname, ticketmoney, TxTmessage))
+                {
+                    context.Response.Write("");
+                }
             }
-
            
+            
 
+            
         }
 
         public bool IsReusable
