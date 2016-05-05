@@ -114,12 +114,12 @@
     margin-right:5%;
 }
 .e{
-    border:1px;
     width:48%;
     height:100%;
     float:left;
     border-style:solid;
     border-color:gainsboro;
+    border:0px;
 }
 .ee{
     border:1px;
@@ -153,8 +153,8 @@
     border-style:solid;
     text-align:center;
     line-height:128px;
-    height:128px;
-    border:1px solid gray;
+    height:130px;
+    border:0px solid gray;
 }
 .tx2{
     width:20%;
@@ -163,8 +163,8 @@
     border-style:solid;
     text-align:center;
     line-height:90px;
-    height:88px;
-    border:1px solid gray;
+    height:90px;
+    border:0px solid gray;
 }
 .tx3{
     width:20%;
@@ -184,13 +184,13 @@
 .b2{
     width:78%;
     float:left;
-    border:0;
+    border:0px;
 }.b3{
      height:60px;
      line-height:60px;  
      width:78%;
      float:left;
-     border:1px;
+     border:0px;
  }
 .b3 img{
      width:10%;
