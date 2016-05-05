@@ -23,14 +23,14 @@ alignright.onclick = function () {
     updown.value = "详情▲";
 }
 
+var total;
+var pri = document.getElementById("price");
 $('#num').numberspinner({
     required: true,
     increment: 1,
     min: 0,
     onSpinUp: function () {
         var number = $("#num").val();
-        var pri = document.getElementById("price");
-
         payfor = vp.value;
         total = number * payfor;
         pri.innerHTML = total;
@@ -39,14 +39,22 @@ $('#num').numberspinner({
 
     onSpinDown: function () {
         var number = $("#num").val();
-        var pri = document.getElementById("price");
-
         payfor = vp.value;
         total = number * payfor;
         pri.innerHTML = total;
 
     }
+});
 
+$("input[name=s]").click(function () {
+    var ih=$('input:radio[name="s"]:checked').val();
+    var iht = ih.split("￥");
+    var sfpri = parseInt(iht[1]);
+    var number = $("#num").val();
+    payfor = vp.value;
+    total = number * payfor;
+    total += sfpri;
+    pri.innerHTML = total;
 });
 
 $('#dt').datetimebox({
@@ -69,7 +77,9 @@ $("#pay").click(function () {
     var safe = document.getElementsByName("s");
     for (var i = 0; i < safe.length; i++) {
         if (safe[i].checked)
-            var intHot = safe[i].value;
+            var ih = safe[i].value;
+        var iht = ih.split("￥");
+        var intHot = iht[0];
     }
     if (ticketname == "" || ticketprice == "" || date == "" || ticketholder == "" || idcardno == "" || telenum == "" || safe == "") {
         alert("支付失败 请确认身份信息");

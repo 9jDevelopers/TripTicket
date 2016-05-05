@@ -15,12 +15,13 @@
     <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
     <script src="../easyui/jquery.easyui.min.js"></script>
     <script>
+        
         $(function () {
             var payfor;
             alert();
             var id = $.cookie('ticket');
             alert(id);
-            $.post("../ByTkt.ashx", { action: "GetPrice", ticketID: $.cookie('ticket') }, function (data) {
+            $.post("../ByTkt.ashx", { action: "GetPrice", ticketID:id}, function (data) {
                 if (data == "") {
                     alert("失败");
                 }
@@ -31,6 +32,7 @@
                     alert(payfor);
                     $("#ticname").html(dt[0]);
                     vp.value = payfor;
+                    
                 }
             });
         }
@@ -89,11 +91,11 @@
                 <div class="safe">
                     <div class="txtsty">添加保险：</div>
                     <div class="mgn">
-                        <input type="radio" name="s" value="1" /><span class="ncolor">￥15</span><span class="wcolor">/人平安景区门票保险 豪华型</span>&nbsp<a class="packupdown">详情</a><br />
-                        <input type="radio" name="s" value="2" /><span class="ncolor">￥10</span><span class="wcolor">/人平安景区门票保险 尊贵型</span>&nbsp<a class="packupdown">详情</a><br />
-                        <input type="radio" name="s" value="3" /><span class="ncolor">￥5</span><span class="wcolor">/人平安景区门票保险 经典型</span>&nbsp<a class="packupdown">详情</a><br />
-                        <input type="radio" name="s" value="4" /><span class="ncolor">￥3</span><span class="wcolor">/人平安景区门票保险 普通型</span>&nbsp<a class="packupdown">详情</a><br />
-                        <input type="radio" name="s" value="5" checked="checked"/><span class="wcolor">不需要保险</span>
+                        <input type="radio" name="s" value="1￥15" /><span class="ncolor">￥15</span><span class="wcolor">/人平安景区门票保险 豪华型</span>&nbsp<a class="packupdown">详情</a><br />
+                        <input type="radio" name="s" value="2￥10" /><span class="ncolor">￥10</span><span class="wcolor">/人平安景区门票保险 尊贵型</span>&nbsp<a class="packupdown">详情</a><br />
+                        <input type="radio" name="s" value="3￥5" /><span class="ncolor">￥5</span><span class="wcolor">/人平安景区门票保险 经典型</span>&nbsp<a class="packupdown">详情</a><br />
+                        <input type="radio" name="s" value="4￥3" /><span class="ncolor">￥3</span><span class="wcolor">/人平安景区门票保险 普通型</span>&nbsp<a class="packupdown">详情</a><br />
+                        <input type="radio" name="s" value="5￥0" checked="checked"/><span class="wcolor">不需要保险</span>
                     </div>
                 </div>
 
@@ -136,7 +138,6 @@
             </div>
         </div>
         <script src="js/BuyTicket.js" type="text/javascript"></script>
-        <script src="../References/jquery-1.8.3.min.js"></script>
         <script src="../Head/Head.js"></script>
     </form>
     

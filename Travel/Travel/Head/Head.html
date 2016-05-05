@@ -63,6 +63,7 @@
         $("#btnlogin").click(function () {
             var u = $("#txtusername").val();
             var p = $("#txtpassword").val();
+            alert(u);
             $.post(
                    "../LoginHandler.ashx",
                     { action:"Login", phone: $("#txtphone").val(), password: $("#txtpassword").val() },
