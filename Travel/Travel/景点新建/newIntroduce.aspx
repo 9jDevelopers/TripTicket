@@ -169,15 +169,30 @@
                     <input class="easyui-textbox" id="TxTmessage" name="TxTmessage" data-options="multiline:true" style="height:95px; width: 434px;"/>
                 </p>
             <%-- 添加图片 --%>
-                <div id="images">
-                        <a id="btnimage"  onclick="test()" class="icon-googleplus" style="margin-left:20px;"></a>  
-                        <div id="fileups">               
-                            
-                        <input type="file"  class="file-up " name="btnim1"onchange=" previewImages()" style="display:none;"/>
-                        <input type="file"  class="file-up " name="btnim2" onchange=" previewImages()" style="display:none;"/>
-                        <input type="file"  class="file-up " name="btnim3" onchange=" previewImages()" style="display:none;"/>
-                        </div>
-                </div>
+              <%--  <div id="images">
+                         
+                    <div id="btnUp1" class="q">
+                       <a class="icon-cancel-circle a"></a>
+                       <i class="tu1 w icon-googleplus" ></i> 
+                       <img id="ig1"  src=""/>         
+                   </div>
+
+                    <div id="btnUp2" class="q">
+                       <i class="tu2 w icon-googleplus" ></i> 
+                       <img id="ig2" src=""/>         
+                   </div>
+        
+                    <div id="btnUp3" class="q">
+                       <i class="tu3 w icon-googleplus" ></i> 
+                       <img id="ig3" src=""/>         
+                   </div>
+        
+                    <div id="btnUp4" class="q">
+                       <i class="tu4 w icon-googleplus" ></i> 
+                       <img id="ig4" src=""/>         
+                   </div>
+   
+                </div>--%>
                   
                 
             </div>

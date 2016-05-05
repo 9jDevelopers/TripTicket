@@ -888,7 +888,6 @@
     <Content Include="景点新建\css\newInteoduce.css" />
     <Content Include="景点新建\newIntroduce.aspx" />
     <Content Include="景点新建\tu\add.css" />
-    <Content Include="景点新建\tu\add.js" />
     <Content Include="Head\PI.ashx" />
     <Content Include="ByTkt.ashx" />
     <Content Include="Reg\Reg.ashx" />
