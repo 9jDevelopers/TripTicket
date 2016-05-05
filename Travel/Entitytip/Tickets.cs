@@ -32,6 +32,7 @@ namespace Entitytip
         }
         public string SET(string ticketname, string ticketprice, string date, string ticketholder, string idcardno, string telenum, string safe)
         {
+
             string safetype;
             if (int.Parse(safe) > 0 && int.Parse(safe) < 6)
             {
@@ -41,6 +42,7 @@ namespace Entitytip
             {
                 safetype = "2";
             }
+
             DbHelper db = new DbHelper();
             DbCommand cmd = db.GetSqlStringCommond("insert into Tickets values(@TicketNmae,@TicketPrice,@TicketUser ,@TicketUserIDcard,@Phone ,@TicketDate ,@TicketSafe)");
             db.AddInParameter(cmd, "@TicketNmae", DbType.String, ticketname);
@@ -50,18 +52,27 @@ namespace Entitytip
             db.AddInParameter(cmd, "@Phone", DbType.String, telenum);
             db.AddInParameter(cmd, "@TicketDate", DbType.String, date);
             db.AddInParameter(cmd, "@TicketSafe", DbType.String, safetype);
-            cmd.Connection.Open();
-            int result = cmd.ExecuteNonQuery();
-            //DataTable dt = db.ExecuteDataTable(cmd);
-            if (result > 0)
+            try
+
             {
-                return "购票成功";
-            }
-            else
-            {
-                return "购票失败";
+                cmd.Connection.Open();
+                int result = cmd.ExecuteNonQuery();
+                if (result > 0)
+                {
+                    return "购票成功";
+                }
+                else
+                {
+                    return "购票失败";
+                }
             }
 
+            finally
+            {
+                cmd.Connection.Close();
+                //DataTable dt = db.ExecuteDataTable(cmd);
+
+            }
         }
         //票id
         public int ticketID;

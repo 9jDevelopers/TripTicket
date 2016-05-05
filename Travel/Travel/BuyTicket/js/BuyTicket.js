@@ -23,31 +23,41 @@ alignright.onclick = function () {
     updown.value = "详情▲";
 }
 
+
 var total;
 var pri = document.getElementById("price");
+
 $('#num').numberspinner({
     required: true,
     increment: 1,
     min: 0,
     onSpinUp: function () {
+        var ih = $('input:radio[name="s"]:checked').val();
+        var iht = ih.split("￥");
+        var sfpri = parseInt(iht[1]);
         var number = $("#num").val();
         payfor = vp.value;
         total = number * payfor;
+        total += sfpri;
         pri.innerHTML = total;
 
     },
 
     onSpinDown: function () {
+        var ih = $('input:radio[name="s"]:checked').val();
+        var iht = ih.split("￥");
+        var sfpri = parseInt(iht[1]);
         var number = $("#num").val();
         payfor = vp.value;
         total = number * payfor;
+        total += sfpri;
         pri.innerHTML = total;
 
     }
 });
 
 $("input[name=s]").click(function () {
-    var ih=$('input:radio[name="s"]:checked').val();
+    var ih = $('input:radio[name="s"]:checked').val();
     var iht = ih.split("￥");
     var sfpri = parseInt(iht[1]);
     var number = $("#num").val();
@@ -68,33 +78,28 @@ var v = $('#dt').datetimebox('getValue');
 
 
 $("#pay").click(function () {
+    var ticketholder = $("#N").val();
+    var idcardno = $("#I").val();
+    var telenum = $("#P").val()
     var ticketprice = vp.value;
     var ticketname = $("#ticname").html();
     var date = v;
-    var ticketholder = $("#N").val();
-    var idcardno = $("#I").val();
-    var telenum = $("#P").val();
     var safe = document.getElementsByName("s");
-    for (var i = 0; i < safe.length; i++) {
-        if (safe[i].checked)
-            var ih = safe[i].value;
-        var iht = ih.split("￥");
-        var intHot = iht[0];
-    }
-    if (ticketname == "" || ticketprice == "" || date == "" || ticketholder == "" || idcardno == "" || telenum == "" || safe == "") {
+    var ih = $('input:radio[name="s"]:checked').val();
+            var iht = ih.split("￥");
+            var intHot = iht[0];               
+    if (ticketname == "" || ticketprice == "" || date == "" || ticketholder.length <3 || ticketholder.length > 10 || idcardno.length != 18 || telenum.length != 11 || safe == "") {
         alert("支付失败 请确认身份信息");
     }
     else {
         $.post(
             "../ByTkt.ashx",
             { action: "Set", jsticketname: $("#ticname").html(), jsticketprice: vp.value, jsdate: date, jsticketholder: $("#N").val(), jsidcardno: $("#I").val(), jstelenum: $("#P").val(), jssafe: intHot },
-            function (data)
-            {
+            function (data) {
                 if (data != "") {
                     alert(data);
                 }
-                else
-                {
+                else {
                     alert("data为空");
                 }
             }
