@@ -7,15 +7,15 @@ using Entitytip;
 
 namespace BL
 {
-    public class Bjudge
+    public class Bjudge                                          //Bjudge类
     {
-        public string get(int vid)
+        public string get(int vid)                               //定义带参的函数。
         {
-            if(vid!=0)
+            if(vid!=0)                                           //2业务逻辑层
             {
-                judgeing jd = new Entitytip.judgeing();
+                judgeing jd = new Entitytip.judgeing();          //实例化judgeing类
                 
-                return jd.GET(vid);
+                return jd.GET(vid);                              //调用带参函数。
             }
             else return null;
            
