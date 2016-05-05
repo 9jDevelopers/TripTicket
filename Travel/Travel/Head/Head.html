@@ -44,6 +44,7 @@
 </div>
 <script>
     window.onload = function () {
+        alert($.cookie('username'));
         if ($.cookie('username') != null) {
             btn.style.fontSize = "10px";
             btn.innerHTML = "Hello，" + $.cookie('username');
