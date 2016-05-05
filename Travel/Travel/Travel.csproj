@@ -791,6 +791,8 @@
     <Content Include="Head\PI.aspx" />
     <Content Include="Head\PI.css" />
     <Content Include="judge\js\judge.js" />
+    <Content Include="Orderform\css\Orderform.css" />
+    <Content Include="Orderform\js\Orderform.js" />
     <Content Include="Orderform\Orderform.aspx" />
     <Content Include="Preview\img\18cc33a0080a03a5.jpg" />
     <Content Include="Preview\img\276197720360c2be.jpg" />
@@ -1360,6 +1362,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Orderform\image\" />
     <Folder Include="景点新建\tu\images\" />
   </ItemGroup>
   <ItemGroup>
