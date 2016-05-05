@@ -31,10 +31,11 @@
         <div class="lname">性别</div><div id="sex" class="rinf"></div>
         <div class="lname">生日</div><div id="birthday" class="rinf"></div>
         <div class="lname">常住城市</div><div id="home" class="rinf"></div>
-        <div class="lname"><a href="#" class="submit easyui-linkbutton">编辑</a></div>       
+        <div class="lname"><a  class="submit easyui-linkbutton">编辑</a></div>       
 	</div>
     <!--#include virtual="../Tail/Tail.html"-->
 	<script>
+	    var objs;
 	    window.onload = function () {
 	        var phone = document.getElementById('phone');
 	        var email = document.getElementById('email');
@@ -45,9 +46,10 @@
 	        var home = document.getElementById('home');        
 	        $.post(
                    "PI.ashx",
-                    { phone: $.cookie('phone') },
+                    { action:'getinfo',phone: $.cookie('phone') },
                     function (data) {
                         alert('开始获取::' + data);
+                        objs = data;
                         var obj = $.parseJSON(data);
                         phone.innerHTML = $.cookie('phone');
                         email.innerHTML = obj.email;
@@ -58,6 +60,11 @@
                         home.innerHTML = obj.home;
                     });
 	    }
+	    $(".submit").click(function () {
+	        alert(objs);
+	        $.cookie('objs',objs, { path: '/' });
+	        window.location.href = "EditPI.html";
+	    });
 		function menuHandler(item){
 			$('#log').prepend('<p>Click Item: '+item.name+'</p>');
 		}

@@ -83,7 +83,7 @@ namespace Entitytip
         {//编辑个人信息
             DbHelper db = new DbHelper();
             DbCommand cmd = db.GetSqlStringCommond("UPDATE Account SET email=@email,username =@username,name=@name,sex=@sex,birthday=@birthday,home=@home WHERE Phone =@phone");
-            db.AddInParameter(cmd, "@phone", DbType.String,phone);
+            db.AddInParameter(cmd, "@phone", DbType.Int32,phone);
             db.AddInParameter(cmd, "@email", DbType.String, email);
             db.AddInParameter(cmd, "@username", DbType.String, username);
             db.AddInParameter(cmd, "@name", DbType.String, name);
