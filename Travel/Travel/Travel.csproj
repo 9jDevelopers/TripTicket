@@ -800,6 +800,7 @@
     <Content Include="Preview\img\d551dc3dd22a77db.jpg" />
     <Content Include="Preview\img\e748df4857078110.jpg" />
     <Content Include="Preview\img\e8cd55da374aba56.jpg" />
+    <Content Include="References\ajaxupload.3.9.js" />
     <Content Include="References\bootstrap-3.3.5-dist\css\bootstrap-theme.css.map" />
     <Content Include="References\bootstrap-3.3.5-dist\css\bootstrap.css.map" />
     <Content Include="References\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.eot" />
@@ -890,7 +891,6 @@
     <Content Include="景点新建\css\newInteoduce.css" />
     <Content Include="景点新建\newIntroduce.aspx" />
     <Content Include="景点新建\tu\add.css" />
-    <Content Include="景点新建\tu\add.js" />
     <Content Include="Head\PI.ashx" />
     <Content Include="ByTkt.ashx" />
     <Content Include="Reg\Reg.ashx" />
