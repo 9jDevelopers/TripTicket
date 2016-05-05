@@ -10,7 +10,7 @@
     <link href="css/newInteoduce.css" rel="stylesheet" />
     <link href="../Head/Head.css" rel="stylesheet" />
     <link href="../Tail/Tail.css" rel="stylesheet" />
-    
+    <link href="../References/icomoon/fontIconStyle.css" rel="stylesheet" />
     
     <link href="../easyui/themes/default/easyui.css" rel="stylesheet" />
     <link href="../easyui/themes/icon.css" rel="stylesheet" />
@@ -18,9 +18,9 @@
     <%-- 添加图 --%>
     <link href="tu/add.css" rel="stylesheet" />
     <link href="../References/icomoon/fontIconStyle.css" rel="stylesheet" />
-    <script src="tu/add.js"></script>
- <%--   <script src="../References/jquery-1.8.3.min.js"></script>--%>
 
+ <%--   <script src="../References/jquery-1.8.3.min.js"></script>--%>
+    <script src="../References/ajaxupload.3.9.js"></script>
     <script src="../easyui/jquery.min.js"></script>
     <script src="../easyui/jquery.easyui.min.js"></script>
 
@@ -169,7 +169,7 @@
                     <input class="easyui-textbox" id="TxTmessage" name="TxTmessage" data-options="multiline:true" style="height:95px; width: 434px;"/>
                 </p>
             <%-- 添加图片 --%>
-              <%--  <div id="images">
+                <div id="images">
                          
                     <div id="btnUp1" class="q">
                        <a class="icon-cancel-circle a"></a>
@@ -192,9 +192,8 @@
                        <img id="ig4" src=""/>         
                    </div>
    
-                </div>--%>
-                  
-                
+                </div>
+                        
             </div>
          
         <%-- 系统推荐 --%>
@@ -251,6 +250,48 @@
     )
 		
 	</script>
+      <script type="text/javascript">
+        var button1 = $('#btnUp1');
+        var image1 = $('#ig1');
+        var tu1 = $('.tu1');
+
+        var button2 = $('#btnUp2');
+        var image2 = $('#ig2');
+        var tu2 = $('.tu2');
+
+        var button3 = $('#btnUp3');
+        var image3 = $('#ig3');
+        var tu3 = $('.tu3');
+
+        var button4 = $('#btnUp4');
+        var image4 = $('#ig4');
+        var tu4 = $('.tu4');
+
+        $(function () {
+            imagedata(button1, image1,tu1);
+            imagedata(button2, image2,tu2);
+            imagedata(button3, image3,tu3);
+            imagedata(button4, image4, tu4);
+            
+        });
+
+        function imagedata( button, img,tu) {
+          
+            new AjaxUpload(button, {
+                action: 'NewIntroduce.ashx',
+                name: 'myflie',
+
+                //上传结束
+                onComplete: function (file, response) {
+                    $(function () {tu.hide(); })
+                    //alert(response);
+                    img.attr("src", "image/" + response);                    
+                    img.attr("width", "100");
+                    img.attr("height", "100");                  
+                }
+            })
+        }
+    </script>
 </body>
   <!--#include virtual="../Tail/Tail.html"-->
 </html>
