@@ -6,7 +6,7 @@
                          "judge.ashx",
                  {
                      //Evaluationofgood: $("#mement1").val(),    把前台"#id名"赋给后台id
-                     Evaluationofgood:$("#mement1").val(),
+                     Evaluationofgood:$("#mement1").val(),       //前台的值传给后台
                      Evaluationservice:$("#mement2").val(),
                  },
                  function (data) {
