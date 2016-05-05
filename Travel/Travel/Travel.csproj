@@ -1360,6 +1360,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Head\Photo\" />
     <Folder Include="景点新建\tu\images\" />
   </ItemGroup>
   <ItemGroup>
