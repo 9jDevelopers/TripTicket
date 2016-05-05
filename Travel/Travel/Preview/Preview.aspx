@@ -61,7 +61,7 @@
                       <a target="_blank" href="/i/tulip_ballade.jpg">
                       <img src="/Preview/img/18cc33a0080a03a5.jpg" />
                       </a>
-                      <div class="desca">厦门8日7晚更团游</div>
+                      <div class="desca"><%= name %></div>
                       <div class="descb">
                           描述
                           <br/><div class ="b">4.8↑</div>
@@ -84,7 +84,7 @@
                       <a target="_blank" href="/i/tulip_ballade.jpg">
                       <img src="/Preview/img/497f685f04c0ab8b.jpg" />
                       </a>
-                      <div class="desca">庐山8日7晚更团游</div>
+                      <div class="desca"><%= name %></div>
                       <div class="descb">
                           描述
                           <br/><div class ="b">4.8↑</div>
@@ -107,7 +107,7 @@
                       <a target="_blank" href="/i/tulip_ballade.jpg">
                       <img src="/Preview/img/a5cd781a08f8c1f1.jpg" />
                       </a>
-                      <div class="desca">鼓浪屿8日7晚更团游</div>
+                      <div class="desca"><%= name %></div>
                       <div class="descb">
                           描述
                           <br/><div class ="b">4.8↑</div>
@@ -132,7 +132,7 @@
                       <a target="_blank" href="/i/tulip_ballade.jpg">
                       <img src="/Preview/img/c9c81519a9c61128.jpg" />
                       </a>
-                      <div class="desca">云南8日7晚更团游</div>
+                      <div class="desca"><%= name %></div>
                       <div class="descb">
                           描述
                           <br/><div class ="b">4.8↑</div>
@@ -155,7 +155,7 @@
                       <a target="_blank" href="/i/tulip_ballade.jpg">
                       <img src="/Preview/img/d551dc3dd22a77db.jpg" />
                       </a>
-                      <div class="desca">西湖8日7晚更团游</div>
+                      <div class="desca"><%= name %></div>
                       <div class="descb">
                           描述
                           <br/><div class ="b">4.8↑</div>
@@ -178,7 +178,7 @@
                       <a target="_blank" href="/i/tulip_ballade.jpg">
                       <img src="/Preview/img/e748df4857078110.jpg" />
                       </a>
-                      <div class="desca">三亚8日7晚更团游</div>
+                      <div class="desca"><%= name %></div>
                       <div class="descb">
                           描述
                           <br/><div class ="b">4.8↑</div>
@@ -201,7 +201,7 @@
                       <a target="_blank" href="/i/tulip_ballade.jpg">
                       <img src="/Preview/img/e8cd55da374aba56.jpg" />
                       </a>
-                      <div class="desca">北京8日7晚更团游</div>
+                      <div class="desca"><%= name %></div>
                       <div class="descb">
                           描述
                           <br/><div class ="b">4.8↑</div>
