@@ -16,15 +16,15 @@
     <script src="../easyui/jquery.easyui.min.js"></script>
     <title></title>
     <script type="text/javascript">
+
         $(function () {
             var id = 2;
-            $.post("judge.ashx", { jgid: id }, function (data)
+            $.post("judge.ashx", { jgid: id }, function (data)          //jgid命名
             {
                 if (data != "") {
                     var ns=data.split("$");
                     $("#yh").text(ns[0]);
                     $("#hd").html(ns[1]);
-
                 }
                 else {
                     alert();
@@ -32,12 +32,24 @@
             })
         })
 
+        window.onload = function () {
+            var _text = "满意";
+            var _default = "r1";
+            var rs = document.getElementsByName("identity");
+            for (var i = 0; i < rs.length; i++) {
+                rs[i].onchange = function () {
+                    console.log(this.parentElement.innerText);
+                    console.log(this.value);
+                    if (this.value != _default) alert("你没有选择满意，你选择的是" + this.parentElement.innerText);
+                    else alert("你选择的是满意");
+                };
+            }
+        };
     </script>
-
 
 </head>
 <body>
-    
+
     <!--#include virtual="../Head/Head.html"-->
      <form id="sf" method="post" runat="server">
         <div class="da">
@@ -60,7 +72,7 @@
                                 <img class="" src="images/er.jpg" /></a></div>
                             <div class="io"><a href="#">
                                 <img class="" src="images/f.jpg" /></a></div>
-                            <div class="tu"><a>></a></div>
+                            <div class="tu"><a>></a></div>；
                         </div>
                     </div>
 
@@ -72,7 +84,7 @@
                  （免费升等2晚五花酒店，囊括经典环岛路线）“去台湾，正当时！一去就爱上”【处境特卖】--%></a></h3>
                         </div>
                         <div>台湾经典环岛游，最全的环岛路线！</div>
-                        <div>出发地：上海</div><div id="hd"></div>
+                        <div>出发地：上海</div><%--<div id="hd"></div>--%>
                         <div>目的地：台湾  台北  高雄  花莲市</div>
                         <div>出行日期：2016.10.15</div>
                         <div class="price">￥ 3580起  6.8折  <s>￥5280</s></div>
@@ -175,15 +187,15 @@
                         <div class="f">
                             <input type="text" placeholder="快递员：服务态度" /></div>
                         <div class="f">
-                            <input type="radio" name="identity" value="失望" checked="checked" />失望</div>
+                            <input type="radio" name="identity" value="r1" checked="checked" />失望</div>
                         <div class="f">
-                            <input type="radio" name="identity" value="不满" />不满</div>
+                            <input type="radio" name="identity" value="r2" />不满</div>
                         <div class="f">
-                            <input type="radio" name="identity" value="一般" />一般</div>
+                            <input type="radio" name="identity" value="r3" />一般</div>
                         <div class="f">
-                            <input type="radio" name="identity" value="满意" />满意</div>
+                            <input type="radio" name="identity" value="r4" />满意</div>
                         <div class="f">
-                            <input type="radio" name="identity" value="惊喜" />惊喜</div>
+                            <input type="radio" name="identity" value="r5" />惊喜</div>
                     </div>
                 </div>
 
