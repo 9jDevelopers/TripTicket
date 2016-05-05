@@ -1,5 +1,5 @@
-﻿function submitbox() {            //函数名需要和前台onclick一样
-    $('#sf').form('submit');
+﻿function submitbox() {        
+    $('#sf').form(submitbox);
     $("#submitbox").click(
         function () {
             $.post(
