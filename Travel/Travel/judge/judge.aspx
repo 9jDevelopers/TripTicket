@@ -16,9 +16,8 @@
     <script src="../easyui/jquery.easyui.min.js"></script>
     <title></title>
     <script type="text/javascript">
-
         $(function () {
-            var id = 2;
+            var id = 1;
             $.post("judge.ashx", { jgid: id }, function (data)          //jgid命名
             {
                 if (data != "") {
@@ -49,8 +48,8 @@
 
 </head>
 <body>
+     <!--#include virtual="../Head/Head.html"-->
 
-    <!--#include virtual="../Head/Head.html"-->
      <form id="sf" method="post" runat="server">
         <div class="da">
 
@@ -124,13 +123,13 @@
                         <div class="j1">
                             <div class="tx1">景点评价</div>
                             <div class="b1">
-                                <input id="mement1" class="easyui-textbox" data-options="multiline:true" value="" style="width:100%;height:130px"/>
+                                <input id="mement1" class="easyui-textbox" data-options="multiline:true" value="" style="width:100%;height:128px"/>
                                </div>
                         </div>
                         <div class="j2">
                             <div class="tx2">服务评价</div>
                             <div class="b2">
-                                <input id="mement2" class="easyui-textbox" data-options="multiline:true" value="" style="width:100%;height:90px"/>
+                                <input id="mement2" class="easyui-textbox" data-options="multiline:true" value="" style="width:100%;height:88px"/>
                             </div>
                         </div>
                         <div class="j3">
@@ -205,8 +204,6 @@
                 </div>
             </div>
 
-
-
             <!--表三-->
 
             <div class="boxthree">
@@ -231,8 +228,7 @@
             </div>
         </div>
        </form>
-    <!--#include virtual="../Tail/Tail.html"-->
-
+      <!--#include virtual="../Tail/Tail.html"-->
 </body>
  
 </html>
