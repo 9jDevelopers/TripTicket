@@ -43,6 +43,16 @@
     <!--登陆界面  end-->
 </div>
 <script>
+    window.onload = ShowMessage();
+    function ShowMessage() {
+        alert($.cookie('username'));
+        if ($.cookie('username') != null) {
+            var btn = document.getElementById('btnl');
+            btn.style.fontSize = "10px";
+            btn.innerHTML = "Hello，" + $.cookie('username');
+        }
+ 
+    }
     $(document).ready(function () {
         var btn = document.getElementById('btnl');
         
@@ -74,7 +84,8 @@
                         else {
                             alert(1);
                             //document.getElementById('btnl').innerHTML = "Hello，" + data;
-                            $.cookie('phone', $("#txtphone").val(), { path:'/'});
+                            $.cookie('phone', $("#txtphone").val(), { path: '/' });
+                            $.cookie('username',data, { path: '/' });
                             btn.style.fontSize = "10px";
                             btn.innerHTML = "Hello，" + data;
                             $("#qbody").hide();
