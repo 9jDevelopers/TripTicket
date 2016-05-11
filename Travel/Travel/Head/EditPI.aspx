@@ -24,32 +24,34 @@
 </head>
 <body>
     <!--#include virtual="../Head/Head.html"-->
-   
+    <form id="frm" runat="server">
     <div id="log" class="easyui-panel" title="个人信息" style="height:350px;padding:10px;width:100%">
-        <div class="photo"><i class="edit icon-link"></i> </div>
+        <div  class="photo"><i class="edit icon-link"></i> </div>
+        <input type="file" class="file-up" name="btnim" style="display:none;" />
         <div class="lname">手机</div><div id="phone" class="rinf">
-            <input id="textphone" class="easyui-textbox" style="width:200px;height:20px" />
+            <input id="textphone" name="phone" class="easyui-textbox" style="width:200px;height:20px" />
         </div>
         <div class="lname">邮箱</div><div id="email" class="rinf">
-            <input id="textemail"class="easyui-textbox" style="width:200px;height:20px" />
+            <input id="textemail" name="email" class="easyui-textbox" style="width:200px;height:20px" />
         </div>
         <div class="lname">昵称</div><div id="username" class="rinf">
-            <input id="textusername" class="easyui-textbox"  style="width:200px;height:20px" />
+            <input id="textusername" name="username" class="easyui-textbox"  style="width:200px;height:20px" />
         </div>
         <div class="lname">姓名</div><div id="name" class="rinf">
-            <input id="textname"class="easyui-textbox"  style="width:200px;height:20px" />
+            <input id="textname" name="_name" class="easyui-textbox"  style="width:200px;height:20px" />
         </div>
         <div class="lname">性别</div><div id="sex" class="rinf">
-            <input id="textsex" class="easyui-textbox"  style="width:200px;height:20px" />
+            <input id="textsex" name="sex" class="easyui-textbox"  style="width:200px;height:20px" />
         </div>
         <div class="lname">生日</div><div id="birthday" class="rinf">
-            <input class="easyui-datetimebox" id="textbirthday" value="" style="width:200px; height:28px;line-height:28px;" />
+            <input class="easyui-datetimebox" name="birthday" id="textbirthday" value="" style="width:200px; height:28px;line-height:28px;" />
         </div>
         <div class="lname">常住城市</div><div id="home" class="rinf">
-            <input id="texthome" class="easyui-textbox"  style="width:200px;height:20px" />
+            <input id="texthome" class="easyui-textbox" name="home" style="width:200px;height:20px" />
         </div>
         <div class="lname"><a id="btnsave" class="submit easyui-linkbutton">保存</a></div>
     </div>
+    </form>
     <!--#include virtual="../Tail/Tail.html"-->
     <script>
         window.onload = function () {
@@ -66,44 +68,54 @@
         }
         $(document).ready(function () {
             $("#btnsave").click(function () {
-                var p = document.getElementById('textphone');
-                var textphone = p.innerText;
-                $('#dt').datetimebox({
-                    value: '3/4/2010 2:3',
-                    required: true,
-                    showSeconds: false
+                var formData = new FormData($("#frm")[0]);
+                alert(formData);
+                $.ajax({
+                    cache: true, //缓存
+                    type: "POST", //提交方式post get
+                    url: "PI.ashx",
+                    data: formData,
+                    async: true, //异步
+                    contentType: false, //避免jQuery将你的表格数据转换为字符串，导致提交失败。
+                    //默认值: "application/x-www-form-urlencoded"。发送信息至服务器时内容编码类型。默认值适合大多数情况。
+                    //上传文件的制定方式：multipart/form-data形式传递文件。
+                    processData: false, //是否转换信息//false避免数据转换成查询字符串
+                    error: function (request) {
+                        alert(request);
+                    },
+                    success: function (data) {
+                        alert(data);//后台返回值
+                    }
                 });
+                //$('#dt').datetimebox({
+                //    value: '3/4/2010 2:3',
+                //    required: true,
+                //    showSeconds: false
+                //});
 
-                var birthday= $('#textbirthday').datetimebox('getValue');
-                $.post(
-                         "PI.ashx",
-                          {
-                              action: "editpi",
-                              phone: textphone,
-                              email: $("#textemail").val(),
-                              username: $("#textusername").val(),
-                              textname: $("#textname").val(),
-                              sex: $("#textsex").val(),
-                              birthday:birthday,
-                              home: $("#texthome").val()
-                          },
-                          function (data) {
-                              if (data == 1)
-                              {
-                                  alert('修改成功');
-                                  window.location.href = "PI.aspx";
-                              }
-                              else
-                              {
-                                  alert('修改失败');
-                              }
-                              
-                          });
+                //var birthday = $('#textbirthday').datetimebox('getValue');
+
+            });//保存点击事件  END
+
+            //点击事件触发上产控件
+            $(".photo").click(function () {
+                alert(1);
+                $(".file-up").click();
             });
-
-
-
-
+            $(".file-up").change(function () {
+                alert(7);
+                var file = $(".file-up").eq(0)[0].files[0];
+                alert(2);
+                if (typeof FileReader != undefined) {
+                    var reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onload = function () {
+                        var imu = this.result;
+                        alert("图片地址" + imu);
+                        $(".photo").css('background-image', 'url(' + imu + ')')
+                    };
+                }
+            });
         });
 
 		function menuHandler(item){
