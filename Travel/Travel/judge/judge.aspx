@@ -13,6 +13,7 @@
     <link href="../easyui/themes/default/easyui.css" rel="stylesheet" />
     <link href="../easyui/themes/icon.css" rel="stylesheet" />
     <link href="../easyui/demo/demo.css" rel="stylesheet" />
+    <link href="../References/icomoon/fontIconStyle.css" rel="stylesheet" />
     <script src="../easyui/jquery.easyui.min.js"></script>
     <title></title>
     <script type="text/javascript">
@@ -62,7 +63,7 @@
                                 <img src="images/er'r.jpg" /></a></div>
                         </div>
                         <div class="se">
-                            <div class="tu"><a><</a></div>
+                            <div class="tu"><a><img src="images/141-previous.png"/></a></div>
                             <div class="io"><a href="#">
                                 <img class="" src="images/e.jpg" /></a></div>
                             <div class="io"><a href="#">
@@ -71,7 +72,7 @@
                                 <img class="" src="images/er.jpg" /></a></div>
                             <div class="io"><a href="#">
                                 <img class="" src="images/f.jpg" /></a></div>
-                            <div class="tu"><a>></a></div>；
+                            <div class="tu"><a><img src="images/147-next.png"/></a></div>
                         </div>
                     </div>
 
@@ -135,12 +136,18 @@
                         <div class="j3">
                             <div class="tx3">晒图片</div>
                             <div class="b3">
-                                <div><a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add'"></a></div>
-                                <div class="pic">0/5</div>
+                                 <a id="btnimage" class="icon-googleplus" style="margin-left:20px;" onclick="fusa()"></a> 
+                                 <div id="fileups">         
+                                   <input type="file" class="file-up" name="btnim0" style="display:none;"/>
+                                   <input type="file" class="file-up" name="btnim1" style="display:none;"/>
+                                   <input type="file" class="file-up" name="btnim2" style="display:none;"/>
+                                   <input type="file" class="file-up" name="btnim3" style="display:none;"/>
+                                   <input type="file" class="file-up" name="btnim4" style="display:none;"/>
+                                 </div>
+                                 <div class="pic">0/5</div>
                             </div>
                         </div>
                     </div>
-
 
                     <div class="ee">
                         <%--<div>
