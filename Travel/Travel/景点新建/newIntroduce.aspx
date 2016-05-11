@@ -62,7 +62,7 @@
                
 	    		<tr>
 	    			<td>游玩时长:</td>
-	    			<td><input class="easyui-textbox" type="text" id="time" name="time" data-options="required:true"/>></td>
+	    			<td><input class="easyui-textbox" type="text" id="time" name="time" data-options="required:true"/></td>
 	    		</tr>
 	    		<tr>
 	    			<td>服务语言:</td>
@@ -112,7 +112,7 @@
 	    		</tr>
                 <tr>
 	    			<td>门票名称:</td>
-	    			<td><input class="easyui-textbox" type="text"id="ticketname" name="ticket" data-options="required:true"/><</td>
+	    			<td><input class="easyui-textbox" type="text"id="ticketname" name="ticket" data-options="required:true"/></td>
 	    		</tr>
                 <tr>
 	    			<td>门票价格:</td>
