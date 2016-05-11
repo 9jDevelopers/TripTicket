@@ -48,7 +48,7 @@
                 <table cellpadding="5">
 	    		<tr>
 	    			<td>景点标题:</td>
-	    			<td><input class="easyui-textbox" type="text" id="name" name="name" data-options="required:true"></input></td>
+	    			<td><input class="easyui-textbox" type="text" id="name" name="name" data-options="required:true"/></td>
 	    		</tr>
 		  		<tr>
 	    			<td>景点类型:</td>
@@ -62,7 +62,7 @@
                
 	    		<tr>
 	    			<td>游玩时长:</td>
-	    			<td><input class="easyui-textbox" type="text" id="time" name="time" data-options="required:true"></input></td>
+	    			<td><input class="easyui-textbox" type="text" id="time" name="time" data-options="required:true"/>></td>
 	    		</tr>
 	    		<tr>
 	    			<td>服务语言:</td>
@@ -112,11 +112,11 @@
 	    		</tr>
                 <tr>
 	    			<td>门票名称:</td>
-	    			<td><input class="easyui-textbox" type="text"id="ticketname" name="ticket" data-options="required:true"></input></td>
+	    			<td><input class="easyui-textbox" type="text"id="ticketname" name="ticket" data-options="required:true"/><</td>
 	    		</tr>
                 <tr>
 	    			<td>门票价格:</td>
-	    			<td><input class="easyui-textbox" type="text" id="ticketmoney" name="money" data-options="required:true"></input></td>
+	    			<td><input class="easyui-textbox" type="text" id="ticketmoney" name="money" data-options="required:true"/></td>
 	    		</tr>
 	    	</table>
                 <div class="XX">
@@ -177,7 +177,7 @@
                    </div>
 
                     <div id="btnUp2" class="q">
-                       <i class="tu2 w icon-googleplus" ></i> 
+                       <i class="tu2 w icon-googleplus"></i> 
                        <img id="ig2" src=""/>         
                    </div>
         
@@ -261,6 +261,11 @@
             var ticketmoney = $("#ticketmoney").val();
             var TxTmessage = $("#TxTmessage").val();
 
+            var image1 = $("#ig1").attr("src");           
+            var image2 = $("#ig2").attr("src");        
+            var image3 = $("ig3").attr("src");
+            var image4 = $("ig4").attr("src");
+
             //alert("这是" + name+"景点");
 
             $.post
@@ -275,6 +280,11 @@
                 ticketname: $("#ticketname").val(),
                 ticketmoney: $("#ticketmoney").val(),
                 TxTmessage: $("#TxTmessage").val(),
+
+                image1: $("#ig1").attr("src"),     
+                image2: $("#ig2").attr("src"),
+                image3: $("#ig3").attr("src"),
+                image4: $("#ig4").attr("src"),
             },
              function (data) {
                  alert(data);
