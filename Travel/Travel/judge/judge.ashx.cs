@@ -33,10 +33,7 @@ namespace Travel.judge
                 //string describe = context.Request.Form["describe"];
                 //string Sellerservice = context.Request.Form["Sellerservice"];
                 //string logisticsservice = context.Request.Form["logisticsservice"];
-
-
                 //context.Response.Write(Evaluationofgood +Evaluationservice);
-
 
                 if (bj.ToString(Evaluationofgood, Evaluationservice))
                 {
@@ -46,11 +43,7 @@ namespace Travel.judge
                 {
                     context.Response.Write(0);
                 }
-
             }
-
-            
-
         }
 
         public bool IsReusable
