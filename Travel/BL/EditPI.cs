@@ -9,9 +9,9 @@ namespace BL
 {
     public class EditPI
     {
-        public bool Beditpi(string phone, string email, string username, string name, string sex, string birthday, string home)
+        public bool Beditpi(string phone, string email, string username, string name, string sex, string birthday, string home,string photo)
         {
-            if (Account.EditPI( phone,  email,  username,  name,  sex,  birthday,  home))
+            if (Account.EditPI( phone,  email,  username,  name,  sex,  birthday,  home, photo))
             {
                 return true;
             }

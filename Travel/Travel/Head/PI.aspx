@@ -67,7 +67,7 @@
 	    $(".submit").click(function () {
 	        alert(objs);
 	        $.cookie('objs',objs, { path: '/' });
-	        window.location.href = "EditPI.html";
+	        window.location.href = "EditPI.aspx";
 	    });
 		function menuHandler(item){
 			$('#log').prepend('<p>Click Item: '+item.name+'</p>');
