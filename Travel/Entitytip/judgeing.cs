@@ -13,7 +13,7 @@ namespace Entitytip
     {
         public string GET(int id)
         {
-            DbHelper db = new DbHelper();
+            DbHelper db = new DbHelper();                                          //数据访问层
             DbCommand cmd = db.GetSqlStringCommond("select SceneName,Score from Introduce where SceneID=@SceneID");
             db.AddInParameter(cmd, "@SceneID", DbType.String, id);
             DataTable dt = db.ExecuteDataTable(cmd);
@@ -30,6 +30,12 @@ namespace Entitytip
 
         public string userID;
         public string Evaluationofgood;           //评价商品
+
+        public bool ToString(string evaluationofgood, string evaluationservice)
+        {
+            throw new NotImplementedException();
+        }
+
         public string Evaluationservice;          //评价服务
         public string SunPhoto;                   //晒照片
         public string onservice;                  //关于服务
@@ -37,7 +43,6 @@ namespace Entitytip
         public string describe;                   //描述
         public string Sellerservice;              //卖家服务
         public string logisticsservice;           //物流服务
-
-       
+ 
     }
 }
