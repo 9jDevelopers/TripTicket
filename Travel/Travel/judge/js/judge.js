@@ -1,5 +1,4 @@
 ﻿var count = 0;
-
 function fusa(){
     $("#btnimage").click(function () {
         count = $("#images .item").size();
@@ -13,10 +12,13 @@ $(function () {
 });
 function previewImages() {
     var file = $(".file-up").eq(count)[0].files[0];
+    alert(2);
     if (typeof FileReader != undefined) {
         var reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onload = function () {
+            var imu = this.result;
+            alert("图片地址" + ssh);
             addPreviewHtml(this.result);
         };
     }
@@ -24,7 +26,7 @@ function previewImages() {
 function addPreviewHtml(src) {
 
     $("#btnimage").before("<div class='item'>" +
-                            "<div class='im' style='background-image:url(" + src + ");'></div>" +
+                            "<div class='im' style='background-image:url(" + ssh + ");'></div>" +
                             "<i class='icon-close ic'></i>" +
                          "</div>");
     var itemSize = $("#images .item").size();
@@ -49,6 +51,29 @@ $(function () {
         if (itemSize != 4) {
             $("#btnimage").show();
         }
+    });
+});
+
+$(function () {
+    $("#submitbox").click(function () {
+        var formData = new FormData($("#sf")[0]);
+        $.ajax({
+            cache: true, //缓存
+            type: "POST", //提交方式post get
+            url: "judge.ashx",
+            data: formData,
+            async: true, //异步
+            contentType: false, //避免jQuery将你的表格数据转换为字符串，导致提交失败。
+            //默认值: "application/x-www-form-urlencoded"。发送信息至服务器时内容编码类型。默认值适合大多数情况。
+            //上传文件的制定方式：multipart/form-data形式传递文件。
+            processData: false, //是否转换信息//false避免数据转换成查询字符串
+            error: function (request) {
+                alert(request);
+            },
+            success: function (data) {
+                alert(data);
+            }
+        });
     });
 });
 
@@ -77,6 +102,10 @@ function submitbox() {
         }
         )
 }
+
+
+
+
 
 
 
