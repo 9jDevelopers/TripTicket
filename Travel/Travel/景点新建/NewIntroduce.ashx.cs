@@ -24,14 +24,17 @@ namespace Travel.景点新建
             string path = context.Server.MapPath(savePath);
             //随机数
             System.Random Random = new System.Random();
-            //int Result2= Random.Next(0, 9999999);
+            
+            //DateTime DT = System.DateTime.Now;
+            //string dt = System.DateTime.Now.ToString();
+            //int tt=int.Parse(dt);
             int Result = Random.Next(0, 9999999);
-
+          
             string filename = ".jpg";
 
-            postedFile.SaveAs(path + Result + filename);
+            postedFile.SaveAs(path+ "01" + Result + filename);
 
-            context.Response.Write(Result + filename);
+            context.Response.Write("01"+Result + filename);
 
 
 
@@ -48,7 +51,12 @@ namespace Travel.景点新建
                 string ticketmoney = context.Request.Form["ticketmoney"];
                 string TxTmessage = context.Request.Form["TxTmessage"];
 
-                if (NI.transfer(name, TravelType, time, language, ticketname, ticketmoney, TxTmessage))
+                string image1 = context.Request.Form["image1"];
+                string image2 = context.Request.Form["image2"];
+                string image3 = context.Request.Form["image3"];
+                string image4 = context.Request.Form["image4"];
+
+                if (NI.transfer(name, TravelType, time, language, ticketname, ticketmoney, TxTmessage,image1,image2,image3,image4))
                 {
                     context.Response.Write("");
                 }
