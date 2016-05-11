@@ -174,7 +174,7 @@
     text-align:center;
     line-height:60px;
     height:60px;
-    border:1px solid gray;
+    border:0px solid gray;
 }
 .b1{
     width:78%;
@@ -190,13 +190,26 @@
      line-height:60px;  
      width:78%;
      float:left;
-     border:0px;
+     border:1px;
  }
 .b3 img{
      width:10%;
      height:80%;
      display:block;
      float:left;
+}
+.item{
+    display: inline-block;
+    width: 22%;
+    margin-left: 2%;
+    position: relative;
+}
+#btnimage{
+    display:inline-block;
+    width: 50px;
+    height: 50px;
+    font-size:50px;
+    margin: 0 auto;
 }
 .pic{
     float:left;

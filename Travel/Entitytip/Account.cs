@@ -80,10 +80,10 @@ namespace Entitytip
                 return false;
             }
         }
-        public static bool EditPI(string phone, string email, string username,string name,string sex,string birthday,string home)
+        public static bool EditPI(string phone, string email, string username,string name,string sex,string birthday,string home,string photo)
         {//编辑个人信息
             DbHelper db = new DbHelper();
-            DbCommand cmd = db.GetSqlStringCommond("UPDATE Account SET email=@email,username =@username,name=@name,sex=@sex,birthday=@birthday,home=@home WHERE Phone =@phone");
+            DbCommand cmd = db.GetSqlStringCommond("UPDATE Account SET email=@email,username =@username,name=@name,sex=@sex,birthday=@birthday,home=@home,Photo=@photo WHERE Phone =@phone");
             db.AddInParameter(cmd, "@phone", DbType.Int32,phone);
             db.AddInParameter(cmd, "@email", DbType.String, email);
             db.AddInParameter(cmd, "@username", DbType.String, username);
@@ -91,6 +91,7 @@ namespace Entitytip
             db.AddInParameter(cmd, "@sex", DbType.String,sex);
             db.AddInParameter(cmd, "@birthday", DbType.Date,birthday);
             db.AddInParameter(cmd, "@home", DbType.String, home);
+            db.AddInParameter(cmd, "@photo", DbType.String, photo);
             cmd.Connection.Open();
             int result = cmd.ExecuteNonQuery();
             if (result > 0)

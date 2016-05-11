@@ -23,8 +23,8 @@
 </head>
 <body>
 	<!--#include virtual="../Head/Head.html"-->
-	<div id="log" class="easyui-panel" title="个人信息" style="height:320px;padding:10px;width:100%">
-        <div class="lname">手机</div><div id="phone" class="rinf"></div><div class="photo"> </div>
+	<div id="log" class="easyui-panel" title="个人信息" style="height:350px;padding:10px;width:100%">
+        <div class="photo"> </div><div class="lname">手机</div><div id="phone" class="rinf"></div>
         <div class="lname">邮箱</div><div id="email" class="rinf"></div>
         <div class="lname">昵称</div><div id="username" class="rinf"></div>
         <div class="lname">姓名</div><div id="name" class="rinf"></div>
@@ -67,7 +67,7 @@
 	    $(".submit").click(function () {
 	        alert(objs);
 	        $.cookie('objs',objs, { path: '/' });
-	        window.location.href = "EditPI.html";
+	        window.location.href = "EditPI.aspx";
 	    });
 		function menuHandler(item){
 			$('#log').prepend('<p>Click Item: '+item.name+'</p>');
