@@ -31,7 +31,7 @@ namespace Entitytip
             else
                 return null;
         }
-        public static void GetInfo(int phone,out string email,out string username,out string name,out string sex,out string birthday,out string home)
+        public static void GetInfo(int phone,out string email,out string username,out string name,out string sex,out string birthday,out string home,out string Photo)
         {//个人信息页面获取数据
             int p = phone;
             DbHelper db = new DbHelper();
@@ -45,6 +45,7 @@ namespace Entitytip
             sex = dt.Rows[0]["sex"].ToString();
             birthday = dt.Rows[0]["birthday"].ToString();
             home = dt.Rows[0]["home"].ToString();
+            Photo = dt.Rows[0]["Photo"].ToString();
         }
         public static void Get(string phone, string password,out string username)
         {
