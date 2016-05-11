@@ -1,9 +1,12 @@
-﻿<!DOCTYPE html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditPI.aspx.cs" Inherits="Travel.Head.EditPI" %>
+
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head >
+<head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>个人信息</title>
+    <link href="../References/icomoon/fontIconStyle.css" rel="stylesheet" />
     <link href="../Head/Head.css" rel="stylesheet" />
 
     <link href="../Tail/Tail.css" rel="stylesheet" />
@@ -21,9 +24,11 @@
 </head>
 <body>
     <!--#include virtual="../Head/Head.html"-->
-    <div id="log" class="easyui-panel" title="个人信息" style="height:340px;padding:10px;width:100%">
-        <div class="lname">手机</div><div id="phone" class="rinf">        
-            <div id="textphone" >未获取到</div>
+   
+    <div id="log" class="easyui-panel" title="个人信息" style="height:350px;padding:10px;width:100%">
+        <div class="photo"><i class="edit icon-link"></i> </div>
+        <div class="lname">手机</div><div id="phone" class="rinf">
+            <input id="textphone" class="easyui-textbox" style="width:200px;height:20px" />
         </div>
         <div class="lname">邮箱</div><div id="email" class="rinf">
             <input id="textemail"class="easyui-textbox" style="width:200px;height:20px" />
@@ -50,14 +55,14 @@
         window.onload = function () {
             alert($.cookie('objs'));
             var obj = $.parseJSON($.cookie('objs'));
-            alert(obj.phone);
-            $('#textphone').text(obj.phone);
-            $('#textemail').val(obj.email);            
-            $('#textusername').val(obj.username);  
-            $('#textname').val(obj.name);
-            $('#textsex').val(obj.sex);
-            $('textbirthday').val(obj.birthday);
-            $('texthome').val(obj.home);
+            $("#textphone").textbox('setValue', obj.phone);
+            $("#textemail").textbox('setValue', obj.email);
+            $("#textusername").textbox('setValue', obj.username);
+            $("#textname").textbox('setValue', obj.name);
+            $("#textsex").textbox('setValue', obj.sex);
+            $("#textbirthday").textbox('setValue', obj.birthday);
+            $(".photo").css('background-image', 'url(Photo/' + obj.photo + ')');
+            $("#texthome").textbox('setValue', obj.home);
         }
         $(document).ready(function () {
             $("#btnsave").click(function () {
@@ -96,6 +101,9 @@
                           });
             });
 
+
+
+
         });
 
 		function menuHandler(item){
@@ -110,6 +118,9 @@
 				});
 			});
 		});
+
+
+
     </script>
 </body>
 </html>

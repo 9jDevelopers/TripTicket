@@ -1,12 +1,15 @@
 ﻿#log{
     font-size:14px;
     color:#aeaeae;
+    position: relative; 
+    z-index:1;
 }
 .lname{
     float:left;
     text-align:right;
     width:20%;
     margin-top:15px;
+
 }
 .rinf{
     float:left;
@@ -14,8 +17,29 @@
     margin-left:20px;
     margin-top:15px;
     width:70%;
+    /*position: relative; 
+    z-index:1;*/
 }
 .submit{
     font-size:15px;
     padding:3px;
 }
+.photo {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #DBDBDB;
+    background-size: cover;
+    position: absolute;
+    right: 1150px;
+    top: 10px;
+    /*position: relative;*/
+    z-index: 1000;
+    /*float:left;*/
+}
+.edit{
+    font-size:16px;
+    color:#434343;
+    position: absolute;
+    right:1px;
+    top:80px;
+        }

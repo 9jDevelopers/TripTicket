@@ -30,9 +30,10 @@ namespace Travel.Head
                 analyze(ref name);
                 analyze(ref sex);
                 analyze(ref home);
-                EditPI ep = new EditPI();
+                BL.EditPI ep = new BL.EditPI();
                 if (ep.Beditpi(phone, email, username, name, sex, birthday, home))
                 {
+                    
                     context.Response.Write(1);
                 }
                 else
@@ -42,11 +43,11 @@ namespace Travel.Head
             }
             if(action=="getinfo")
             {
-                string photo;//后期完善
+                string Photo;//后期完善
                 int phone;
                 string email;
                 string username;
-                string name;
+                string name; 
                 string sex;
                 string birthday;
                 string home;
@@ -55,7 +56,7 @@ namespace Travel.Head
                 string p = context.Request.Form["phone"];
                 phone = Convert.ToInt32(p);
                 BGetInfo getif = new BGetInfo();
-                getif.BGI(phone, out email, out username, out name, out sex, out birthday, out home);
+                getif.BGI(phone, out email, out username, out name, out sex, out birthday, out home,out Photo);
                 analyze(ref email);
                 analyze(ref username);
                 analyze(ref sex);
@@ -68,8 +69,9 @@ namespace Travel.Head
                 string _name = "\"name\":\"" + name + "\","; ;
                 string _sex = "\"sex\":\"" + sex + "\","; ;
                 string _birthday = "\"birthday\":\"" + birthday + "\","; ;
+                string _photo = "\"photo\":\"" + Photo + "\","; ; 
                 string _home = "\"home\":\"" + home + "\"}"; ;
-                context.Response.Write(_phone+_email + _username + _name + _sex + _birthday + _home); 
+                context.Response.Write(_phone+_email + _username + _name + _sex + _birthday +_photo +_home); 
             }
         }
 
