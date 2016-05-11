@@ -786,6 +786,7 @@
     <Content Include="easyui\themes\metro\validatebox.css" />
     <Content Include="easyui\themes\metro\window.css" />
     <Content Include="easyui\themes\mobile.css" />
+    <Content Include="Head\EditPI.aspx" />
     <Content Include="Head\EditPI.html" />
     <Content Include="Head\Head.js" />
     <Content Include="Head\Photo\8f3036a5-659d-4daf-a6a8-8d4be54868a5.jpg" />
@@ -1295,6 +1296,13 @@
     </Compile>
     <Compile Include="ByTkt.ashx.cs">
       <DependentUpon>ByTkt.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Head\EditPI.aspx.cs">
+      <DependentUpon>EditPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Head\EditPI.aspx.designer.cs">
+      <DependentUpon>EditPI.aspx</DependentUpon>
     </Compile>
     <Compile Include="Head\PI.ashx.cs">
       <DependentUpon>PI.ashx</DependentUpon>

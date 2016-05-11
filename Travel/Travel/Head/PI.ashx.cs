@@ -30,9 +30,10 @@ namespace Travel.Head
                 analyze(ref name);
                 analyze(ref sex);
                 analyze(ref home);
-                EditPI ep = new EditPI();
+                BL.EditPI ep = new BL.EditPI();
                 if (ep.Beditpi(phone, email, username, name, sex, birthday, home))
                 {
+                    
                     context.Response.Write(1);
                 }
                 else
