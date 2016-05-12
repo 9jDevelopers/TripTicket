@@ -1,34 +1,34 @@
 ﻿var count = 0;
-function fusa(){
-    $("#btnimage").click(function () {
-        count = $("#images .item").size();
+function test() {
+    //$("#btnimage").click(function () {}        //前台已有了点击事件，这里就不需要再次点击触发。
+        count = $("#b3.item").size();
         $(".file-up").eq(count).click();
-    });
-};
+        alert(2)
+}
+//改变预览图片
 $(function () {
     $(".file-up").live("change", function () {
-        previewImages();
+        alert(1)
+        previewImage();
     });
 });
-function previewImages() {
+function previewImage() {
     var file = $(".file-up").eq(count)[0].files[0];
-    alert(2);
     if (typeof FileReader != undefined) {
         var reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onload = function () {
-            var imu = this.result;
-            alert("图片地址" + ssh);
-            addPreviewHtml(this.result);
-        };
+        var imu = this.result;
+        addPreviewHtml(this.result);
+        alert(3);
+        }
     }
 }
 function addPreviewHtml(src) {
-
+    alert(2);
     $("#btnimage").before("<div class='item'>" +
-                            "<div class='im' style='background-image:url(" + ssh + ");'></div>" +
-                            "<i class='icon-close ic'></i>" +
-                         "</div>");
+                            "<div class='im' style='background-image:url(" + src + ");'></div>" +
+                            "<i class='icon-close ic'></i>" + "</div>");
     var itemSize = $("#images .item").size();
     if (itemSize == 5) {
         $("#btnimage").hide();
@@ -36,8 +36,9 @@ function addPreviewHtml(src) {
     }
     else {
         $("#btnimage").show();
+        alert(4);
     }
-}
+}                                         //显示图片。
 $(function () {
     $(".icon-close").live("click", function () {
         var index = $(this).parent(".item").index();
@@ -46,36 +47,36 @@ $(function () {
         $(".file-up").each(function (id) {
             $(this).attr("name", "fileUp" + id);
         });
-        $("#fileups").append("<input type='file'  capture='camera' accept='image/*' class='file-up' name='fileUp3' style='display:none;'/> ");
+        $("#fileups").append("<input type='file'  capture='camera' accept='image/*' class='file-up' name='fileUp4' style='display:none;'/> ");
         var itemSize = $(".images-preview .item").size();
-        if (itemSize != 4) {
+        if (itemSize != 5) {
             $("#btnimage").show();
         }
     });
 });
 
-$(function () {
-    $("#submitbox").click(function () {
-        var formData = new FormData($("#sf")[0]);
-        $.ajax({
-            cache: true, //缓存
-            type: "POST", //提交方式post get
-            url: "judge.ashx",
-            data: formData,
-            async: true, //异步
-            contentType: false, //避免jQuery将你的表格数据转换为字符串，导致提交失败。
-            //默认值: "application/x-www-form-urlencoded"。发送信息至服务器时内容编码类型。默认值适合大多数情况。
-            //上传文件的制定方式：multipart/form-data形式传递文件。
-            processData: false, //是否转换信息//false避免数据转换成查询字符串
-            error: function (request) {
-                alert(request);
-            },
-            success: function (data) {
-                alert(data);
-            }
-        });
-    });
-});
+//$(function () {
+//    $("#submitbox").click(function () {
+//        var formData = new FormData($("#sf")[0]);
+//        $.ajax({
+//            cache: true, //缓存
+//            type: "POST", //提交方式post get
+//            url: "judge.ashx",
+//            data: formData,
+//            async: true, //异步
+//            contentType: false, //避免jQuery将你的表格数据转换为字符串，导致提交失败。
+//            //默认值: "application/x-www-form-urlencoded"。发送信息至服务器时内容编码类型。默认值适合大多数情况。
+//            //上传文件的制定方式：multipart/form-data形式传递文件。
+//            processData: false, //是否转换信息//false避免数据转换成查询字符串
+//            error: function (request) {
+//                alert(request);
+//            },
+//            success: function (data) {
+//                alert(data);
+//            }
+//        });
+//    });
+//});
 
 
 

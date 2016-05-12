@@ -135,8 +135,9 @@
                         </div>
                         <div class="j3">
                             <div class="tx3">晒图片</div>
-                            <div class="b3">
-                                 <a id="btnimage" class="icon-googleplus" style="margin-left:20px;" onclick="fusa()"></a> 
+                           <div class="b3">
+
+    <a id="btnimage" class="icon-googleplus" style="margin-left:20px;" onclick="test()"></a> 
                                  <div id="fileups">         
                                    <input type="file" class="file-up" name="btnim0" style="display:none;"/>
                                    <input type="file" class="file-up" name="btnim1" style="display:none;"/>
@@ -183,27 +184,32 @@
                     </div>
                 </div>
 
-                <div>
-
-                    <div class="fu">
-                        <div>
-                            <h2>关于服务</h2>
+                    <div>
+                        <div class="fu">
+                            <div>
+                                <h2>关于服务</h2>
+                            </div>
+                            <hr />
+                            <div class="f">
+                                <input type="text" placeholder="快递员：服务态度" />
+                            </div>
+                            <div class="f">
+                                <input type="radio" name="identity" value="r1" checked="checked" />失望
+                            </div>
+                            <div class="f">
+                                <input type="radio" name="identity" value="r2" />不满
+                            </div>
+                            <div class="f">
+                                <input type="radio" name="identity" value="r3" />一般
+                            </div>
+                            <div class="f">
+                                <input type="radio" name="identity" value="r4" />满意
+                            </div>
+                            <div class="f">
+                                <input type="radio" name="identity" value="r5" />惊喜
+                            </div>
                         </div>
-                        <hr />
-                        <div class="f">
-                            <input type="text" placeholder="快递员：服务态度" /></div>
-                        <div class="f">
-                            <input type="radio" name="identity" value="r1" checked="checked" />失望</div>
-                        <div class="f">
-                            <input type="radio" name="identity" value="r2" />不满</div>
-                        <div class="f">
-                            <input type="radio" name="identity" value="r3" />一般</div>
-                        <div class="f">
-                            <input type="radio" name="identity" value="r4" />满意</div>
-                        <div class="f">
-                            <input type="radio" name="identity" value="r5" />惊喜</div>
                     </div>
-                </div>
         
                 <div class="qwe">
                     <div class="l"><input type="checkbox" />匿名评价</div>

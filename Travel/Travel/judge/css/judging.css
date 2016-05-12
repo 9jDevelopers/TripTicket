@@ -198,18 +198,16 @@
      display:block;
      float:left;
 }
-
-
 .item{
     display: inline-block;
-    width: 22%;
-    margin-left: 2%;
+    width: 80px;
+    margin-left: 15px;
     position: relative;
 }
 .im
 {
-    width: 100%;
-    padding-top: 100%;
+    width: 70px;
+    padding-top:10px;
     background-size: cover;
     background-position: center;
     overflow: hidden;
