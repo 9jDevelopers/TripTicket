@@ -16,6 +16,7 @@
     <link href="../easyui/demo/demo.css" rel="stylesheet" />
     <script src="../easyui/jquery.easyui.min.js"></script>
 
+    <script src="../References/jquery-2.1.1.min.js"></script>
 </head>
 <body>
     <!--#include virtual="../Head/Head.html"-->
