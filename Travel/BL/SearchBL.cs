@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BL
 {
-    class SearchBL
+     public class SearchBL
     {
+        
     }
 }

@@ -14,6 +14,12 @@ namespace MSSQLDAL
     {
         //用于指示具体使用的数据库类型
         private static string dbProviderName = ConfigurationManager.AppSettings["DbHelperProvider"];
+
+        public DbCommand GetSqlStringCommond()
+        {
+            throw new NotImplementedException();
+        }
+
         //数据库连接字符串
         private static string dbConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
 
