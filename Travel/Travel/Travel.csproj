@@ -786,12 +786,12 @@
     <Content Include="easyui\themes\metro\validatebox.css" />
     <Content Include="easyui\themes\metro\window.css" />
     <Content Include="easyui\themes\mobile.css" />
-    <Content Include="Head\GetPassword\getpassword.aspx" />
-    <Content Include="Head\PI\EditPI.aspx" />
+    <Content Include="GetPassword\getpassword.aspx" />
+    <Content Include="PI\EditPI.aspx" />
     <Content Include="Head\Head.js" />
-    <Content Include="Head\PI\Photo\8f3036a5-659d-4daf-a6a8-8d4be54868a5.jpg" />
-    <Content Include="Head\PI\PI.aspx" />
-    <Content Include="Head\PI\PI.css" />
+    <Content Include="PI\Photo\8f3036a5-659d-4daf-a6a8-8d4be54868a5.jpg" />
+    <Content Include="PI\PI.aspx" />
+    <Content Include="PI\PI.css" />
     <Content Include="judge\js\judge.js" />
     <Content Include="Orderform\css\Orderform.css" />
     <Content Include="Orderform\js\Orderform.js" />
@@ -862,7 +862,7 @@
     <Content Include="景点合作\HtmlPage.html" />
     <Content Include="景点合作\imges\01.jpg" />
     <Content Include="景点合作\imges\02.jpg" />
-    <Content Include="LoginHandler.ashx" />
+    <Content Include="Head\LoginHandler.ashx" />
     <Content Include="景点新建\css\ajaxupload.3.9.js" />
     <Content Include="景点新建\image\0景点简介_03 - 副本.gif" />
     <Content Include="景点新建\image\0景点简介_05 - 副本.gif" />
@@ -895,7 +895,7 @@
     <Content Include="景点新建\css\newInteoduce.css" />
     <Content Include="景点新建\newIntroduce.aspx" />
     <Content Include="景点新建\tu\add.css" />
-    <Content Include="Head\PI\PI.ashx" />
+    <Content Include="PI\PI.ashx" />
     <Content Include="ByTkt.ashx" />
     <Content Include="Reg\Reg.ashx" />
     <Content Include="judge\judge.ashx" />
@@ -1297,28 +1297,28 @@
     <Compile Include="ByTkt.ashx.cs">
       <DependentUpon>ByTkt.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Head\GetPassword\getpassword.aspx.cs">
+    <Compile Include="GetPassword\getpassword.aspx.cs">
       <DependentUpon>getpassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Head\GetPassword\getpassword.aspx.designer.cs">
+    <Compile Include="GetPassword\getpassword.aspx.designer.cs">
       <DependentUpon>getpassword.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Head\PI\EditPI.aspx.cs">
+    <Compile Include="PI\EditPI.aspx.cs">
       <DependentUpon>EditPI.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Head\PI\EditPI.aspx.designer.cs">
+    <Compile Include="PI\EditPI.aspx.designer.cs">
       <DependentUpon>EditPI.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Head\PI\PI.ashx.cs">
+    <Compile Include="PI\PI.ashx.cs">
       <DependentUpon>PI.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Head\PI\PI.aspx.cs">
+    <Compile Include="PI\PI.aspx.cs">
       <DependentUpon>PI.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Head\PI\PI.aspx.designer.cs">
+    <Compile Include="PI\PI.aspx.designer.cs">
       <DependentUpon>PI.aspx</DependentUpon>
     </Compile>
     <Compile Include="judge\judge.ashx.cs">
@@ -1331,7 +1331,7 @@
     <Compile Include="judge\judge.aspx.designer.cs">
       <DependentUpon>judge.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LoginHandler.ashx.cs">
+    <Compile Include="Head\LoginHandler.ashx.cs">
       <DependentUpon>LoginHandler.ashx</DependentUpon>
     </Compile>
     <Compile Include="Orderform\Orderform.aspx.cs">
