@@ -29,7 +29,7 @@
                             alert("无账户名");
                         }
                         else {
-                            alert(1);
+                            alert(data);
                         }
                     });
             });

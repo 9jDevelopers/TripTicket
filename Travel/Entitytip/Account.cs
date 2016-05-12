@@ -47,6 +47,14 @@ namespace Entitytip
             home = dt.Rows[0]["home"].ToString();
             Photo = dt.Rows[0]["Photo"].ToString();
         }
+        public static void GetEmail(string phone,out string email)
+        {
+            DbHelper db = new DbHelper();
+            DbCommand cmd = db.GetSqlStringCommond("select * from Account where Phone=@p");
+            db.AddInParameter(cmd, "@p", DbType.Int32, phone);
+            DataTable dt = db.ExecuteDataTable(cmd);
+            email = dt.Rows[0]["email"].ToString();
+        }
         public static void Get(string phone, string password,out string username)
         {
             DbHelper db = new DbHelper();
