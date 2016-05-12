@@ -204,7 +204,7 @@
                             <input type="radio" name="identity" value="r5" />惊喜</div>
                     </div>
                 </div>
-
+        
                 <div class="qwe">
                     <div class="l"><input type="checkbox" />匿名评价</div>
                     <div class="submit"><a href="javascript:judge" class="red" id="submitbox" onclick="submitbox()">提交评价</a></div>

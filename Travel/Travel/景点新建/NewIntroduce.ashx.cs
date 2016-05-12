@@ -16,27 +16,7 @@ namespace Travel.景点新建
 
         public void ProcessRequest(HttpContext context)
         {
-            //传图片
-            HttpPostedFile postedFile = context.Request.Files[0];
-            //物理路径
-            string savePath = "image/";
-            //返回路径
-            string path = context.Server.MapPath(savePath);
-            //随机数
-            System.Random Random = new System.Random();
             
-            //DateTime DT = System.DateTime.Now;
-            //string dt = System.DateTime.Now.ToString();
-            //int tt=int.Parse(dt);
-            int Result = Random.Next(0, 9999999);
-          
-            string filename = ".jpg";
-
-            postedFile.SaveAs(path+ "01" + Result + filename);
-
-            context.Response.Write("01"+Result + filename);
-
-
 
             string acction = context.Request.Form["shuju"];
             if (acction =="newshuju") {
@@ -61,10 +41,37 @@ namespace Travel.景点新建
                     context.Response.Write("");
                 }
             }
-           
-            
 
-            
+            else
+            {
+                
+                //传图片
+                HttpPostedFile postedFile = context.Request.Files[0];
+                //物理路径
+                string savePath = "image/";
+                //返回路径
+                string path = context.Server.MapPath(savePath);
+                //随机数
+                System.Random Random = new System.Random();
+
+
+                DateTime DT = System.DateTime.Now;
+                string dt = System.DateTime.Now.ToString("yyyyMMddHHmmss");
+                //string str = dt.Replace('/', ' ');
+
+                int Result = Random.Next(0, 9999999);
+                string strRes = Result.ToString();
+
+                string filename = ".jpg";
+
+                postedFile.SaveAs(path + "01" +dt+ strRes + filename);
+
+                context.Response.Write("01"+dt + strRes + filename);
+            }
+
+
+
+
         }
 
         public bool IsReusable
