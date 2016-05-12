@@ -7,7 +7,7 @@
 
                 <div data-options="name:'sports'"></div>
             </div>
-            <script>
+            <script>//搜索功能
 		    function doSearch(value,name){
 			    alert('You input: ' + value+'('+name+')');
 		    }
@@ -62,7 +62,7 @@
         $("#btnl").click(function () {
             alert($.cookie('phone'));
             if ($.cookie('phone') != null) {
-                window.location.href = "PI/PI.aspx";
+                window.location.href = "../PI/PI.aspx";
             }
             else
                 {
@@ -75,7 +75,7 @@
             var p = $("#txtpassword").val();
             alert(u);
             $.post(
-                   "../LoginHandler.ashx",
+                   "../Head/LoginHandler.ashx",
                     { action:"Login", phone: $("#txtphone").val(), password: $("#txtpassword").val() },
                     function (data) {
                         if (data == "") {
