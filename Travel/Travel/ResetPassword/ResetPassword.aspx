@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="getpassword.aspx.cs" Inherits="Travel.Head.GetPassword.getpassword" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ResetPassword.aspx.cs" Inherits="Travel.Head.GetPassword.getpassword" %>
 
 <!DOCTYPE html>
 
@@ -15,6 +15,27 @@
     <link href="../easyui/themes/icon.css" rel="stylesheet" />
     <link href="../easyui/demo/demo.css" rel="stylesheet" />
     <script src="../easyui/jquery.easyui.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btnemail").click(function () {
+                
+                var phone = $("#phone").val();
+                alert(phone);
+                $.post(
+                   "getpassword.ashx",
+                    { phone: $("#phone").val()},
+                    function (data) {
+                        if (data == "") {
+                            alert("无账户名");
+                        }
+                        else {
+                            alert(1);
+                        }
+                    });
+            });
+
+        });//ready                  END
+    </script>
 </head>
 <body>
     <!--#include virtual="../Head/Head.html"-->
@@ -23,23 +44,23 @@
 
             <div style="margin-bottom:20px">
                 <div>手机号</div>
-                <input id="username" class="easyui-textbox" style="width:350px;height:32px"/>
+                <input id="phone" class="easyui-textbox" style="width:250px;height:32px"/>
             </div>
             <div style="margin-bottom:20px">
                 <div>新密码</div>
-                <input id="password" class="easyui-textbox" style="width:400px;height:32px"/>
+                <input id="password" class="easyui-textbox" style="width:250px;height:32px"/>
             </div>
             <div style="margin-bottom:20px">
                 <div>确认新密码</div>
-                <input id="password2" class="easyui-textbox" style="width:400px;height:32px"/>
+                <input id="password2" class="easyui-textbox" style="width:250px;height:32px"/>
             </div>
             <div style="margin-bottom:20px">
                 
                 <div>验证码</div>
-                <input id="phone"  class="easyui-textbox" style="width:250px;height:32px"/><a id="btnemail" class="easyui-linkbutton" style="width:150px;height:32px">向邮箱发送验证码</a>
+                <input id="phone"  class="easyui-textbox" style="width:140px;height:32px"/><a id="btnemail" class="easyui-linkbutton" style="width:110px;height:32px">向邮箱发送验证码</a>
             </div>
             <div style="margin-left:110px">
-                <a id="btnReg" class="easyui-linkbutton">完成注册</a>
+                <a id="btnReg" class="easyui-linkbutton">修改密码</a>
             </div>
 
         </div>
