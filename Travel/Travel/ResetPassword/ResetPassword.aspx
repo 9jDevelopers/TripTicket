@@ -18,21 +18,40 @@
     <script>
         $(document).ready(function () {
             $("#btnemail").click(function () {
-                
-                var phone = $("#phone").val();
-                alert(phone);
                 $.post(
-                   "getpassword.ashx",
-                    { phone: $("#phone").val()},
+                   "ResetPassword.ashx",
+                    { action:'getemail',phone: $("#phone").val()},
                     function (data) {
-                        if (data == "") {
-                            alert("无账户名");
+                        if (data == ""|| data==null) {
+                            alert("无效账户名");
                         }
                         else {
                             alert(data);
                         }
                     });
-            });
+            });//btnemail 点击         END
+            $("#btnsubmit").click(function () {
+                var p1 = $("#pwd").val();
+                var p2 = $("#rpwd").val();
+               
+                if(p1!=p2){
+                    alert('密码不一致');
+                }
+                else {
+
+                }
+                
+            });//submit                END
+            $.extend($.fn.validatebox.defaults.rules, {
+                equals: {
+                    validator: function (value, param) {
+                        return value == $(param[0]).val();
+                    },
+                    message: '密码不一致'
+                }
+            });//easyui代码 验证密码是否一致
+            
+            
 
         });//ready                  END
     </script>
@@ -44,23 +63,23 @@
 
             <div style="margin-bottom:20px">
                 <div>手机号</div>
-                <input id="phone" class="easyui-textbox" style="width:250px;height:32px"/>
+                <input id="phone" name="pwd" type="text" class="easyui-textbox" data-options="required:true" style="width:250px;height:32px"/>
             </div>
             <div style="margin-bottom:20px">
                 <div>新密码</div>
-                <input id="password" class="easyui-textbox" style="width:250px;height:32px"/>
+                <input id="pwd" name="pwd" type="password" class="easyui-textbox" data-options="required:true" style="width:250px;height:32px"/>
             </div>
             <div style="margin-bottom:20px">
                 <div>确认新密码</div>
-                <input id="password2" class="easyui-textbox" style="width:250px;height:32px"/>
+                <input id="rpwd" name="rpwd" type="password" class="easyui-textbox" required="required"  validType="equals['#pwd']" style="width:250px;height:32px"/>
             </div>
             <div style="margin-bottom:20px">
                 
                 <div>验证码</div>
-                <input id="phone"  class="easyui-textbox" style="width:140px;height:32px"/><a id="btnemail" class="easyui-linkbutton" style="width:110px;height:32px">向邮箱发送验证码</a>
+                <input id="number"  class="easyui-textbox" style="width:130px;height:32px;margin:5px;"/><a id="btnemail" class="easyui-linkbutton" style="width:110px;height:32px">向邮箱发送验证码</a>
             </div>
             <div style="margin-left:110px">
-                <a id="btnReg" class="easyui-linkbutton">修改密码</a>
+                <a id="btnsubmit" class="easyui-linkbutton">重置密码</a>
             </div>
 
         </div>

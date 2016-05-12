@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using BL;
 
 namespace Travel.GetPassword
 {
@@ -13,8 +14,22 @@ namespace Travel.GetPassword
 
         public void ProcessRequest(HttpContext context)
         {
-            context.Response.ContentType = "text/plain";
-            context.Response.Write("Hello World");
+            string action = context.Request.Form["action"];
+            if(action=="getemail")
+            { 
+                string email;
+                string phone=context.Request.Form["phone"];
+                BGetEmail bge = new BGetEmail();
+                bge.BGE(phone, out email);
+                if(email==""||email==null)
+                {
+                    context.Response.Write("");
+                }
+                else
+                {
+                    context.Response.Write(email);
+                }
+            }
         }
 
         public bool IsReusable

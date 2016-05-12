@@ -87,14 +87,6 @@
                         alert(data);//后台返回值
                     }
                 });
-                //$('#dt').datetimebox({
-                //    value: '3/4/2010 2:3',
-                //    required: true,
-                //    showSeconds: false
-                //});
-
-                //var birthday = $('#textbirthday').datetimebox('getValue');
-
             });//保存点击事件  END
 
             //点击事件触发上产控件
