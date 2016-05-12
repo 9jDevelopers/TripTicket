@@ -27,8 +27,16 @@ namespace Travel.GetPassword
                 }
                 else
                 {
-                    context.Response.Write(email);
+                    Random rad = new Random();
+                    int number = rad.Next(0,99999999); 
+                    context.Response.Write(number);
                 }
+            }//得到邮箱
+            if(action== "resetpwd")
+            {
+                string phone = context.Request.Form["phone"];
+                string password = context.Request.Form["password"];
+                context.Response.Write(phone + password);
             }
         }
 

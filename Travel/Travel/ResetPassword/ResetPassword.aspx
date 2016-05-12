@@ -26,11 +26,15 @@
                             alert("无效账户名");
                         }
                         else {
+                                                  
+                            $("#noneipt").val(data);
                             alert(data);
                         }
                     });
             });//btnemail 点击         END
             $("#btnsubmit").click(function () {
+                //var n=$("#noneipt").val();
+                //alert(n);
                 var p1 = $("#pwd").val();
                 var p2 = $("#rpwd").val();
                
@@ -38,7 +42,15 @@
                     alert('密码不一致');
                 }
                 else {
-
+                    var noneipt = $("#noneipt").val();
+                    var number = $("#number").val();
+                    alert('n:' + number + 'i' + noneipt);
+                    $.post(
+                   "ResetPassword.ashx",
+                    { action:'resetpwd',phone:$("#phone").val(),password:$("#pwd").val()},
+                    function (data) {
+                        alert(data);
+                    });
                 }
                 
             });//submit                END
@@ -74,14 +86,13 @@
                 <input id="rpwd" name="rpwd" type="password" class="easyui-textbox" required="required"  validType="equals['#pwd']" style="width:250px;height:32px"/>
             </div>
             <div style="margin-bottom:20px">
-                
-                <div>验证码</div>
+              
+                <div>验证码</div><input type="text" id="noneipt"style="display:none;" />
                 <input id="number"  class="easyui-textbox" style="width:130px;height:32px;margin:5px;"/><a id="btnemail" class="easyui-linkbutton" style="width:110px;height:32px">向邮箱发送验证码</a>
             </div>
             <div style="margin-left:110px">
                 <a id="btnsubmit" class="easyui-linkbutton">重置密码</a>
             </div>
-
         </div>
 </body>
 </html>
