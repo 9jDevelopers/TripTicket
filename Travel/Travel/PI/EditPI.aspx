@@ -29,7 +29,7 @@
         <div  class="photo"><i class="edit icon-link"></i> </div>
         <input type="file" class="file-up" name="btnim" style="display:none;" />
         <div class="lname">手机</div><div id="phone" class="rinf">
-            <input id="textphone" name="phone" class="easyui-textbox" style="width:200px;height:20px" />
+            <input id="textphone" name="phone" class="easyui-textbox" readonly="readonly" style="width:200px;height:20px" />
         </div>
         <div class="lname">邮箱</div><div id="email" class="rinf">
             <input id="textemail" name="email" class="easyui-textbox" style="width:200px;height:20px" />
@@ -87,14 +87,6 @@
                         alert(data);//后台返回值
                     }
                 });
-                //$('#dt').datetimebox({
-                //    value: '3/4/2010 2:3',
-                //    required: true,
-                //    showSeconds: false
-                //});
-
-                //var birthday = $('#textbirthday').datetimebox('getValue');
-
             });//保存点击事件  END
 
             //点击事件触发上产控件

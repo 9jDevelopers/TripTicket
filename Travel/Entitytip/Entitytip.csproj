@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs" />
+    <Compile Include="Search.cs" />
     <Compile Include="Ent.cs" />
     <Compile Include="GetPreview.cs" />
     <Compile Include="Introduce.cs" />

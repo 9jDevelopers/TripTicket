@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BBuyTicket.cs" />
+    <Compile Include="BGetEmail.cs" />
     <Compile Include="BGetInfo.cs" />
     <Compile Include="Bjudge.cs" />
     <Compile Include="BLogin.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="NEWIntroduceBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BReg.cs" />
+    <Compile Include="SearchBL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entitytip\Entitytip.csproj">

@@ -132,3 +132,20 @@
     text-align:center;
     line-height:18px;
 }
+
+/*附加*/
+.fadd{
+    position:relative; 
+    top:-20px;
+    border:solid #baafaf 1px;
+    background-color:#f5eeee;
+    display:none;
+    
+}
+.fadd ul{
+    
+}
+.fadd ul li{
+    list-style:none;
+    margin-top:13px;
+}

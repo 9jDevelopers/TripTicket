@@ -50,7 +50,7 @@ namespace Travel.Head
             }
             else
             {
-                string uploadFolder = HttpContext.Current.Server.MapPath("..//Head//photo//");
+                string uploadFolder = HttpContext.Current.Server.MapPath("..//PI//photo//");
                 string fileName = "";
                 string fileExtName = "";
                 string newFileName = "";
