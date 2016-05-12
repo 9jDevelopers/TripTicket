@@ -786,7 +786,7 @@
     <Content Include="easyui\themes\metro\validatebox.css" />
     <Content Include="easyui\themes\metro\window.css" />
     <Content Include="easyui\themes\mobile.css" />
-    <Content Include="GetPassword\getpassword.aspx" />
+    <Content Include="ResetPassword\ResetPassword.aspx" />
     <Content Include="PI\EditPI.aspx" />
     <Content Include="Head\Head.js" />
     <Content Include="PI\Photo\8f3036a5-659d-4daf-a6a8-8d4be54868a5.jpg" />
@@ -899,7 +899,7 @@
     <Content Include="ByTkt.ashx" />
     <Content Include="Reg\Reg.ashx" />
     <Content Include="judge\judge.ashx" />
-    <Content Include="GetPassword\getpassword.ashx" />
+    <Content Include="ResetPassword\ResetPassword.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1298,15 +1298,15 @@
     <Compile Include="ByTkt.ashx.cs">
       <DependentUpon>ByTkt.ashx</DependentUpon>
     </Compile>
-    <Compile Include="GetPassword\getpassword.ashx.cs">
-      <DependentUpon>getpassword.ashx</DependentUpon>
+    <Compile Include="ResetPassword\ResetPassword.ashx.cs">
+      <DependentUpon>ResetPassword.ashx</DependentUpon>
     </Compile>
-    <Compile Include="GetPassword\getpassword.aspx.cs">
-      <DependentUpon>getpassword.aspx</DependentUpon>
+    <Compile Include="ResetPassword\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GetPassword\getpassword.aspx.designer.cs">
-      <DependentUpon>getpassword.aspx</DependentUpon>
+    <Compile Include="ResetPassword\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="PI\EditPI.aspx.cs">
       <DependentUpon>EditPI.aspx</DependentUpon>
