@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BBuyTicket.cs" />
+    <Compile Include="BGetEmail.cs" />
     <Compile Include="BGetInfo.cs" />
     <Compile Include="Bjudge.cs" />
     <Compile Include="BLogin.cs" />
