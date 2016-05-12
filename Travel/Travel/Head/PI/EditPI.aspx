@@ -29,7 +29,7 @@
         <div  class="photo"><i class="edit icon-link"></i> </div>
         <input type="file" class="file-up" name="btnim" style="display:none;" />
         <div class="lname">手机</div><div id="phone" class="rinf">
-            <input id="textphone" name="phone" class="easyui-textbox" style="width:200px;height:20px" />
+            <input id="textphone" name="phone" class="easyui-textbox" readonly="readonly" style="width:200px;height:20px" />
         </div>
         <div class="lname">邮箱</div><div id="email" class="rinf">
             <input id="textemail" name="email" class="easyui-textbox" style="width:200px;height:20px" />
