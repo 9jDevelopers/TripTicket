@@ -7,7 +7,7 @@ using Entitytip;
 
 namespace BL
 {
-    public class BGetEmail
+    public class BResetPassword
     {
         public void BGE(string phone, out string email)
         {

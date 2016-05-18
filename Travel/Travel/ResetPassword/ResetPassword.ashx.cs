@@ -22,7 +22,7 @@ namespace Travel.GetPassword
             { 
                 string email;
                 string phone=context.Request.Form["phone"];
-                BGetEmail bge = new BGetEmail();
+                BResetPassword bge = new BResetPassword();
                 bge.BGE(phone, out email);
                 if(email==""||email==null)
                 {
