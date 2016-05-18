@@ -22,13 +22,18 @@
                    "ResetPassword.ashx",
                     { action:'getemail',phone: $("#phone").val()},
                     function (data) {
-                        if (data == ""|| data==null) {
-                            alert("无效账户名");
+                        var obj = $.parseJSON(data);
+                        var result = obj.result;
+                        var no = obj.rano;
+                        $("#noneipt").val(no);
+                        alert("result:" + result + "no" + no);
+                        if (result == "1") {
+                            alert("发送成功");
                         }
                         else {
                                                   
-                            $("#noneipt").val(data);
-                            alert(data);
+                            
+                            alert("发送失败");
                         }
                     });
             });//btnemail 点击         END
@@ -45,12 +50,19 @@
                     var noneipt = $("#noneipt").val();
                     var number = $("#number").val();
                     alert('n:' + number + 'i' + noneipt);
-                    $.post(
-                   "ResetPassword.ashx",
-                    { action:'resetpwd',phone:$("#phone").val(),password:$("#pwd").val()},
-                    function (data) {
-                        alert(data);
-                    });
+                    if (noneipt == number)
+                    {
+                        $.post(
+                       "ResetPassword.ashx",
+                        { action:'resetpwd',phone:$("#phone").val(),password:$("#pwd").val()},
+                        function (data) {
+                            alert(data);
+                        });
+                    }
+                    else
+                    {
+                        alert("验证码不正确!");
+                    }
                 }
                 
             });//submit                END
