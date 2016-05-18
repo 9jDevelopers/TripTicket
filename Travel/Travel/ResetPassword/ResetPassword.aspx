@@ -50,18 +50,25 @@
                     var noneipt = $("#noneipt").val();
                     var number = $("#number").val();
                     alert('n:' + number + 'i' + noneipt);
-                    if (noneipt == number)
+                    if ((p1 != "" && p1 != null) && (p2 != "" && p2 != null) && (number != "" && number != null))
                     {
-                        $.post(
-                       "ResetPassword.ashx",
-                        { action:'resetpwd',phone:$("#phone").val(),password:$("#pwd").val()},
-                        function (data) {
-                            alert(data);
-                        });
+                        if (noneipt == number)
+                        {
+                            $.post(
+                           "ResetPassword.ashx",
+                            { action:'resetpwd',phone:$("#phone").val(),password:$("#pwd").val()},
+                            function (data) {
+                                alert(data);
+                            });
+                        }
+                        else
+                        {
+                            alert("验证码不正确!");
+                        }
                     }
                     else
                     {
-                        alert("验证码不正确!");
+                        alert("请将信息填写完全！");
                     }
                 }
                 

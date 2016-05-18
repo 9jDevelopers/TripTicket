@@ -13,5 +13,16 @@ namespace BL
         {
             Account.GetEmail(phone, out email);
         }
+        public bool BRP(string phone,string password)
+        {
+            if(Account.ResetPassword(phone,password))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

@@ -17,13 +17,13 @@ namespace Travel.GetPassword
 
         public void ProcessRequest(HttpContext context)
         {
+            BResetPassword brp = new BResetPassword();
             string action = context.Request.Form["action"];
             if(action=="getemail")
             { 
                 string email;
-                string phone=context.Request.Form["phone"];
-                BResetPassword bge = new BResetPassword();
-                bge.BGE(phone, out email);
+                string phone=context.Request.Form["phone"];              
+                brp.BGE(phone, out email);
                 if(email==""||email==null)
                 {
                     context.Response.Write("");
@@ -43,7 +43,14 @@ namespace Travel.GetPassword
             {
                 string phone = context.Request.Form["phone"];
                 string password = context.Request.Form["password"];
-                context.Response.Write(phone + password);
+                if(brp.BRP(phone, password))
+                {
+                    context.Response.Write("重置成功！");
+                }
+                else
+                {
+                    context.Response.Write("重置失败！");
+                }    
             }
         }
 

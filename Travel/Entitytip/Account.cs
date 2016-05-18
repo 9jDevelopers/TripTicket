@@ -95,6 +95,23 @@ namespace Entitytip
                 return false;
             }
         }
+        public static bool ResetPassword(string phone, string password)
+        {
+            DbHelper db = new DbHelper();
+            DbCommand cmd = db.GetSqlStringCommond("UPDATE Account SET userpassword=@password WHERE Phone =@phone");
+            db.AddInParameter(cmd, "@phone", DbType.Int32, phone);
+            db.AddInParameter(cmd, "@password", DbType.String,password);
+            cmd.Connection.Open();
+            int result = cmd.ExecuteNonQuery();
+            if (result > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public static bool EditPI(string phone, string email, string username,string name,string sex,string birthday,string home,string photo)
         {//编辑个人信息
             DbHelper db = new DbHelper();
