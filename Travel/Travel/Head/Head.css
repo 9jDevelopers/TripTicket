@@ -47,6 +47,7 @@
     font-family:"黑体";
     color:white;
     font-size:30px;
+    position:relative;
 }
 
 #nav .item
@@ -67,12 +68,12 @@
 {
     text-align:center;
     font-size:30px;
-    float:left;
     width:200px;
     height:45px;
     background-color:#ff9913;
     margin-left:200px;
-   
+    position:absolute;
+    right:20px;
 }
 #nav div a{
     color:white;

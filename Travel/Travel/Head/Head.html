@@ -1,6 +1,4 @@
-﻿
-<script src="../References/jquery-2.1.1.min.js"></script>
-<div id="Head">
+﻿<div id="Head">
     <div id="Headbim">
         <div class="Head_log">LOG</div>
         <div class="Head_search">
@@ -13,7 +11,6 @@
                         <li>3</li>
                     </ul>
                 </div>
-               
             </div>
             
             <div id="mm">
@@ -28,7 +25,7 @@
        
         
          </div>
-        <div class="phone">客服电话：10086-10010</div>        
+        <div class="phone">客服电话：10086-10010</div>  <a id="test">TEST</a>      
     </div>
     <div id="nav">
         <a href="#" class="item _item">新的体验</a>
@@ -36,7 +33,6 @@
         <a href="#" class="item">景点合作</a>
         <a href="../judge/judge.aspx" class="item">体验交流</a>
         <div><a id="btnl">登录</a>|<a>注册</a></div>
-
     </div>
     <!--登陆界面  begin-->
     <div id="qbody">
@@ -70,7 +66,9 @@
     }
     $(document).ready(function () {
         var btn = document.getElementById('btnl');
-        
+        $("test").click(function () {
+            alert(1);
+        });
         $("#btnclose").click(function () {
             $("#qbody").hide();
         });
