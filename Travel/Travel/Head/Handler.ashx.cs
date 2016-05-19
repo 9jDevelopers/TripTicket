@@ -1,5 +1,8 @@
-﻿using System;
+﻿using MSSQLDAL;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
 using System.Linq;
 using System.Web;
 
@@ -13,7 +16,13 @@ namespace Travel.Head
 
         public void ProcessRequest(HttpContext context)
         {
-            context.Response.ContentType = "text/plain";
+            DbHelper db = new DbHelper();
+
+            DbCommand cmd = db.GetSqlStringCommond("select * from xxss where name like '%山%' ");
+            DataTable dt = db.ExecuteDataTable(cmd);
+
+            string a = DataTableConvertJson.DataTable2Json(dt);
+            context.Response.Write(a);
             context.Response.Write("Hello World");
         }
 

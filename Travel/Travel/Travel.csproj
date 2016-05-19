@@ -1402,6 +1402,10 @@
       <Project>{3e2762ce-e5a1-4c75-ac23-88b107835986}</Project>
       <Name>Entitytip</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MSSQLDAL\MSSQLDAL.csproj">
+      <Project>{838cd31b-355a-46e2-99e9-a167670bb85f}</Project>
+      <Name>MSSQLDAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
