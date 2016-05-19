@@ -93,6 +93,7 @@
                             alert("账户名或密码错误");
                         }
                         else {
+
                             $.cookie('phone', $("#txtphone").val(), { path: '/' });
                             $.cookie('username',data, { path: '/' });
                             btn.style.fontSize = "10px";
