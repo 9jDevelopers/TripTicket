@@ -1363,6 +1363,7 @@
     <Compile Include="Test\test.aspx.designer.cs">
       <DependentUpon>test.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Tool\ProofTechnique.cs" />
     <Compile Include="景点介绍\Introduce.aspx.cs">
       <DependentUpon>Introduce.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
