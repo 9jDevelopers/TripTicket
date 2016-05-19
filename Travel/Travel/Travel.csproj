@@ -900,6 +900,7 @@
     <Content Include="Reg\Reg.ashx" />
     <Content Include="judge\judge.ashx" />
     <Content Include="ResetPassword\ResetPassword.ashx" />
+    <Content Include="Head\Handler.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1297,6 +1298,9 @@
     </Compile>
     <Compile Include="ByTkt.ashx.cs">
       <DependentUpon>ByTkt.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Head\Handler.ashx.cs">
+      <DependentUpon>Handler.ashx</DependentUpon>
     </Compile>
     <Compile Include="ResetPassword\ResetPassword.ashx.cs">
       <DependentUpon>ResetPassword.ashx</DependentUpon>
