@@ -14,11 +14,9 @@ namespace Travel.Head
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            //ProofTechnique a = new ProofTechnique();
-            //a.proofuid();
-            Session["UID"] = "123456789";
-            string text = Session["UID"].ToString();
-            //Session["username"] = account;
+            Session["UID"] = "";
+            ProofTechnique a = new ProofTechnique();
+            a.proofuid(Session["UID"].ToString());
         }
     }
 }

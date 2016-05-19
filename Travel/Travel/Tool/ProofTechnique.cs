@@ -9,9 +9,12 @@ namespace Travel.Tool
 {
     public class ProofTechnique
     {
-        public void proofuid()
+        public void proofuid(string UID)
         {
-            HttpContext.Current.Response.Redirect("~/Preview/Preview.aspx", true);
+            if(UID==""||UID==null)
+            { 
+                HttpContext.Current.Response.Redirect("~/Preview/Preview.aspx", true);
+            }
         }
     }
 }
