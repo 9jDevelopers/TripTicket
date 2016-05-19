@@ -13,10 +13,10 @@ namespace Travel.Preview
         public string name;
         protected void Page_Load(object sender, EventArgs e)
         {
-            string id = "1";
+            string SceneID = "2";
             GetPreviews getif = new GetPreviews();
 
-            getif.BGI(id, out name);
+            getif.BGI(SceneID, out name);
 
         }
     }
