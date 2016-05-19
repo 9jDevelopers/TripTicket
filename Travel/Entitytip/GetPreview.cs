@@ -12,16 +12,15 @@ namespace Entitytip
 {
     public class GetPreview
     {
-        public static void getp(string id,out string name)
+        public static void getp(string SceneID, out string name)
         {
 
             DbHelper db = new DbHelper();
-            DbCommand cmd = db.GetSqlStringCommond("select * from NewIntroduce where id=@id");
-            db.AddInParameter(cmd, "id", DbType.String, id);
+            DbCommand cmd = db.GetSqlStringCommond("select * from NewIntroduce where SceneID=@SceneID");
+            db.AddInParameter(cmd, "SceneID", DbType.String, SceneID);
 
             DataTable dt = db.ExecuteDataTable(cmd);
             name = dt.Rows[0]["name"].ToString();
-
         }
     }
 }

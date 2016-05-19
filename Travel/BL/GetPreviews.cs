@@ -9,9 +9,9 @@ namespace BL
 {
     public  class GetPreviews
     {
-        public void BGI(string id, out string name)
+        public void BGI(string SceneID, out string name)
         {
-            GetPreview.getp(id, out name);
+            GetPreview.getp(SceneID, out name);
         }
     }
 }
