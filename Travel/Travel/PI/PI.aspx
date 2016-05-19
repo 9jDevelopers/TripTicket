@@ -48,7 +48,6 @@
                    "PI.ashx",
                     { action:'getinfo',phone: $.cookie('phone') },
                     function (data) {
-                        alert('开始获取::' + data);
                         objs = data;
                         var obj = $.parseJSON(data);
                         phone.innerHTML = $.cookie('phone');
@@ -61,11 +60,10 @@
 
                         //background-image: url(images/test.jpg);
                         home.innerHTML = obj.home;
-                        alert(obj.photo);
+                      
                     });
 	    }
 	    $(".submit").click(function () {
-	        alert(objs);
 	        $.cookie('objs',objs, { path: '/' });
 	        window.location.href = "EditPI.aspx";
 	    });

@@ -25,7 +25,7 @@
        
         
          </div>
-        <div class="phone">客服电话：10086-10010</div>  <a id="test">TEST</a>      
+        <div class="phone">客服电话：10086-10010</div> 
     </div>
     <div id="nav">
         <a href="#" class="item _item">新的体验</a>
@@ -62,18 +62,13 @@
             btn.style.fontSize = "10px";
             btn.innerHTML = "Hello，" + $.cookie('username');
         }
- 
     }
     $(document).ready(function () {
         var btn = document.getElementById('btnl');
-        $("test").click(function () {
-            alert(1);
-        });
         $("#btnclose").click(function () {
             $("#qbody").hide();
         });
         $("#btnl").click(function () {
-            alert($.cookie('phone'));
             if ($.cookie('phone') != null) {
                 window.location.href = "../PI/PI.aspx";
             }
@@ -86,7 +81,6 @@
         $("#btnlogin").click(function () {
             var u = $("#txtusername").val();
             var p = $("#txtpassword").val();
-            alert(u);
             $.post(
                    "../Head/LoginHandler.ashx",
                     { action:"Login", phone: $("#txtphone").val(), password: $("#txtpassword").val() },
@@ -95,8 +89,6 @@
                             alert("账户名或密码错误");
                         }
                         else {
-                            alert(1);
-                            //document.getElementById('btnl').innerHTML = "Hello，" + data;
                             $.cookie('phone', $("#txtphone").val(), { path: '/' });
                             $.cookie('username',data, { path: '/' });
                             btn.style.fontSize = "10px";

@@ -55,7 +55,6 @@
     <!--#include virtual="../Tail/Tail.html"-->
     <script>
         window.onload = function () {
-            alert($.cookie('objs'));
             var obj = $.parseJSON($.cookie('objs'));
             $("#textphone").textbox('setValue', obj.phone);
             $("#textemail").textbox('setValue', obj.email);
