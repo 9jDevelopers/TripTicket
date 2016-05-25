@@ -16,14 +16,20 @@ namespace Travel.Head
 
         public void ProcessRequest(HttpContext context)
         {
+            string NM = context.Request.QueryString["name"];
+
             DbHelper db = new DbHelper();
 
-            DbCommand cmd = db.GetSqlStringCommond("select * from xxss where name like '%山%' ");
+            DbCommand cmd = db.GetSqlStringCommond("select * from xxss where name like  '%" + NM + "%' ");
             DataTable dt = db.ExecuteDataTable(cmd);
+            string jsonName = " ";
+            string a = DataTableConvertJson.DataTableToJson(jsonName,dt);
 
-            string a = DataTableConvertJson.DataTable2Json(dt);
-            context.Response.Write(a);
-            context.Response.Write("Hello World");
+            string str = a.Remove(0, 5);
+            int i = str.Length;
+            string str2 = str.Remove(i -1);
+            context.Response.Write(str2);
+           
         }
 
         public bool IsReusable

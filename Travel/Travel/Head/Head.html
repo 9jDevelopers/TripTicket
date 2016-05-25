@@ -17,7 +17,6 @@
                     </table>
                 </div>
             </div>
-            
             <div id="mm">
 
                 <div data-options="name:'sports'"></div>
@@ -26,9 +25,7 @@
 		                function doSearch(value,name){
 			                alert('You input: ' + value+'('+name+')');
 		                }
-                    </script>
-       
-        
+                    </script> 
          </div>
         <div class="phone">客服电话：10086-10010</div> 
     </div>
@@ -114,10 +111,12 @@
             valueField: 'ID',
             textField: 'name',
             onChange: function (newValue, oldValue) {
+                
                 if (newValue != null) {
 
                     //var urlStr = "/ciccpsMember/member/getMemberSelectByName?name=" + encodeURIComponent(newValue);           
-                    var urlStr = "Handler.ashx?name=" + encodeURIComponent(newValue);
+                    var urlStr = "../Head/Handler.ashx?name=" + encodeURIComponent(newValue);
+                    //alert(data);
                     $("#sel").combobox("reload", urlStr);
                 }
             }
