@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using BL;
 
 namespace Travel.Administrator
 {
@@ -13,8 +14,23 @@ namespace Travel.Administrator
 
         public void ProcessRequest(HttpContext context)
         {
-            context.Response.ContentType = "text/plain";
-            context.Response.Write("Hello World");
+            string loginname = context.Request.Form["loginname"];
+            string password = context.Request.Form["password"];
+            bool result;
+            string addAD;
+            string addScenic;
+            BAdministrator bad = new BAdministrator();
+            bad.badmin(loginname, password, out result, out addAD, out addScenic);
+            if(result)
+            {
+                addAD= "{\"addAD\":\"" + addAD + "\",";
+                addScenic= "\"addScenic\":\"" + addScenic + "\"}";
+                context.Response.Write(addAD+addScenic);
+            }
+            else
+            {
+                context.Response.Write("");
+            }
         }
 
         public bool IsReusable
