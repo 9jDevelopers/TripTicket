@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using BL;
+using Travel;
+using Travel.Tool;
 
 namespace Travel.Head
 {
@@ -14,7 +16,7 @@ namespace Travel.Head
 
         public void ProcessRequest(HttpContext context)
         {
-
+            
             string action= context.Request.Form["action"];            
             if(action=="getinfo")
             {
@@ -65,9 +67,7 @@ namespace Travel.Head
                     string saveImagsUrl = uploadFolder + newFileName;
                     file.SaveAs(saveImagsUrl);
                     //将图片名字和物品ID存入数据库
-
                 }
-
                 string phone = context.Request.Form["phone"];
                 string email = context.Request.Form["email"];
                 string username = context.Request.Form["username"];

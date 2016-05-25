@@ -58,6 +58,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administrator\Administrator.aspx" />
     <Content Include="BuyTicket\js\BuyTicket.js" />
     <Content Include="easyui\changelog.txt" />
     <Content Include="easyui\demo-mobile\accordion\basic.html" />
@@ -900,7 +901,8 @@
     <Content Include="Reg\Reg.ashx" />
     <Content Include="judge\judge.ashx" />
     <Content Include="ResetPassword\ResetPassword.ashx" />
-    <Content Include="Preview\Preview.ashx" />
+    <Content Include="Head\Handler.ashx" />
+    <Content Include="Administrator\Administrator.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1289,6 +1291,16 @@
     <Content Include="景点介绍\Introduce.js" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator\Administrator.ashx.cs">
+      <DependentUpon>Administrator.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\Administrator.aspx.cs">
+      <DependentUpon>Administrator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\Administrator.aspx.designer.cs">
+      <DependentUpon>Administrator.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BuyTicket\BuyTicket.aspx.cs">
       <DependentUpon>BuyTicket.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1299,8 +1311,8 @@
     <Compile Include="ByTkt.ashx.cs">
       <DependentUpon>ByTkt.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Preview\Preview.ashx.cs">
-      <DependentUpon>Preview.ashx</DependentUpon>
+    <Compile Include="Head\Handler.ashx.cs">
+      <DependentUpon>Handler.ashx</DependentUpon>
     </Compile>
     <Compile Include="ResetPassword\ResetPassword.ashx.cs">
       <DependentUpon>ResetPassword.ashx</DependentUpon>
@@ -1401,6 +1413,10 @@
     <ProjectReference Include="..\Entitytip\Entitytip.csproj">
       <Project>{3e2762ce-e5a1-4c75-ac23-88b107835986}</Project>
       <Name>Entitytip</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MSSQLDAL\MSSQLDAL.csproj">
+      <Project>{838cd31b-355a-46e2-99e9-a167670bb85f}</Project>
+      <Name>MSSQLDAL</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
