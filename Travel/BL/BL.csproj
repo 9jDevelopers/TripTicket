@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BAdministrator.cs" />
     <Compile Include="BBuyTicket.cs" />
     <Compile Include="BResetPassword.cs" />
     <Compile Include="BGetInfo.cs" />

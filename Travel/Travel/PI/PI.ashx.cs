@@ -45,9 +45,9 @@ namespace Travel.Head
                 string _username = "\"username\":\"" + username + "\",";
                 string _name = "\"name\":\"" + name + "\","; ;
                 string _sex = "\"sex\":\"" + sex + "\","; ;
-                string _birthday = "\"birthday\":\"" + birthday + "\","; ;
-                string _photo = "\"photo\":\"" + Photo + "\","; ; 
-                string _home = "\"home\":\"" + home + "\"}"; ;
+                string _birthday = "\"birthday\":\"" + birthday + "\","; 
+                string _photo = "\"photo\":\"" + Photo + "\","; 
+                string _home = "\"home\":\"" + home + "\"}"; 
                 context.Response.Write(_phone+_email + _username + _name + _sex + _birthday +_photo +_home); 
             }
             else

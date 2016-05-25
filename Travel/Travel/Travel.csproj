@@ -58,6 +58,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administrator\Administrator.aspx" />
+    <Content Include="Administrator\Administrator.css" />
+    <Content Include="Administrator\Administrator.js" />
     <Content Include="BuyTicket\js\BuyTicket.js" />
     <Content Include="easyui\changelog.txt" />
     <Content Include="easyui\demo-mobile\accordion\basic.html" />
@@ -786,6 +789,7 @@
     <Content Include="easyui\themes\metro\validatebox.css" />
     <Content Include="easyui\themes\metro\window.css" />
     <Content Include="easyui\themes\mobile.css" />
+    <Content Include="Orderform\HtmlPage1.html" />
     <Content Include="ResetPassword\ResetPassword.aspx" />
     <Content Include="PI\EditPI.aspx" />
     <Content Include="Head\Head.js" />
@@ -901,6 +905,7 @@
     <Content Include="judge\judge.ashx" />
     <Content Include="ResetPassword\ResetPassword.ashx" />
     <Content Include="Head\Handler.ashx" />
+    <Content Include="Administrator\Administrator.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1289,6 +1294,16 @@
     <Content Include="景点介绍\Introduce.js" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator\Administrator.ashx.cs">
+      <DependentUpon>Administrator.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\Administrator.aspx.cs">
+      <DependentUpon>Administrator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\Administrator.aspx.designer.cs">
+      <DependentUpon>Administrator.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BuyTicket\BuyTicket.aspx.cs">
       <DependentUpon>BuyTicket.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
