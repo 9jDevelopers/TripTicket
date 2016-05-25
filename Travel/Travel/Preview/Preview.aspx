@@ -41,11 +41,11 @@
                       <div class="desca"><%= name %></div>
                       <div class="descb">
                           描述
-                          <br/><div class ="b">4.8↑</div>
+                          <br/><div id="describe" class ="b">4.8↑</div>
                       </div>
                       <div class="descb">
                           服务
-                          <br/><div class ="b">4.8↑</div>
+                          <br/><div id="Sellerservice" class ="b">4.8↑</div>
                       </div>
                       <div class="descb">
                           体验值
@@ -231,5 +231,19 @@
     <hr/>
     </form>
          <!--#include virtual="../Tail/Tail.html"-->
+<%--    <script>
+        var objs;
+        window.onload = function () {
+            var describe = document.getElementById('describe');
+            var Sellerservice = document.getElementById('Sellerservice');
+            $.post("Preview.ashx", { action: 'getinfo', describe: $.cookie('describe') },
+                function (data) {
+                    var obj = $.parseJSON(data);
+                    describe.innerHTML = $.cookie('describe');
+                    Sellerservice.innerHTML = obj.Sellerservice;
+
+                });
+        }
+    </script>--%>
 </body>
 </html>
