@@ -1,2 +1,10 @@
-﻿body {
+﻿.divbottom li {
+    width:200px;
+}
+.divbottom li a {
+    width:170px;
+    background-color:white;
+}
+.divtop {
+    line-height:50px;
 }
