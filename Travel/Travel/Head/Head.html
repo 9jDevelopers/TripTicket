@@ -105,21 +105,35 @@
     });
 
     //收索自能提示
-    $(function () {
-        $('#sel').combobox({
-            
-            valueField: 'ID',
-            textField: 'name',
-            onChange: function (newValue, oldValue) {
-                
-                if (newValue != null) {
+    
+    //if($('#sel').val()!=null)
+    //{
+         $(function () {
+             $('#sel').combobox
+             (
+                 {
+                valueField: 'ID',
+                textField: 'name',
+                onChange: function (newValue, oldValue) {             
+                    if (newValue != "")
+                    {
+                        //var urlStr = "/ciccpsMember/member/getMemberSelectByName?name=" + encodeURIComponent(newValue);           
+                        var urlStr = "../Head/Handler.ashx?name=" + encodeURIComponent(newValue);
+                        //alert(data);
+                        $("#sel").combobox("reload", urlStr);
+                    }
+                }   
+                 }
+             );            
+         });
+         $(function () {
+             $('#sel').combobox({
+                 onSelect: function (record) {
+                     alert(record.ID);
+                 }
+             })
+         })
 
-                    //var urlStr = "/ciccpsMember/member/getMemberSelectByName?name=" + encodeURIComponent(newValue);           
-                    var urlStr = "../Head/Handler.ashx?name=" + encodeURIComponent(newValue);
-                    //alert(data);
-                    $("#sel").combobox("reload", urlStr);
-                }
-            }
-        });
-    });
+       
+   
 </script>
