@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link href="../Head/Head.css" rel="stylesheet" />  
+    <link href="Administrator.css" rel="stylesheet" />
 
     <script src="../easyui/jquery.min.js"></script>
     <link href="../easyui/themes/default/easyui.css" rel="stylesheet" />
@@ -16,16 +16,11 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    
-
-
-
-
-        <div id="qbody">
+        <div id="addbody"><a href="#" id="addAD">添加管理员</a><a href="#" id="addSec">添加景点</a></div>
+        <div id="lbody">
         <div class="easyui-panel" title="登录窗口" style="height:185px;width:400px;padding:30px 70px 20px 70px">
-            <i id="btnclose">×</i>
             <div class="bdiv">
-                <input id="txtphone" class="incss easyui-textbox" data-options="prompt:'请输入手机号',iconCls:'icon-man',iconWidth:38"/>
+                <input id="txtphone" class="incss easyui-textbox" data-options="prompt:'请输入登录名',iconCls:'icon-man',iconWidth:38"/>
             </div>
             <div class="bdiv">
                 <input id="txtpassword" class="incss easyui-textbox" type="password" data-options="prompt:'请输入密码',iconCls:'icon-lock',iconWidth:38"/>
