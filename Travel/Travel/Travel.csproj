@@ -1355,13 +1355,6 @@
     <Compile Include="Head\LoginHandler.ashx.cs">
       <DependentUpon>LoginHandler.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Orderform\Orderform.aspx.cs">
-      <DependentUpon>Orderform.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Orderform\Orderform.aspx.designer.cs">
-      <DependentUpon>Orderform.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Preview\Preview.aspx.cs">
       <DependentUpon>Preview.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

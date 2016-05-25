@@ -8,3 +8,23 @@
 .divtop {
     line-height:50px;
 }
+.of1 {
+    height:27px;
+    border:1px solid #95B8E7;
+    display:block;
+    width:128px;
+    line-height:27px;
+    text-align:center;
+}
+.tb1 {
+    height:350px;
+    width:1028px;
+    border-spacing:0px;
+    padding-top:2px;
+}
+    .tb1 .t3 td {
+        border-top:1px solid #95B8E7;
+    }
+    .tb1 .t4 td {
+        border-bottom:1px solid #95B8E7;
+    }

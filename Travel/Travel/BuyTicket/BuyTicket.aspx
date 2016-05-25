@@ -8,6 +8,7 @@
     <title></title>
     <link href="css/BuyTicket.css" rel="stylesheet" />
     <link href="../Head/Head.css" rel="stylesheet" />
+    <link href="../Tail/Tail.css" rel="stylesheet" />
     <link href="../easyui/themes/default/easyui.css" rel="stylesheet" />
     <link href="../easyui/themes/icon.css" rel="stylesheet" />
     <link href="../easyui/demo/demo.css" rel="stylesheet" />
@@ -150,6 +151,6 @@
         <script src="js/BuyTicket.js" type="text/javascript"></script>
         <script src="../Head/Head.js"></script>
     </form>
-
+             <!--#include virtual="../Tail/Tail.html"-->
 </body>
 </html>
