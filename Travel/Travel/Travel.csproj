@@ -60,6 +60,7 @@
   <ItemGroup>
     <Content Include="Administrator\Administrator.aspx" />
     <Content Include="Administrator\Administrator.css" />
+    <Content Include="Administrator\Administrator.js" />
     <Content Include="BuyTicket\js\BuyTicket.js" />
     <Content Include="easyui\changelog.txt" />
     <Content Include="easyui\demo-mobile\accordion\basic.html" />
