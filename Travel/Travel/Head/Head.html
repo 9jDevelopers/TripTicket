@@ -117,7 +117,7 @@
                 onChange: function (newValue, oldValue) {             
                     if (newValue != "")
                     {
-                        //var urlStr = "/ciccpsMember/member/getMemberSelectByName?name=" + encodeURIComponent(newValue);           
+                                   
                         var urlStr = "../Head/Handler.ashx?name=" + encodeURIComponent(newValue);
                         //alert(data);
                         $("#sel").combobox("reload", urlStr);

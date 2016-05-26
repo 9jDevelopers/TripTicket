@@ -9,9 +9,9 @@ namespace BL
 {
      public class NEWIntroduceBL
     {
-        public bool transfer(string English,string name,string TravelType,string time,string lanuage,string ticketname,string ticketmoney,string TxTmessage,string image1,string image2,string image3,string image4)
+        public bool transfer(string English,string name,string TravelType,string time,string lanuage,string ticketname,string ticketmoney,string TxTmessage,string image1,string image2,string image3,string image4,string AdminID)
         {
-            if (NEWintroduce.create(English,name, TravelType, time, lanuage, ticketname, ticketmoney, TxTmessage, image1, image2, image3, image4) == null)
+            if (NEWintroduce.create(English,name, TravelType, time, lanuage, ticketname, ticketmoney, TxTmessage, image1, image2, image3, image4,AdminID) == null)
             {
                 return false;
             }
