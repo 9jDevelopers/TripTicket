@@ -23,6 +23,9 @@ namespace Travel.景点新建
                 //传数据
                 NEWIntroduceBL NI = new NEWIntroduceBL();
 
+                Random number = new Random();
+                string English = number.Next(0, 999999999).ToString();
+
                 string name = context.Request.Form["name"];
                 string TravelType = context.Request.Form["TravelType"];
                 string time = context.Request.Form["time"];
@@ -30,13 +33,14 @@ namespace Travel.景点新建
                 string ticketname = context.Request.Form["ticketname"];
                 string ticketmoney = context.Request.Form["ticketmoney"];
                 string TxTmessage = context.Request.Form["TxTmessage"];
+                
 
                 string image1 = context.Request.Form["image1"];
                 string image2 = context.Request.Form["image2"];
                 string image3 = context.Request.Form["image3"];
                 string image4 = context.Request.Form["image4"];
 
-                if (NI.transfer(name, TravelType, time, language, ticketname, ticketmoney, TxTmessage,image1,image2,image3,image4))
+                if (NI.transfer(English, name, TravelType, time, language, ticketname, ticketmoney, TxTmessage,image1,image2,image3,image4))
                 {
                     context.Response.Write("");
                 }
@@ -53,14 +57,14 @@ namespace Travel.景点新建
                 string path = context.Server.MapPath(savePath);
                 //随机数
                 System.Random Random = new System.Random();
-
+                int Result = Random.Next(0, 9999999);
+                string strRes = Result.ToString();
 
                 DateTime DT = System.DateTime.Now;
                 string dt = System.DateTime.Now.ToString("yyyyMMddHHmmss");
                 //string str = dt.Replace('/', ' ');
 
-                int Result = Random.Next(0, 9999999);
-                string strRes = Result.ToString();
+                
 
                 string filename = ".jpg";
 
