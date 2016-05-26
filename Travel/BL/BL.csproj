@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="BAdministrator.cs" />
     <Compile Include="BBuyTicket.cs" />
+    <Compile Include="BOrderform.cs" />
     <Compile Include="BResetPassword.cs" />
     <Compile Include="BGetInfo.cs" />
     <Compile Include="Bjudge.cs" />

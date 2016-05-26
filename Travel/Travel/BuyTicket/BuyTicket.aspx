@@ -22,7 +22,7 @@
 
             var id = $.cookie('ticket');
 
-            $.post("../ByTkt.ashx", { action: "GetPrice", ticketID: id }, function (data) {
+            $.post("ByTkt.ashx", { action: "GetPrice", ticketID: id }, function (data) {
                 if (data == "") {
                     alert("失败");
                 }

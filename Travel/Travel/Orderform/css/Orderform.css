@@ -5,6 +5,9 @@
     width:170px;
     background-color:white;
 }
+.divbottom .tabs-panels {
+    border:none;
+}
 .divtop {
     line-height:50px;
 }
@@ -17,10 +20,9 @@
     text-align:center;
 }
 .tb1 {
-    height:350px;
-    width:1028px;
+    width:1030px;
     border-spacing:0px;
-    padding-top:2px;
+    margin:1px 0;
 }
     .tb1 .t3 td {
         border-top:1px solid #95B8E7;
@@ -28,3 +30,9 @@
     .tb1 .t4 td {
         border-bottom:1px solid #95B8E7;
     }
+.borderleft {
+    border-left:1px solid #95B8E7;
+}
+.borderright {
+    border-right:1px solid #95B8E7;
+}

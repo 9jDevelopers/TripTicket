@@ -900,12 +900,13 @@
     <Content Include="景点新建\newIntroduce.aspx" />
     <Content Include="景点新建\tu\add.css" />
     <Content Include="PI\PI.ashx" />
-    <Content Include="ByTkt.ashx" />
+    <Content Include="BuyTicket\ByTkt.ashx" />
     <Content Include="Reg\Reg.ashx" />
     <Content Include="judge\judge.ashx" />
     <Content Include="ResetPassword\ResetPassword.ashx" />
     <Content Include="Head\Handler.ashx" />
     <Content Include="Administrator\Administrator.ashx" />
+    <Content Include="Orderform\Orderform.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1311,11 +1312,14 @@
     <Compile Include="BuyTicket\BuyTicket.aspx.designer.cs">
       <DependentUpon>BuyTicket.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ByTkt.ashx.cs">
+    <Compile Include="BuyTicket\ByTkt.ashx.cs">
       <DependentUpon>ByTkt.ashx</DependentUpon>
     </Compile>
     <Compile Include="Head\Handler.ashx.cs">
       <DependentUpon>Handler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Orderform\Orderform.ashx.cs">
+      <DependentUpon>Orderform.ashx</DependentUpon>
     </Compile>
     <Compile Include="ResetPassword\ResetPassword.ashx.cs">
       <DependentUpon>ResetPassword.ashx</DependentUpon>

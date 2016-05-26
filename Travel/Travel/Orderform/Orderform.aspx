@@ -15,12 +15,15 @@
     <script src="../easyui/jquery.easyui.min.js"></script>
     <script src="js/Orderform.js"></script>
     <script>
-        
+        $(function () {
+
+            $.post();
+        });
     </script>
 </head>
 <body>
     <!--#include virtual="../Head/Head.html"-->
-    <form id="form1" runat="server">
+    <form id="form1">
         <div class="divout" style="min-width: 300px; width: 100%; margin: 50px 0 100px 0">
             <table>
                 <tr>
@@ -45,10 +48,11 @@
                             </div>
                             <div class="easyui-tabs divbottom" style="width: 1030px; height: 527px;">
                                 <div class="" title="全部订单">
+
                                     <table class="tb1">
-                                        <tr style="height: 40px; background-color: #95B8E7;">
+                                        <tr style="height: 40px; background-color: #95B8E7;text-align:center;">
                                             <td>全选</td>
-                                            <td>类型</td>
+                                            <td>数量</td>
                                             <td>旅客</td>
                                             <td>行程/有效日期</td>
                                             <td>总金额</td>
@@ -59,25 +63,29 @@
                                             <td colspan="7"></td>
                                         </tr>
                                         <tr class="t3" style="height: 35px; background-color: #E0ECFF;">
-                                            <td>订单号：</td>
-                                            <td>预定日期：</td>
-                                            <td colspan="5"></td>
+                                            <td class="borderleft">订单号：<span id="e1"></span></td>
+                                            <td>预定日期：<span id="e2"></span></td>
+                                            <td class="borderright" colspan="5"></td>
                                         </tr>
-                                        <tr class="t4">
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                        <tr class="t4" style="height: 70px;text-align:center;">
+                                            <td class="borderleft" id="e3"></td>
+                                            <td id="e4"></td>
+                                            <td id="e5"></td>
+                                            <td id="e6"></td>
+                                            <td id="e7"></td>
+                                            <td id="e8"></td>
+                                            <td class="borderright" id="e9"></td>
                                         </tr>
                                     </table>
+                                    <div class="easyui-panel">
+                                        <div class="easyui-pagination" data-options="total:114"></div>
+                                    </div>
                                 </div>
-                                <div class="" title="未出行"></div>
-                                <div class="" title="待付款"></div>
-                                <div class="" title="待评价"></div>
-                            </div>
+                                    <div class="" title="未出行"></div>
+                                    <div class="" title="待付款"></div>
+                                    <div class="" title="待评价"></div>
+                                </div>
+                            
                         </div>
                     </td>
                 </tr>
