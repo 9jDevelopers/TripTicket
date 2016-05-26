@@ -16,8 +16,12 @@
     <script src="js/Orderform.js"></script>
     <script>
         $(function () {
+            var id = $("#e1").val();
+           
+            $.post("Orderform.ashx", { eid: e1}, function (data) {
 
-            $.post();
+
+            });
         });
     </script>
 </head>
@@ -81,11 +85,11 @@
                                         <div class="easyui-pagination" data-options="total:114"></div>
                                     </div>
                                 </div>
-                                    <div class="" title="未出行"></div>
-                                    <div class="" title="待付款"></div>
-                                    <div class="" title="待评价"></div>
-                                </div>
-                            
+                                <div class="" title="未出行"></div>
+                                <div class="" title="待付款"></div>
+                                <div class="" title="待评价"></div>
+                            </div>
+
                         </div>
                     </td>
                 </tr>

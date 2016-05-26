@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-
+using BL;
 namespace Travel.Orderform
 {
     /// <summary>
@@ -13,8 +13,11 @@ namespace Travel.Orderform
 
         public void ProcessRequest(HttpContext context)
         {
-            context.Response.ContentType = "text/plain";
-            context.Response.Write("Hello World");
+            int EntID = int.Parse(context.Request.Form["eid"]);
+            BOrderform bof = new BOrderform();
+            string info = bof.Set(EntID);
+            string[] str = info.Split('$');
+
         }
 
         public bool IsReusable
