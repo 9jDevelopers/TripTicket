@@ -206,6 +206,7 @@
   
         </form>
     <script src="js/NI.js"></script>
+    <%-- 图片 --%>
       <script type="text/javascript">
         var button1 = $('#btnUp1');
         var image1 = $('#ig1');
@@ -257,8 +258,10 @@
             var TravelType = $("#TravelType").val();
             var time = $("#time").val();
             var language = $("#language").val();
+
             var ticketname = $("#ticketname").val();
             var ticketmoney = $("#ticketmoney").val();
+
             var TxTmessage = $("#TxTmessage").val();
 
             var image1 = $("#ig1").attr("src");           
@@ -277,8 +280,10 @@
                 TravelType: $("#TravelType").val(),
                 time: $("#time").val(),
                 language: $("#language").val(),
+
                 ticketname: $("#ticketname").val(),
                 ticketmoney: $("#ticketmoney").val(),
+
                 TxTmessage: $("#TxTmessage").val(),
 
                 image1: $("#ig1").attr("src"),     
