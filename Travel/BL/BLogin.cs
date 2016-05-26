@@ -11,10 +11,10 @@ namespace BL
     public class BLogin
     {
         //LoginDal ld = new LoginDal();
-        public void Login(string phone, string Password,out string username)
+        public void Login(string phone, string Password,out string username,out string uid)
         {
             //// return ld.Login(LoginName, Password);
-            Account.Get(phone, Password, out username);
+            Account.Get(phone, Password, out username,out uid);
 
         }
 

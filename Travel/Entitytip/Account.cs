@@ -62,7 +62,7 @@ namespace Entitytip
                 email = "";
             }
         }
-        public static void Get(string phone, string password,out string username)
+        public static void Get(string phone, string password,out string username,out string uid)
         {
             DbHelper db = new DbHelper();
             DbCommand cmd = db.GetSqlStringCommond("select * from Account where Phone=@LoginName and userpassword=@Password");
@@ -70,10 +70,17 @@ namespace Entitytip
             db.AddInParameter(cmd, "@Password", DbType.String, password);
             DataTable dt = db.ExecuteDataTable(cmd);
             if (dt.Rows.Count > 0)
-                //登陆成功
+            //登陆成功
+            {
+                uid= dt.Rows[0]["userID"].ToString();
                 username = dt.Rows[0]["username"].ToString();
+            }
+               
             else
+            {
                 username = null;
+                uid = null;
+            }
         }
         public static bool Reg(string phone,string username, string email, string password)
         {//注册页面
