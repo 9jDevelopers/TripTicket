@@ -39,8 +39,9 @@ namespace Travel.景点新建
                 string image2 = context.Request.Form["image2"];
                 string image3 = context.Request.Form["image3"];
                 string image4 = context.Request.Form["image4"];
+                string AdminID = "99999";
 
-                if (NI.transfer(English, name, TravelType, time, language, ticketname, ticketmoney, TxTmessage,image1,image2,image3,image4))
+                if (NI.transfer(English, name, TravelType, time, language, ticketname, ticketmoney, TxTmessage,image1,image2,image3,image4,AdminID))
                 {
                     context.Response.Write("");
                 }
