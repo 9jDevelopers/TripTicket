@@ -10,6 +10,9 @@
     <link href="../Tail/Tail.css" rel="stylesheet" />
     <script src="js/judge.js"></script>
     <script src="../easyui/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.raty.js"></script>
+    <script src="js/jquery.raty.min.js"></script>
     <link href="../easyui/themes/default/easyui.css" rel="stylesheet" />
     <link href="../easyui/themes/icon.css" rel="stylesheet" />
     <link href="../easyui/demo/demo.css" rel="stylesheet" />
@@ -69,48 +72,51 @@
             }
        };
 
-       window.onload = function () {
+       //window.onload = function () {
            //var star = document.getElementById("fd");
            //var star_li = star.getElementsByTagName("li");
            //var star_word = document.getElementById("fd_word");
            //var result = document.getElementById("result");
 
-           var star = document.getElementById("ju");
-           var star_li = star.getElementsByTagName("li");
-           var star_word = document.getElementById("ju_word");
-           var result = document.getElementById("resulty");
+           //var star = document.getElementById("ju");
+           //var star_li = star.getElementsByTagName("li");
+           //var star_word = document.getElementById("ju_word");
+           //var result = document.getElementById("resulty");
 
            //var star = document.getElementById("dk");
            //var star_li = star.getElementsByTagName("li");
            //var star_word = document.getElementById("dk_word");
            //var result = document.getElementById("resultz");
 
-           var i = 0;
-           var j = 0;
-           var len = star_li.length;
-           var word = ['很差', '差', '一般', "好", "很好"]
+       //    var i = 0;
+       //    var j = 0;
+       //    var len = star_li.length;
+       //    var word = ['很差', '差', '一般', "好", "很好"]
 
-           for (i = 0; i < len; i++) {
-               star_li[i].index = i;
-               star_li[i].onmouseover = function () {
-                   star_word.style.display = "block";
-                   star_word.innerHTML = word[this.index];
-                   for (i = 0; i <= this.index; i++) {
-                       star_li[i].className = "act";
-                   }
-               }
-               star_li[i].onmouseout = function () {
-                   star_word.style.display = "none";
-                   for (i = 0; i < len; i++) {
-                       star_li[i].className = "";
-                   }
-               }
-               star_li[i].onclick = function () {
-                   result.innerHTML = (this.index + 1) + "分";
-               }
-           }
+       //    for (i = 0; i < len; i++) {
+       //        star_li[i].index = i;
+       //        star_li[i].onmouseover = function () {
+       //            star_word.style.display = "block";
+       //            star_word.innerHTML = word[this.index];
+       //            for (i = 0; i <= this.index; i++) {
+       //                star_li[i].className = "act";
+       //            }
+       //        }
+       //        star_li[i].onmouseout = function () {
+       //            star_word.style.display = "none";
+       //            for (i = 0; i < len; i++) {
+       //                star_li[i].className = "";
+       //            }
+       //        }
+       //        star_li[i].onclick = function () {
+       //            result.innerHTML = (this.index + 1) + "分";
+       //        }
+       //    }
 
-       }
+       //}
+    </script>
+    <script type="text/javascript">
+        $('#star').raty();
     </script>
 
 </head>
@@ -217,7 +223,8 @@
 
                     <div class="ee">
                         <div>
-                            <div>描述相符</div>
+                            <div id="star"></div>
+                            <%--<div>描述相符</div>
                             <div class="dt">
                                 打分结果 
                                 <span id="result"></span>
@@ -230,12 +237,12 @@
                                 </ul>
                                 <div id="fd_word">一般</div>
 
-                            </div>  
+                            </div>  --%>
                         </div> 
 
                         <div>
                             <div>卖家服务</div>
-                            <div class="ji">
+                            <%--<div class="ji">
                                 评分结果<span id="resulty"></span>
                                 <ul id="ju">
                                     <li>★</li>
@@ -245,12 +252,12 @@
                                     <li>★</li>
                                 </ul>
                                 <div id="ju_word">一般</div>
-                            </div>
+                            </div>--%>
                         </div> 
 
                         <div>
                             <div>物流服务</div>
-                            <div class="zy">
+                         <%--   <div class="zy">
                                 评分结果<span id=""></span>
                                 <ul id="dk">
                                     <li>★</li>
@@ -260,7 +267,7 @@
                                     <li>★</li>
                                 </ul>
                                 <div id="dk_word">一般</div>
-                            </div>
+                            </div>--%>
                         </div> 
                     </div>
 
