@@ -789,6 +789,9 @@
     <Content Include="easyui\themes\metro\validatebox.css" />
     <Content Include="easyui\themes\metro\window.css" />
     <Content Include="easyui\themes\mobile.css" />
+    <Content Include="Index\Index.aspx" />
+    <Content Include="Index\Index.css" />
+    <Content Include="Index\Index.js" />
     <Content Include="Orderform\HtmlPage1.html" />
     <Content Include="ResetPassword\ResetPassword.aspx" />
     <Content Include="PI\EditPI.aspx" />
@@ -907,6 +910,7 @@
     <Content Include="Head\Handler.ashx" />
     <Content Include="Administrator\Administrator.ashx" />
     <Content Include="Orderform\Orderform.ashx" />
+    <Content Include="Index\Index.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1318,6 +1322,16 @@
     </Compile>
     <Compile Include="Head\Handler.ashx.cs">
       <DependentUpon>Handler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Index\Index.ashx.cs">
+      <DependentUpon>Index.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Index\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Orderform\Orderform.ashx.cs">
       <DependentUpon>Orderform.ashx</DependentUpon>
