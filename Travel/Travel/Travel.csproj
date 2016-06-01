@@ -914,6 +914,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <Content Include="景点合作\Web.config" />
+    <Content Include="景点介绍\Introduce.ashx" />
     <None Include="景点合作\Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1380,6 +1381,9 @@
       <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tool\ProofTechnique.cs" />
+    <Compile Include="景点介绍\Introduce.ashx.cs">
+      <DependentUpon>Introduce.ashx</DependentUpon>
+    </Compile>
     <Compile Include="景点介绍\Introduce.aspx.cs">
       <DependentUpon>Introduce.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

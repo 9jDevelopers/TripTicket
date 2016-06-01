@@ -130,6 +130,10 @@
              $('#sel').combobox({
                  onSelect: function (record) {
                      alert(record.ID);
+
+                     //$.cookie('selectID', record.ID, { path: '/' });
+                     window.location = "../景点介绍/Introduce.aspx";
+                     
                  }
              })
          })

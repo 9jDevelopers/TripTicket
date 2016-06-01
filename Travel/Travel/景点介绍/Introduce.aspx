@@ -187,6 +187,19 @@
 
 </html>
 <script type="text/javascript">
+    //window.onload = function () {
+    //    var SceneID = $.cookie('selectID')
+    //    $.post(
+    //       "Introduce.ashx", {
+    //           SceneID:$.cookie('selectID')
+    //       })
+       
+    //}
+    
+    
+        
+       
+    
     $(".Yuyue").click(function () {
       
         $.cookie('ticket', '2', { path: '/' });
@@ -194,4 +207,5 @@
         //alert("123456");
         window.location.href = "../BuyTicket/BuyTicket.aspx";
     });
+    
 </script>
