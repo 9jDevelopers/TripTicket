@@ -9,7 +9,7 @@
     margin-right:3%;
     margin-top:40px;
     font-size:18px;
-}
+}                                                                                                   
 .dh{
     border:1px solid gray;
     float:left;
@@ -85,7 +85,7 @@
 }
 .downbox{
     width:89%;
-    height:840px;
+    height:850px;
     margin-left:7%;
     margin-right:3%;
     background-color:gainsboro;
@@ -207,7 +207,7 @@
 .im
 {
     width: 70px;
-    padding-top:10px;
+    height:50px;
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -218,6 +218,8 @@
     right: -10px;
     top: -10px;
     color: Red;
+    width:20px;
+    height:20px;
     font-size: 20px;
     background-color: White;
     border-radius: 20px;
@@ -230,10 +232,15 @@
     width: 50px;
     height: 50px;
     margin: 0 auto;
+
+     background-image: url(images/test.jpg);
+            background-size: cover;
+            position: relative;
 }
 .pic{
     float:left;
 }
+
 .f{
     margin:3%;
 }
@@ -248,7 +255,7 @@
     font-size:20px;
 }
 .qwe{
-    height:3%;
+    height:20px;
     width:99%;
     background-color:white;
     margin-bottom:0;
@@ -283,37 +290,3 @@ a{
 .red{
     background-color:red;
 }
-
-
-
-/* 灰色背景星星5个平铺 */
-.star_bg {
-    width: 200px; height: 50px;
-    background:url(/judge/images/star.jpg) repeat-x;
-    position: relative;
-    overflow: hidden;
-    float:left;
-}
-/* 这是5个小星星们的默认状态的定位 */
-.star {
-    height: 40px; width: 40px;
-    line-height: 2em;
-    position: absolute;
-    z-index: 3;
-}
-.star_1 { left: 0px; }
-.star_2 { left: 40px; }
-.star_3 { left: 80px; }
-.star_4 { left: 120px; }
-.star_5 { left: 160px; }
-
-/* 鼠标hover效果实现，分别显示背景与定宽 */
-.star:hover {    
-    background:url(/judge/images/star.jpg) repeat-x 0 -20px;
-    left: 0; z-index: 2;
-}
-.star_1:hover { width: 40px; }
-.star_2:hover { width: 80px; }
-.star_3:hover { width: 120px; }
-.star_4:hover { width: 160px; }
-.star_5:hover { width: 200px; }
