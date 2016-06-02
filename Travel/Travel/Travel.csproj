@@ -797,9 +797,8 @@
     <Content Include="judge\img\star-half.png" />
     <Content Include="judge\img\star-off.png" />
     <Content Include="judge\img\star-on.png" />
+    <Content Include="judge\js\jquery-1.5.1.min.js" />
     <Content Include="judge\js\jquery.min.js" />
-    <Content Include="judge\js\jquery.raty.js" />
-    <Content Include="judge\js\jquery.raty.min.js" />
     <Content Include="Orderform\HtmlPage1.html" />
     <Content Include="ResetPassword\ResetPassword.aspx" />
     <Content Include="PI\EditPI.aspx" />
