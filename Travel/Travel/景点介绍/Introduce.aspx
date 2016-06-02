@@ -150,11 +150,11 @@
                     <img src="image/z景点简介_03.gif" /></div>
 
             
-            <p><a name="A4"><img src="image/景点简介222_10.gif" /></a>&nbsp;&nbsp;<i class="pf">4.9</i>分</p>
+            <p><a name="A4"><img src="image/景点简介222_10.gif" /></a>
                 <hr />     
             <div>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/景点简介a_03.gif" width="120" height="" />
-                <p class="hp">好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评</p>
+                
                  </div>
 
         </div>
@@ -199,7 +199,8 @@
         }
         
         alert(getUrlParam("selectid")); 
-        var zi = getUrlParam("selectid");
+    //var zi = getUrlParam("selectid");
+        var zi = "2";
         if (zi != null)
         {
             $.post(
