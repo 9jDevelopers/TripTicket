@@ -31,16 +31,17 @@
         <%-- 景点简介 --%>
         <div class="jianjie ">
             <div class="tu">
-                <div class="banner">
+              <%--  <div class="banner">
                   <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide swiper-slide-bg-1"></div>
-                        <div class="swiper-slide swiper-slide-bg-2"></div>
-                        <div class="swiper-slide swiper-slide-bg-3"></div>
-                            </div>
+                         <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-slide-bg-1"></div>
+                            <div class="swiper-slide swiper-slide-bg-2"></div>
+                            <div class="swiper-slide swiper-slide-bg-3"></div>
+                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
-                 </div>
+                 </div>--%>
+               <img id="ig" src=""/> 
                
             </div>
 
@@ -213,11 +214,15 @@
             alert(a.NData);
             alert(a.NScore);
             alert(a.NNumber);
+
             $("#NData").html(a.NData);
             $("#NSceneName").html(a.NSceneName);
             $("#NScore").html(a.NScore);
             $("#NNumber").html(a.NNumber);
-        }
+            $("#ig").attr("src", "../景点新建/image/" + a.image0)
+            $("#ig").attr("width", "650")
+            $("#ig").attr("height", "450")
+        }    
     )
         }
        
