@@ -13,17 +13,18 @@ namespace 游游旅游
     public partial class Introduce : System.Web.UI.Page
     {
 
-        public string SceneName;
-        public string Data;
-        public string Score;
-        public string Number;
+        //public string SceneName;
+        //public string Data;
+        //public string Score;
+        //public string Number;
         protected void Page_Load(object sender, EventArgs e)
         {
-            string SceneID = "2";
 
-            IntroduceBL giveme = new IntroduceBL();
+            //string SceneID="2";
 
-            giveme.Message(SceneID, out SceneName, out Data, out Score, out Number);
+            //IntroduceBL giveme = new IntroduceBL();
+
+            //giveme.Message(SceneID, out SceneName, out Data, out Score, out Number);
         }
     }
 }
