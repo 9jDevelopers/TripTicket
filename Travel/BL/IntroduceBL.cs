@@ -8,9 +8,12 @@ namespace BL
 {
     public class IntroduceBL
     {
-        public void Message(string SceneID,out string SceneName, out string Data, out string Score, out string Number)
+        
+        public Introduce Message(string SceneID)
         {
-            Introduce.Give(SceneID, out SceneName, out Data, out Score, out Number);
+         return Introduce.get(SceneID);
+
         }
+
     }
 }
