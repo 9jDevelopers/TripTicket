@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using BL;
 
 namespace Travel.Index
 {
@@ -13,8 +14,9 @@ namespace Travel.Index
 
         public void ProcessRequest(HttpContext context)
         {
-            context.Response.ContentType = "text/plain";
-            context.Response.Write("Hello World");
+            Bgetindexinfo getinfo = new Bgetindexinfo();
+            string data = getinfo.bindexinfo();
+            context.Response.Write(data);
         }
 
         public bool IsReusable
