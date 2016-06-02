@@ -21,11 +21,6 @@
 
                 <div data-options="name:'sports'"></div>
             </div>
-                    <script>//搜索功能
-		                function doSearch(value,name){
-			                alert('You input: ' + value+'('+name+')');
-		                }
-                    </script> 
          </div>
         <div class="phone">客服电话：10086-10010</div> 
     </div>
@@ -116,8 +111,7 @@
                 textField: 'name',
                 onChange: function (newValue, oldValue) {             
                     if (newValue != "")
-                    {
-                                   
+                    {          
                         var urlStr = "../Head/Handler.ashx?name=" + encodeURIComponent(newValue);
                         //alert(data);
                         $("#sel").combobox("reload", urlStr);
@@ -137,7 +131,4 @@
                  }
              })
          })
-
-       
-   
 </script>

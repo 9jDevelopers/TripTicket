@@ -15,7 +15,7 @@ namespace Travel.Tool
             
             if (Convert.ToString(UID) == "")
             {
-                HttpContext.Current.Response.Redirect("~/Preview/Preview.aspx", true);
+                HttpContext.Current.Response.Redirect("~/Index/Index.aspx", true);
             }
         }
         public void proofaid(string AID) 
