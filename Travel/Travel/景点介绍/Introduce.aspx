@@ -45,10 +45,10 @@
             </div>
 
             <div class="wen">            
-                <p><div class="FT"><%=SceneName%></div></p>
+                <p><div class="FT" id="NSceneName"></div></p>
 
                 <p class="c">
-                    <img src="image/景点简介_03_02.gif" />月销<%=Data%>份&nbsp;<i class="PingFen"><%=Score%></i>分&nbsp;已有<%=Number%>人评价</p>
+                    <img src="image/景点简介_03_02.gif" />月销<i id="NData"></i>份&nbsp;<i class="PingFen"><i id="NScore"></i></i>分&nbsp;已有<i id="Number"></i>人评价</p>
                 <p><div class="GuanGuang">城市观光</div></p>           
                 <p><font color="#808080">出&nbsp;发&nbsp;地:</font>韩国&middot;首尔</p>
                 <p><font color="#808080">游玩时长&nbsp;：</font>10小时&nbsp;&nbsp;<font color="#808080">服务语言：</font>中文、韩语</p>
@@ -179,7 +179,8 @@
         
 </div>
 
- 
+       
+   
     </form>
      <!--#include virtual="../Tail/Tail.html"-->
  
@@ -187,16 +188,44 @@
 
 </html>
 <script type="text/javascript">
-    //window.onload = function () {
-    //    var SceneID = $.cookie('selectID')
-    //    $.post(
-    //       "Introduce.ashx", {
-    //           SceneID:$.cookie('selectID')
-    //       })
+   
+
+    //接受地址ID
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+            if (r != null) return unescape(r[2]); return null; //返回参数值
+        }
+        
+        alert(getUrlParam("selectid")); 
+        var zi = getUrlParam("selectid");
+        if (zi != null)
+        {
+            $.post(
+            "Introduce.ashx",
+        {
+            zi: getUrlParam("selectid")
+        },
+        function (data) {
+            alert(data);
+            var a = $.parseJSON(data);
+            alert(a.NSceneName);
+            alert(a.NData);
+            alert(a.NScore);
+            alert(a.NNumber);
+            $("#NData").html(a.NData);
+            $("#NSceneName").html(a.NSceneName);
+            $("#NScore").html(a.NScore);
+            $("#NNumber").html(a.NNumber);
+        }
+    )
+        }
        
-    //}
-    
-    
+        else
+        {
+            alert("请正确加载页面");
+            location.href = "../Index/Index.aspx";
+        }
         
        
     

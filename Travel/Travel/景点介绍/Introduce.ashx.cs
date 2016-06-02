@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using BL;
+using MSSQLDAL;
 
 namespace Travel.景点介绍
 {
@@ -11,19 +12,21 @@ namespace Travel.景点介绍
     /// </summary>
     public class Introduce : IHttpHandler
     {
-        public string SceneName;
-        public string Data;
-        public string Score;
-        public string Number;
+
 
         public void ProcessRequest(HttpContext context)
         {
-            //string SceneID =context.Request.Form["selectID"];
-            string SceneID = "2";
-            IntroduceBL giveme = new IntroduceBL();
 
-            giveme.Message(SceneID, out SceneName, out Data, out Score, out Number);
-            //context.Response.Write("Hello World");
+            string SceneID = context.Request.Form["zi"];
+            IntroduceBL giveme = new IntroduceBL();
+            Entitytip.Introduce a = giveme.Message(SceneID);
+            
+            
+            string MSG = " {\"NSceneName\":\""+a.SceneName+ "\",\"NData\":\""+a.Data+ "\",\"NScore\":\""+a.Score+ "\",\"NNumber\":\""+a.Number+"\"}";
+        
+
+
+            context.Response.Write(MSG);
         }
 
         public bool IsReusable

@@ -2,21 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using BL;
 
-namespace Travel.Index
+namespace Travel.PersonalCenter
 {
     /// <summary>
-    /// Index1 的摘要说明
+    /// PersonalCenter1 的摘要说明
     /// </summary>
-    public class Index1 : IHttpHandler
+    public class PersonalCenter1 : IHttpHandler
     {
 
         public void ProcessRequest(HttpContext context)
         {
-            Bgetindexinfo getinfo = new Bgetindexinfo();
-            string data = getinfo.bindexinfo();
-            context.Response.Write(data);
+            context.Response.ContentType = "text/plain";
+            context.Response.Write("Hello World");
         }
 
         public bool IsReusable
