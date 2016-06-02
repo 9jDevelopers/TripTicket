@@ -28,10 +28,10 @@ namespace Entitytip
 
         public SceceType Stype;
 
-        public static NEWintroduce create(string English,string name,string TravelType,string time,string language, string ticketname,string sicketmoney,string TxTmessage,string image1, string image2, string image3, string image4,string AdminID)
+        public static NEWintroduce create(string English,string name,string TravelType,string time,string language, string ticketname,string sicketmoney,string TxTmessage,string image1, string image2, string image3, string image4,string AdminID,string image0)
         {
             DbHelper db = new DbHelper();
-            DbCommand cmd = db.GetSqlStringCommond("insert into NewIntroduce(SceneID,name,TravelType,time,language,TxTmessage,image1,image2,image3,image4,AdminID)values(@SceneID,@name,@TravelType,@time,@language,@TxTmessage,@image1,@image2,@image3,@image4,@AdminID)");
+            DbCommand cmd = db.GetSqlStringCommond("insert into NewIntroduce(SceneID,name,TravelType,time,language,TxTmessage,image1,image2,image3,image4,AdminID,image0)values(@SceneID,@name,@TravelType,@time,@language,@TxTmessage,@image1,@image2,@image3,@image4,@AdminID,@image0)");
             
             db.AddInParameter(cmd, "@SceneID",DbType.String,English);
             db.AddInParameter(cmd,"@name", DbType.String,name);
@@ -44,6 +44,7 @@ namespace Entitytip
             db.AddInParameter(cmd, "@image3", DbType.String, image3);
             db.AddInParameter(cmd, "@image4", DbType.String, image4);
             db.AddInParameter(cmd, "@AdminID", DbType.Int32, AdminID);
+            db.AddInParameter(cmd, "@image0", DbType.String, image0);
 
             DbCommand cmT = db.GetSqlStringCommond("insert into TicketType(SceneID,ticketname,ticketmoney)values(@SceneID,@ticketmoney,@ticketname)");
             db.AddInParameter(cmT, "@SceneID", DbType.String, English);
