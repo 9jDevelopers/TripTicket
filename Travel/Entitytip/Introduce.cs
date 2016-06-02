@@ -15,20 +15,24 @@ namespace Entitytip
         public string Data = "";
         public string Score = "";
         public string Number = "";
+        public string image0 = "";
         public static Introduce get(string SceneID)
         {
             DbHelper db = new DbHelper();
             DbCommand cmd = db.GetSqlStringCommond("select * from Introduce where SceneID=@SceneID ");
+            DbCommand cmp = db.GetSqlStringCommond("select *from NewIntroduce where SceneID=@SceneID");
             db.AddInParameter(cmd, "@SceneID", DbType.String, SceneID);
+            db.AddInParameter(cmp, "@SceneID", DbType.String, SceneID);
             DataTable dt = db.ExecuteDataTable(cmd);
+            DataTable dp = db.ExecuteDataTable(cmp);
 
             Introduce getmessage = new Introduce();
 
-            getmessage.SceneName = dt.Rows[0]["SceneName"].ToString();
+            getmessage.SceneName = dp.Rows[0]["name"].ToString();
             getmessage.Data = dt.Rows[0]["Data"].ToString();
             getmessage.Score = dt.Rows[0]["Score"].ToString();
             getmessage.Number = dt.Rows[0]["Number"].ToString();
-
+            getmessage.image0 = dp.Rows[0]["image0"].ToString();
             return getmessage;
 
         }
