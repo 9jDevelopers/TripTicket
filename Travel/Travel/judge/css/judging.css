@@ -1,205 +1,116 @@
 ﻿.da{
     width:100%;
-    height:1500px;
+    height:1000px;
 }
 .yu {
-    height:400px;
+    height:900px;
     width:90%;
-    margin-left:7%;
-    margin-right:3%;
+    margin-left:5%;
+    margin-right:5%;
     margin-top:40px;
-    font-size:18px;
-}                                                                                                   
+    background-color:darkgray;
+}
+.gh{
+    width:93%;
+    height:100px;
+    margin-right:3%;
+    margin-left:2%;
+    background-color:white;
+}
+.hf{
+    width:55%;
+    height:50px;
+    margin-top:5px;
+    background-color:white;
+}
+.fh{
+    width:93%;
+    height:200px;
+    margin-top:5px;
+    margin-left:2%;
+    background-color:white;
+}
+.du{
+    width:93%;
+    height:300px;
+    margin-top:5px;
+    margin-left:2%;
+    background-color:white;
+}
+.lp{
+    width:93%;
+    height:200px;
+    margin-top:5px;
+    margin-left:2%;
+    background-color:white;
+}
+.ij {
+    width:50px;
+    height:80%;
+    margin-left:40px;
+    margin-bottom:5px;
+    margin-top:5px;
+    float:left;
+}
+.dii {
+    margin-top:5px;
+} 
+.ij img{
+    width:100%;
+    height:100%;
+}
+.kl{
+    text-align:center;
+}
+.kj {
+    float:right;
+}                                                                                            
 .dh{
     border:1px solid gray;
     float:left;
     width:85%;
 }
-.first {
-    height:80%;
-    width:100%;
-}
-.ga img{
-    width:100%;
-    height:100%;
-}
-.se{
-    width:100%;
-    height:18%;
-    padding-top:1%;
-}
-.tu{
-    width:5%;
-    height:100%;
-    float:left;
-}
-.tu img{
-    width:100%;
-    height:100%;
-}
-.io{
+.gup{
     width:20%;
     height:100%;
-    float:left;
-}
-.io img{
-    width:100%;
-    height:100%;
-}
-.leftbox{
-    height:400px;
-    width:40%;
-    float:left;
-}
-.centerbox{
-    width:60%;
-    height:400px;
-    float:left;
-}
-.centerbox div{
-    padding:2%;
-}
-.rightbox {
-    width:14%;
-    height:400px;
-    float:left;
-    border:1px solid gray;
-}
-.rightbox div{
-    padding:2%;
-}
-.rightbox img{
-    width:40%;
-    height:10%;
-}
-.rightbox div{
-    padding:2%;
-}
-.r{
-    color:dodgerblue;
-}
-.q{
-    background-color:gainsboro;
-    margin-left:7%;
-    margin-bottom:10%;
-}
-.downbox{
-    width:89%;
-    height:850px;
-    margin-left:7%;
-    margin-right:3%;
-    background-color:gainsboro;
-    margin-top:10px;
-    border:1px solid;
-    border-color:gray;
     font-size:18px;
-}
-.s{
-    float:right;
-}
-.price{
-    width:90%;
-    height:30px;
-    background-color:lightpink;
-    line-height:30px;
-    color:#e5c5c9;
-}
-.ty{
-    margin-left:5%;
-}
-.sd{
-    width:90%;
-    height:300px;
-    margin-left:5%;
-    margin-right:5%;
-}
-.e{
-    width:48%;
-    height:100%;
+    text-align:center;
+    border-left-color:darkblue;
+    border-right-style:dashed;
+    display:block;
     float:left;
-    border-style:solid;
-    border-color:gainsboro;
-    border:0px;
+    text-align:center;
 }
-.ee{
-    border:1px;
-    width:20%;
+.sui{
+    width:75%;
     height:100%;
-    margin-left:10%;
-    margin-right:20%;
+    display:block;
     float:left;
-    border-style:solid;
-    border-color:gainsboro;
 }
-.j1{
-    width:100%;
-    height:130px;
-    background-color:white;
+.fji{
+    width:60%;
+    height:20%;
+}
+.ji{
+    width:80%;
+    height:42%;
 }
 .j2{
-    width:100%;
-    height:90px;
-    background-color:white;
-}
-.j3{
-    width:100%;
-    height:60px;
-    background-color:white;
-}
-.tx1{
-    width:20%;
-    border-color:gainsboro;
-    float:left;
-    border-style:solid;
-    text-align:center;
-    line-height:128px;
-    height:130px;
-    border:0px solid gray;
-}
-.tx2{
-    width:20%;
-    border-color:gainsboro;
-    float:left;
-    border-style:solid;
-    text-align:center;
-    line-height:90px;
-    height:90px;
-    border:0px solid gray;
-}
-.tx3{
-    width:20%;
-    border-color:gainsboro;
-    float:left;
-    border-style:solid;
-    text-align:center;
-    line-height:60px;
-    height:60px;
-    border:0px solid gray;
+    width:80%;
+    height:42%;
 }
 .b1{
     width:78%;
-    float:left;
-    border:0px;
+    height:128px;
 }
 .b2{
     width:78%;
+    height:88px;
     float:left;
     border:0px;
-}.b3{
-     height:60px;
-     line-height:60px;  
-     width:78%;
-     float:left;
-     border:1px;
- }
-.b3 img{
-     width:10%;
-     height:80%;
-     display:block;
-     float:left;
 }
 .item{
-    display: inline-block;
+    display:inline-block;
     width: 80px;
     margin-left: 15px;
     position: relative;
@@ -225,53 +136,42 @@
     border-radius: 20px;
     margin: 3px;
 }
-
-
 #btnimage{
     display:inline-block;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     margin: 0 auto;
-
-     background-image: url(images/test.jpg);
-            background-size: cover;
-            position: relative;
-}
-.pic{
-    float:left;
-}
-
-.f{
-    margin:3%;
-}
-.fu{
-    width:90%;
-    margin-right:5%;
-    margin-left:5%;
-    margin-top:2%;
+    background-image: url(images/test.jpg);
+    background-size: cover;
+    position: relative;
 }
 .submit {
+    width:100%;
     text-align:center;
-    font-size:20px;
+    font-size:24px;
 }
 .qwe{
-    height:20px;
-    width:99%;
+    height:40px;
+    width:100%;
+    margin-top:30px;
     background-color:white;
-    margin-bottom:0;
+    margin-top:80px;
+}
+.dy{
+    width:100%;
+    height:80%;
+    background-color:darkgray;
 }
 .gy{
     text-align:center;
     line-height:30px;
 }
 .boxthree {
-    width:90%;
+    width:100%;
     height:20px;
     border-style:solid;
     border-color:gray;
-    background-color:gainsboro;
-    margin-left:7%;
-    margin-right:3%;
+    background-color:darkgray;
     margin-top:2%;
     font-size:18px;
 }
@@ -283,6 +183,7 @@
 .c{
     float:right;
     width:10%;
+    height:100%;
 }
 a{
     text-decoration:none;
