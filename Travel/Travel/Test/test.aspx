@@ -7,7 +7,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Test</title>
     <link href="../Head/Head.css" rel="stylesheet" />  
-
     <script src="../easyui/jquery.min.js"></script>
     <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
     <link href="../Tail/Tail.css" rel="stylesheet" />

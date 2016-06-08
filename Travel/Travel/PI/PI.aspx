@@ -35,6 +35,7 @@
 	<script>
 	    var objs;
 	    window.onload = function () {
+	        alert(1);
 	        var phone = document.getElementById('phone');
 	        var email = document.getElementById('email');
 	        var username = document.getElementById('username');
