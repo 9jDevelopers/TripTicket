@@ -38,8 +38,11 @@
 }//加载结束
 
 $(document).ready(function () {//点击开始----------------------------------
-    $(".itemdiv").live("click", function () {//点击传ID值  到景点介绍页面       
+    $(document).on("click",".itemdiv",function(){
+    //    $("a").live("focus",function(){   //jquery1.8版本的方法  之后版本被删除
+    //$(".itemdiv").live("click", function () {//点击传ID值  到景点介绍页面       
         var value = $(this).children("input").val();
-        alert(value);//获取ID   应当通过url传
+        //alert(value);//获取ID   应当通过url传
+        window.location = "../景点介绍/Introduce.aspx?selectid=" + value;
     });
 });
