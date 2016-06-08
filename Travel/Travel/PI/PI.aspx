@@ -45,7 +45,7 @@
 	        var home = document.getElementById('home');        
 	        $.post(
                    "PI.ashx",
-                    { action:'getinfo',phone: $.cookie('phone') },
+                    { action:'getinfo'},
                     function (data) {
                         objs = data;
                         var obj = $.parseJSON(data);
@@ -56,10 +56,8 @@
                         sex.innerHTML = obj.sex;
                         birthday.innerHTML = obj.birthday;
                         $(".photo").css('background-image', 'url(Photo/' + obj.photo + ')');
-
                         //background-image: url(images/test.jpg);
-                        home.innerHTML = obj.home;
-                      
+                        home.innerHTML = obj.home;      
                     });
 	    }
 	    $(".submit").click(function () {

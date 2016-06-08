@@ -12,6 +12,7 @@
                       var d = t[i].d;
                       var s = t[i].s;
                       var e = t[i].e;
+                      var m = t[i].im;
                       if (d == null || d == "")
                       {
                           d = "无";
@@ -22,6 +23,10 @@
                       if (e == null || e == "") {
                           e = "无";
                       }
+                      if (m == null || m == "") {
+                          m="m"
+                      }
+                      
 
                       $("#star").append("<div class='itemdiv'>"+
                       "<div class='imagediv' style=\"background-image: url('../景点新建/image/0景点简介_05 - 副本.gif');\"> </div>"+

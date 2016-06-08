@@ -35,6 +35,7 @@ namespace Travel
                     if(uid!=null)
                     {
                         context.Session["UID"] = uid;
+                        string t = context.Session["UID"].ToString();
                     }
                     context.Response.Write(username);
                     break;
