@@ -1,5 +1,15 @@
 ﻿window.onload = function () {
     //alert(1);
+    //function IsExistsFile(filepath) {
+    //    var xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    //    xmlhttp.open("GET", filepath, false);
+    //    xmlhttp.send();
+    //    if (xmlhttp.readyState == 4) {
+    //        if (xmlhttp.status == 200) return true; //url存在   
+    //        else if (xmlhttp.status == 404) return false; //url不存在   
+    //        else return false;//其他状态   
+    //    }
+    //}
     $.post(
              "Index.ashx",
               function (data) {
@@ -23,13 +33,14 @@
                       if (e == null || e == "") {
                           e = "无";
                       }
-                      if (m == null || m == "") {
-                          m="m"
+
+                      if (m == null || m == "" ) {
+                          m="m.jpg"
                       }
                       
 
                       $("#star").append("<div class='itemdiv'>"+
-                      "<div class='imagediv' style=\"background-image: url('../景点新建/image/0景点简介_05 - 副本.gif');\"> </div>"+
+                      "<div class='imagediv' style=\"background-image: url('../景点新建/image/"+m+"');\"> </div>"+
                       "<div class='tipdiv'>"+t[i].name+"</div>"+
                       "<div class='taildiv'>"+
                       "<div class='spandiv'><span>描述</span><span class='spano'>"+d+"</span></div>"+

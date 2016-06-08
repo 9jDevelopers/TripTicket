@@ -1,9 +1,13 @@
 ﻿#Head{
 
 }
-.Head_log{
-    float:left;
-    width:20%;
+.Head_log {
+    float: left;
+    width: 110px;
+    height:84px;
+    background-image: url('../Head/images/log.png');
+    background-size:cover;
+    margin-right:150px;
 }
 .Head_search{
     width:40%;
@@ -11,7 +15,7 @@
     border-radius:7px;
     float:left;
 }
- .Head_search input{
+ /*.Head_search input{
 
     border-style:none;
     height:33px;
@@ -19,7 +23,7 @@
     float:left;
     border-radius:7px;
     outline:none;
-}
+}*/
 
 /*.Head_search a{
     background-color:#a4cbff;
