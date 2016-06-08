@@ -31,24 +31,25 @@
         <%-- 景点简介 --%>
         <div class="jianjie ">
             <div class="tu">
-                <div class="banner">
+              <%--  <div class="banner">
                   <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide swiper-slide-bg-1"></div>
-                        <div class="swiper-slide swiper-slide-bg-2"></div>
-                        <div class="swiper-slide swiper-slide-bg-3"></div>
-                            </div>
+                         <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-slide-bg-1"></div>
+                            <div class="swiper-slide swiper-slide-bg-2"></div>
+                            <div class="swiper-slide swiper-slide-bg-3"></div>
+                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
-                 </div>
+                 </div>--%>
+               <img id="ig" src=""/> 
                
             </div>
 
             <div class="wen">            
-                <p><div class="FT"><%=SceneName%></div></p>
+                <p><div class="FT" id="NSceneName"></div></p>
 
                 <p class="c">
-                    <img src="image/景点简介_03_02.gif" />月销<%=Data%>份&nbsp;<i class="PingFen"><%=Score%></i>分&nbsp;已有<%=Number%>人评价</p>
+                    <img src="image/景点简介_03_02.gif" />月销<i id="NData"></i>份&nbsp;<i class="PingFen"><i id="NScore"></i></i>分&nbsp;已有<i id="Number"></i>人评价</p>
                 <p><div class="GuanGuang">城市观光</div></p>           
                 <p><font color="#808080">出&nbsp;发&nbsp;地:</font>韩国&middot;首尔</p>
                 <p><font color="#808080">游玩时长&nbsp;：</font>10小时&nbsp;&nbsp;<font color="#808080">服务语言：</font>中文、韩语</p>
@@ -149,11 +150,11 @@
                     <img src="image/z景点简介_03.gif" /></div>
 
             
-            <p><a name="A4"><img src="image/景点简介222_10.gif" /></a>&nbsp;&nbsp;<i class="pf">4.9</i>分</p>
+            <p><a name="A4"><img src="image/景点简介222_10.gif" /></a>
                 <hr />     
             <div>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/景点简介a_03.gif" width="120" height="" />
-                <p class="hp">好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评</p>
+                
                  </div>
 
         </div>
@@ -179,7 +180,8 @@
         
 </div>
 
- 
+       
+   
     </form>
      <!--#include virtual="../Tail/Tail.html"-->
  
@@ -187,6 +189,52 @@
 
 </html>
 <script type="text/javascript">
+   
+
+    //接受地址ID
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+            if (r != null) return unescape(r[2]); return null; //返回参数值
+        }
+        
+        alert(getUrlParam("selectid")); 
+    //var zi = getUrlParam("selectid");
+        var zi = "2";
+        if (zi != null)
+        {
+            $.post(
+            "Introduce.ashx",
+        {
+            zi: getUrlParam("selectid")
+        },
+        function (data) {
+            alert(data);
+            var a = $.parseJSON(data);
+            alert(a.NSceneName);
+            alert(a.NData);
+            alert(a.NScore);
+            alert(a.NNumber);
+
+            $("#NData").html(a.NData);
+            $("#NSceneName").html(a.NSceneName);
+            $("#NScore").html(a.NScore);
+            $("#NNumber").html(a.NNumber);
+            $("#ig").attr("src", "../景点新建/image/" + a.image0)
+            $("#ig").attr("width", "650")
+            $("#ig").attr("height", "450")
+        }    
+    )
+        }
+       
+        else
+        {
+            alert("请正确加载页面");
+            location.href = "../Index/Index.aspx";
+        }
+        
+       
+    
     $(".Yuyue").click(function () {
       
         $.cookie('ticket', '2', { path: '/' });
@@ -194,4 +242,5 @@
         //alert("123456");
         window.location.href = "../BuyTicket/BuyTicket.aspx";
     });
+    
 </script>

@@ -29,6 +29,17 @@
         .easyui-combobox {
             width: 151px;
         }
+        .tuq{
+            float:left;
+        }
+        .itw{
+            font-size:10rem;
+            margin-left:39%;  
+        }
+        .itw2{
+            margin-left:39%; 
+            font-size:2rem;
+        }
     </style>
 </head>
 <body>
@@ -38,10 +49,11 @@
         <%-- 景点简介 --%>
         <div class="jianjie ">
             <div class="tu">
-                <asp:Image ID="Image1" runat="server" ImageUrl="~/景点介绍/image/T){YV~N)7~3{3H]K}RUY($6_17.gif" Width="650px" Height="400" />
-               <div>
-                   
-                 </div>
+               <div id="btnUp0" class="">                      
+                       <i class="tu0 itw icon-googleplus" ></i>                    
+                       <img id="ig0"  src=""/>    
+                      <p class="itw2">添加主页图</p>     
+                   </div>
             </div>
 
             <div class="wen">
@@ -171,22 +183,22 @@
             <%-- 添加图片 --%>
                 <div id="images">
                          
-                    <div id="btnUp1" class="q">                      
+                    <div id="btnUp1" class="tuq">                      
                        <i class="tu1 w icon-googleplus" ></i> 
                        <img id="ig1"  src=""/>         
                    </div>
 
-                    <div id="btnUp2" class="q">
+                    <div id="btnUp2" class="tuq">
                        <i class="tu2 w icon-googleplus"></i> 
                        <img id="ig2" src=""/>         
                    </div>
         
-                    <div id="btnUp3" class="q">
+                    <div id="btnUp3" class="tuq">
                        <i class="tu3 w icon-googleplus" ></i> 
                        <img id="ig3" src=""/>         
                    </div>
         
-                    <div id="btnUp4" class="q">
+                    <div id="btnUp4" class="tuq">
                        <i class="tu4 w icon-googleplus" ></i> 
                        <img id="ig4" src=""/>         
                    </div>
@@ -208,6 +220,10 @@
     <script src="js/NI.js"></script>
     <%-- 图片 --%>
       <script type="text/javascript">
+          var button0 = $('#btnUp0');
+          var image0 = $('#ig0');
+          var tu0 = $('.tu0');
+
         var button1 = $('#btnUp1');
         var image1 = $('#ig1');
         var tu1 = $('.tu1');
@@ -229,7 +245,7 @@
             imagedata(button2, image2,tu2);
             imagedata(button3, image3,tu3);
             imagedata(button4, image4, tu4);
-            
+            imagedata2(button0, image0, tu0);
         });
 
         function imagedata( button, img,tu) {
@@ -245,6 +261,22 @@
                     img.attr("src", "image/" + response);                    
                     img.attr("width", "100");
                     img.attr("height", "100");                  
+                }
+            })
+        }
+        function imagedata2(button, img, tu) {
+
+            new AjaxUpload(button, {
+                action: 'NewIntroduce.ashx',
+                name: 'myflie',
+
+                //上传结束
+                onComplete: function (file, response) {
+                    $(function () { tu.hide(); })
+                    //alert(response);
+                    img.attr("src", "image/" + response);
+                    img.attr("width", "650");
+                    img.attr("height", "400");
                 }
             })
         }
@@ -264,6 +296,7 @@
 
             var TxTmessage = $("#TxTmessage").val();
 
+            var image0 = $("#ig0").attr("src");
             var image1 = $("#ig1").attr("src");           
             var image2 = $("#ig2").attr("src");        
             var image3 = $("ig3").attr("src");
@@ -286,6 +319,7 @@
 
                 TxTmessage: $("#TxTmessage").val(),
 
+                image0: $("#ig0").attr("src"),
                 image1: $("#ig1").attr("src"),     
                 image2: $("#ig2").attr("src"),
                 image3: $("#ig3").attr("src"),

@@ -8,7 +8,7 @@
                     <table>
                         <tr>
                             <td>
-                                企业名称：
+                                
                             </td>
                             <td>
                                 <select id="sel" name="memberName" class="easyui-combobox" style="width:200px;" data-options="required:true"></select>
@@ -21,11 +21,6 @@
 
                 <div data-options="name:'sports'"></div>
             </div>
-                    <script>//搜索功能
-		                function doSearch(value,name){
-			                alert('You input: ' + value+'('+name+')');
-		                }
-                    </script> 
          </div>
         <div class="phone">客服电话：10086-10010</div> 
     </div>
@@ -116,8 +111,7 @@
                 textField: 'name',
                 onChange: function (newValue, oldValue) {             
                     if (newValue != "")
-                    {
-                        //var urlStr = "/ciccpsMember/member/getMemberSelectByName?name=" + encodeURIComponent(newValue);           
+                    {          
                         var urlStr = "../Head/Handler.ashx?name=" + encodeURIComponent(newValue);
                         //alert(data);
                         $("#sel").combobox("reload", urlStr);
@@ -130,10 +124,11 @@
              $('#sel').combobox({
                  onSelect: function (record) {
                      alert(record.ID);
+
+                     //$.cookie('selectID', record.ID, { path: '/' });
+                     window.location = "../景点介绍/Introduce.aspx?selectid=" + record.ID;
+                     
                  }
              })
          })
-
-       
-   
 </script>

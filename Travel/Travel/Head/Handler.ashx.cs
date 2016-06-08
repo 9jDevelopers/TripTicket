@@ -16,7 +16,7 @@ namespace Travel.Head
 
         public void ProcessRequest(HttpContext context)
         {
-            string NM = context.Request.QueryString["name"];
+             string NM = context.Request.QueryString["name"];
 
             DbHelper db = new DbHelper();
 

@@ -35,12 +35,14 @@ namespace Travel.景点新建
                 string TxTmessage = context.Request.Form["TxTmessage"];
                 
 
-                string image1 = context.Request.Form["image1"];
-                string image2 = context.Request.Form["image2"];
-                string image3 = context.Request.Form["image3"];
-                string image4 = context.Request.Form["image4"];
+                string image1 = context.Request.Form["image1"].Remove(0,6);
+                string image2 = context.Request.Form["image2"].Remove(0,6);
+                string image3 = context.Request.Form["image3"].Remove(0,6);
+                string image4 = context.Request.Form["image4"].Remove(0,6);
+                string image0 = context.Request.Form["image0"].Remove(0,6);
+                string AdminID = "99999";
 
-                if (NI.transfer(English, name, TravelType, time, language, ticketname, ticketmoney, TxTmessage,image1,image2,image3,image4))
+                if (NI.transfer(English, name, TravelType, time, language, ticketname, ticketmoney, TxTmessage,image1,image2,image3,image4,AdminID,image0))
                 {
                     context.Response.Write("");
                 }

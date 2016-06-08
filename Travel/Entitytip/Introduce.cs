@@ -11,19 +11,39 @@ namespace Entitytip
 {
     public class Introduce
     {
-        public static void Give(string SceneID,out string SceneName,out string Data,out string Score,out string Number)
+        public string SceneName = "";
+        public string Data = "";
+        public string Score = "";
+        public string Number = "";
+        public string image0 = "";
+        public static Introduce get(string SceneID)
         {
             DbHelper db = new DbHelper();
             DbCommand cmd = db.GetSqlStringCommond("select * from Introduce where SceneID=@SceneID ");
+            DbCommand cmp = db.GetSqlStringCommond("select *from NewIntroduce where SceneID=@SceneID");
             db.AddInParameter(cmd, "@SceneID", DbType.String, SceneID);
-
+            db.AddInParameter(cmp, "@SceneID", DbType.String, SceneID);
             DataTable dt = db.ExecuteDataTable(cmd);
-            SceneName = dt.Rows[0]["SceneName"].ToString();
-            Data = dt.Rows[0]["Data"].ToString();
-            Score = dt.Rows[0]["Score"].ToString();
-            Number = dt.Rows[0]["Number"].ToString();
+            DataTable dp = db.ExecuteDataTable(cmp);
 
+            Introduce getmessage = new Introduce();
+
+            getmessage.SceneName = dp.Rows[0]["name"].ToString();
+            getmessage.Data = dt.Rows[0]["Data"].ToString();
+            getmessage.Score = dt.Rows[0]["Score"].ToString();
+            getmessage.Number = dt.Rows[0]["Number"].ToString();
+            getmessage.image0 = dp.Rows[0]["image0"].ToString();
+            return getmessage;
 
         }
     }
 }
+//if (dt.Rows.Count > 0)
+//{
+//    string jsonName = " ";
+//    string a = DataTableConvertJson.DataTableToJson(jsonName, dt);
+
+//    string str = a.Remove(0, 5);
+//    int i = str.Length;
+//    string str2 = str.Remove(i - 1);
+//}

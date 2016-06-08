@@ -789,7 +789,20 @@
     <Content Include="easyui\themes\metro\validatebox.css" />
     <Content Include="easyui\themes\metro\window.css" />
     <Content Include="easyui\themes\mobile.css" />
+    <Content Include="Index\Index.aspx" />
+    <Content Include="Index\Index.css" />
+    <Content Include="Index\Index.js" />
+    <Content Include="judge\img\cancel-off.png" />
+    <Content Include="judge\img\cancel-on.png" />
+    <Content Include="judge\img\star-half.png" />
+    <Content Include="judge\img\star-off.png" />
+    <Content Include="judge\img\star-on.png" />
+    <Content Include="judge\js\jquery-1.5.1.min.js" />
+    <Content Include="judge\js\jquery.min.js" />
     <Content Include="Orderform\HtmlPage1.html" />
+    <Content Include="PersonalCenter\PersonalCenter.aspx" />
+    <Content Include="PersonalCenter\PersonalCenter.css" />
+    <Content Include="PersonalCenter\PersonalCenter.js" />
     <Content Include="ResetPassword\ResetPassword.aspx" />
     <Content Include="PI\EditPI.aspx" />
     <Content Include="Head\Head.js" />
@@ -907,6 +920,8 @@
     <Content Include="Head\Handler.ashx" />
     <Content Include="Administrator\Administrator.ashx" />
     <Content Include="Orderform\Orderform.ashx" />
+    <Content Include="Index\Index.ashx" />
+    <Content Include="PersonalCenter\PersonalCenter.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -914,6 +929,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <Content Include="景点合作\Web.config" />
+    <Content Include="景点介绍\Introduce.ashx" />
     <None Include="景点合作\Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1318,8 +1334,28 @@
     <Compile Include="Head\Handler.ashx.cs">
       <DependentUpon>Handler.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Index\Index.ashx.cs">
+      <DependentUpon>Index.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Index\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Orderform\Orderform.ashx.cs">
       <DependentUpon>Orderform.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalCenter\PersonalCenter.ashx.cs">
+      <DependentUpon>PersonalCenter.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalCenter\PersonalCenter.aspx.cs">
+      <DependentUpon>PersonalCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonalCenter\PersonalCenter.aspx.designer.cs">
+      <DependentUpon>PersonalCenter.aspx</DependentUpon>
     </Compile>
     <Compile Include="ResetPassword\ResetPassword.ashx.cs">
       <DependentUpon>ResetPassword.ashx</DependentUpon>
@@ -1380,6 +1416,9 @@
       <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tool\ProofTechnique.cs" />
+    <Compile Include="景点介绍\Introduce.ashx.cs">
+      <DependentUpon>Introduce.ashx</DependentUpon>
+    </Compile>
     <Compile Include="景点介绍\Introduce.aspx.cs">
       <DependentUpon>Introduce.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

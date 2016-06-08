@@ -9,12 +9,28 @@ namespace Travel.Tool
 {
     public class ProofTechnique
     {
-        public void proofuid(string UID)
+        public void proofuid(object UID)
         {
-            if(UID==""||UID==null)
-            { 
-                HttpContext.Current.Response.Redirect("~/Preview/Preview.aspx", true);
+            //string _uid = UID.ToString();
+            
+            if (Convert.ToString(UID) == "")
+            {
+                HttpContext.Current.Response.Redirect("~/Index/Index.aspx", true);
             }
         }
+        public void proofaid(string AID) 
+        {
+            if (AID == "" || AID == null)
+            {
+                HttpContext.Current.Response.Redirect("~/Administrator/Administrator.aspx", true);
+            }
+        }
+        //public void saveuid(string UID)
+        //{
+        //    if (UID == "" || UID == null)
+        //    {
+        //        Session["UID"] = "";
+        //    }
+        //}
     }
 }

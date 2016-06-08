@@ -3,42 +3,33 @@ function test() {
     //$("#btnimage").click(function () {}        //前台已有了点击事件，这里就不需要再次点击触发。
         count = $("#b3.item").size();
         $(".file-up").eq(count).click();
-        alert(2)
-}
-//改变预览图片
-$(function () {
-    $(".file-up").live("change", function () {
-        alert(1)
-        previewImage();
-    });
-});
-function previewImage() {
-    var file = $(".file-up").eq(count)[0].files[0];
-    if (typeof FileReader != undefined) {
-        var reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = function () {
-        var imu = this.result;
-        addPreviewHtml(this.result);
-        alert(3);
+
+        //改变预览图片 
+        var file = $(".file-up").eq(count)[0].files[0];
+        if (typeof FileReader != undefined) {
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function () {
+                var imu = this.result;
+                addPreviewHtml(this.result);
+            }
         }
-    }
 }
+
 function addPreviewHtml(src) {
-    alert(2);
     $("#btnimage").before("<div class='item'>" +
                             "<div class='im' style='background-image:url(" + src + ");'></div>" +
                             "<i class='icon-close ic'></i>" + "</div>");
-    var itemSize = $("#images .item").size();
+    var itemSize = $("#images.item").size();
     if (itemSize == 5) {
         $("#btnimage").hide();
         alert('已达到图片上限');
     }
     else {
         $("#btnimage").show();
-        alert(4);
     }
 }                                         //显示图片。
+
 $(function () {
     $(".icon-close").live("click", function () {
         var index = $(this).parent(".item").index();
@@ -55,35 +46,38 @@ $(function () {
     });
 });
 
-//$(function () {
-//    $("#submitbox").click(function () {
-//        var formData = new FormData($("#sf")[0]);
-//        $.ajax({
-//            cache: true, //缓存
-//            type: "POST", //提交方式post get
-//            url: "judge.ashx",
-//            data: formData,
-//            async: true, //异步
-//            contentType: false, //避免jQuery将你的表格数据转换为字符串，导致提交失败。
-//            //默认值: "application/x-www-form-urlencoded"。发送信息至服务器时内容编码类型。默认值适合大多数情况。
-//            //上传文件的制定方式：multipart/form-data形式传递文件。
-//            processData: false, //是否转换信息//false避免数据转换成查询字符串
-//            error: function (request) {
-//                alert(request);
-//            },
-//            success: function (data) {
-//                alert(data);
-//            }
-//        });
-//    });
-//});
 
+
+
+$(function () {
+    $("#submitbox").click(function () {
+        var formData = new FormData($("#sf")[0]);
+        $.ajax({
+            cache: true, //缓存
+            type: "POST", //提交方式post get
+            url: "judge.ashx",
+            data: formData,
+            async: true, //异步
+            contentType: false, //避免jQuery将你的表格数据转换为字符串，导致提交失败。
+            //默认值: "application/x-www-form-urlencoded"。发送信息至服务器时内容编码类型。默认值适合大多数情况。
+            //上传文件的制定方式：multipart/form-data形式传递文件。
+            processData: false, //是否转换信息//false避免数据转换成查询字符串
+            error: function (request) {
+                alert(request);
+            },
+            success: function (data) {
+                alert(data);
+            }
+        });
+    });
+});
 
 
 function submitbox() {
     $('#sf').form(submitbox);
     $("#submitbox").click(
         function () {
+            alert(6);
             $.post(
                          "judge.ashx",
                  {
