@@ -22,14 +22,14 @@
     <div class="easyui-panel" style="padding:5px;">
 		<a href="#" class="easyui-linkbutton" data-options="plain:true" onclick="pi()">个人资料</a>
         <a href="#" class="easyui-linkbutton" data-options="plain:true">查看订单</a>
-        <a href="#" class="easyui-linkbutton" data-options="plain:true">重置密码</a>
+        <a href="#" class="easyui-linkbutton" data-options="plain:true" onclick="rp()">重置密码</a>
     </div>
     <div id="p" class="easyui-panel" title="个人资料" style="height:auto;padding:10px;"
             data-options="
                 tools:[{
                     iconCls:'icon-reload',
                     handler:function(){
-                        $('#p').panel('refresh', 'two.aspx');
+                        $('#p').panel('refresh', '../PI/PI.aspx');
                     }
                 }]
             ">
@@ -38,6 +38,79 @@
         function pi() {
             $('#p').panel('refresh', '../PI/PI.aspx');
         }
+        function rp() {
+            $('#p').panel('refresh', '../ResetPassword/ResetPassword.aspx');
+        }
+     
+        $(document).ready(function () {
+            $("#btnemail").click(function () {
+                $.post(
+                   "ResetPassword.ashx",
+                    { action:'getemail',phone: $("#phone").val()},
+                    function (data) {
+                        var obj = $.parseJSON(data);
+                        var result = obj.result;
+                        var no = obj.rano;
+                        $("#noneipt").val(no);
+                        alert("result:" + result + "no" + no);
+                        if (result == "1") {
+                            alert("发送成功");
+                        }
+                        else {
+                                                  
+                            
+                            alert("发送失败");
+                        }
+                    });
+            });//btnemail 点击         END
+            $("#btnsubmit").click(function () {
+                //var n=$("#noneipt").val();
+                //alert(n);
+                var p1 = $("#pwd").val();
+                var p2 = $("#rpwd").val();
+               
+                if(p1!=p2){
+                    alert('密码不一致');
+                }
+                else {
+                    var noneipt = $("#noneipt").val();
+                    var number = $("#number").val();
+                    alert('n:' + number + 'i' + noneipt);
+                    if ((p1 != "" && p1 != null) && (p2 != "" && p2 != null) && (number != "" && number != null))
+                    {
+                        if (noneipt == number)
+                        {
+                            $.post(
+                           "ResetPassword.ashx",
+                            { action:'resetpwd',phone:$("#phone").val(),password:$("#pwd").val()},
+                            function (data) {
+                                alert(data);
+                            });
+                        }
+                        else
+                        {
+                            alert("验证码不正确!");
+                        }
+                    }
+                    else
+                    {
+                        alert("请将信息填写完全！");
+                    }
+                }
+                
+            });//submit                END
+            $.extend($.fn.validatebox.defaults.rules, {
+                equals: {
+                    validator: function (value, param) {
+                        return value == $(param[0]).val();
+                    },
+                    message: '密码不一致'
+                }
+            });//easyui代码 验证密码是否一致
+            
+            
+
+        });//ready                  END
     </script>
     <!--#include virtual="../Tail/Tail.html"-->
 </body>

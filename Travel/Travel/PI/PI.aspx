@@ -17,7 +17,7 @@
     <link href="../easyui/themes/default/easyui.css" rel="stylesheet" />
     <link href="../easyui/themes/icon.css" rel="stylesheet" />
     <link href="../easyui/demo/demo.css" rel="stylesheet" />
-   
+  
     <script src="../easyui/jquery.easyui.min.js"></script>
    
 </head>

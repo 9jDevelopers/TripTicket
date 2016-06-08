@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Travel.Tool;
 
 namespace Travel.PersonalCenter
 {
@@ -11,7 +12,9 @@ namespace Travel.PersonalCenter
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            ProofTechnique a = new ProofTechnique();
 
+            a.proofuid(Session["UID"]);
         }
     }
 }
