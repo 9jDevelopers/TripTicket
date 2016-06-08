@@ -149,38 +149,27 @@
                 <div id="dituContent" class="map">
                     <img src="image/z景点简介_03.gif" /></div>
 
-            
-            <p><a name="A4"><img src="image/景点简介222_10.gif" /></a>
-                <hr />     
-            <div>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/景点简介a_03.gif" width="120" height="" />
-                
-                 </div>
-
+            <%-- 点评 --%>
+            <p><a name="A4"><img src="image/景点简介222_10.gif" /></a></p>
+                     
+            <div class="Elddiv">
+                <dl class="ldl">              
+                        <dd class="wg">文字</dd>
+                        <dd class="mg">
+                            <img class="mimg" src="../景点介绍/image/T){YV~N)7~3{3H]K}RUY($6_02.gif" />
+                            <img class="mimg" src="../景点介绍/image/T){YV~N)7~3{3H]K}RUY($6_04.gif" />
+                            <img class="mimg" src="../景点介绍/image/T){YV~N)7~3{3H]K}RUY($6_06.gif" />
+                        </dd>
+                        <dd><i class="user">user</i><i class="time">time</i></dd>     
+                </dl>
         </div>
         <%-- 系统推荐 --%>
-        <div class="XD">
-            <a href="#">
-                <img src="image/景点简介000_03.gif" /></a>
-            <a class="#">
-                <img src="image/景点简介000_05.gif" /></a>
-            <a href="#">
-                <img src="image/景点简介000_06.gif" /></a>
-            <a href="#">
-                <img src="image/景点简介000_07.gif" /></a>
-            <a href="#">
-                <img src="image/景点简介000_03.gif" /></a>
-            <a class="#">
-                <img src="image/景点简介000_05.gif" /></a>
-            <a href="#">
-                <img src="image/景点简介000_06.gif" /></a>
-            <a href="#">
-                <img src="image/景点简介000_07.gif" /></a>
-        </div>
         
 </div>
 
-       
+       <%--<div style="border:solid red 1px;width:100%;height:2100px;">--%>
+           
+       </div>
    
     </form>
      <!--#include virtual="../Tail/Tail.html"-->
