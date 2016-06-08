@@ -16,10 +16,23 @@
     <script src="js/Orderform.js"></script>
     <script>
         $(function () {
-            var id = $("#e1").val();
-           
-            $.post("Orderform.ashx", { eid: e1}, function (data) {
-
+            var id = 1;
+            
+            $.post("Orderform.ashx", { eid: id}, function (data) {
+                if(data!="")
+                {
+                    var ofinfo = data.split('$');
+                    var buytime = ofinfo[8].substring(0, 8);
+                    var usetime = ofinfo[1].substring(0, 8);
+                    $("#e1").html(ofinfo[0]);
+                    $("#e2").html(buytime);
+                    $("#e3").html(ofinfo[4]);
+                    $("#e4").html(ofinfo[5]);
+                    $("#e5").html(ofinfo[3]);
+                    $("#e6").html(usetime);
+                    $("#e7").html(ofinfo[6]);
+                    $("#e8").html(ofinfo[7]);
+                }
 
             });
         });
@@ -76,8 +89,8 @@
                                             <td id="e4"></td>
                                             <td id="e5"></td>
                                             <td id="e6"></td>
-                                            <td id="e7"></td>
-                                            <td id="e8"></td>
+                                            <td class="mcl" id="e7" style="border-left:1px solid #95B8E7;"></td>
+                                            <td id="e8" style="border-left:1px solid #95B8E7;"></td>
                                             <td class="borderright" id="e9"></td>
                                         </tr>
                                     </table>

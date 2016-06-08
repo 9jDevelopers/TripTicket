@@ -2,21 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using BL;
-namespace Travel.Orderform
+
+namespace Travel.景点介绍
 {
     /// <summary>
-    /// Orderform 的摘要说明
+    /// ReadEva 的摘要说明
     /// </summary>
-    public class Orderform : IHttpHandler
+    public class ReadEva : IHttpHandler
     {
 
         public void ProcessRequest(HttpContext context)
         {
-            int EntID = int.Parse(context.Request.Form["eid"]);
-            BOrderform bof = new BOrderform();
-            string info = bof.Set(EntID);
-            context.Response.Write(info);
+            context.Response.ContentType = "text/plain";
+            context.Response.Write("Hello World");
         }
 
         public bool IsReusable
@@ -24,7 +22,7 @@ namespace Travel.Orderform
             get
             {
                 return false;
-            }  
+            }
         }
     }
 }
