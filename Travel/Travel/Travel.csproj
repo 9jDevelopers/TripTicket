@@ -792,6 +792,9 @@
     <Content Include="Index\Index.aspx" />
     <Content Include="Index\Index.css" />
     <Content Include="Index\Index.js" />
+    <Content Include="judge\css\bootstrap.min.css" />
+    <Content Include="judge\css\star-rating.css" />
+    <Content Include="judge\css\star-rating.min.css" />
     <Content Include="judge\img\cancel-off.png" />
     <Content Include="judge\img\cancel-on.png" />
     <Content Include="judge\img\star-half.png" />
@@ -799,6 +802,8 @@
     <Content Include="judge\img\star-on.png" />
     <Content Include="judge\js\jquery-1.5.1.min.js" />
     <Content Include="judge\js\jquery.min.js" />
+    <Content Include="judge\js\star-rating.js" />
+    <Content Include="judge\js\star-rating.min.js" />
     <Content Include="Orderform\HtmlPage1.html" />
     <Content Include="PersonalCenter\PersonalCenter.aspx" />
     <Content Include="PersonalCenter\PersonalCenter.css" />
