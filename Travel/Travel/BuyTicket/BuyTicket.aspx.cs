@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BL;
-
+using Travel.Tool;
 
 namespace Travel
 {
@@ -23,6 +23,8 @@ namespace Travel
             //string[] npArray = np.Split('$');
             //tktname = npArray[0];
             //tktprice = double.Parse(npArray[1]);
+            //ProofTechnique a = new ProofTechnique();
+            //a.proofuid(Session["UID"]);
         }
     }
 }
