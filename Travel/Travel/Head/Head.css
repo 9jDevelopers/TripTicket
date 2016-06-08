@@ -1,9 +1,13 @@
 ﻿#Head{
 
 }
-.Head_log{
-    float:left;
-    width:20%;
+.Head_log {
+    float: left;
+    width: 84px;
+    height:84px;
+    background-image: url('../Head/images/log.png');
+    background-size:cover;
+    margin-right:150px;
 }
 .Head_search{
     width:40%;
