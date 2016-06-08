@@ -31,16 +31,17 @@
         <%-- 景点简介 --%>
         <div class="jianjie ">
             <div class="tu">
-                <div class="banner">
+              <%--  <div class="banner">
                   <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide swiper-slide-bg-1"></div>
-                        <div class="swiper-slide swiper-slide-bg-2"></div>
-                        <div class="swiper-slide swiper-slide-bg-3"></div>
-                            </div>
+                         <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-slide-bg-1"></div>
+                            <div class="swiper-slide swiper-slide-bg-2"></div>
+                            <div class="swiper-slide swiper-slide-bg-3"></div>
+                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
-                 </div>
+                 </div>--%>
+               <img id="ig" src=""/> 
                
             </div>
 
@@ -148,38 +149,27 @@
                 <div id="dituContent" class="map">
                     <img src="image/z景点简介_03.gif" /></div>
 
-            
-            <p><a name="A4"><img src="image/景点简介222_10.gif" /></a>&nbsp;&nbsp;<i class="pf">4.9</i>分</p>
-                <hr />     
-            <div>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/景点简介a_03.gif" width="120" height="" />
-                <p class="hp">好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评</p>
-                 </div>
-
+            <%-- 点评 --%>
+            <p><a name="A4"><img src="image/景点简介222_10.gif" /></a></p>
+                     
+            <div class="Elddiv">
+                <dl class="ldl">              
+                        <dd class="wg">文字</dd>
+                        <dd class="mg">
+                            <img class="mimg" src="../景点介绍/image/T){YV~N)7~3{3H]K}RUY($6_02.gif" />
+                            <img class="mimg" src="../景点介绍/image/T){YV~N)7~3{3H]K}RUY($6_04.gif" />
+                            <img class="mimg" src="../景点介绍/image/T){YV~N)7~3{3H]K}RUY($6_06.gif" />
+                        </dd>
+                        <dd><i class="user">user</i><i class="time">time</i></dd>     
+                </dl>
         </div>
         <%-- 系统推荐 --%>
-        <div class="XD">
-            <a href="#">
-                <img src="image/景点简介000_03.gif" /></a>
-            <a class="#">
-                <img src="image/景点简介000_05.gif" /></a>
-            <a href="#">
-                <img src="image/景点简介000_06.gif" /></a>
-            <a href="#">
-                <img src="image/景点简介000_07.gif" /></a>
-            <a href="#">
-                <img src="image/景点简介000_03.gif" /></a>
-            <a class="#">
-                <img src="image/景点简介000_05.gif" /></a>
-            <a href="#">
-                <img src="image/景点简介000_06.gif" /></a>
-            <a href="#">
-                <img src="image/景点简介000_07.gif" /></a>
-        </div>
         
 </div>
 
-       
+       <%--<div style="border:solid red 1px;width:100%;height:2100px;">--%>
+           
+       </div>
    
     </form>
      <!--#include virtual="../Tail/Tail.html"-->
@@ -198,7 +188,8 @@
         }
         
         alert(getUrlParam("selectid")); 
-        var zi = getUrlParam("selectid");
+    //var zi = getUrlParam("selectid");
+        var zi = "2";
         if (zi != null)
         {
             $.post(
@@ -213,11 +204,15 @@
             alert(a.NData);
             alert(a.NScore);
             alert(a.NNumber);
+
             $("#NData").html(a.NData);
             $("#NSceneName").html(a.NSceneName);
             $("#NScore").html(a.NScore);
             $("#NNumber").html(a.NNumber);
-        }
+            $("#ig").attr("src", "../景点新建/image/" + a.image0)
+            $("#ig").attr("width", "650")
+            $("#ig").attr("height", "450")
+        }    
     )
         }
        

@@ -32,7 +32,19 @@
     }
 .borderleft {
     border-left:1px solid #95B8E7;
+    
+}
+    .borderleft span {
+        color:darkblue;
+    }
+#e3 {
+    color:darkblue;
 }
 .borderright {
     border-right:1px solid #95B8E7;
+}
+.mcl {
+    font-size:16px;
+    color:#ff6a00;
+    font-weight:bold;
 }

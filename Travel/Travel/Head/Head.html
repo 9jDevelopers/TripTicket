@@ -21,25 +21,20 @@
 
                 <div data-options="name:'sports'"></div>
             </div>
-                    <script>//搜索功能
-		                function doSearch(value,name){
-			                alert('You input: ' + value+'('+name+')');
-		                }
-                    </script> 
          </div>
         <div class="phone">客服电话：10086-10010</div> 
     </div>
     <div id="nav">
-        <a href="#" class="item _item">新的体验</a>
+        <a href="../Index/Index.aspx" class="item _item">首页</a>
         <a href="#" class="item">旧地重游</a>
         <a href="#" class="item">景点合作</a>
-        <a href="../judge/judge.aspx" class="item">体验交流</a>
-        <div><a id="btnl">登录</a>|<a>注册</a></div>
+        <a href="../judge/judge.aspx" class="item">关于我们</a>
+        <div><a href="#" id="btnl">登录</a>|<a href="../Reg/网页注册.html">注册</a></div>
     </div>
     <!--登陆界面  begin-->
     <div id="qbody">
         <div class="easyui-panel" title="登录窗口" style="height:185px;width:400px;padding:30px 70px 20px 70px">
-            <i id="btnclose">×</i>
+            <i href="#" id="btnclose">×</i>
             <div class="bdiv">
                 <input id="txtphone" class="incss easyui-textbox" data-options="prompt:'请输入手机号',iconCls:'icon-man',iconWidth:38">
             </div>
@@ -94,7 +89,7 @@
                         }
                         else {
 
-                            $.cookie('phone', $("#txtphone").val(), { path: '/' });
+                            //$.cookie('phone', $("#txtphone").val(), { path: '/' });
                             $.cookie('username',data, { path: '/' });
                             btn.style.fontSize = "10px";
                             btn.innerHTML = "Hello，" + data;
@@ -116,8 +111,7 @@
                 textField: 'name',
                 onChange: function (newValue, oldValue) {             
                     if (newValue != "")
-                    {
-                                   
+                    {          
                         var urlStr = "../Head/Handler.ashx?name=" + encodeURIComponent(newValue);
                         //alert(data);
                         $("#sel").combobox("reload", urlStr);
@@ -137,7 +131,4 @@
                  }
              })
          })
-
-       
-   
 </script>

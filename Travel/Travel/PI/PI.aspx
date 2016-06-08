@@ -22,8 +22,7 @@
    
 </head>
 <body>
-	<!--#include virtual="../Head/Head.html"-->
-	<div id="log" class="easyui-panel" title="个人信息" style="height:350px;padding:10px;width:100%">
+    <div>
         <div class="photo"> </div><div class="lname">手机</div><div id="phone" class="rinf"></div>
         <div class="lname">邮箱</div><div id="email" class="rinf"></div>
         <div class="lname">昵称</div><div id="username" class="rinf"></div>
@@ -33,10 +32,10 @@
         <div class="lname">常住城市</div><div id="home" class="rinf"></div>
         <div class="lname"><a  class="submit easyui-linkbutton">编辑</a></div>       
 	</div>
-    <!--#include virtual="../Tail/Tail.html"-->
 	<script>
 	    var objs;
 	    window.onload = function () {
+	        alert(1);
 	        var phone = document.getElementById('phone');
 	        var email = document.getElementById('email');
 	        var username = document.getElementById('username');
@@ -46,7 +45,7 @@
 	        var home = document.getElementById('home');        
 	        $.post(
                    "PI.ashx",
-                    { action:'getinfo',phone: $.cookie('phone') },
+                    { action:'getinfo'},
                     function (data) {
                         objs = data;
                         var obj = $.parseJSON(data);
@@ -57,10 +56,8 @@
                         sex.innerHTML = obj.sex;
                         birthday.innerHTML = obj.birthday;
                         $(".photo").css('background-image', 'url(Photo/' + obj.photo + ')');
-
                         //background-image: url(images/test.jpg);
-                        home.innerHTML = obj.home;
-                      
+                        home.innerHTML = obj.home;      
                     });
 	    }
 	    $(".submit").click(function () {

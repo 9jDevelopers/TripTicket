@@ -22,11 +22,12 @@ namespace Travel.景点介绍
             Entitytip.Introduce a = giveme.Message(SceneID);
             
             
-            string MSG = " {\"NSceneName\":\""+a.SceneName+ "\",\"NData\":\""+a.Data+ "\",\"NScore\":\""+a.Score+ "\",\"NNumber\":\""+a.Number+"\"}";
+            string MSG = " {\"NSceneName\":\""+a.SceneName+ "\",\"NData\":\""+a.Data+ "\",\"NScore\":\""+a.Score+ "\",\"NNumber\":\""+a.Number+"\",\"image0\":\""+a.image0+"\"}";
         
 
 
             context.Response.Write(MSG);
+
         }
 
         public bool IsReusable

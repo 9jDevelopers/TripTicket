@@ -885,6 +885,7 @@
     <Content Include="景点新建\image\0景点简介_05 - 副本.gif" />
     <Content Include="景点新建\image\0景点简介_09 - 副本.gif" />
     <Content Include="景点新建\image\0景点简介_10 - 副本.gif" />
+    <Content Include="景点新建\image\m.jpg" />
     <Content Include="景点新建\image\QQ图片20160405230222.png" />
     <Content Include="景点新建\image\T%29{YV~N%297~3{3H]K}RUY%28%246_02.gif" />
     <Content Include="景点新建\image\T%29{YV~N%297~3{3H]K}RUY%28%246_04.gif" />
@@ -930,6 +931,7 @@
     </None>
     <Content Include="景点合作\Web.config" />
     <Content Include="景点介绍\Introduce.ashx" />
+    <Content Include="景点介绍\ReadEva.ashx" />
     <None Include="景点合作\Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1425,6 +1427,9 @@
     </Compile>
     <Compile Include="景点介绍\Introduce.aspx.designer.cs">
       <DependentUpon>Introduce.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="景点介绍\ReadEva.ashx.cs">
+      <DependentUpon>ReadEva.ashx</DependentUpon>
     </Compile>
     <Compile Include="景点新建\NewIntroduce.ashx.cs">
       <DependentUpon>NewIntroduce.ashx</DependentUpon>
