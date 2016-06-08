@@ -789,6 +789,7 @@
     <Content Include="easyui\themes\metro\validatebox.css" />
     <Content Include="easyui\themes\metro\window.css" />
     <Content Include="easyui\themes\mobile.css" />
+    <Content Include="Head\images\log.png" />
     <Content Include="Index\Index.aspx" />
     <Content Include="Index\Index.css" />
     <Content Include="Index\Index.js" />
