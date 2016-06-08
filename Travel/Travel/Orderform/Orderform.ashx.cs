@@ -16,8 +16,7 @@ namespace Travel.Orderform
             int EntID = int.Parse(context.Request.Form["eid"]);
             BOrderform bof = new BOrderform();
             string info = bof.Set(EntID);
-            string[] str = info.Split('$');
-
+            context.Response.Write(info);
         }
 
         public bool IsReusable
@@ -25,7 +24,7 @@ namespace Travel.Orderform
             get
             {
                 return false;
-            }
+            }  
         }
     }
 }
