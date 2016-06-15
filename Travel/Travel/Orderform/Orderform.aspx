@@ -15,25 +15,33 @@
     <script src="../easyui/jquery.easyui.min.js"></script>
     <script src="js/Orderform.js"></script>
     <script>
-        $(function () {
-            var userid = 2;
+        function formatPrice(val, row) {
+            if (val == "待评价") {
+                return '<a href=javascript:alert(123)>' + val + '</a>';
+            }
+            else {
+                return val;
+            }
+        }
+        //$(function () {
+        //    var userid = 2;
             
-            $.post("Orderform.ashx", { eid: userid}, function (data) {
-                if(data!="")
-                {
+        //    $.post("Orderform.ashx", { eid: userid}, function (data) {
+        //        if(data!="")
+        //        {
                     
-                    alert(data);
+        //            alert(data);
                     
                     
-                    for (var i = 0; info[i].EntID != ""; i++)
-                    {
-                        $("#e1").html(info[i].EntID);
-                    }
+        //            for (var i = 0; info[i].EntID != ""; i++)
+        //            {
+        //                $("#e1").html(info[i].EntID);
+        //            }
                     
-                }
+        //        }
 
-            });
-        });
+        //    });
+        //});
     </script>
 </head>
 <body>
@@ -45,6 +53,9 @@
                     <td>
                         <div class="divleft" style="width: 150px; margin: 0 20px 0 50px;">
                             <div class="easyui-accordion" style="width: 150px; height: 599px;">
+                                <div title="个人信息" data-options="iconCls:'icon-ok'" style="overflow: auto; padding: 10px;">
+                                    <a class="of1" id="info" onclick="infomation()">个人资料</a>
+                                </div>
                                 <div title="订单" data-options="iconCls:'icon-ok'" style="overflow: auto; padding: 10px;">
                                     <a class="of1" id="click" onclick="lk()">全部订单</a>
                                 </div>
@@ -63,18 +74,18 @@
                             </div>
                             <div class="easyui-tabs divbottom" style="width: 1030px; height: 527px;">
                                 <div class="" title="全部订单">
-                                    <table class="easyui-datagrid" title="订单" style="width:1030px;height:250px"
-                                           data-options="singleSelect:true,collapsible:true,url:'Orderform.ashx',method:'get'">
+                                    <table class="easyui-datagrid" title="全部订单" style="width:1030px;height:250px;"
+                                           data-options="singleSelect:true,pagination:true,url:'Orderform.ashx?eid=2',method:'get'">
                                         <thead>
                                             <tr>
                                                 <th data-options="field:'EntID',width:80">订单号</th>
                                                 <th data-options="field:'Entname',width:250">订单名称</th>
-                                                <th data-options="field:'Buytime',width:100">预定日期</th>
+                                                <th data-options="field:'Buytime',width:150">预定日期</th>
                                                 <th data-options="field:'Num',width:80,align:'right'">数量</th>
                                                 <th data-options="field:'TicketBuyer',width:80,align:'right'">旅客</th>
-                                                <th data-options="field:'Usertime',width:250">行程/有效日期</th>
-                                                <th data-options="field:'Price',width:60,align:'center'">总金额</th>
-                                                <th data-options="field:'Status',width:60,align:'center'">订单状态</th>
+                                                <th data-options="field:'Usertime',width:250,align:'center'">行程/有效日期</th>
+                                                <th data-options="field:'Price',width:70,align:'center'">总金额</th>
+                                                <th data-options="field:'Status',width:68,align:'center',formatter:formatPrice">订单状态</th>
                                                 
                                             </tr>
                                         </thead>
