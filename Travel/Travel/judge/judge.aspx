@@ -23,21 +23,7 @@
          #fd li{float:left; width:20px; height:20px; margin:2px; display:inline; color:#999; font:bold 18px arial; cursor:pointer}
          #fd .act{color:#c00}
          #fd_word{width:80px; height:30px; line-height:30px; border:1px solid #ccc; margin:10px; text-align:center; display:none}
-
-          .ji{width:300px; margin:10px auto; font:14px/1.5 arial;}
-          /*tab*/
-         #ju{overflow:hidden;}
-         #ju li{float:left; width:20px; height:20px; margin:2px; display:inline; color:#999; font:bold 18px arial; cursor:pointer}
-         #ju .act{color:#c00}
-         #ju_word{width:80px; height:30px; line-height:30px; border:1px solid #ccc; margin:10px; text-align:center; display:none}
-
-          .zy{width:300px; margin:10px auto; font:14px/1.5 arial;}
-          /*tab*/
-         #dk{overflow:hidden;}
-         #dk li{float:left; width:20px; height:20px; margin:2px; display:inline; color:#999; font:bold 18px arial; cursor:pointer}
-         #dk .act{color:#c00}
-         #dk_word{width:80px; height:30px; line-height:30px; border:1px solid #ccc; margin:10px; text-align:center; display:none}
-      
+ 
     </style>
     <script type="text/javascript">
         $(function () {
@@ -56,34 +42,11 @@
         })
 
        window.onload = function () {
-            var _text = "满意";
-            var _default = "r1";
-            var rs = document.getElementsByName("identity");
-            for (var i = 0; i < rs.length; i++) {
-                rs[i].onchange = function () {
-                    console.log(this.parentElement.innerText);
-                    console.log(this.value);
-                    if (this.value != _default) alert("你没有选择满意，你选择的是" + this.parentElement.innerText);
-                    else alert("你选择的是满意");
-                };
-            }
-       };
-
-       window.onload = function () {
            var star = document.getElementById("fd");
            var star_li = star.getElementsByTagName("li");
            var star_word = document.getElementById("fd_word");
            var result = document.getElementById("result");
 
-           //var star = document.getElementById("ju");
-           //var star_li = star.getElementsByTagName("li");
-           //var star_word = document.getElementById("ju_word");
-           //var result = document.getElementById("resulty");
-
-           //var star = document.getElementById("dk");
-           //var star_li = star.getElementsByTagName("li");
-           //var star_word = document.getElementById("dk_word");
-           //var result = document.getElementById("resultz");
 
            var i = 0;
            var j = 0;
@@ -108,98 +71,110 @@
                star_li[i].onclick = function () {
                    result.innerHTML = (this.index + 1) + "分";
                }
-           }
+           } 
        }
     </script>
-
+    
 </head>
 <body>
      <!--#include virtual="../Head/Head.html"-->
 
      <form id="sf" method="post" runat="server">
         <div class="da">
-
             <div class="yu">
 
-                <div class="dh">
-                    <div class="leftbox">
-                        <div class="first">
-                            <div class="ga"><a href="#">
-                                <img src="images/er'r.jpg" /></a></div>
-                        </div>
-                        <div class="se">
-                            <div class="tu"><a><img src="images/141-previous.png"/></a></div>
-                            <div class="io"><a href="#">
-                                <img class="" src="images/e.jpg" /></a></div>
-                            <div class="io"><a href="#">
-                                <img class="" src="images/er'r.jpg" /></a></div>
-                            <div class="io"><a href="#">
-                                <img class="" src="images/er.jpg" /></a></div>
-                            <div class="io"><a href="#">
-                                <img class="" src="images/f.jpg" /></a></div>
-                            <div class="tu"><a><img src="images/147-next.png"/></a></div>
-                        </div>
-                    </div>
-
-                    <div class="centerbox">
+                <div class="gh">
+                    <div class="dii">
                         <!--产品介绍-->
-                        <div>
-                            <h3 id="yh"><a href="#">
-                                <%--<%=titlename %>--%>   <%--【上海-台湾】台湾环岛7晚8日经典跟团游
-                 （免费升等2晚五花酒店，囊括经典环岛路线）“去台湾，正当时！一去就爱上”【处境特卖】--%></a></h3>
+                        <div class="ij">
+                            <img src="images/xing.jpg" />
                         </div>
-                        <div>台湾经典环岛游，最全的环岛路线！</div>
-                        <div>出发地：上海</div><%--<div id="hd"></div>--%>
-                        <div>目的地：台湾  台北  高雄  花莲市</div>
-                        <div>出行日期：2016.10.15</div>
-                        <div class="price">￥ 3580起  6.8折  <s>￥5280</s></div>
-                    </div>
-
-                </div>
-
-                <div class="rightbox">
-                    <!--公司信誉简介-->
-                    <div class="q">
-                        <div>产品编号 43399</div>
-                        <div>好评率 <span class="red">100%</span></div>
-                        <div class="r">￥价格保证</div>
-                        <div class="r">#推定保障</div>
-                        <div class="r">*救援保障</div>
-                        <div class="r">@7*24小时服务</div>
-                        <hr />
-                        <div>
-                            <img src="images/20131211092723-939931253.jpg" /></div>
-                        <div>扫一扫更优惠</div>
-                        <hr />
-                        <div>&分享   + 收藏</div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!--表二-->
-            <div class="downbox">
-                <div class="s">认真写评价最多可获得优惠！</div>
-                <div class="ty">
-                    <h1>其他买家，需要你的建议哦！</h1>
-                </div>
-
-                <div class="sd">
-                    <div class="e">
-                        <div class="j1">
-                            <div class="tx1">景点评价</div>
-                            <div class="b1">
-                                <input id="mement1" class="easyui-textbox" data-options="multiline:true" value="" style="width:100%;height:128px" placeholder="请留下你的评价"/>
-                               </div>
-                        </div>
-                        <div class="j2">
-                            <div class="tx2">服务评价</div>
-                            <div class="b2">
-                                <input id="mement2" class="easyui-textbox" data-options="multiline:true" value="" style="width:100%;height:88px" placeholder="请留下你的评价"/>
+                        <div class="kl">
+                            <div>
+                                <h1 id="yh"><a href="#">
+                                    <%--<%=titlename %>--%>  <%--黄山--%></a></h1>
                             </div>
+                            <div class="kj">出发地：上海</div>
+                            <%--<div id="hd"></div>--%>
+                            <div class="kj">日期：2016.1.15</div>
                         </div>
-                        <div class="j3">
-                            <div class="tx3">晒图片</div>
+                    </div>
+                </div>
+
+                <div class="hf"><h2>请留下你的评价！</h2></div>
+
+                 <div class="fh">
+                     <div class="gup">总体评价</div>
+                     <div class="sui"> 
+                         <div class="fjji">
+
+                             <div class="lk"><h4>描述相符</h4></div>
+                             <div class="dt"> 
+
+                                <div> 评分结果 <span id="result"></span></div>
+                                 <div class="ddd">
+                                    <ul id="fd">
+                                         <li>★</li>
+                                         <li>★</li>
+                                         <li>★</li>
+                                         <li>★</li>
+                                         <li>★</li>
+                                     </ul>
+                                     <div id="fd_word">一般</div>
+                                 </div>
+                             </div>
+                         </div> 
+
+                        <div class="fji">
+                            <div class="lk"><h4>卖家服务</h4></div>
+                            <div class="ji">
+
+                                <div>评分结果<span id="rey"></span></div>
+                                <div class="ddd">
+                                    
+
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="fji">
+                            <div class="lk"><h4>物流服务</h4></div>
+                            <div class="zy">
+
+                                <div>评分结果<span id="rtz""></span></div>
+                                <div class="ddd">
+                                   
+                                    
+                                </div>
+                            </div>
+                        </div> 
+                     </div>
+                 </div>
+
+                 
+                <div class="du">
+                    <div class="gup">点评</div>
+                    <div class="sui">
+                                <div class="j1">
+                                    <div><h3>景点评价</h3></div>
+                                    <div class="b1">
+                                        <input id="mement1" class="easyui-textbox" data-options="multiline:true" value="" style="width: 100%; height: 100px" placeholder="请留下你的评价" />
+                                    </div>
+                                </div>
+                                <div class="j2">
+                                    <div><h3>服务评价</h3></div>
+                                    <div class="b2">
+                                        <input id="mement2" class="easyui-textbox" data-options="multiline:true" value="" style="width: 100%; height:60px" placeholder="请留下你的评价" />
+                                    </div>
+                                </div>
+                        <div class="dui"><h4>你已输入0字，50字以上的优质点评将获得100积分！</h4></div>
+                    </div>
+                </div>
+
+                 <div class="lp">
+                     <div class="gup">上传图片</div>
+                     <div class="sui">  
+                         <div class="tx3"><h4>晒图片</h4></div>
                            <div class="b3">
                                 <a id="btnimage"  class="icon-googleplus" style="margin-left:20px;" onclick="test()"></a> 
                                  <div id="fileups">         
@@ -209,92 +184,14 @@
                                    <input type="file" class="file-up" name="btnim3" style="display:none;"/>
                                    <input type="file" class="file-up" name="btnim4" style="display:none;"/>
                                  </div>
-                                 <div class="pic">0/5</div>
-                            </div>
-                        </div>
-                    </div>
+                            <div class="pic">0/5</div>
+                       </div>
+                     </div>
+                 </div>
 
-                    <div class="ee">
-                        <div>
-                            <div>描述相符</div>
-                            <div class="dt">
-                                打分结果 
-                                <span id="result"></span>
-                                <ul id="fd">
-                                    <li>★</li>
-                                    <li>★</li>
-                                    <li>★</li>
-                                    <li>★</li>
-                                    <li>★</li>
-                                </ul>
-                                <div id="fd_word">一般</div>
-                            </div>  
-                        </div> 
-
-                        <div>
-                            <div>卖家服务</div>
-                            <div class="ji">
-                                评分结果<span id="resulty"></span>
-                                <ul id="ju">
-                                    <li>★</li>
-                                    <li>★</li>
-                                    <li>★</li>
-                                    <li>★</li>
-                                    <li>★</li>
-                                </ul>
-                                <div id="ju_word">一般</div>
-                            </div>
-                        </div> 
-
-                        <div>
-                            <div>物流服务</div>
-                            <div class="zy">
-                                评分结果<span id=""></span>
-                                <ul id="dk">
-                                    <li>★</li>
-                                    <li>★</li>
-                                    <li>★</li>
-                                    <li>★</li>
-                                    <li>★</li>
-                                </ul>
-                                <div id="dk_word">一般</div>
-                            </div>
-                        </div> 
-                    </div>
-
-                    <div>
-                        <div class="fu">
-                            <div>
-                                <h2>关于服务</h2>
-                            </div>
-                            <hr />
-                            <div class="f">
-                                <input type="text" placeholder="快递员：服务态度" />
-                            </div>
-                            <div class="f">
-                                <input type="radio" name="identity" value="r1" checked="checked" />失望
-                            </div>
-                            <div class="f">
-                                <input type="radio" name="identity" value="r2" />不满
-                            </div>
-                            <div class="f">
-                                <input type="radio" name="identity" value="r3" />一般
-                            </div>
-                            <div class="f">
-                                <input type="radio" name="identity" value="r4" />满意
-                            </div>
-                            <div class="f">
-                                <input type="radio" name="identity" value="r5" />惊喜  
-                            </div>
-                        </div>
-                    </div>
-        
-                <div class="qwe">
-                    <div class="l"><input type="checkbox" />匿名评价</div>
-                    <div class="submit"><a href="javascript:judge" class="red" id="submitbox" onclick="submitbox()">提交评价</a></div>
-                </div>
-            </div>
-         </div>
+               <div class="qwe">
+                 <div class="dy"><div class="submit"><a href="javascript:judge" class="red" id="submitbox" onclick="submitbox()">提交评价</a></div></div>
+             </div>
 
             <!--表三-->
 
@@ -311,15 +208,17 @@
                 <div class="c">
                     <select>
                         <option>按默认</option>
-                        <option></option>
-                        <option></option>
-                        <option></option>
+                        <option>服务评价</option>
+                        <option>产品评价</option>
+                        <option>服务态度</option>
                         <option></option>
                     </select>
                 </div>
-            </div>
+              </div>
+             </div>
            </div>
        </form>
+   
       <!--#include virtual="../Tail/Tail.html"-->
 </body>
  

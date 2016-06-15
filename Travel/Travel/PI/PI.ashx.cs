@@ -5,13 +5,14 @@ using System.Web;
 using BL;
 using Travel;
 using Travel.Tool;
+using System.Web.SessionState;
 
 namespace Travel.Head
 {
     /// <summary>
     /// PI1 的摘要说明
     /// </summary>
-    public class PI1 : IHttpHandler
+    public class PI1 : IHttpHandler, IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)
@@ -21,7 +22,8 @@ namespace Travel.Head
             if(action=="getinfo")
             {
                 string Photo;//后期完善
-                int phone;
+                int uid;
+                string Phone;
                 string email;
                 string username;
                 string name; 
@@ -30,17 +32,17 @@ namespace Travel.Head
                 string home;
 
                 //phone = "1234567890";
-                string p = context.Request.Form["phone"];
-                phone = Convert.ToInt32(p);
+                //object p = context.Session["UID"];
+                uid = Convert.ToInt32(context.Session["UID"].ToString());
                 BGetInfo getif = new BGetInfo();
-                getif.BGI(phone, out email, out username, out name, out sex, out birthday, out home,out Photo);
+                getif.BGI(uid,out Phone, out email, out username, out name, out sex, out birthday, out home,out Photo);
                 analyze(ref email);
                 analyze(ref username);
                 analyze(ref sex);
                 analyze(ref name);
                 analyze(ref birthday);
                 analyze(ref home);
-                string _phone = "{\"phone\":\"" + p + "\",";
+                string _phone = "{\"phone\":\"" + Phone + "\",";
                 string _email = "\"email\":\"" + email + "\",";
                 string _username = "\"username\":\"" + username + "\",";
                 string _name = "\"name\":\"" + name + "\","; ;

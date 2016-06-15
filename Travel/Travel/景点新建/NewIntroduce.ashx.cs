@@ -44,7 +44,7 @@ namespace Travel.景点新建
 
                 if (NI.transfer(English, name, TravelType, time, language, ticketname, ticketmoney, TxTmessage,image1,image2,image3,image4,AdminID,image0))
                 {
-                    context.Response.Write("");
+                    context.Response.Write(English);
                 }
             }
 

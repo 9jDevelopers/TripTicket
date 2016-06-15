@@ -46,7 +46,7 @@ namespace Entitytip
             db.AddInParameter(cmd, "@AdminID", DbType.Int32, AdminID);
             db.AddInParameter(cmd, "@image0", DbType.String, image0);
 
-            DbCommand cmT = db.GetSqlStringCommond("insert into TicketType(SceneID,ticketname,ticketmoney)values(@SceneID,@ticketmoney,@ticketname)");
+            DbCommand cmT = db.GetSqlStringCommond("insert into TicketType(SceneID,ticketmoney,ticketname)values(@SceneID,@ticketmoney,@ticketname)");
             db.AddInParameter(cmT, "@SceneID", DbType.String, English);
             db.AddInParameter(cmT, "@ticketname", DbType.String, ticketname);
             db.AddInParameter(cmT, "@ticketmoney", DbType.String, sicketmoney);

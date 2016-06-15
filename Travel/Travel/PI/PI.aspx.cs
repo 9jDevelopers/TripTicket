@@ -16,7 +16,6 @@ namespace Travel.Head
         {
             //Session["UID"] = "";
             ProofTechnique a = new ProofTechnique();
-
             a.proofuid(Session["UID"]);
         }
     }

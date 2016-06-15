@@ -30,17 +30,7 @@
 
         <%-- 景点简介 --%>
         <div class="jianjie ">
-            <div class="tu">
-              <%--  <div class="banner">
-                  <div class="swiper-container">
-                         <div class="swiper-wrapper">
-                            <div class="swiper-slide swiper-slide-bg-1"></div>
-                            <div class="swiper-slide swiper-slide-bg-2"></div>
-                            <div class="swiper-slide swiper-slide-bg-3"></div>
-                         </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                 </div>--%>
+            <div class="tu">             
                <img id="ig" src=""/> 
                
             </div>
@@ -48,12 +38,11 @@
             <div class="wen">            
                 <p><div class="FT" id="NSceneName"></div></p>
 
-                <p class="c">
-                    <img src="image/景点简介_03_02.gif" />月销<i id="NData"></i>份&nbsp;<i class="PingFen"><i id="NScore"></i></i>分&nbsp;已有<i id="Number"></i>人评价</p>
-                <p><div class="GuanGuang">城市观光</div></p>           
-                <p><font color="#808080">出&nbsp;发&nbsp;地:</font>韩国&middot;首尔</p>
-                <p><font color="#808080">游玩时长&nbsp;：</font>10小时&nbsp;&nbsp;<font color="#808080">服务语言：</font>中文、韩语</p>
-                <p><img src="image/景点简介_03.gif" /> <a class="Yuyue">立刻预约</a></p>
+                <p class="c">               <%--地点--%>
+                <p><div class="GuanGuang"><i id="site"></i></div></p>           
+                                                                  <%--游玩时间--%>
+                <p><font color="#808080">游玩时长&nbsp;：</font><i id="playtime"></i>&nbsp;&nbsp;<font color="#808080">服务语言：</font><i id="language"></i></p>
+                <p> <font color="#808080">票价&nbsp;：</font> <a class="Yuyue">立刻预约</a></p>
                 <div class="XX">
                     
                     <div class="DW">玩乐亮点</div>
@@ -69,49 +58,7 @@
 
             </div>  
         </div>
-      
-
-
-        <%-- 快乐预订 --%>
-
-         <div class="book k">
-             <p>玩乐预定</p>
-             <table>
-                 <tr class="tr1">
-                     <td class="td1">&nbsp;名称</td>
-                     <td class="td2">服务语言</td>
-                     <td class="td3">活动时长</td>
-                     <td class="td4">市场价</td>
-                     <td class="td5">携程价</td>
-                     <td class="td6">支付方式</td>
-                     <td class="td7">7</td>
-                 </tr>
-                 <tr class="tr2">
-                     <td class="td1 FT4">首尔景福宫+仁寺宫市区经典一日游</td>
-                     <td class="td2">
-                         <select class ="LB">  
-                              <option value ="">中文</option>  
-                              <option value ="">韩语</option>  
-                             <option value ="">英语</option>  
-                             <option value ="">德语</option>   
-                         </select>
-                     </td>
-                     <td class="td3 FT4 ">10小时</td>
-                     <td class="td4 FT4">
-                         <img src="image/景点简介-恢复_03.gif" / width="20px" height="20px">180</td>
-                     <td class="td5">
-                         <img src="image/景点简介_03.gif" /></td>
-                     <td class="td6">
-                         <select class ="LB">  
-                              <option value ="">支付宝</option>  
-                              <option value ="">银行卡</option>  
-                         </select>
-                     </td>
-                     <td class="td7"><div class="YD">预定</div></td>
-                 </tr>
-             </table>
-
-         </div>
+    
         </div>
  <%-- 详细信息 --%>
  <div class="F">         
@@ -149,38 +96,27 @@
                 <div id="dituContent" class="map">
                     <img src="image/z景点简介_03.gif" /></div>
 
-            
-            <p><a name="A4"><img src="image/景点简介222_10.gif" /></a>
-                <hr />     
-            <div>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/景点简介a_03.gif" width="120" height="" />
-                
-                 </div>
-
+            <%-- 点评 --%>
+            <p><a name="A4"><img src="image/景点简介222_10.gif" /></a></p>
+                     
+            <div class="Elddiv">
+                <dl class="ldl">              
+                        <dd class="wg">文字</dd>
+                        <dd class="mg">
+                            <img class="mimg" src="../景点介绍/image/T){YV~N)7~3{3H]K}RUY($6_02.gif" />
+                            <img class="mimg" src="../景点介绍/image/T){YV~N)7~3{3H]K}RUY($6_04.gif" />
+                            <img class="mimg" src="../景点介绍/image/T){YV~N)7~3{3H]K}RUY($6_06.gif" />
+                        </dd>
+                        <dd><i class="user">user</i><i class="time">time</i></dd>     
+                </dl>
         </div>
         <%-- 系统推荐 --%>
-        <div class="XD">
-            <a href="#">
-                <img src="image/景点简介000_03.gif" /></a>
-            <a class="#">
-                <img src="image/景点简介000_05.gif" /></a>
-            <a href="#">
-                <img src="image/景点简介000_06.gif" /></a>
-            <a href="#">
-                <img src="image/景点简介000_07.gif" /></a>
-            <a href="#">
-                <img src="image/景点简介000_03.gif" /></a>
-            <a class="#">
-                <img src="image/景点简介000_05.gif" /></a>
-            <a href="#">
-                <img src="image/景点简介000_06.gif" /></a>
-            <a href="#">
-                <img src="image/景点简介000_07.gif" /></a>
-        </div>
         
 </div>
 
-       
+       <%--<div style="border:solid red 1px;width:100%;height:2100px;">--%>
+           
+       </div>
    
     </form>
      <!--#include virtual="../Tail/Tail.html"-->
@@ -199,38 +135,38 @@
         }
         
         alert(getUrlParam("selectid")); 
-    //var zi = getUrlParam("selectid");
-        var zi = "2";
+        var zi = getUrlParam("selectid");
+        //var zi = "2";
         if (zi != null)
         {
-            $.post(
-            "Introduce.ashx",
-        {
-            zi: getUrlParam("selectid")
-        },
-        function (data) {
-            alert(data);
-            var a = $.parseJSON(data);
-            alert(a.NSceneName);
-            alert(a.NData);
-            alert(a.NScore);
-            alert(a.NNumber);
+            //$.post(
+            //"Introduce.ashx",
+        //{
+            //zi: getUrlParam("selectid")
+        //},
+        //function (data) {
+        //    alert(data);
+            //var a = $.parseJSON(data);
+            //alert(a.NSceneName);
+            //alert(a.NData);
+            //alert(a.NScore);
+            //alert(a.NNumber);
 
-            $("#NData").html(a.NData);
-            $("#NSceneName").html(a.NSceneName);
-            $("#NScore").html(a.NScore);
-            $("#NNumber").html(a.NNumber);
-            $("#ig").attr("src", "../景点新建/image/" + a.image0)
-            $("#ig").attr("width", "650")
-            $("#ig").attr("height", "450")
-        }    
-    )
+            //$("#NData").html(a.NData);
+            //$("#NSceneName").html(a.NSceneName);
+            //$("#NScore").html(a.NScore);
+            //$("#NNumber").html(a.NNumber);
+            //$("#ig").attr("src", "../景点新建/image/" + a.image0)
+            //$("#ig").attr("width", "650")
+            //$("#ig").attr("height", "450")
+    //    }    
+    //)
         }
        
         else
         {
-            alert("请正确加载页面");
-            location.href = "../Index/Index.aspx";
+           // alert("请正确加载页面");
+           // location.href = "../Index/Index.aspx";
         }
         
        
@@ -240,7 +176,7 @@
         $.cookie('ticket', '2', { path: '/' });
         
         //alert("123456");
-        window.location.href = "../BuyTicket/BuyTicket.aspx";
+        window.location.href = "../BuyTicket/BuyTicket.aspx?introduceid="+zi;
     });
     
 </script>

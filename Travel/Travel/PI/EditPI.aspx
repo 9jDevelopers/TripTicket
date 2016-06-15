@@ -6,15 +6,8 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>个人信息</title>
-    <link href="../References/icomoon/fontIconStyle.css" rel="stylesheet" />
-    <link href="../Head/Head.css" rel="stylesheet" />
-
-    <link href="../Tail/Tail.css" rel="stylesheet" />
-
-    <link href="PI.css" rel="stylesheet" />
     <script src="../easyui/jquery.min.js"></script>
     <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
-
     <link href="../easyui/themes/default/easyui.css" rel="stylesheet" />
     <link href="../easyui/themes/icon.css" rel="stylesheet" />
     <link href="../easyui/demo/demo.css" rel="stylesheet" />
@@ -23,10 +16,9 @@
 
 </head>
 <body>
-    <!--#include virtual="../Head/Head.html"-->
     <form id="frm" runat="server">
-    <div id="log" class="easyui-panel" title="个人信息" style="height:350px;padding:10px;width:100%">
-        <div  class="photo"><i class="edit icon-link"></i> </div>
+        <div id="log" class="easyui-panel" title="个人信息" style="height:350px;padding:10px;width:100%">
+        <div  class="photo"><i class="edit icon-link"></i></div>
         <input type="file" class="file-up" name="btnim" style="display:none;" />
         <div class="lname">手机</div><div id="phone" class="rinf">
             <input id="textphone" name="phone" class="easyui-textbox" readonly="readonly" style="width:200px;height:20px" />
@@ -50,21 +42,26 @@
             <input id="texthome" class="easyui-textbox" name="home" style="width:200px;height:20px" />
         </div>
         <div class="lname"><a id="btnsave" class="submit easyui-linkbutton">保存</a></div>
-    </div>
+       </div>
     </form>
-    <!--#include virtual="../Tail/Tail.html"-->
     <script>
-        window.onload = function () {
-            var obj = $.parseJSON($.cookie('objs'));
-            $("#textphone").textbox('setValue', obj.phone);
-            $("#textemail").textbox('setValue', obj.email);
-            $("#textusername").textbox('setValue', obj.username);
-            $("#textname").textbox('setValue', obj.name);
-            $("#textsex").textbox('setValue', obj.sex);
-            $("#textbirthday").textbox('setValue', obj.birthday);
-            $(".photo").css('background-image', 'url(Photo/' + obj.photo + ')');
-            $("#texthome").textbox('setValue', obj.home);
-        }
+        setTimeout(function () {
+            alert(1);
+            $.post(
+            "../PI/PI.ashx",
+            { action: 'getinfo' },
+            function (data) {
+                var obj = $.parseJSON(data);
+                $("#textphone").textbox('setValue', obj.phone);
+                $("#textemail").textbox('setValue', obj.email);
+                $("#textusername").textbox('setValue', obj.username);
+                $("#textname").textbox('setValue', obj.name);
+                $("#textsex").textbox('setValue', obj.sex);
+                $("#textbirthday").textbox('setValue', obj.birthday);
+                $(".photo").css('background-image', 'url(../PI/Photo/' + obj.photo + ')');
+                $("#texthome").textbox('setValue', obj.home);
+            });
+            },100);
         $(document).ready(function () {
             $("#btnsave").click(function () {
                 var formData = new FormData($("#frm")[0]);

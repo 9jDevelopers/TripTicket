@@ -113,5 +113,6 @@
                 <a id="btnsubmit" class="easyui-linkbutton">重置密码</a>
             </div>
         </div>
+    <!--#include virtual="../Tail/Tail.html"-->
 </body>
 </html>
