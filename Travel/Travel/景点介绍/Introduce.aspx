@@ -74,7 +74,7 @@
 
         <%-- 快乐预订 --%>
 
-         <div class="book k">
+        <%-- <div class="book k">
              <p>玩乐预定</p>
              <table>
                  <tr class="tr1">
@@ -111,7 +111,7 @@
                  </tr>
              </table>
 
-         </div>
+         </div>--%>
         </div>
  <%-- 详细信息 --%>
  <div class="F">         
