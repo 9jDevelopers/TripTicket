@@ -114,7 +114,7 @@
              $('#sel').combobox
              (
                  {
-                valueField: 'ID',
+                valueField: 'SceneID',
                 textField: 'name',
                 onChange: function (newValue, oldValue) {             
                     if (newValue != "")
@@ -130,10 +130,10 @@
          $(function () {
              $('#sel').combobox({
                  onSelect: function (record) {
-                     alert(record.ID);
+                     alert(record.SceneID);
 
                      //$.cookie('selectID', record.ID, { path: '/' });
-                     window.location = "../景点介绍/Introduce.aspx?selectid=" + record.ID;
+                     window.location = "../景点介绍/Introduce.aspx?selectid=" + record.SceneID;
                      
                  }
              })
