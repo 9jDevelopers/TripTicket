@@ -17,6 +17,8 @@
 </head>
 <body>
     <form id="frm" runat="server">
+        <div id="log" class="easyui-panel" title="个人信息" style="height:350px;padding:10px;width:100%">
+
         <div  class="photo"><i class="edit icon-link"></i> </div>
         <input type="file" class="file-up" name="btnim" style="display:none;" />
         <div class="lname">手机</div><div id="phone" class="rinf">
@@ -41,9 +43,11 @@
             <input id="texthome" class="easyui-textbox" name="home" style="width:200px;height:20px" />
         </div>
         <div class="lname"><a id="btnsave" class="submit easyui-linkbutton">保存</a></div>
+       </div>
     </form>
     <script>
         setTimeout(function () {
+            alert(1);
             $.post(
             "../PI/PI.ashx",
             { action: 'getinfo' },

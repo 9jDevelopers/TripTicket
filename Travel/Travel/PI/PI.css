@@ -1,4 +1,10 @@
-﻿.lname{
+﻿#log{
+    font-size:12px;
+    color:#aeaeae;
+    position: relative; 
+    z-index:1;
+}
+.lname{
     float:left;
     text-align:right;
     width:20%;
