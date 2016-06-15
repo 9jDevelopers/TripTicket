@@ -33,7 +33,7 @@ namespace Travel.Head
                 string str2 = str.Remove(i - 1);
                 context.Response.Write(str2);
             }
-        }
+         }
 
         public bool IsReusable
         {
