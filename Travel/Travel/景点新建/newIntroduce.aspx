@@ -330,15 +330,14 @@
 
                  function (data) {
                      alert(data);
-                     var a = $.parseJSON(data);
-                     var num = a.English;
-                     alert(a.English)
-                 },
-                 alert("添加成功")
-                             
+                     
+                     
+                     alert("添加成功");
+                     window.location = "../景点介绍/Introduce.aspx?selectid=" + data;
+                 }                               
                 )
 
-                window.onload = "../景点介绍/Introduce.aspx?selectid=" + a.English;
+                
             }
             else
                 {

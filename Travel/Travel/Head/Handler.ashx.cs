@@ -20,7 +20,7 @@ namespace Travel.Head
 
             DbHelper db = new DbHelper();
 
-            DbCommand cmd = db.GetSqlStringCommond("select * from xxss where name like  '%" + NM + "%' ");
+            DbCommand cmd = db.GetSqlStringCommond("select * from NewIntroduce where name like  '%" + NM + "%' ");
             DataTable dt = db.ExecuteDataTable(cmd);
             int b = dt.Rows.Count;
             if (b > 0)
@@ -33,7 +33,7 @@ namespace Travel.Head
                 string str2 = str.Remove(i - 1);
                 context.Response.Write(str2);
             }
-        }
+         }
 
         public bool IsReusable
         {
