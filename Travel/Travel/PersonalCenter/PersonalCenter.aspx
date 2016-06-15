@@ -5,8 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="../References/icomoon/fontIconStyle.css" rel="stylesheet" />
     <link href="PersonalCenter.css" rel="stylesheet" />
     <title>个人中心</title>
+    <link href="../PI/PI.css" rel="stylesheet" />
     <link href="../Head/Head.css" rel="stylesheet" />  
     <script src="../References/jquery-1.8.3.min.js"></script>
     <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
@@ -36,7 +38,7 @@
     </div>
     <script>
         function pi() {
-            $('#p').panel('refresh', '../PI/PI.aspx');
+            $('#p').panel('refresh', '../PI/EditPI.aspx');
         }
         function rp() {
             $('#p').panel('refresh', '../ResetPassword/ResetPassword.aspx');

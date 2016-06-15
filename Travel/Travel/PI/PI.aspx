@@ -33,7 +33,6 @@
 	<script>
 	    var objs;
 	    setTimeout(function () {
-	        alert(1);
 	        var phone = document.getElementById('phone');
 	        var email = document.getElementById('email');
 	        var username = document.getElementById('username');
@@ -45,10 +44,9 @@
                    "../PI/PI.ashx",
                     { action: 'getinfo' },
                     function (data) {
-                        alert(data);
                         objs = data;
                         var obj = $.parseJSON(data);
-                        phone.innerHTML = $.cookie('phone');
+                        phone.innerHTML = obj.phone;
                         email.innerHTML = obj.email;
                         username.innerHTML = obj.username;
                         name.innerHTML = obj.name;
@@ -58,7 +56,7 @@
                         //background-image: url(images/test.jpg);
                         home.innerHTML = obj.home;
                     });
-	    }, 5000);
+	    }, 1000);
 	    $(".submit").click(function () {
 	        $.cookie('objs',objs, { path: '/' });
 	        window.location.href = "EditPI.aspx";
