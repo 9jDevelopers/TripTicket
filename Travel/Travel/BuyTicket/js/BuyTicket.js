@@ -6,6 +6,7 @@ var alignright = document.getElementById("alignright");
 var calendar = document.getElementById("calendar");
 var Calendar1 = document.getElementById("Calendar1");
 var txt;
+var vp = document.getElementById("vp");
 updown.onclick = function () {
     txt = this.value;
     if (txt === "详情▼") {
@@ -78,10 +79,10 @@ var v = $('#dt').datetimebox('getValue');
 
 
 $("#pay").click(function () {
-    var number = $("#num").val();
+    var nnn = $("#num").val();
     var ticketholder = $("#N").val();
     var idcardno = $("#I").val();
-    var telenum = $("#P").val()
+    var telenum = $("#P").val();
     var ticketprice = vp.value;
     var ticketname = $("#ticname").html();
     var date = v;
@@ -89,13 +90,13 @@ $("#pay").click(function () {
     var ih = $('input:radio[name="s"]:checked').val();
             var iht = ih.split("￥");
             var intHot = iht[0];               
-            if (ticketname == "" || ticketprice == "" || date == "" || ticketholder.length < 3 || ticketholder.length > 10 || idcardno.length != 18 || telenum.length != 11 || safe == "" || number == "") {
+            if (total==""|| ticketname == "" || ticketprice == "" || date == "" || ticketholder.length < 3 || ticketholder.length > 10 || idcardno.length != 18 || telenum.length != 11 || safe == "" || nnn == "") {
         alert("支付失败 请确认身份信息");
     }
     else {
         $.post(
-            "../ByTkt.ashx",
-            { action: "Set", jnum:number,jsticketname: $("#ticname").html(), jsticketprice: vp.value, jsdate: date, jsticketholder: $("#N").val(), jsidcardno: $("#I").val(), jstelenum: $("#P").val(), jssafe: intHot },
+            "ByTkt.ashx",
+            { action: "Set", jtotal:total,jnum: $("#num").val(), jsticketname: $("#ticname").html(), jsticketprice: vp.value, jsdate: date, jsticketholder: $("#N").val(), jsidcardno: $("#I").val(), jstelenum: $("#P").val(), jssafe: intHot },
             function (data) {
                 if (data != "") {
                     alert(data);

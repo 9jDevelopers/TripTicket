@@ -20,7 +20,7 @@
 <body>
     <!--#include virtual="../Head/Head.html"-->
     <form id="form1" runat="server">
-        <%-- 景点预览 --%>
+         <%-- 景点预览 --%>
     <div class="yi">
          <%--小导航栏--%>
          <ul> 

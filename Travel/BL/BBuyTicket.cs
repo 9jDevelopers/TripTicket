@@ -22,12 +22,12 @@ namespace BL
                 return null;
             }
         }
-        public string Set(int Bnum,string Bticketname,string Bticketprice,string Bdate, string Bticketholder, string Bidcardno, string Btelenum,string Bsafe ,string Buserid)
+        public string Set(string Btotal, string Bnum,string Bticketname,string Bticketprice,string Bdate, string Bticketholder, string Bidcardno, string Btelenum,string Bsafe ,string Buserid)
         {
-            if (Bnum != 0 && Bticketname != "" && Bticketprice != "" && Bdate != "" && Bticketholder != "" && Bidcardno != "" && Btelenum != "" && Bsafe != "" && Buserid!="")
+            if (Btotal!=""&& Bnum != "" && Bticketname != "" && Bticketprice != "" && Bdate != "" && Bticketholder != "" && Bidcardno != "" && Btelenum != "" && Bsafe != "" && Buserid!="")
             {
                 Tickets tkts = new Tickets();
-                return tkts.SET(Bnum,Bticketname, Bticketprice, Bdate, Bticketholder, Bidcardno, Btelenum, Bsafe,Buserid);
+                return tkts.SET(Btotal,Bnum,Bticketname, Bticketprice, Bdate, Bticketholder, Bidcardno, Btelenum, Bsafe,Buserid);
                 
             }
             else {
