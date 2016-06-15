@@ -188,8 +188,8 @@
         }
         
         alert(getUrlParam("selectid")); 
-    //var zi = getUrlParam("selectid");
-        var zi = "2";
+        var zi = getUrlParam("selectid");
+        //var zi = "2";
         if (zi != null)
         {
             $.post(
@@ -229,7 +229,7 @@
         $.cookie('ticket', '2', { path: '/' });
         
         //alert("123456");
-        window.location.href = "../BuyTicket/BuyTicket.aspx";
+        window.location.href = "../BuyTicket/BuyTicket.aspx?intrduce="+zi;
     });
     
 </script>
