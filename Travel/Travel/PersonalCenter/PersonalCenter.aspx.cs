@@ -12,9 +12,9 @@ namespace Travel.PersonalCenter
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ProofTechnique a = new ProofTechnique();
+            //ProofTechnique a = new ProofTechnique();
 
-            a.proofuid(Session["UID"]);
+            //a.proofuid(Session["UID"]);
         }
     }
 }

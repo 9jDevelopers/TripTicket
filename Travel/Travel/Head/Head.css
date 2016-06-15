@@ -154,3 +154,51 @@
     list-style:none;
     margin-top:13px;
 }
+
+
+/*悬浮*/
+a, img {
+            border: 0;
+        }
+        /* leftsead */
+#leftsead {
+    width:131px;
+    height:143px;
+    position:fixed;
+    top: 245px;
+    right: 50px;
+}
+#leftsead li {
+    width: 131px;
+    height: 60px;
+    list-style:none;
+}
+
+#leftsead li img {
+    float: right;
+}
+
+#leftsead li a {
+    height: 49px;
+    float: right;
+    display: block;
+    min-width: 47px;
+    max-width: 131px;
+}
+
+#leftsead li a .shows {
+    display: block;
+}
+
+#leftsead li a .hides {
+    margin-right: -143px;
+    cursor: pointer;
+    cursor: hand;
+}
+
+#leftsead li a.youhui .hides {
+    display: none;
+    position: absolute;
+    right: 190px;
+    top: 2px;
+}
