@@ -18,8 +18,8 @@ namespace Entitytip
         {
 
             DbHelper db = new DbHelper();
-            DbCommand cmd = db.GetSqlStringCommond("select ticketName,ticketPrice from TicketType where TicketTypeID=@ticketID");
-            db.AddInParameter(cmd, "@ticketID", DbType.String, Eid);
+            DbCommand cmd = db.GetSqlStringCommond("select ticketName,ticketmoney from TicketType where TicketTypeID=@TicketTypeID");
+            db.AddInParameter(cmd, "@TicketTypeID", DbType.String, Eid);
             DataTable dt = db.ExecuteDataTable(cmd);
             if (dt.Rows.Count > 0)
             {
@@ -31,7 +31,7 @@ namespace Entitytip
             }
         }
         //insert into Ent values(@EntID, @Usertime, @userID, @TicketBuyer, @Entname, @Num, @Price, @Status, @Buytime)
-        public string SET(int num,string ticketname, string ticketprice, string date, string ticketholder, string idcardno, string telenum, string safe,string userid)
+        public string SET(string total,string num,string ticketname, string ticketprice, string date, string ticketholder, string idcardno, string telenum, string safe,string userid)
         {
 
             string safetype;
@@ -57,24 +57,23 @@ namespace Entitytip
             try
 
             {
-                cmd.Connection.Open();
-                int result = cmd.ExecuteNonQuery();
+                int result = db.ExecuteNonQuery(cmd);
                 if (result > 0)
                 {
                     string dtnow = DateTime.Now.ToShortDateString().ToString();
                     DbHelper dbh = new DbHelper();
-                    DbCommand comd = db.GetSqlStringCommond("insert into Ent values(@EntID, @Usertime, @userID, @TicketBuyer, @Entname, @Num, @Price, @Status, @Buytime)");
-                    db.AddInParameter(cmd, "@Buytime", DbType.String, dtnow);
-                    db.AddInParameter(cmd, "@Usertime", DbType.String, date);
-                    db.AddInParameter(cmd, "@userID", DbType.String, 2);
-                    db.AddInParameter(cmd, "@TicketBuyer", DbType.String, ticketholder);
-                    db.AddInParameter(cmd, "@Entname", DbType.String, ticketname);
-                    db.AddInParameter(cmd, "@Num", DbType.String, num);
-                    db.AddInParameter(cmd, "@Price", DbType.String, ticketprice);
-                    db.AddInParameter(cmd, "@Status", DbType.String, "待评价");
-                    DataTable dt = db.ExecuteDataTable(cmd);
-                    return "购票成功";
+                    DbCommand comd = db.GetSqlStringCommond("insert into Ent values(@Usertime, @userID, @TicketBuyer, @Entname, @Num, @Price, @Status, @Buytime)");
 
+                    db.AddInParameter(comd, "@Usertime", DbType.String, date);
+                    db.AddInParameter(comd, "@userID", DbType.String, userid);
+                    db.AddInParameter(comd, "@TicketBuyer", DbType.String, ticketholder);
+                    db.AddInParameter(comd, "@Entname", DbType.String, ticketname);
+                    db.AddInParameter(comd, "@Num", DbType.String, num);
+                    db.AddInParameter(comd, "@Price", DbType.String, total);
+                    db.AddInParameter(comd, "@Status", DbType.String, "待评价");
+                    db.AddInParameter(comd, "@Buytime", DbType.String, dtnow);
+                    int dt = db.ExecuteNonQuery(comd);
+                    return "购票成功";
                 }
                 else
                 {
