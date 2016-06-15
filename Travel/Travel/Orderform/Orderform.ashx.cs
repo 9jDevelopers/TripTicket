@@ -15,12 +15,13 @@ namespace Travel.Orderform
 
         public void ProcessRequest(HttpContext context)
         {
-            int userID = int.Parse(context.Request.Form["eid"]);
+            int count = 0;
+            int userID = int.Parse(context.Request["eid"]);
             BOrderform bof = new BOrderform();
-            string info = bof.Set(userID);
+            string info = bof.Set(userID, out count);
             string str = info.Remove(0, 4);
             
-            string infomation = "{\"total\":28,\"rows\":" + str ;
+            string infomation = "{\"total\":"+count+",\"rows\":" + str ;
             context.Response.Write(infomation);
         }
 

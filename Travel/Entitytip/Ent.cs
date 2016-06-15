@@ -12,17 +12,16 @@ namespace Entitytip
 
     public class Ent
     {
-        public string set(int Userid)
+        public DataTable set(int Userid)
         {
             DbHelper db = new DbHelper();
             DbCommand cmd = db.GetSqlStringCommond("select * from Ent where userID=@userID");
             db.AddInParameter(cmd, "@userID", DbType.String, Userid);
             DataTable dt = db.ExecuteDataTable(cmd);
-            string jsonName="";
-            string of= DataTableConvertJson.DataTableToJson(jsonName, dt);
+           
             
 
-            return of;
+            return dt;
 
         }
 

@@ -22,7 +22,8 @@ namespace Travel.Head
             if(action=="getinfo")
             {
                 string Photo;//后期完善
-                int phone;
+                int uid;
+                string Phone;
                 string email;
                 string username;
                 string name; 
@@ -32,16 +33,16 @@ namespace Travel.Head
 
                 //phone = "1234567890";
                 //object p = context.Session["UID"];
-                phone = Convert.ToInt32(context.Session["UID"].ToString());
+                uid = Convert.ToInt32(context.Session["UID"].ToString());
                 BGetInfo getif = new BGetInfo();
-                getif.BGI(phone, out email, out username, out name, out sex, out birthday, out home,out Photo);
+                getif.BGI(uid,out Phone, out email, out username, out name, out sex, out birthday, out home,out Photo);
                 analyze(ref email);
                 analyze(ref username);
                 analyze(ref sex);
                 analyze(ref name);
                 analyze(ref birthday);
                 analyze(ref home);
-                string _phone = "{\"phone\":\"" + phone + "\",";
+                string _phone = "{\"phone\":\"" + Phone + "\",";
                 string _email = "\"email\":\"" + email + "\",";
                 string _username = "\"username\":\"" + username + "\",";
                 string _name = "\"name\":\"" + name + "\","; ;
