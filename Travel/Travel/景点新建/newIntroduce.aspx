@@ -330,17 +330,25 @@
 
                  function (data) {
                      alert(data);
-
-                 }
+                     var a = $.parseJSON(data);
+                     var num = a.English;
+                     alert(a.English)
+                 },
+                 alert("添加成功")
+                             
                 )
+
+                window.onload = "../景点介绍/Introduce.aspx?selectid=" + a.English;
             }
             else
+                {
                 alert("您有未填写完的信息，请将信息填写完整");
-            $("html,body").animate({ scrollTop: 0 }, 600);
+                $("html,body").animate({ scrollTop: 0 }, 600);
+            }
         }
    )
 		
-	</script>
+    </script>
     
 </body>
   <!--#include virtual="../Tail/Tail.html"-->
