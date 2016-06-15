@@ -229,7 +229,7 @@
         $.cookie('ticket', '2', { path: '/' });
         
         //alert("123456");
-        window.location.href = "../BuyTicket/BuyTicket.aspx?intrduce="+zi;
+        window.location.href = "../BuyTicket/BuyTicket.aspx?introduceid="+zi;
     });
     
 </script>

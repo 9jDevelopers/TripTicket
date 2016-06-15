@@ -283,8 +283,9 @@
     </script>
 
     <script  type="text/javascript">
-		$("#TJ").click
+        $("#TJ").click
     (
+     
         function () {
             var name = $("#name").val();
             var TravelType = $("#TravelType").val();
@@ -301,37 +302,43 @@
             var image2 = $("#ig2").attr("src");        
             var image3 = $("ig3").attr("src");
             var image4 = $("ig4").attr("src");
+            if (name != "" && TravelType != "" && time != "" && language != "" && ticketname != "" && ticketmoney != "" && TxTmessage != "" && image0 != "" && image1 != "" && image2 != "" && image3 != "" && image4 != "") {
 
-            //alert("这是" + name+"景点");
+                //alert("这是" + name+"景点");
 
-            $.post
-            (
-            "NewIntroduce.ashx",
-            {
-                shuju:'newshuju',
-                name: $("#name").val(),
-                TravelType: $("#TravelType").val(),
-                time: $("#time").val(),
-                language: $("#language").val(),
+                $.post
+                (
+                "NewIntroduce.ashx",
+                {
+                    shuju: 'newshuju',
+                    name: $("#name").val(),
+                    TravelType: $("#TravelType").val(),
+                    time: $("#time").val(),
+                    language: $("#language").val(),
 
-                ticketname: $("#ticketname").val(),
-                ticketmoney: $("#ticketmoney").val(),
+                    ticketname: $("#ticketname").val(),
+                    ticketmoney: $("#ticketmoney").val(),
 
-                TxTmessage: $("#TxTmessage").val(),
+                    TxTmessage: $("#TxTmessage").val(),
 
-                image0: $("#ig0").attr("src"),
-                image1: $("#ig1").attr("src"),     
-                image2: $("#ig2").attr("src"),
-                image3: $("#ig3").attr("src"),
-                image4: $("#ig4").attr("src"),
-            },
-             function (data) {
-                 alert(data);
-                 
-             }
-            )
+                    image0: $("#ig0").attr("src"),
+                    image1: $("#ig1").attr("src"),
+                    image2: $("#ig2").attr("src"),
+                    image3: $("#ig3").attr("src"),
+                    image4: $("#ig4").attr("src"),
+                },
+
+                 function (data) {
+                     alert(data);
+
+                 }
+                )
+            }
+            else
+                alert("您有未填写完的信息，请将信息填写完整");
+            $("html,body").animate({ scrollTop: 0 }, 600);
         }
-    )
+   )
 		
 	</script>
     
