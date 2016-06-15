@@ -1,19 +1,11 @@
-﻿#log{
-    font-size:14px;
-    color:#aeaeae;
-    position: relative; 
-    z-index:1;
-}
-.lname{
+﻿.lname{
     float:left;
     text-align:right;
     width:20%;
-    margin-top:15px;
-    display:inline-block;
+    margin-top:20px;
 }
 .rinf{
-   display:inline-block;
-    float:left;
+    float:right;
     text-align:left;
     margin-left:20px;
     margin-top:15px;

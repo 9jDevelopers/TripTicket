@@ -31,14 +31,14 @@ namespace Entitytip
             else
                 return null;
         }
-        public static void GetInfo(int phone,out string email,out string username,out string name,out string sex,out string birthday,out string home,out string Photo)
+        public static void GetInfo(int uid,out string Phone,out string email,out string username,out string name,out string sex,out string birthday,out string home,out string Photo)
         {//个人信息页面获取数据
-            int p = phone;
             DbHelper db = new DbHelper();
-            DbCommand cmd = db.GetSqlStringCommond("select * from Account where Phone=@p");
-            db.AddInParameter(cmd, "@p", DbType.Int32, p);
+            DbCommand cmd = db.GetSqlStringCommond("select * from Account where userID=@p");
+            db.AddInParameter(cmd, "@p", DbType.Int32, uid);
 
             DataTable dt = db.ExecuteDataTable(cmd);
+            Phone = dt.Rows[0]["Phone"].ToString();
             email = dt.Rows[0]["email"].ToString();
             username = dt.Rows[0]["username"].ToString();
             name = dt.Rows[0]["name"].ToString();
