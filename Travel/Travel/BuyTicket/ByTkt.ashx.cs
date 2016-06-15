@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using BL;
+using System.Web.SessionState;
 
 namespace Travel
 {
     /// <summary>
     /// ByTkt 的摘要说明
     /// </summary>
-    public class ByTkt : IHttpHandler
+    public class ByTkt : IHttpHandler,IRequiresSessionState
     {
+
         public string tktname;
         public double tktprice;
         public void ProcessRequest(HttpContext context)
@@ -33,9 +35,10 @@ namespace Travel
                     string icn = context.Request.Form["jsidcardno"];
                     string tn = context.Request.Form["jstelenum"];
                     string sf = context.Request.Form["jssafe"];
+                    string uid = context.Session["UID"].ToString();
                     string txt;
                     BBuyTicket bbt1 = new BBuyTicket();
-                    txt=bbt1.Set(tname, pf, dt, th, icn, tn, sf);
+                    txt=bbt1.Set(tname, pf, dt, th, icn, tn, sf,uid);
                     context.Response.Write(txt);
                     break;
 

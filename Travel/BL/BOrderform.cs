@@ -8,10 +8,10 @@ namespace BL
 {
     public class BOrderform
     {
-        public string Set(int Bid)
+        public string Set(int userid)
         {
             Ent e = new Ent();
-            return e.set(Bid);
+            return e.set(userid);
         }
     }
 }

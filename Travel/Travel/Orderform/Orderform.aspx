@@ -16,22 +16,20 @@
     <script src="js/Orderform.js"></script>
     <script>
         $(function () {
-            var id = 1;
+            var userid = 2;
             
-            $.post("Orderform.ashx", { eid: id}, function (data) {
+            $.post("Orderform.ashx", { eid: userid}, function (data) {
                 if(data!="")
                 {
-                    var ofinfo = data.split('$');
-                    var buytime = ofinfo[8].substring(0, 8);
-                    var usetime = ofinfo[1].substring(0, 8);
-                    $("#e1").html(ofinfo[0]);
-                    $("#e2").html(buytime);
-                    $("#e3").html(ofinfo[4]);
-                    $("#e4").html(ofinfo[5]);
-                    $("#e5").html(ofinfo[3]);
-                    $("#e6").html(usetime);
-                    $("#e7").html(ofinfo[6]);
-                    $("#e8").html(ofinfo[7]);
+                    
+                    alert(data);
+                    
+                    
+                    for (var i = 0; info[i].EntID != ""; i++)
+                    {
+                        $("#e1").html(info[i].EntID);
+                    }
+                    
                 }
 
             });
@@ -65,8 +63,23 @@
                             </div>
                             <div class="easyui-tabs divbottom" style="width: 1030px; height: 527px;">
                                 <div class="" title="全部订单">
-
-                                    <table class="tb1">
+                                    <table class="easyui-datagrid" title="订单" style="width:1030px;height:250px"
+                                           data-options="singleSelect:true,collapsible:true,url:'Orderform.ashx',method:'get'">
+                                        <thead>
+                                            <tr>
+                                                <th data-options="field:'EntID',width:80">订单号</th>
+                                                <th data-options="field:'Entname',width:250">订单名称</th>
+                                                <th data-options="field:'Buytime',width:100">预定日期</th>
+                                                <th data-options="field:'Num',width:80,align:'right'">数量</th>
+                                                <th data-options="field:'TicketBuyer',width:80,align:'right'">旅客</th>
+                                                <th data-options="field:'Usertime',width:250">行程/有效日期</th>
+                                                <th data-options="field:'Price',width:60,align:'center'">总金额</th>
+                                                <th data-options="field:'Status',width:60,align:'center'">订单状态</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                    <!--<table class="tb1">
                                         <tr style="height: 40px; background-color: #95B8E7;text-align:center;">
                                             <td>全选</td>
                                             <td>数量</td>
@@ -96,7 +109,7 @@
                                     </table>
                                     <div class="easyui-panel">
                                         <div class="easyui-pagination" data-options="total:114"></div>
-                                    </div>
+                                    </div>-->
                                 </div>
                                 <div class="" title="未出行"></div>
                                 <div class="" title="待付款"></div>
