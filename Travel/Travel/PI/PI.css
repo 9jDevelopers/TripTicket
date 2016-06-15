@@ -29,10 +29,10 @@
     border: 2px solid #DBDBDB;
     background-size: cover;
     position: absolute;
-    right: 1150px;
+    right: 880px;
     top: 10px;
     /*position: relative;*/
-    z-index: 1000;
+    z-index: 10;
     /*float:left;*/
 }
 .edit{
