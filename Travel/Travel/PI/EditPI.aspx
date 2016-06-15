@@ -46,7 +46,6 @@
     </form>
     <script>
         setTimeout(function () {
-            alert(1);
             $.post(
             "../PI/PI.ashx",
             { action: 'getinfo' },
