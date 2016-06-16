@@ -17,6 +17,9 @@
        
     <script src="../References/Swiper-3.2.0/dist/js/swiper.js"></script>
     <script src="../References/jquery-1.8.3.min.js"></script>
+    <link href="../easyui/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../easyui/themes/icon.css" rel="stylesheet" />
+    <%--<link href="../easyui/demo/demo.css" rel="stylesheet" />--%>
     <script src="../easyui/jquery.easyui.min.js"></script>
     <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
     <script src="JScript1.js"></script>
@@ -72,7 +75,6 @@
                 <a href="#A4" style="text-decoration:none"><div class="XQ W">用户点评</div></a>
             </div>
             <%--<p><a name="A1"><img src="image/景点简介222_03.gif" /></a></p>--%>
-
             <%--<p> <i class="s">08:00</i>前往机场,由随团领队协助办理登机及出境手续。</p>--%>
                  <%--<ul>
                       <li><i class="s">08:00</i>&nbsp;前往机场,由随团领队协助办理登机及出境手续。</li>
@@ -95,7 +97,9 @@
              <p><a name ="A3"><img src="image/景点简介222_08.gif" /></a></p>
             
                 <div id="dituContent" class="map">
-                    <img src="image/z景点简介_03.gif" /></div>
+                    
+
+                </div>
 
             <%-- 点评 --%>
             <p><a name="A4"><img src="image/景点简介222_10.gif" /></a></p>
