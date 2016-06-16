@@ -16,6 +16,7 @@ namespace Travel.judge
 
         public void ProcessRequest(HttpContext context)
         {
+            string k = context.Request["i"];
             Bjudge bj = new Bjudge();                                    //实体化Bjudge类。
             int jgname = int.Parse(context.Request.Form["jgid"]);        //1.界面交互层
 
