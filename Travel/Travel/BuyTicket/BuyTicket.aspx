@@ -32,7 +32,6 @@
                 else {
                     var dt = data.split('$');
                     payfor = dt[1];
-
                     $("#ticname").html(dt[0]);
                     var vp = document.getElementById("vp"); 
                     vp.value = payfor;

@@ -14,8 +14,38 @@
     <link href="../easyui/demo/demo.css" rel="stylesheet" />
     <script src="../easyui/jquery.min.js"></script>
     <script src="../easyui/jquery.easyui.min.js"></script>
-    <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
-    
+    <script src="js/Orderform.js"></script>
+    <script>
+        
+
+        function formatPrice(val, row) {
+            if (val == "待评价") {
+                return '<a href=../judge/judge.aspx>' + val + '</a>';
+            }
+            else {
+                return val;
+            }
+        }
+        //$(function () {
+        //    var userid = 2;
+            
+        //    $.post("Orderform.ashx", { eid: userid}, function (data) {
+        //        if(data!="")
+        //        {
+                    
+        //            alert(data);
+                    
+                    
+        //            for (var i = 0; info[i].EntID != ""; i++)
+        //            {
+        //                $("#e1").html(info[i].EntID);
+        //            }
+                    
+        //        }
+
+        //    });
+        //});
+    </script>
 </head>
 <body>
     <!--#include virtual="../Head/Head.html"-->
@@ -31,7 +61,7 @@
                                     <a class="of1" href="#" id="info2" onclick="infomation2()">重置密码</a>
                                 </div>
                                 <div title="订单" data-options="iconCls:'icon-ok'" style="overflow: auto; padding: 10px;">
-                                    <a class="of1" id="click" onclick="lk()">全部订单</a>
+                                    <a class="of1" href="#" id="click" onclick="lk()">全部订单</a>
                                 </div>
                                 <div title="帮助" data-options="iconCls:'icon-help'" style="padding: 10px;">
                                 </div>
@@ -107,38 +137,6 @@
             </table>
         </div>
     </form>
-    <script src="js/Orderform.js"></script>
-    <script>
-        
-
-        function formatPrice(val, row) {
-            if (val == "待评价") {
-                return '<a href=../judge/judge.aspx>' + val + '</a>';
-            }
-            else {
-                return val;
-            }
-        }
-        //$(function () {
-        //    var userid = 2;
-            
-        //    $.post("Orderform.ashx", { eid: userid}, function (data) {
-        //        if(data!="")
-        //        {
-                    
-        //            alert(data);
-                    
-                    
-        //            for (var i = 0; info[i].EntID != ""; i++)
-        //            {
-        //                $("#e1").html(info[i].EntID);
-        //            }
-                    
-        //        }
-
-        //    });
-        //});
-    </script>
     <!--#include virtual="../Tail/Tail.html"-->
 </body>
 </html>
