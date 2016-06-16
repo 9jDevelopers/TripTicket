@@ -39,7 +39,9 @@ namespace Travel
                     }
                     context.Response.Write(username);
                     break;
-                case "GetUsername":
+                case "Logout":
+                    context.Session["UID"] = "";
+                    context.Response.Write('1');
                     break;
                 default: break;
             }

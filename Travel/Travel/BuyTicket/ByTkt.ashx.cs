@@ -18,6 +18,7 @@ namespace Travel
         public void ProcessRequest(HttpContext context)
         {
             string action = context.Request["action"];
+            
             switch (action)
             {
                 case "GetPrice":
@@ -38,15 +39,13 @@ namespace Travel
                     string tn = context.Request.Form["jstelenum"];
                     string sf = context.Request.Form["jssafe"];
                     string uid = context.Session["UID"].ToString();
+                    string t = context.Request.Form["t"];
                     string txt;
                     BBuyTicket bbt1 = new BBuyTicket();
-                    txt=bbt1.Set(ttotal,tnm,tname, pf, dt, th, icn, tn, sf,uid);
+                    txt=bbt1.Set(ttotal,tnm,tname, pf, dt, th, icn, tn, sf,uid,t);
                     context.Response.Write(txt);
                     break;
-                case "confirm":
-                    string t = context.Request.Form["t"];
-
-                    break;
+                
                 default: break;
             }
 
