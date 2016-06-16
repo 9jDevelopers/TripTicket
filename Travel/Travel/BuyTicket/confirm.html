@@ -17,7 +17,6 @@
                 if (r != null) return unescape(r[2]); return null; //返回参数值
             }
             var zi = getUrlParam("tal");
-            alert(zi);
             info = zi.split("$");            
             $("#info1").html("￥" + info[0] + ".00");            
         });
@@ -25,13 +24,13 @@
     </script>
 </head>
 <body>
-    <div class="divout" style="min-width: 300px; width: 1366px;height:500px; margin: 50px 0 100px 0;border:1px solid red;">
-        <table style="width:1200px;height:400px;margin:0 auto;border:1px solid red;">
+    <div class="divout" style="min-width: 300px; width: 1366px;height:500px; margin: 50px 0 100px 0">
+        <table style="width:1200px;height:400px;margin:0 auto;">
             <tr>
-                <td colspan="2" style="height:60px;border:1px solid red;text-align:center;font-size:24px;font-weight:bold;">支付信息</td>
+                <td colspan="2" style="height:60px;text-align:center;font-size:24px;font-weight:bold;">支付信息</td>
             </tr>
             <tr>
-                <td style="height:40px;width:400px;border:1px solid red;background-color:aliceblue">总金额：
+                <td style="height:40px;width:400px;background-color:aliceblue">总金额：
                     <div style="display:inline-block;width:100px;height:20px;color:red;font-weight:bold;font-size:20px;" id="info1"></div>
                 </td>
                 
