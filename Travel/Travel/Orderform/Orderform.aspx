@@ -57,7 +57,8 @@
                         <div class="divleft" style="width: 150px; margin: 0 20px 0 50px;">
                             <div class="easyui-accordion" style="width: 150px; height: 599px;">
                                 <div title="个人信息" data-options="iconCls:'icon-ok'" style="overflow: auto; padding: 10px;">
-                                    <a class="of1" id="info" onclick="infomation()">个人资料</a>
+                                    <a class="of1" href="#" id="info1" onclick="infomation1()">个人资料</a>
+                                    <a class="of1" href="#" id="info2" onclick="infomation2()">重置密码</a>
                                 </div>
                                 <div title="订单" data-options="iconCls:'icon-ok'" style="overflow: auto; padding: 10px;">
                                     <a class="of1" id="click" onclick="lk()">全部订单</a>

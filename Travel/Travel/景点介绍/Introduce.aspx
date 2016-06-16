@@ -31,18 +31,18 @@
         <%-- 景点简介 --%>
         <div class="jianjie ">
             <div class="tu">             
-               <img id="ig" src=""/> 
+               <img id="ig0" src=""/> 
                
             </div>
 
-            <div class="wen">            
+            <div class="wen">            <%--名字--%>
                 <p><div class="FT" id="NSceneName"></div></p>
 
-                <p class="c">                                                     <%--地点--%>
-                <p><div class="GuanGuang"><font color="#808080">门票&nbsp;：</font><i id="site"></i></div></p>           
+                <p class="c">                                                     <%--票名--%>
+                <p><div class="GuanGuang"><font color="#808080">门票&nbsp;：</font><i id="tickname"></i></div></p>           
                                                                   <%--游玩时间--%>
                 <p><font color="#808080">游玩时长&nbsp;：</font><i id="playtime"></i>&nbsp;&nbsp;<font color="#808080">服务语言：</font><i id="language"></i></p>
-                <p> <font color="#808080">票价&nbsp;：</font><i id="money"></i> <a class="Yuyue">立刻预约</a></p>
+                <p> <font color="#808080">票价&nbsp;：</font><i id="money"></i>元 <a class="Yuyue">立刻预约</a></p>
                 <div class="XX">
                     
                     <div class="DW">玩乐亮点</div>
@@ -139,41 +139,56 @@
         //var zi = "2";
         if (zi != null)
         {
-            //$.post(
-            //"Introduce.ashx",
-        //{
-            //zi: getUrlParam("selectid")
-        //},
-        //function (data) {
-        //    alert(data);
-            //var a = $.parseJSON(data);
-            //alert(a.NSceneName);
-            //alert(a.NData);
-            //alert(a.NScore);
-            //alert(a.NNumber);
+            $.post(
+            "Introduce.ashx",
+        {
+            zi: getUrlParam("selectid")
+        },
+        function (data) {
+            alert(data);
+            var a = $.parseJSON(data);
+            
+            $("#ig0").attr("src", "../景点新建/image/" + a.image0);
+            $("#ig0").attr("width", "650");
+            $("#ig0").attr("height", "450");            
+            $("#NSceneName").html(a.NSceneName);
+            $("#tickname").html(a.Tickname);
+            $("#playtime").html(a.playtime);
+            $("#language").html(a.language);
+            $("#money").html(a.money);
+            $("#TexTmessage").html(a.TeT);
+            $("#ig1").attr("src", "../景点新建/image/" + a.ig1);
+            $("#ig1").attr("width", "350");
+            $("#ig1").attr("height", "350");
 
-            //$("#NData").html(a.NData);
-            //$("#NSceneName").html(a.NSceneName);
-            //$("#NScore").html(a.NScore);
-            //$("#NNumber").html(a.NNumber);
-            //$("#ig").attr("src", "../景点新建/image/" + a.image0)
-            //$("#ig").attr("width", "650")
-            //$("#ig").attr("height", "450")
-    //    }    
-    //)
+            $("#ig2").attr("src", "../景点新建/image/" + a.ig2);
+            $("#ig2").attr("width", "350");
+            $("#ig2").attr("height", "350");
+
+            $("#ig3").attr("src", "../景点新建/image/" + a.ig3);
+            $("#ig3").attr("width", "350");
+            $("#ig3").attr("height", "350");
+
+            $("#ig4").attr("src", "../景点新建/image/" + a.ig4);
+            $("#ig4").attr("width", "350");
+            $("#ig4").attr("height", "350");
+
+            
+        }    
+    )
         }
        
         else
         {
-           // alert("请正确加载页面");
-           // location.href = "../Index/Index.aspx";
+            alert("请正确加载页面");
+            location.href = "../Index/Index.aspx";
         }
         
        
     
     $(".Yuyue").click(function () {
       
-        $.cookie('ticket', '2', { path: '/' });
+        
         
         //alert("123456");
         window.location.href = "../BuyTicket/BuyTicket.aspx?introduceid="+zi;
