@@ -16,14 +16,16 @@
     <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
     <script src="../easyui/jquery.easyui.min.js"></script>
     <script>
+        
         //function getUrlParam(name) {
         //    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
         //    var r = window.location.search.substr(1).match(reg);  //匹配目标参数
         //    if (r != null) return unescape(r[2]); return null; //返回参数值
         //}
         //var zi = getUrlParam("introduceid");
-        var zi =17;   
+        var zi = 17;
         $(function () {
+            
             var payfor;
             $.post("ByTkt.ashx", { action: "GetPrice", ticketID: zi }, function (data) {
                 if (data == "") {
@@ -33,7 +35,7 @@
                     var dt = data.split('$');
                     payfor = dt[1];
                     $("#ticname").html(dt[0]);
-                    var vp = document.getElementById("vp"); 
+                    var vp = document.getElementById("vp");
                     vp.value = payfor;
 
                 }
