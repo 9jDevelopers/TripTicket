@@ -329,7 +329,7 @@
                 },
 
                  function (data) {
-                     alert(data);
+                     //alert(data);
                      
                      
                      alert("添加成功");
