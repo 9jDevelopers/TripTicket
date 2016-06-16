@@ -17,6 +17,9 @@
        
     <script src="../References/Swiper-3.2.0/dist/js/swiper.js"></script>
     <script src="../References/jquery-1.8.3.min.js"></script>
+    <link href="../easyui/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../easyui/themes/icon.css" rel="stylesheet" />
+    <%--<link href="../easyui/demo/demo.css" rel="stylesheet" />--%>
     <script src="../easyui/jquery.easyui.min.js"></script>
     <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
     <script src="JScript1.js"></script>
@@ -72,7 +75,6 @@
                 <a href="#A4" style="text-decoration:none"><div class="XQ W">用户点评</div></a>
             </div>
             <%--<p><a name="A1"><img src="image/景点简介222_03.gif" /></a></p>--%>
-
             <%--<p> <i class="s">08:00</i>前往机场,由随团领队协助办理登机及出境手续。</p>--%>
                  <%--<ul>
                       <li><i class="s">08:00</i>&nbsp;前往机场,由随团领队协助办理登机及出境手续。</li>
@@ -95,7 +97,9 @@
              <p><a name ="A3"><img src="image/景点简介222_08.gif" /></a></p>
             
                 <div id="dituContent" class="map">
-                    <img src="image/z景点简介_03.gif" /></div>
+                    
+
+                </div>
 
             <%-- 点评 --%>
             <p><a name="A4"><img src="image/景点简介222_10.gif" /></a></p>
@@ -111,7 +115,7 @@
                         <dd><i class="user">user</i><i class="time">time</i></dd>     
                 </dl>
         </div>
-        <%-- 系统推荐 --%>
+        
         
 </div>
 
@@ -202,7 +206,15 @@
                 alert(t[3].SceneID+"123456");
                 while (i > 0) {
                     alert(i);
-                    $("#Elddiv").append("<div style='border:solid 2px red;width:10px;height:10px'></div>");
+                    $(".Elddiv").append("<dl class='ldl'>" +
+                        "<dd class='wg'>" + t[i - 1].judgetext + "</dd>" +
+                        "<dd class='mg'>" +
+                            "<img class='mimg' src='../景点介绍/image/T){YV~N)7~3{3H]K}RUY($6_02.gif'/>" +
+                            "<img class='mimg' src='../景点介绍/image/T){YV~N)7~3{3H]K}RUY($6_04.gif' />" +
+                            "<img class='mimg' src='../景点介绍/image/T){YV~N)7~3{3H]K}RUY($6_06.gif' />" +
+                        "</dd>" +
+                        "<dd><i class='user'>" + t[i - 1].usernamr + "</i><i class='time'>" + t[i - 1].judgedate + "</i></dd>" +
+                "</dl>");
                     i = i - 1;
                 }
             }
@@ -217,12 +229,3 @@
     });
     
 </script>
-<%--"<dl class='ldl'>" +
-                        "<dd class='wg'>" + t[i-1].judgetext + "</dd>" +
-                        "<dd class='mg'>" +
-                            "<img class='mimg' src='../景点介绍/image/T){YV~N)7~3{3H]K}RUY($6_02.gif'/>" +
-                            "<img class='mimg' src='../景点介绍/image/T){YV~N)7~3{3H]K}RUY($6_04.gif' />" +
-                            "<img class='mimg' src='../景点介绍/image/T){YV~N)7~3{3H]K}RUY($6_06.gif' />" +
-                        "</dd>" +
-                        "<dd><i class='user'>" + t[i-1].usernamr + "</i><i class='time'>" + t[i - 1].judgedate + "</i></dd>" +
-                "</dl>"--%>

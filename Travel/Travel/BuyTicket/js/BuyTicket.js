@@ -79,7 +79,6 @@ var v = $('#dt').datetimebox('getValue');
 
 
 $("#pay").click(function () {
-    
     var nnn = $("#num").val();
     var ticketholder = $("#N").val();
     var idcardno = $("#I").val();
@@ -95,9 +94,11 @@ $("#pay").click(function () {
         alert("支付失败 请确认身份信息");
     }
             else {
-                window.location = "confirm.html?tal=" + total + ",number=" + nnn +  ",ticketname="
-                + ticketname + ",ticketprice=" + ticketprice + ",date=" + date + ",ticketholder=" + ticketholder
-                + ",telenum=" + telenum + ",safe=" + intHot;
+                var _name = encodeURI(ticketname);
+                alert(_name);
+                window.location = "confirm.html?tal=" + total + "$" + nnn + "$"
+                + _name + "$" + ticketprice + "$" + date + "$" + ticketholder
+                + "$" + idcardno + "$" + telenum + "$" + intHot;
         //$.post(
         //    "ByTkt.ashx",
         //    { action: "Set", jtotal:total,jnum: $("#num").val(), jsticketname: $("#ticname").html(), jsticketprice: vp.value, jsdate: date, jsticketholder: $("#N").val(), jsidcardno: $("#I").val(), jstelenum: $("#P").val(), jssafe: intHot },
