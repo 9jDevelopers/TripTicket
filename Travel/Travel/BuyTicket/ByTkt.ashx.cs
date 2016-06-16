@@ -28,7 +28,8 @@ namespace Travel
                     context.Response.Write(np);
                     break;
                 case "Set":
-                    int tnm= int.Parse(context.Request.Form["jnum"]);
+                    string ttotal = context.Request.Form["jtotal"];
+                    string tnm= context.Request.Form["jnum"];
                     string tname = context.Request.Form["jsticketname"];
                     string pf = context.Request.Form["jsticketprice"];
                     string dt = context.Request.Form["jsdate"];
@@ -39,7 +40,7 @@ namespace Travel
                     string uid = context.Session["UID"].ToString();
                     string txt;
                     BBuyTicket bbt1 = new BBuyTicket();
-                    txt=bbt1.Set(tnm,tname, pf, dt, th, icn, tn, sf,uid);
+                    txt=bbt1.Set(ttotal,tnm,tname, pf, dt, th, icn, tn, sf,uid);
                     context.Response.Write(txt);
                     break;
 

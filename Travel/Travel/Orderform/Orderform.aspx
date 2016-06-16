@@ -16,9 +16,11 @@
     <script src="../easyui/jquery.easyui.min.js"></script>
     <script src="js/Orderform.js"></script>
     <script>
+        
+
         function formatPrice(val, row) {
             if (val == "待评价") {
-                return '<a href=javascript:alert(123)>' + val + '</a>';
+                return '<a href=../judge/judge.aspx>' + val + '</a>';
             }
             else {
                 return val;
@@ -48,7 +50,7 @@
 <body>
     <!--#include virtual="../Head/Head.html"-->
     <form id="form1">
-        <div class="divout" style="min-width: 300px; width: 100%; margin: 50px 0 100px 0">
+        <div class="divout" style="min-width: 300px; width: 1366px; margin: 50px 0 100px 0;">
             <table>
                 <tr>
                     <td>
