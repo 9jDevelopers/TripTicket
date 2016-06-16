@@ -1,68 +1,86 @@
-﻿.bd {
+﻿
+#bd {
     width:960px;
     height:734px;
+    margin-top: 10px;
+    border-top: 1px solid #dfdfe0;
+    position: relative;
+}
+#bd, #ft {
+    width: 960px;
+    margin: 10px auto 0;
+    clear: both;
 }
 .yi {
     width :960px;
-    height :239px;
-    border-bottom-width :1px 1px 0px 1px;
+    height :224px;
+    border-style:solid;
+    border-width :0px 1px 1px 1px;
+    border-color:#dfdfe0;
 }
 .er {
     width :960px;
-    height :91px;
-    border-bottom-width :1px 1px 0px 1px;
+    height :76px;
+    border-style: solid;
+    border-width :0px 1px 1px 1px;
+    border-color:#dfdfe0;
 }
 .san {
     width :960px;
-    height :128px;
-    border-bottom-width :1px 1px 0px 1px;
+    height :113px;
+    border-style: solid;
+    border-width :0px 1px 1px 1px;
+    border-color:#dfdfe0;
 }
 .si {
     width :960px;
-    height :91px;
-    border-bottom-width :1px 1px 0px 1px;
+    height :76px;
+    border-style: solid;
+    border-width :0px 1px 1px 1px;
+    border-color:#dfdfe0;
 }
 .wu {
     width :960px;
-    height :54px;
-    border-bottom-width :1px 1px 1px 1px;
-}
-.zuo {
+    height :39px;
+    border-style: solid;
+    border-width :0px 1px 1px 1px;
+    border-color:#dfdfe0;
+} 
+h2 {
     width:128px;
-    height :100%;
+    float:left ;
+    padding-top:8px;
+    font-size:15px;
 }
-.you {
-    width:830px;
-    height:100%;
-}
-ul
-    {
+ul{
+        float:left ;
         list-style-type:none;
-        margin:0;
-        padding:0;
-        padding-top:6px;
-        padding-bottom:6px;      
-        color:blue;
+        padding:0px; 
+        margin:0px; 
+        width:830px;
+        border :none ;
     }
 li
     {
-        display:inline;
-        
-    }
-li a {
+        display:inline; 
         width:166px; 
-        height:37px; 
+        height:37px;  
+        float :left ;
+}
+li a {
+        width:125px; 
+        height:20px; 
+        float :left ;
+        border :none;
+        margin-top:10px;
     }
-li a:hover
+a:hover
 {
-     background:#0a56bb; 
+     background:#7CCD7C; 
 }
 a:link,a:visited
     {
-        font-weight:bold;
-        color:blue;
-        text-align:center;
-        padding:6px;
+        font-size:15px;
+        text-align:left;
         text-decoration:none;
-        text-transform:uppercase;
     }
