@@ -16,13 +16,16 @@
     <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
     <script src="../easyui/jquery.easyui.min.js"></script>
     <script>
-
+        //function getUrlParam(name) {
+        //    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        //    var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        //    if (r != null) return unescape(r[2]); return null; //返回参数值
+        //}
+        //var zi = getUrlParam("introduceid");
+        var zi =17;   
         $(function () {
             var payfor;
-
-            var id = $.cookie('ticket');
-
-            $.post("ByTkt.ashx", { action: "GetPrice", ticketID: id }, function (data) {
+            $.post("ByTkt.ashx", { action: "GetPrice", ticketID: zi }, function (data) {
                 if (data == "") {
                     alert("失败");
                 }
@@ -31,6 +34,7 @@
                     payfor = dt[1];
 
                     $("#ticname").html(dt[0]);
+                    var vp = document.getElementById("vp"); 
                     vp.value = payfor;
 
                 }
@@ -133,16 +137,16 @@
                         placeholder="接收确认信息" style="width: 30%; height: 19px;" />
                 </div>
             </div>
-        <div class="Touristagree">
-            <asp:CheckBox ID="CheckBox3" runat="server" />同意 <a class="packupdown">梅岭国家级风景名胜区协议</a>
+            <div class="Touristagree">
+                <asp:CheckBox ID="CheckBox3" runat="server" />同意 <a class="packupdown">梅岭国家级风景名胜区协议</a>
 
-        </div>
+            </div>
 
         </div>
         <div class="payfor">
             <div class="pageend">
                 <div class="money">订单总金额：<span class="Title">￥</span><span id="price" class="price">0</span></div>
-                <input id="pay" class="pay" type="button" value="去支付" />
+                <a id="pay" class="pay">去支付</a>
                 <input type="hidden" id="vp" />
 
 
@@ -151,6 +155,6 @@
         <script src="js/BuyTicket.js" type="text/javascript"></script>
         <script src="../Head/Head.js"></script>
     </form>
-             <!--#include virtual="../Tail/Tail.html"-->
+    <!--#include virtual="../Tail/Tail.html"-->
 </body>
 </html>

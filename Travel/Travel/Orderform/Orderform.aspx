@@ -16,9 +16,11 @@
     <script src="../easyui/jquery.easyui.min.js"></script>
     <script src="js/Orderform.js"></script>
     <script>
+        
+
         function formatPrice(val, row) {
             if (val == "待评价") {
-                return '<a href=javascript:alert(123)>' + val + '</a>';
+                return '<a href=../judge/judge.aspx>' + val + '</a>';
             }
             else {
                 return val;
@@ -48,14 +50,15 @@
 <body>
     <!--#include virtual="../Head/Head.html"-->
     <form id="form1">
-        <div class="divout" style="min-width: 300px; width: 100%; margin: 50px 0 100px 0">
+        <div class="divout" style="min-width: 300px; width: 1366px; margin: 50px 0 100px 0;">
             <table>
                 <tr>
                     <td>
                         <div class="divleft" style="width: 150px; margin: 0 20px 0 50px;">
                             <div class="easyui-accordion" style="width: 150px; height: 599px;">
                                 <div title="个人信息" data-options="iconCls:'icon-ok'" style="overflow: auto; padding: 10px;">
-                                    <a class="of1" id="info" onclick="infomation()">个人资料</a>
+                                    <a class="of1" href="#" id="info1" onclick="infomation1()">个人资料</a>
+                                    <a class="of1" href="#" id="info2" onclick="infomation2()">重置密码</a>
                                 </div>
                                 <div title="订单" data-options="iconCls:'icon-ok'" style="overflow: auto; padding: 10px;">
                                     <a class="of1" id="click" onclick="lk()">全部订单</a>
