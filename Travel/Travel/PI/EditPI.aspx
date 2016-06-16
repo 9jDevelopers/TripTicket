@@ -68,7 +68,7 @@
                 $.ajax({
                     cache: true, //缓存
                     type: "POST", //提交方式post get
-                    url: "PI.ashx",
+                    url: "../PI/PI.ashx",
                     data: formData,
                     async: true, //异步
                     contentType: false, //避免jQuery将你的表格数据转换为字符串，导致提交失败。
