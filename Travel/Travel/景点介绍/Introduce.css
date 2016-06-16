@@ -15,13 +15,16 @@
 /*景点简介*/
 .jianjie{
     background-color:#ffffff;
-    height:630px;
+    height:500px;
     margin-top:35px;
     margin-left:80px;
     margin-right:80px;
     border:solid 2px #dddddd;
     
     }
+.bian{
+    margin-top:35px;
+}
 
 .tu{
     /*border:solid 1px red;*/
@@ -58,7 +61,7 @@
     border:solid 3px #6fdef3;
     background-color:#e4f6fa;
     padding:5px;
-    width:87px;
+    width:150px;
     text-align:center;
     color:#6fdef3;
 }
@@ -70,7 +73,7 @@
     font-weight:400;
     color:#ffffff;
     padding:3% 2% 3% 2%;
-    margin-right:250px;
+    margin-right:220px;
   }
 .wen .XX{
     border:dashed 1px #45c3da;
@@ -160,7 +163,7 @@
 .F{
     margin-top:21px;
     /*border:solid 1px red;*/
-    height:2100px;
+    /*height:2500px;*/
     width:100%
    
 }
@@ -206,6 +209,7 @@ li{
 }
 .map{
     text-align:center;
+    width:100%;
 }
 /*玩乐*/
 .wl{
@@ -238,7 +242,7 @@ hr{
 /*评价*/
 .Elddiv{
     width:100%;
-    height:160px;
+    height:450px;
     overflow:scroll;
     border:solid 2px #808080;
 }
