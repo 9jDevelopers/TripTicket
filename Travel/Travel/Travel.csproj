@@ -894,6 +894,8 @@
     <Content Include="easyui\themes\material\images\Thumbs.db" />
     <Content Include="Reg\网页注册.html" />
     <Content Include="Test\test.aspx" />
+    <Content Include="TouristSite\css\TouristSite.css" />
+    <Content Include="TouristSite\TouristSite.aspx" />
     <Content Include="景点合作\HtmlPage.html" />
     <Content Include="景点合作\imges\01.jpg" />
     <Content Include="景点合作\imges\02.jpg" />
@@ -1463,6 +1465,13 @@
       <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tool\ProofTechnique.cs" />
+    <Compile Include="TouristSite\TouristSite.aspx.cs">
+      <DependentUpon>TouristSite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TouristSite\TouristSite.aspx.designer.cs">
+      <DependentUpon>TouristSite.aspx</DependentUpon>
+    </Compile>
     <Compile Include="景点介绍\Introduce.ashx.cs">
       <DependentUpon>Introduce.ashx</DependentUpon>
     </Compile>
