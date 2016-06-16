@@ -1,0 +1,68 @@
+﻿.bd {
+    width:960px;
+    height:734px;
+}
+.yi {
+    width :960px;
+    height :239px;
+    border-bottom-width :1px 1px 0px 1px;
+}
+.er {
+    width :960px;
+    height :91px;
+    border-bottom-width :1px 1px 0px 1px;
+}
+.san {
+    width :960px;
+    height :128px;
+    border-bottom-width :1px 1px 0px 1px;
+}
+.si {
+    width :960px;
+    height :91px;
+    border-bottom-width :1px 1px 0px 1px;
+}
+.wu {
+    width :960px;
+    height :54px;
+    border-bottom-width :1px 1px 1px 1px;
+}
+.zuo {
+    width:128px;
+    height :100%;
+}
+.you {
+    width:830px;
+    height:100%;
+}
+ul
+    {
+        list-style-type:none;
+        margin:0;
+        padding:0;
+        padding-top:6px;
+        padding-bottom:6px;      
+        color:blue;
+    }
+li
+    {
+        display:inline;
+        
+    }
+li a {
+        width:166px; 
+        height:37px; 
+    }
+li a:hover
+{
+     background:#0a56bb; 
+}
+a:link,a:visited
+    {
+        font-weight:bold;
+        color:blue;
+        text-align:center;
+        padding:6px;
+        text-decoration:none;
+        text-transform:uppercase;
+    }

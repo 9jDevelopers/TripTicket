@@ -56,7 +56,7 @@
                         //background-image: url(images/test.jpg);
                         home.innerHTML = obj.home;
                     });
-	    }, 1000);
+	    }, 10);
 	    $(".submit").click(function () {
 	        $.cookie('objs',objs, { path: '/' });
 	        window.location.href = "EditPI.aspx";

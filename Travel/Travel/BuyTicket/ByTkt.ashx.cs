@@ -43,7 +43,10 @@ namespace Travel
                     txt=bbt1.Set(ttotal,tnm,tname, pf, dt, th, icn, tn, sf,uid);
                     context.Response.Write(txt);
                     break;
+                case "confirm":
+                    string t = context.Request.Form["t"];
 
+                    break;
                 default: break;
             }
 
