@@ -46,13 +46,10 @@
 <body>
     <!--#include virtual="../Head/Head.html"-->
     <form id="form1" runat="server">
-
         <div class="web">
             <div class="Title">预订信息</div>
             <div class="line"></div>
             <div class="Ticketintroduce">
-
-
                 <div id="ticname"></div>
                 <input type="text" readonly="true" id="updown" value="详情▼" class="packupdown" />
                 <div class="details" id="detailsupdown">
