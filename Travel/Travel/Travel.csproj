@@ -828,6 +828,7 @@
     <Content Include="PersonalCenter\PersonalCenter.aspx" />
     <Content Include="PersonalCenter\PersonalCenter.css" />
     <Content Include="PersonalCenter\PersonalCenter.js" />
+    <Content Include="Reg\Reg.aspx" />
     <Content Include="ResetPassword\ResetPassword.aspx" />
     <Content Include="PI\EditPI.aspx" />
     <Content Include="Head\Head.js" />
@@ -899,7 +900,6 @@
     <Content Include="easyui\demo\tree\tree_data1.json" />
     <Content Include="easyui\demo\tree\tree_data2.json" />
     <Content Include="easyui\themes\material\images\Thumbs.db" />
-    <Content Include="Reg\网页注册.html" />
     <Content Include="Test\test.aspx" />
     <Content Include="TouristSite\css\TouristSite.css" />
     <Content Include="TouristSite\TouristSite.aspx" />
@@ -1412,6 +1412,13 @@
     </Compile>
     <Compile Include="PersonalCenter\PersonalCenter.aspx.designer.cs">
       <DependentUpon>PersonalCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reg\Reg.aspx.cs">
+      <DependentUpon>Reg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reg\Reg.aspx.designer.cs">
+      <DependentUpon>Reg.aspx</DependentUpon>
     </Compile>
     <Compile Include="ResetPassword\ResetPassword.ashx.cs">
       <DependentUpon>ResetPassword.ashx</DependentUpon>
