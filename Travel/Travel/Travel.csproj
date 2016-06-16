@@ -969,6 +969,7 @@
     <Content Include="Orderform\Orderform.ashx" />
     <Content Include="Index\Index.ashx" />
     <Content Include="PersonalCenter\PersonalCenter.ashx" />
+    <Content Include="BuyTicket\confirm.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1378,6 +1379,9 @@
     </Compile>
     <Compile Include="BuyTicket\ByTkt.ashx.cs">
       <DependentUpon>ByTkt.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="BuyTicket\confirm.ashx.cs">
+      <DependentUpon>confirm.ashx</DependentUpon>
     </Compile>
     <Compile Include="Head\Handler.ashx.cs">
       <DependentUpon>Handler.ashx</DependentUpon>

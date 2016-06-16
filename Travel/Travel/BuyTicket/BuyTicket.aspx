@@ -146,7 +146,7 @@
         <div class="payfor">
             <div class="pageend">
                 <div class="money">订单总金额：<span class="Title">￥</span><span id="price" class="price">0</span></div>
-                <input id="pay" class="pay" type="button" value="去支付" />
+                <a id="pay" class="pay">去支付</a>
                 <input type="hidden" id="vp" />
 
 
