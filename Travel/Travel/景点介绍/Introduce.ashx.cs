@@ -20,10 +20,10 @@ namespace Travel.景点介绍
             string SceneID = context.Request.Form["zi"];
             IntroduceBL giveme = new IntroduceBL();
             Entitytip.Introduce a = giveme.Message(SceneID);
-            
-            
-            string MSG = " {\"NSceneName\":\""+a.SceneName+ "\",\"NData\":\""+a.Data+ "\",\"NScore\":\""+a.Score+ "\",\"NNumber\":\""+a.Number+"\",\"image0\":\""+a.image0+"\"}";
-        
+
+
+            string MSG = " {\"NSceneName\":\""+a.SceneName+ "\",\"image0\":\""+a.image0+ "\",\"Tickname\":\""+a.Tickname+ "\",\"playtime\":\""+a.playtime+"\",\"language\":\""+a.language+ "\",\"money\":\"" + a.money + "\",\"TeT\":\"" + a.TeT + "\",\"ig1\":\"" + a.ig1 + "\",\"ig2\":\"" + a.ig2 + "\",\"ig3\":\"" + a.ig3 + "\",\"ig4\":\"" + a.ig4 + "\"}";
+
 
 
             context.Response.Write(MSG);
