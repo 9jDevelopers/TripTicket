@@ -17,6 +17,7 @@
        
     <script src="../References/Swiper-3.2.0/dist/js/swiper.js"></script>
     <script src="../References/jquery-1.8.3.min.js"></script>
+    <script src="../easyui/jquery.easyui.min.js"></script>
     <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
     <script src="JScript1.js"></script>
     
@@ -194,7 +195,16 @@
             function(data)
             {
                 alert("123789");
-                alert(data + "789");
+                alert(data);
+                var arr = data.split('$');
+                var i= arr[0];
+                var t = JSON.parse(arr[1]);
+                alert(t[3].SceneID+"123456");
+                while (i > 0) {
+                    alert(i);
+                    $("#Elddiv").append("<div style='border:solid 2px red;width:10px;height:10px'></div>");
+                    i = i - 1;
+                }
             }
             )
         }
@@ -207,3 +217,12 @@
     });
     
 </script>
+<%--"<dl class='ldl'>" +
+                        "<dd class='wg'>" + t[i-1].judgetext + "</dd>" +
+                        "<dd class='mg'>" +
+                            "<img class='mimg' src='../景点介绍/image/T){YV~N)7~3{3H]K}RUY($6_02.gif'/>" +
+                            "<img class='mimg' src='../景点介绍/image/T){YV~N)7~3{3H]K}RUY($6_04.gif' />" +
+                            "<img class='mimg' src='../景点介绍/image/T){YV~N)7~3{3H]K}RUY($6_06.gif' />" +
+                        "</dd>" +
+                        "<dd><i class='user'>" + t[i-1].usernamr + "</i><i class='time'>" + t[i - 1].judgedate + "</i></dd>" +
+                "</dl>"--%>
