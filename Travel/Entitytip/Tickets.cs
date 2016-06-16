@@ -31,7 +31,7 @@ namespace Entitytip
             }
         }
         //insert into Ent values(@EntID, @Usertime, @userID, @TicketBuyer, @Entname, @Num, @Price, @Status, @Buytime)
-        public string SET(string total,string num,string ticketname, string ticketprice, string date, string ticketholder, string idcardno, string telenum, string safe,string userid)
+        public string SET(string total,string num,string ticketname, string ticketprice, string date, string ticketholder, string idcardno, string telenum, string safe,string userid,string wait)
         {
 
             string safetype;
@@ -70,7 +70,7 @@ namespace Entitytip
                     db.AddInParameter(comd, "@Entname", DbType.String, ticketname);
                     db.AddInParameter(comd, "@Num", DbType.String, num);
                     db.AddInParameter(comd, "@Price", DbType.String, total);
-                    db.AddInParameter(comd, "@Status", DbType.String, "待评价");
+                    db.AddInParameter(comd, "@Status", DbType.String, wait);
                     db.AddInParameter(comd, "@Buytime", DbType.String, dtnow);
                     int dt = db.ExecuteNonQuery(comd);
                     return "购票成功";
