@@ -61,7 +61,7 @@
     
     setTimeout(function () {
 
-        if ($.cookie('username') != null) {
+        if ($.cookie('username') != "" && $.cookie('username') != null) {
             var btn = document.getElementById('btnl');
             btn.style.fontSize = "10px";
             btn.innerHTML = "Hello，" + $.cookie('username');

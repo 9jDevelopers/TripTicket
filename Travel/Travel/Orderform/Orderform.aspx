@@ -60,6 +60,7 @@
                                 <div title="个人信息" data-options="iconCls:'icon-ok'" style="overflow: auto; padding: 10px;">
                                     <a class="of1" href="#" id="info1" onclick="infomation1()">个人资料</a>
                                     <a class="of1" href="#" id="info2" onclick="infomation2()">重置密码</a>
+                                    <a class="of1" href="#" id="info3" onclick="infomation3()">注销登录</a>
                                 </div>
                                 <div title="订单" data-options="iconCls:'icon-ok'" style="overflow: auto; padding: 10px;">
                                     <a class="of1" href="#" id="click" onclick="lk()">全部订单</a>
