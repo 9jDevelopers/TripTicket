@@ -14,38 +14,8 @@
     <link href="../easyui/demo/demo.css" rel="stylesheet" />
     <script src="../easyui/jquery.min.js"></script>
     <script src="../easyui/jquery.easyui.min.js"></script>
-    <script src="js/Orderform.js"></script>
-    <script>
-        
-
-        function formatPrice(val, row) {
-            if (val == "待评价") {
-                return '<a href=../judge/judge.aspx>' + val + '</a>';
-            }
-            else {
-                return val;
-            }
-        }
-        //$(function () {
-        //    var userid = 2;
-            
-        //    $.post("Orderform.ashx", { eid: userid}, function (data) {
-        //        if(data!="")
-        //        {
-                    
-        //            alert(data);
-                    
-                    
-        //            for (var i = 0; info[i].EntID != ""; i++)
-        //            {
-        //                $("#e1").html(info[i].EntID);
-        //            }
-                    
-        //        }
-
-        //    });
-        //});
-    </script>
+    <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
+    
 </head>
 <body>
     <!--#include virtual="../Head/Head.html"-->
@@ -137,6 +107,38 @@
             </table>
         </div>
     </form>
+    <script src="js/Orderform.js"></script>
+    <script>
+        
+
+        function formatPrice(val, row) {
+            if (val == "待评价") {
+                return '<a href=../judge/judge.aspx>' + val + '</a>';
+            }
+            else {
+                return val;
+            }
+        }
+        //$(function () {
+        //    var userid = 2;
+            
+        //    $.post("Orderform.ashx", { eid: userid}, function (data) {
+        //        if(data!="")
+        //        {
+                    
+        //            alert(data);
+                    
+                    
+        //            for (var i = 0; info[i].EntID != ""; i++)
+        //            {
+        //                $("#e1").html(info[i].EntID);
+        //            }
+                    
+        //        }
+
+        //    });
+        //});
+    </script>
     <!--#include virtual="../Tail/Tail.html"-->
 </body>
 </html>
