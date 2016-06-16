@@ -13,6 +13,7 @@
     <script src="js/judge.js"></script>
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="js/jquery.min.js"></script>
+    <link href="css/zyUpload.css" rel="stylesheet" />
     <link href="css/star-rating.css" rel="stylesheet" />
     <script src="js/star-rating.js"></script>
     <script src="js/star-rating.min.js"></script>
@@ -216,7 +217,8 @@
                      <div class="gup">上传图片</div>
                      <div class="sui">  
                          <div class="tx3"><h4>晒图片</h4></div>
-                           <div class="b3">
+
+                        <%--   <div class="b3">
                                 <div id="btnimage"  class="icon-googleplus" style="margin-left:20px;" onclick="test()"> </div>
                                  <div id="fileups">         
                                    <input type="file" class="file-up" name="btnim0" style="display:none;"/>
@@ -225,8 +227,30 @@
                                    <input type="file" class="file-up" name="btnim3" style="display:none;"/>
                                    <input type="file" class="file-up" name="btnim4" style="display:none;"/>
                                  </div>
-                           <%-- <div class="pic">0/5</div>--%>
-                       </div>
+                           <%-- <div class="pic">0/5</div>
+                       </div>--%>
+                        
+                         <div id="images">
+
+                             <div id="btnUp1" class="tuq">
+                                 <i class="tu1 w icon-googleplus"></i>
+                                 <img id="ig1" src="" />
+                             </div>
+                             <div id="btnUp2" class="tuq">
+                                 <i class="tu2 w icon-googleplus"></i>
+                                 <img id="ig2" src="" />
+                             </div>
+                             <div id="btnUp3" class="tuq">
+                                 <i class="tu3 w icon-googleplus"></i>
+                                 <img id="ig3" src="" />
+                             </div>
+                             <div id="btnUp4" class="tuq">5
+                                 <i class="tu4 w icon-googleplus"></i>
+                                 <img id="ig4" src="" />
+                             </div>
+                         </div>
+
+
                      </div>
                  </div>
 
