@@ -18,9 +18,9 @@ namespace Travel.Tool
                 HttpContext.Current.Response.Redirect("~/Index/Index.aspx", true);
             }
         }
-        public void proofaid(string AID) 
+        public void proofaid(object AID) 
         {
-            if (AID == "" || AID == null)
+            if (Convert.ToString(AID) == "")
             {
                 HttpContext.Current.Response.Redirect("~/Administrator/Administrator.aspx", true);
             }

@@ -810,19 +810,25 @@
     <Content Include="judge\css\bootstrap.min.css" />
     <Content Include="judge\css\star-rating.css" />
     <Content Include="judge\css\star-rating.min.css" />
+    <Content Include="judge\css\zyUpload.css" />
     <Content Include="judge\img\cancel-off.png" />
     <Content Include="judge\img\cancel-on.png" />
     <Content Include="judge\img\star-half.png" />
     <Content Include="judge\img\star-off.png" />
     <Content Include="judge\img\star-on.png" />
-    <Content Include="judge\js\jquery-1.5.1.min.js" />
+    <Content Include="judge\img\u=3895186919,2942111945&amp;fm=21&amp;gp=0.jpg" />
+    <Content Include="judge\js\jq22.js" />
+    <Content Include="judge\js\jquery-1.7.2.js" />
     <Content Include="judge\js\jquery.min.js" />
     <Content Include="judge\js\star-rating.js" />
     <Content Include="judge\js\star-rating.min.js" />
+    <Content Include="judge\js\zyFile.js" />
+    <Content Include="judge\js\zyUpload.js" />
     <Content Include="Orderform\HtmlPage1.html" />
     <Content Include="PersonalCenter\PersonalCenter.aspx" />
     <Content Include="PersonalCenter\PersonalCenter.css" />
     <Content Include="PersonalCenter\PersonalCenter.js" />
+    <Content Include="Reg\Reg.aspx" />
     <Content Include="ResetPassword\ResetPassword.aspx" />
     <Content Include="PI\EditPI.aspx" />
     <Content Include="Head\Head.js" />
@@ -894,7 +900,6 @@
     <Content Include="easyui\demo\tree\tree_data1.json" />
     <Content Include="easyui\demo\tree\tree_data2.json" />
     <Content Include="easyui\themes\material\images\Thumbs.db" />
-    <Content Include="Reg\网页注册.html" />
     <Content Include="Test\test.aspx" />
     <Content Include="TouristSite\css\TouristSite.css" />
     <Content Include="TouristSite\TouristSite.aspx" />
@@ -1407,6 +1412,13 @@
     </Compile>
     <Compile Include="PersonalCenter\PersonalCenter.aspx.designer.cs">
       <DependentUpon>PersonalCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reg\Reg.aspx.cs">
+      <DependentUpon>Reg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reg\Reg.aspx.designer.cs">
+      <DependentUpon>Reg.aspx</DependentUpon>
     </Compile>
     <Compile Include="ResetPassword\ResetPassword.ashx.cs">
       <DependentUpon>ResetPassword.ashx</DependentUpon>

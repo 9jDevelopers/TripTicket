@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <script src="../easyui/jquery.min.js"></script>
+    <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
     <%-----------------------------------------------------------%>
     <link href="../easyui/themes/default/easyui.css" rel="stylesheet" />
     <link href="../easyui/themes/icon.css" rel="stylesheet" />
@@ -40,9 +41,13 @@
             </div>
         </div>
     <script>
+        setTimeout(function () {
+            if ($.cookie('phone') != "" && $.cookie('phone') != null) {
+                $("#phone").textbox('setValue', $.cookie('phone'));
+            }
+        }, 100);
         $(document).ready(function () {
             $("#btnemail").click(function () {
-                alert(1);
                 $.post(
                    "../ResetPassword/ResetPassword.ashx",
                     { action:'getemail',phone: $("#phone").val()},
@@ -51,7 +56,6 @@
                         var result = obj.result;
                         var no = obj.rano;
                         $("#noneipt").val(no);
-                        alert("result:" + result + "no" + no);
                         if (result == "1") {
                             alert("发送成功");
                         }
@@ -74,7 +78,6 @@
                 else {
                     var noneipt = $("#noneipt").val();
                     var number = $("#number").val();
-                    alert('n:' + number + 'i' + noneipt);
                     if ((p1 != "" && p1 != null) && (p2 != "" && p2 != null) && (number != "" && number != null))
                     {
                         if (noneipt == number)

@@ -51,6 +51,7 @@
             { action: 'getinfo' },
             function (data) {
                 var obj = $.parseJSON(data);
+                $.cookie('phone',obj.phone, { path: '/' });
                 $("#textphone").textbox('setValue', obj.phone);
                 $("#textemail").textbox('setValue', obj.email);
                 $("#textusername").textbox('setValue', obj.username);

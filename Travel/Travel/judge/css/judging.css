@@ -26,7 +26,7 @@
     margin-left:3%;
     margin-top:5px;
     background-color:white;
-    line-height:55px;
+    line-height:50px;
 }
 .fh{
     width:94%;
@@ -53,8 +53,8 @@
     background-color:white;
 }
 .ij {
-    width:50px;
-    height:80%;
+    width:100px;
+    height:100%;
     margin-left:40px;
     margin-bottom:5px;
     margin-top:5px;
@@ -90,7 +90,7 @@
     text-align:center;
 }
 .sui{
-    width:75%;
+    width:80%;
     height:100%;
     display:block;
     float:left;
@@ -101,7 +101,7 @@
 }
 .lk{
     float:left;
-    width:10%;
+    width:15%;
     height:100%;
 }
 .dt{
@@ -111,8 +111,8 @@
     height:100%;
 }
 .ji{
+    width:80%;
     float:left;
-    margin-left:20px;
 }
 .zy{
     float:left;
@@ -120,7 +120,7 @@
 }
 .ddd {
     float:left;
-    width:70%;
+    width:80%;
     height:60px;
 }
 .ji{
@@ -151,7 +151,7 @@
 }
 .im
 {
-    width: 70px;
+    width: 80px;
     height:50px;
     background-size: cover;
     background-position: center;
@@ -172,8 +172,8 @@
 }
 #btnimage{
     display:inline-block;
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     margin: 0 auto;
     background-image: url(images/test.jpg);
     background-size: cover;
@@ -182,7 +182,7 @@
 .submit {
     width:100%;
     text-align:center;
-    font-size:24px;
+    font-size:24px;      
 }
 .qwe{
     height:40px;
@@ -221,3 +221,10 @@
 a{
     text-decoration:none;
 }
+
+.tuq{
+    width:100px;
+    height:100px;
+    float:left;
+}
+
