@@ -17,7 +17,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div id="addbody"><a href="#" id="addAD">添加管理员</a><a href="#" id="addSec">添加景点</a></div>
+        <div id="addbody"><a href="#" id="addAD">添加管理员</a><a href="../景点新建/newIntroduce.aspx" id="addSec">添加景点</a></div>
         <div id="lbody">
         <div class="easyui-panel" title="管理员登录窗口" style="height:185px;width:400px;padding:30px 70px 20px 70px">
             <div class="bdiv">

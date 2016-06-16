@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using BL;
+using System.Web.SessionState;
 
 namespace Travel.Administrator
 {
     /// <summary>
     /// Administrator1 的摘要说明
     /// </summary>
-    public class Administrator1 : IHttpHandler
+    public class Administrator1 : IHttpHandler, IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)
@@ -25,6 +26,7 @@ namespace Travel.Administrator
             {
                 addAD= "{\"addAD\":\"" + addAD + "\",";
                 addScenic= "\"addScenic\":\"" + addScenic + "\"}";
+                context.Session["AID"] =loginname;
                 context.Response.Write(addAD+addScenic);
             }
             else

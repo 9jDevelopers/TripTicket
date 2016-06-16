@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
     var btn = document.getElementById('btnl');
     $("#btnlogin").click(function () {
-        alert(1);
         $.post(
                "Administrator.ashx",
                 { loginname:$("#txtloginname").val(), password: $("#txtpassword").val() },
