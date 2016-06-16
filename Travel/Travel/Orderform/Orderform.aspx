@@ -5,6 +5,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
+    <link href="../PI/PI.css" rel="stylesheet" />
     <link href="css/Orderform.css" rel="stylesheet" />
     <link href="../Tail/Tail.css" rel="stylesheet" />
     <link href="../Head/Head.css" rel="stylesheet" />
@@ -15,38 +16,50 @@
     <script src="../easyui/jquery.easyui.min.js"></script>
     <script src="js/Orderform.js"></script>
     <script>
-        $(function () {
-            var id = 1;
-            
-            $.post("Orderform.ashx", { eid: id}, function (data) {
-                if(data!="")
-                {
-                    var ofinfo = data.split('$');
-                    var buytime = ofinfo[8].substring(0, 8);
-                    var usetime = ofinfo[1].substring(0, 8);
-                    $("#e1").html(ofinfo[0]);
-                    $("#e2").html(buytime);
-                    $("#e3").html(ofinfo[4]);
-                    $("#e4").html(ofinfo[5]);
-                    $("#e5").html(ofinfo[3]);
-                    $("#e6").html(usetime);
-                    $("#e7").html(ofinfo[6]);
-                    $("#e8").html(ofinfo[7]);
-                }
+        
 
-            });
-        });
+        function formatPrice(val, row) {
+            if (val == "待评价") {
+                return '<a href=../judge/judge.aspx>' + val + '</a>';
+            }
+            else {
+                return val;
+            }
+        }
+        //$(function () {
+        //    var userid = 2;
+            
+        //    $.post("Orderform.ashx", { eid: userid}, function (data) {
+        //        if(data!="")
+        //        {
+                    
+        //            alert(data);
+                    
+                    
+        //            for (var i = 0; info[i].EntID != ""; i++)
+        //            {
+        //                $("#e1").html(info[i].EntID);
+        //            }
+                    
+        //        }
+
+        //    });
+        //});
     </script>
 </head>
 <body>
     <!--#include virtual="../Head/Head.html"-->
     <form id="form1">
-        <div class="divout" style="min-width: 300px; width: 100%; margin: 50px 0 100px 0">
+        <div class="divout" style="min-width: 300px; width: 1366px; margin: 50px 0 100px 0;">
             <table>
                 <tr>
                     <td>
                         <div class="divleft" style="width: 150px; margin: 0 20px 0 50px;">
                             <div class="easyui-accordion" style="width: 150px; height: 599px;">
+                                <div title="个人信息" data-options="iconCls:'icon-ok'" style="overflow: auto; padding: 10px;">
+                                    <a class="of1" href="#" id="info1" onclick="infomation1()">个人资料</a>
+                                    <a class="of1" href="#" id="info2" onclick="infomation2()">重置密码</a>
+                                </div>
                                 <div title="订单" data-options="iconCls:'icon-ok'" style="overflow: auto; padding: 10px;">
                                     <a class="of1" id="click" onclick="lk()">全部订单</a>
                                 </div>
@@ -65,8 +78,23 @@
                             </div>
                             <div class="easyui-tabs divbottom" style="width: 1030px; height: 527px;">
                                 <div class="" title="全部订单">
-
-                                    <table class="tb1">
+                                    <table class="easyui-datagrid" title="全部订单" style="width:1030px;height:250px;"
+                                           data-options="singleSelect:true,pagination:true,url:'Orderform.ashx?eid=2',method:'get'">
+                                        <thead>
+                                            <tr>
+                                                <th data-options="field:'EntID',width:80">订单号</th>
+                                                <th data-options="field:'Entname',width:250">订单名称</th>
+                                                <th data-options="field:'Buytime',width:150">预定日期</th>
+                                                <th data-options="field:'Num',width:80,align:'right'">数量</th>
+                                                <th data-options="field:'TicketBuyer',width:80,align:'right'">旅客</th>
+                                                <th data-options="field:'Usertime',width:250,align:'center'">行程/有效日期</th>
+                                                <th data-options="field:'Price',width:70,align:'center'">总金额</th>
+                                                <th data-options="field:'Status',width:68,align:'center',formatter:formatPrice">订单状态</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                    <!--<table class="tb1">
                                         <tr style="height: 40px; background-color: #95B8E7;text-align:center;">
                                             <td>全选</td>
                                             <td>数量</td>
@@ -96,7 +124,7 @@
                                     </table>
                                     <div class="easyui-panel">
                                         <div class="easyui-pagination" data-options="total:114"></div>
-                                    </div>
+                                    </div>-->
                                 </div>
                                 <div class="" title="未出行"></div>
                                 <div class="" title="待付款"></div>

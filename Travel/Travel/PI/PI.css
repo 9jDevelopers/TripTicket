@@ -1,5 +1,5 @@
 ﻿#log{
-    font-size:14px;
+    font-size:12px;
     color:#aeaeae;
     position: relative; 
     z-index:1;
@@ -8,11 +8,10 @@
     float:left;
     text-align:right;
     width:20%;
-    margin-top:15px;
-
+    margin-top:20px;
 }
 .rinf{
-    float:left;
+    float:right;
     text-align:left;
     margin-left:20px;
     margin-top:15px;
@@ -30,10 +29,10 @@
     border: 2px solid #DBDBDB;
     background-size: cover;
     position: absolute;
-    right: 1150px;
+    right: 880px;
     top: 10px;
     /*position: relative;*/
-    z-index: 1000;
+    z-index: 10;
     /*float:left;*/
 }
 .edit{

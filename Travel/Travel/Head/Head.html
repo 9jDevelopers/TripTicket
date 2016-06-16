@@ -41,30 +41,40 @@
             <div>
                 <a href="#" id="btnlogin" class="easyui-linkbutton" data-options="iconCls:'icon-ok'">
                     <span style="font-size:10px;">登录</span>
-                </a>
+                </a><a href="../ResetPassword/ResetPassword.aspx" id="resetpassword">忘记密码？</a>
             </div>
         </div>
     </div>
     <!--登陆界面  end-->
 </div>
+<div id="leftsead">
+    <ul>
+        <li><a href="#"><img src="../Head/images/foot03/ll01.png" width="131" height="49" class="hides" /><img src="../Head/images/foot03/l01.png" width="47" height="49" class="shows" /></a></li>
+        <li><a href="#"><img src="../Head/images/foot03/ll03.png" width="131" height="49" class="hides" /><img src="../Head/images/foot03/l03.png" width="47" height="49" class="shows" /></a></li>
+        <li><a class="youhui"><img src="../Head/images/foot03/l02.png" width="47" height="49" class="shows" /><img src="../Head/images/foot03/youhui.png" width="145" height="343" class="hides" usemap="#taklhtml" /><map name="taklhtml"><area shape="rect" coords="26,273,115,300 " href="http://www.jq22.com/" /></map></a></li>
+        <li><a href="#"><img src="../Head/images/foot03/ll04.png" width="131" height="49" class="hides" /><img src="../Head/images/foot03/l04.png" width="47" height="49" class="shows" /></a></li>
+        <li><a href="#"><img src="../Head/images/foot03/ll05.png" width="131" height="49" class="hides" /><img src="../Head/images/foot03/l05.png" width="47" height="49" class="shows" /></a></li>
+        <li><a id="top_btn"><img src="../Head/images/foot03/ll06.png" width="131" height="49" class="hides" /><img src="../Head/images/foot03/l06.png" width="47" height="49" class="shows" /></a></li>
+    </ul>
+</div>
 <script>
-    window.onload = ShowMessage();
-    function ShowMessage() {
-      
+    
+    setTimeout(function () {
+
         if ($.cookie('username') != null) {
             var btn = document.getElementById('btnl');
             btn.style.fontSize = "10px";
             btn.innerHTML = "Hello，" + $.cookie('username');
         }
-    }
+    }, 5000);
     $(document).ready(function () {
         var btn = document.getElementById('btnl');
         $("#btnclose").click(function () {
             $("#qbody").hide();
         });
         $("#btnl").click(function () {
-            if ($.cookie('phone') != null) {
-                window.location.href = "../PI/PI.aspx";
+            if ($.cookie('username') != null) {
+                window.location.href = "../Orderform/Orderform.aspx";
             }
             else
                 {
@@ -104,7 +114,7 @@
              $('#sel').combobox
              (
                  {
-                valueField: 'ID',
+                valueField: 'SceneID',
                 textField: 'name',
                 onChange: function (newValue, oldValue) {             
                     if (newValue != "")
@@ -120,12 +130,38 @@
          $(function () {
              $('#sel').combobox({
                  onSelect: function (record) {
-                     alert(record.ID);
+                     alert(record.SceneID);
 
                      //$.cookie('selectID', record.ID, { path: '/' });
-                     window.location = "../景点介绍/Introduce.aspx?selectid=" + record.ID;
+                     window.location = "../景点介绍/Introduce.aspx?selectid=" + record.SceneID;
                      
                  }
              })
          })
+     //悬浮框
+         $(document).ready(function () {
+
+             $("#leftsead a").hover(function () {
+                 if ($(this).prop("className") == "youhui") {
+                     $(this).children("img.hides").show();
+                 } else {
+                     $(this).children("img.hides").show();
+                     $(this).children("img.shows").hide();
+                     $(this).children("img.hides").animate({ marginRight: '0px' }, 'slow');
+                 }
+             }, function () {
+                 if ($(this).prop("className") == "youhui") {
+                     $(this).children("img.hides").hide('slow');
+                 } else {
+                     $(this).children("img.hides").animate({ marginRight: '-143px' }, 'slow', function () { $(this).hide(); $(this).next("img.shows").show(); });
+                 }
+             });
+
+             $("#top_btn").click(function ()
+             {
+                 if (scroll == "off") return;
+                 $("html,body").animate({ scrollTop: 0 }, 600);
+             });
+
+         });
 </script>

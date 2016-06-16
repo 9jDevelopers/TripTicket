@@ -9,25 +9,20 @@ using System.Threading.Tasks;
 
 namespace Entitytip
 {
-    
+
     public class Ent
     {
-        public string set(int Eid)
+        public DataTable set(int Userid)
         {
             DbHelper db = new DbHelper();
-            DbCommand cmd = db.GetSqlStringCommond("select * from Ent where EntID=@EntID");
-            db.AddInParameter(cmd, "@EntID", DbType.String, Eid);
+            DbCommand cmd = db.GetSqlStringCommond("select * from Ent where userID=@userID");
+            db.AddInParameter(cmd, "@userID", DbType.String, Userid);
             DataTable dt = db.ExecuteDataTable(cmd);
-            if (dt.Rows.Count > 0)
-            {
-                return dt.Rows[0][0].ToString() + "$" + dt.Rows[0][1].ToString() + "$" + dt.Rows[0][2].ToString() + "$" + dt.Rows[0][3].ToString() + "$" +
-                    dt.Rows[0][4].ToString() + "$" + dt.Rows[0][5].ToString() + "$" + dt.Rows[0][6].ToString() + "$" + dt.Rows[0][7].ToString() + "$" +
-                    dt.Rows[0][8].ToString();
-            }
-            else
-            {
-                return null;
-            }
+           
+            
+
+            return dt;
+
         }
 
         public int EntID;

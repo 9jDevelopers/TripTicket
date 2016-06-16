@@ -22,17 +22,18 @@ namespace BL
                 return null;
             }
         }
-        public string Set(string Bticketname,string Bticketprice,string Bdate, string Bticketholder, string Bidcardno, string Btelenum,string Bsafe)
+        public string Set(string Btotal, string Bnum,string Bticketname,string Bticketprice,string Bdate, string Bticketholder, string Bidcardno, string Btelenum,string Bsafe ,string Buserid)
         {
-            if (Bticketname != "" && Bticketprice != "" && Bdate != "" && Bticketholder != "" && Bidcardno != "" && Btelenum != "" && Bsafe != "")
+            if (Btotal!=""&& Bnum != "" && Bticketname != "" && Bticketprice != "" && Bdate != "" && Bticketholder != "" && Bidcardno != "" && Btelenum != "" && Bsafe != "" && Buserid!="")
             {
                 Tickets tkts = new Tickets();
-                return tkts.SET(Bticketname, Bticketprice, Bdate, Bticketholder, Bidcardno, Btelenum, Bsafe);
+                return tkts.SET(Btotal,Bnum,Bticketname, Bticketprice, Bdate, Bticketholder, Bidcardno, Btelenum, Bsafe,Buserid);
                 
             }
             else {
                 return "逻辑层传值失败";
             }
         }
+       
     }
 }

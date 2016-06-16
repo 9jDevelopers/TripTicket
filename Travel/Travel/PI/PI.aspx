@@ -6,18 +6,16 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>个人信息</title>
-    <link href="../Head/Head.css" rel="stylesheet" />  
 
-    <link href="../Tail/Tail.css" rel="stylesheet" />
 
-    <link href="PI.css" rel="stylesheet" />
+    <link href="../PI/PI.css" rel="stylesheet" />
     <script src="../easyui/jquery.min.js"></script>
     <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
 
     <link href="../easyui/themes/default/easyui.css" rel="stylesheet" />
     <link href="../easyui/themes/icon.css" rel="stylesheet" />
     <link href="../easyui/demo/demo.css" rel="stylesheet" />
-   
+  
     <script src="../easyui/jquery.easyui.min.js"></script>
    
 </head>
@@ -34,22 +32,21 @@
 	</div>
 	<script>
 	    var objs;
-	    window.onload = function () {
-	        alert(1);
+	    setTimeout(function () {
 	        var phone = document.getElementById('phone');
 	        var email = document.getElementById('email');
 	        var username = document.getElementById('username');
 	        var name = document.getElementById('name');
 	        var sex = document.getElementById('sex');
 	        var birthday = document.getElementById('birthday');
-	        var home = document.getElementById('home');        
+	        var home = document.getElementById('home');
 	        $.post(
-                   "PI.ashx",
-                    { action:'getinfo'},
+                   "../PI/PI.ashx",
+                    { action: 'getinfo' },
                     function (data) {
                         objs = data;
                         var obj = $.parseJSON(data);
-                        phone.innerHTML = $.cookie('phone');
+                        phone.innerHTML = obj.phone;
                         email.innerHTML = obj.email;
                         username.innerHTML = obj.username;
                         name.innerHTML = obj.name;
@@ -57,9 +54,9 @@
                         birthday.innerHTML = obj.birthday;
                         $(".photo").css('background-image', 'url(Photo/' + obj.photo + ')');
                         //background-image: url(images/test.jpg);
-                        home.innerHTML = obj.home;      
+                        home.innerHTML = obj.home;
                     });
-	    }
+	    }, 10);
 	    $(".submit").click(function () {
 	        $.cookie('objs',objs, { path: '/' });
 	        window.location.href = "EditPI.aspx";
