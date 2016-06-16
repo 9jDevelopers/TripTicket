@@ -42,7 +42,7 @@
                 <p><div class="GuanGuang"><font color="#808080">门票&nbsp;：</font><i id="tickname"></i></div></p>           
                                                                   <%--游玩时间--%>
                 <p><font color="#808080">游玩时长&nbsp;：</font><i id="playtime"></i>&nbsp;&nbsp;<font color="#808080">服务语言：</font><i id="language"></i></p>
-                <p> <font color="#808080">票价&nbsp;：</font><i id="money"></i>元 <a class="Yuyue">立刻预约</a></p>
+                <p> <font color="#808080">票价&nbsp;：</font><i id="money"></i>&nbsp;&nbsp;元 <a class="Yuyue">立刻预约</a></p>
                 <div class="XX">
                     
                     <div class="DW">玩乐亮点</div>
@@ -183,9 +183,21 @@
             alert("请正确加载页面");
             location.href = "../Index/Index.aspx";
         }
-        
-       
-    
+        window.onload = pj;
+        function pj() {
+            alert("qweascad");
+        $.post(
+            "ReadEva.ashx",
+            {
+                a:"2"
+            },
+            function(data)
+            {
+                alert("123789");
+                alert(data + "789");
+            }
+            )
+        }
     $(".Yuyue").click(function () {
       
         

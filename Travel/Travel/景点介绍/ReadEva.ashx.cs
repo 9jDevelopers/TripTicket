@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using BL;
 
 namespace Travel.景点介绍
 {
@@ -13,8 +14,12 @@ namespace Travel.景点介绍
 
         public void ProcessRequest(HttpContext context)
         {
-            context.Response.ContentType = "text/plain";
-            context.Response.Write("Hello World");
+            string NSceneID = context.Request.Form["a"];
+            
+            ReadEvaBL getBL = new ReadEvaBL();
+            string data = getBL.ReadBL(NSceneID);
+
+            context.Response.Write(data);
         }
 
         public bool IsReusable
