@@ -64,7 +64,6 @@
         $(document).ready(function () {
             $("#btnsave").click(function () {
                 var formData = new FormData($("#frm")[0]);
-                alert(formData);
                 $.ajax({
                     cache: true, //缓存
                     type: "POST", //提交方式post get
@@ -76,7 +75,7 @@
                     //上传文件的制定方式：multipart/form-data形式传递文件。
                     processData: false, //是否转换信息//false避免数据转换成查询字符串
                     error: function (request) {
-                        
+                        alert(request);
                     },
                     success: function (data) {
                         if (data == "1") {
