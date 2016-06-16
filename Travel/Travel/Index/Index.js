@@ -39,7 +39,7 @@
                       }
                       
 
-                      $("#star").append("<div class='itemdiv'>"+
+                      $("#star").append("<a href='#' class='itemdiv'>"+
                       "<div class='imagediv' style=\"background-image: url('../景点新建/image/"+m+"');\"> </div>"+
                       "<div class='tipdiv'>"+t[i].name+"</div>"+
                       "<div class='taildiv'>"+
@@ -47,7 +47,7 @@
                       "<div class='spandiv'><span>服务</span><span class='spano'>"+s+"</span></div>"+
                       "<div class='spandiv'><span>体验</span><span class='spano'>"+e+"</span></div>"+
                       "<div class='moneydiv'>￥" + t[i].tmoney + "</div></div>" +
-                      "<input type='text' value='"+t[i].scid+"'/></div>");
+                      "<input type='text' value='"+t[i].scid+"'/></a>");
                       i = i - 1;
                   }
               });

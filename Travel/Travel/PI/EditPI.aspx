@@ -64,7 +64,6 @@
         $(document).ready(function () {
             $("#btnsave").click(function () {
                 var formData = new FormData($("#frm")[0]);
-                alert(formData);
                 $.ajax({
                     cache: true, //缓存
                     type: "POST", //提交方式post get
@@ -79,26 +78,27 @@
                         alert(request);
                     },
                     success: function (data) {
-                        alert(data);//后台返回值
+                        if (data == "1") {
+                            alert("保存成功");
+                        }//后台返回值
+                        else {
+                            alert("保存失败");
+                        }
                     }
                 });
             });//保存点击事件  END
 
             //点击事件触发上产控件
             $(".photo").click(function () {
-                alert(1);
                 $(".file-up").click();
             });
             $(".file-up").change(function () {
-                alert(7);
                 var file = $(".file-up").eq(0)[0].files[0];
-                alert(2);
                 if (typeof FileReader != undefined) {
                     var reader = new FileReader();
                     reader.readAsDataURL(file);
                     reader.onload = function () {
                         var imu = this.result;
-                        alert("图片地址" + imu);
                         $(".photo").css('background-image', 'url(' + imu + ')')
                     };
                 }

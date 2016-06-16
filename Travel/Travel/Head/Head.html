@@ -24,7 +24,7 @@
     <div id="nav">
         <a href="../Index/Index.aspx" class="item _item">首页</a>
         <a href="#" class="item">旧地重游</a>
-        <a href="#" class="item">景点合作</a>
+        <a href="../TouristSite/TouristSite.aspx" class="item">合作网址</a>
         <a href="../judge/judge.aspx" class="item">关于我们</a>
         <div><a href="#" id="btnl">登录</a>|<a href="../Reg/网页注册.html">注册</a></div>
     </div>
@@ -61,12 +61,12 @@
     
     setTimeout(function () {
 
-        if ($.cookie('username') != null) {
+        if ($.cookie('username') != "" && $.cookie('username') != null) {
             var btn = document.getElementById('btnl');
             btn.style.fontSize = "10px";
             btn.innerHTML = "Hello，" + $.cookie('username');
         }
-    }, 5000);
+    }, 10);
     $(document).ready(function () {
         var btn = document.getElementById('btnl');
         $("#btnclose").click(function () {

@@ -17,6 +17,10 @@
        
     <script src="../References/Swiper-3.2.0/dist/js/swiper.js"></script>
     <script src="../References/jquery-1.8.3.min.js"></script>
+    <link href="../easyui/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../easyui/themes/icon.css" rel="stylesheet" />
+    <%--<link href="../easyui/demo/demo.css" rel="stylesheet" />--%>
+    <script src="../easyui/jquery.easyui.min.js"></script>
     <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
     <script src="JScript1.js"></script>
     
@@ -42,7 +46,7 @@
                 <p><div class="GuanGuang"><font color="#808080">门票&nbsp;：</font><i id="tickname"></i></div></p>           
                                                                   <%--游玩时间--%>
                 <p><font color="#808080">游玩时长&nbsp;：</font><i id="playtime"></i>&nbsp;&nbsp;<font color="#808080">服务语言：</font><i id="language"></i></p>
-                <p> <font color="#808080">票价&nbsp;：</font><i id="money"></i>元 <a class="Yuyue">立刻预约</a></p>
+                <p> <font color="#808080">票价&nbsp;：</font><i id="money"></i>&nbsp;&nbsp;元 <a class="Yuyue">立刻预约</a></p>
                 <div class="XX">
                     
                     <div class="DW">玩乐亮点</div>
@@ -71,7 +75,6 @@
                 <a href="#A4" style="text-decoration:none"><div class="XQ W">用户点评</div></a>
             </div>
             <%--<p><a name="A1"><img src="image/景点简介222_03.gif" /></a></p>--%>
-
             <%--<p> <i class="s">08:00</i>前往机场,由随团领队协助办理登机及出境手续。</p>--%>
                  <%--<ul>
                       <li><i class="s">08:00</i>&nbsp;前往机场,由随团领队协助办理登机及出境手续。</li>
@@ -94,7 +97,9 @@
              <p><a name ="A3"><img src="image/景点简介222_08.gif" /></a></p>
             
                 <div id="dituContent" class="map">
-                    <img src="image/z景点简介_03.gif" /></div>
+                    
+
+                </div>
 
             <%-- 点评 --%>
             <p><a name="A4"><img src="image/景点简介222_10.gif" /></a></p>
@@ -110,7 +115,7 @@
                         <dd><i class="user">user</i><i class="time">time</i></dd>     
                 </dl>
         </div>
-        <%-- 系统推荐 --%>
+        
         
 </div>
 
@@ -183,9 +188,38 @@
             alert("请正确加载页面");
             location.href = "../Index/Index.aspx";
         }
-        
-       
-    
+        window.onload = pj;
+        function pj() {
+            alert("qweascad");
+        $.post(
+            "ReadEva.ashx",
+            {
+                a:"2"
+            },
+            function(data)
+            {
+                alert("123789");
+                alert(data);
+                var arr = data.split('$');
+                var i= arr[0];
+                var t = JSON.parse(arr[1]);
+                alert(t[3].SceneID+"123456");
+                while (i > 0) {
+                    alert(i);
+                    $(".Elddiv").append("<dl class='ldl'>" +
+                        "<dd class='wg'>" + t[i - 1].judgetext + "</dd>" +
+                        "<dd class='mg'>" +
+                            "<img class='mimg' src='../景点介绍/image/T){YV~N)7~3{3H]K}RUY($6_02.gif'/>" +
+                            "<img class='mimg' src='../景点介绍/image/T){YV~N)7~3{3H]K}RUY($6_04.gif' />" +
+                            "<img class='mimg' src='../景点介绍/image/T){YV~N)7~3{3H]K}RUY($6_06.gif' />" +
+                        "</dd>" +
+                        "<dd><i class='user'>" + t[i - 1].usernamr + "</i><i class='time'>" + t[i - 1].judgedate + "</i></dd>" +
+                "</dl>");
+                    i = i - 1;
+                }
+            }
+            )
+        }
     $(".Yuyue").click(function () {
       
         

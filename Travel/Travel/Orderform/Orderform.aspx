@@ -13,6 +13,7 @@
     <link href="../easyui/themes/icon.css" rel="stylesheet" />
     <link href="../easyui/demo/demo.css" rel="stylesheet" />
     <script src="../easyui/jquery.min.js"></script>
+    <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
     <script src="../easyui/jquery.easyui.min.js"></script>
     <script src="js/Orderform.js"></script>
     <script>
@@ -59,9 +60,10 @@
                                 <div title="个人信息" data-options="iconCls:'icon-ok'" style="overflow: auto; padding: 10px;">
                                     <a class="of1" href="#" id="info1" onclick="infomation1()">个人资料</a>
                                     <a class="of1" href="#" id="info2" onclick="infomation2()">重置密码</a>
+                                    <a class="of1" href="#" id="info3" onclick="infomation3()">注销登录</a>
                                 </div>
                                 <div title="订单" data-options="iconCls:'icon-ok'" style="overflow: auto; padding: 10px;">
-                                    <a class="of1" id="click" onclick="lk()">全部订单</a>
+                                    <a class="of1" href="#" id="click" onclick="lk()">全部订单</a>
                                 </div>
                                 <div title="帮助" data-options="iconCls:'icon-help'" style="padding: 10px;">
                                 </div>

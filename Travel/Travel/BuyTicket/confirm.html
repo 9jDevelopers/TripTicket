@@ -4,11 +4,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 	<meta charset="utf-8" />
+    <script src="js/confirm.js"></script>
     <script src="../easyui/jquery.min.js"></script>
     <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
     <script src="../easyui/jquery.easyui.min.js"></script>
     <script>
-        $(function () {
+        var info;
+        $(function () {     
             function getUrlParam(name) {
                 var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
                 var r = window.location.search.substr(1).match(reg);  //匹配目标参数
@@ -16,17 +18,10 @@
             }
             var zi = getUrlParam("tal");
             alert(zi);
-            $("#info1").html("￥" + zi + ".00");
-            
+            info = zi.split("$");            
+            $("#info1").html("￥" + info[0] + ".00");            
         });
-        $("#t").click(function () {
-            $.post("ByTkt.ashx", { action: "confirm", t: "待评价" }, function (data) {
-
-
-            }
-
-                )
-        })
+       
     </script>
 </head>
 <body>
@@ -48,9 +43,9 @@
             </tr>
             <tr>
                 <td colspan="2" style="height:50px;border:1px solid red;text-align:center;">
-                    <input style="display:inline-block;width:100px;height:30px;" id="t" type="button" value="确认"/>
+                    <input style="display:inline-block;width:100px;height:30px;" id="con" onclick="sent1()" type="button" value="确认"/>
                     <div style="width:300px;display:inline-block;"></div>
-                    <input style="display:inline-block;width:100px;height:30px;" id="f" type="button" value="稍后"/>
+                    <input style="display:inline-block;width:100px;height:30px;" id="uncon" onclick="sent2()" type="button" value="稍后"/>
                 </td>
             </tr>
 

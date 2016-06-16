@@ -23,6 +23,7 @@ namespace Travel.Orderform
             
             string infomation = "{\"total\":"+count+",\"rows\":" + str ;
             context.Response.Write(infomation);
+            
         }
 
         public bool IsReusable
