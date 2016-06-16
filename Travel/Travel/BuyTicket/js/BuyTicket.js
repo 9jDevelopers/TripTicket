@@ -106,5 +106,6 @@ $("#pay").click(function () {
                 }
             }
             );
-    }
+            }
+            window.location = "confirm.html?tal=" + total;
 });
