@@ -23,10 +23,11 @@
             if (r != null) return unescape(r[2]); return null; //返回参数值
         }
         var zi = getUrlParam("introduceid");
+        alert(zi);
         $(function () {
             
             var payfor;
-            $.post("ByTkt.ashx", { action: "GetPrice", ticketID: zi }, function (data) {
+            $.post("ByTkt.ashx", { action: "GetPrice", SceneID: zi }, function (data) {
                 if (data == "") {
                     alert("失败");
                 }

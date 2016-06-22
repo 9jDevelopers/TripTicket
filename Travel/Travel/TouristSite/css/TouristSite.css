@@ -70,15 +70,15 @@ li
 li a {
         width:125px; 
         height:20px; 
-        float :left ;
-        border :none;
+        float:left ;
+        border:none;
         margin-top:10px;
     }
 ul li a:hover
 {
      background:#7CCD7C; 
      border-radius:5px; 
-     color:#ffffff;   
+     color:#ffffff;  
 }
 ul li a:link,ul li a:visited
     {
