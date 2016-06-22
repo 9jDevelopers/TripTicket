@@ -108,8 +108,7 @@
 
     //收索自能提示
     
-    //if($('#sel').val()!=null)
-    //{
+   
          $(function () {
              $('#sel').combobox
              (
@@ -130,7 +129,7 @@
          $(function () {
              $('#sel').combobox({
                  onSelect: function (record) {
-                     alert(record.SceneID);
+                     //alert(record.SceneID);
 
                      //$.cookie('selectID', record.ID, { path: '/' });
                      window.location = "../景点介绍/Introduce.aspx?selectid=" + record.SceneID;
