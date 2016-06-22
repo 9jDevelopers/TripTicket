@@ -40,7 +40,6 @@ namespace Travel.Head
                 analyze(ref username);
                 analyze(ref sex);
                 analyze(ref name);
-                analyze(ref birthday);
                 analyze(ref home);
                 string _phone = "{\"phone\":\"" + Phone + "\",";
                 string _email = "\"email\":\"" + email + "\",";
