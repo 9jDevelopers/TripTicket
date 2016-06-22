@@ -1527,6 +1527,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AboutUs\img\" />
     <Folder Include="Orderform\image\" />
     <Folder Include="景点新建\tu\images\" />
   </ItemGroup>
