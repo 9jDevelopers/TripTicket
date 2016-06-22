@@ -165,6 +165,7 @@ a, img {
 #leftsead {
     width:131px;
     height:143px;
+    z-index:99;
     position:fixed;
     top:450px;
     right:52px;
