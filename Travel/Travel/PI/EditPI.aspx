@@ -17,7 +17,7 @@
 </head>
 <body>
     <form id="frm" runat="server">
-        <div id="log" class="easyui-panel" title="个人信息" style="height:350px;padding:10px;width:100%">
+        <div id="log" class="easyui-panel" title="个人信息" style="height:355px;padding:10px;width:100%">
         <div  class="photo"><i class="edit icon-link"></i></div>
         <input type="file" class="file-up" name="btnim" style="display:none;" />
         <div class="lname">手机</div><div id="phone" class="rinf">
