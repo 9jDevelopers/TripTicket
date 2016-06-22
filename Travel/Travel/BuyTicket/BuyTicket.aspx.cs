@@ -25,6 +25,7 @@ namespace Travel
             //tktprice = double.Parse(npArray[1]);
             //ProofTechnique a = new ProofTechnique();
             //a.proofuid(Session["UID"]);
+
         }
     }
 }

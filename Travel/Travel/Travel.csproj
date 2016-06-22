@@ -825,9 +825,11 @@
     <Content Include="judge\js\zyFile.js" />
     <Content Include="judge\js\zyUpload.js" />
     <Content Include="Orderform\HtmlPage1.html" />
+    <Content Include="Orderform\Orderform.aspx" />
     <Content Include="PersonalCenter\PersonalCenter.aspx" />
     <Content Include="PersonalCenter\PersonalCenter.css" />
     <Content Include="PersonalCenter\PersonalCenter.js" />
+    <Content Include="Reg\Reg.aspx" />
     <Content Include="ResetPassword\ResetPassword.aspx" />
     <Content Include="PI\EditPI.aspx" />
     <Content Include="Head\Head.js" />
@@ -837,7 +839,6 @@
     <Content Include="judge\js\judge.js" />
     <Content Include="Orderform\css\Orderform.css" />
     <Content Include="Orderform\js\Orderform.js" />
-    <Content Include="Orderform\Orderform.aspx" />
     <Content Include="Preview\img\18cc33a0080a03a5.jpg" />
     <Content Include="Preview\img\276197720360c2be.jpg" />
     <Content Include="Preview\img\497f685f04c0ab8b.jpg" />
@@ -899,7 +900,6 @@
     <Content Include="easyui\demo\tree\tree_data1.json" />
     <Content Include="easyui\demo\tree\tree_data2.json" />
     <Content Include="easyui\themes\material\images\Thumbs.db" />
-    <Content Include="Reg\网页注册.html" />
     <Content Include="Test\test.aspx" />
     <Content Include="TouristSite\css\TouristSite.css" />
     <Content Include="TouristSite\TouristSite.aspx" />
@@ -1403,6 +1403,13 @@
     <Compile Include="Orderform\Orderform.ashx.cs">
       <DependentUpon>Orderform.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Orderform\Orderform.aspx.cs">
+      <DependentUpon>Orderform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Orderform\Orderform.aspx.designer.cs">
+      <DependentUpon>Orderform.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PersonalCenter\PersonalCenter.ashx.cs">
       <DependentUpon>PersonalCenter.ashx</DependentUpon>
     </Compile>
@@ -1412,6 +1419,13 @@
     </Compile>
     <Compile Include="PersonalCenter\PersonalCenter.aspx.designer.cs">
       <DependentUpon>PersonalCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reg\Reg.aspx.cs">
+      <DependentUpon>Reg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reg\Reg.aspx.designer.cs">
+      <DependentUpon>Reg.aspx</DependentUpon>
     </Compile>
     <Compile Include="ResetPassword\ResetPassword.ashx.cs">
       <DependentUpon>ResetPassword.ashx</DependentUpon>

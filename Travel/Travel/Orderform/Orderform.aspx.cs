@@ -6,14 +6,14 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Travel.Tool;
 
-namespace Travel.景点新建
+namespace Travel.Orderform
 {
-    public partial class newIntroduce : System.Web.UI.Page
+    public partial class Orderform1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             ProofTechnique a = new ProofTechnique();
-            a.proofaid(Session["AID"]);
+            a.proofuid(Session["UID"]);
         }
     }
 }

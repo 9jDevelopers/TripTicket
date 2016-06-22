@@ -15,13 +15,16 @@
 /*景点简介*/
 .jianjie{
     background-color:#ffffff;
-    height:630px;
+    height:500px;
     margin-top:35px;
     margin-left:80px;
     margin-right:80px;
     border:solid 2px #dddddd;
     
     }
+.bian{
+    margin-top:35px;
+}
 
 .tu{
     /*border:solid 1px red;*/
@@ -206,6 +209,7 @@ li{
 }
 .map{
     text-align:center;
+    width:100%;
 }
 /*玩乐*/
 .wl{

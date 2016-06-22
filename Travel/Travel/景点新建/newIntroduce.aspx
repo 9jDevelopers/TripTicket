@@ -8,8 +8,6 @@
     <title>景点新建</title>
     
     <link href="css/newInteoduce.css" rel="stylesheet" />
-    <link href="../Head/Head.css" rel="stylesheet" />
-    <link href="../Tail/Tail.css" rel="stylesheet" />
     <link href="../References/icomoon/fontIconStyle.css" rel="stylesheet" />
     
     <link href="../easyui/themes/default/easyui.css" rel="stylesheet" />
@@ -43,7 +41,6 @@
     </style>
 </head>
 <body>
-    <!--#include virtual="../Head/Head.html"-->
     <form id="form1" runat="server">
     <div class="back">
         <%-- 景点简介 --%>
@@ -329,7 +326,7 @@
                 },
 
                  function (data) {
-                     alert(data);
+                     //alert(data);
                      
                      
                      alert("添加成功");
@@ -350,5 +347,4 @@
     </script>
     
 </body>
-  <!--#include virtual="../Tail/Tail.html"-->
 </html>
