@@ -17,7 +17,7 @@
 			
 			var defaults = {
 					width            : "700px",  					// 宽度
-					height           : "400px",  					// 宽度
+					height           : "200px",  					// 宽度
 					itemWidth        : "140px",                     // 文件项的宽度
 					itemHeight       : "120px",                     // 文件项的高度
 					url              : "/upload/UploadAction",  	// 上传文件的路径

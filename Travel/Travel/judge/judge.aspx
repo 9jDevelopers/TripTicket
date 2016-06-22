@@ -20,6 +20,9 @@
     <link href="../easyui/themes/default/easyui.css" rel="stylesheet" />
     <link href="../easyui/themes/icon.css" rel="stylesheet" />
     <link href="../easyui/demo/demo.css" rel="stylesheet" />
+    <script src="js/zyUpload.js"></script>
+    <script src="js/jq22.js"></script>
+    <script src="js/zyFile.js"></script>
     <link href="../References/icomoon/fontIconStyle.css" rel="stylesheet" />
     <script src="../easyui/jquery.easyui.min.js"></script>
     <title></title>
@@ -122,7 +125,7 @@
             <div class="yu">
 
                 <div class="gh">
-                    <div class="dii">
+                    <div>
                         <!--产品介绍-->
                         <div class="ij">
                             <img src="img/u=3895186919,2942111945&fm=21&gp=0.jpg"/>
@@ -134,7 +137,7 @@
                             </div>
                             <div class="kj">出发地：上海</div>
                             <%--<div id="hd"></div>--%>
-                            <div class="kj">日期：2016.1.15</div>
+                           <%-- <div class="kj">日期：2016.1.15</div>--%>
                         </div>
                     </div>
                 </div>
@@ -215,8 +218,8 @@
 
                  <div class="lp"> 
                      <div class="gup">上传图片</div>
-                     <div class="sui">  
-                         <div class="tx3"><h4>晒图片</h4></div>
+                     <div class="sui"> 
+                            <div id="demo" class="demo"></div>
 
                         <%--   <div class="b3">
                                 <div id="btnimage"  class="icon-googleplus" style="margin-left:20px;" onclick="test()"> </div>
@@ -230,27 +233,6 @@
                            <%-- <div class="pic">0/5</div>
                        </div>--%>
                         
-                         <div id="images">
-
-                             <div id="btnUp1" class="tuq">
-                                 <i class="tu1 w icon-googleplus"></i>
-                                 <img id="ig1" src="" />
-                             </div>
-                             <div id="btnUp2" class="tuq">
-                                 <i class="tu2 w icon-googleplus"></i>
-                                 <img id="ig2" src="" />
-                             </div>
-                             <div id="btnUp3" class="tuq">
-                                 <i class="tu3 w icon-googleplus"></i>
-                                 <img id="ig3" src="" />
-                             </div>
-                             <div id="btnUp4" class="tuq">5
-                                 <i class="tu4 w icon-googleplus"></i>
-                                 <img id="ig4" src="" />
-                             </div>
-                         </div>
-
-
                      </div>
                  </div>
 
