@@ -25,7 +25,7 @@
         var zi = getUrlParam("introduceid");
         alert(zi);
         $(function () {
-            
+            $('input[type=text]').validatebox();
             var payfor;
             $.post("ByTkt.ashx", { action: "GetPrice", SceneID: zi }, function (data) {
                 if (data == "") {
@@ -42,6 +42,7 @@
             });
         }
         )
+        
     </script>
 </head>
 <body>
@@ -121,17 +122,17 @@
             <div class="easyui-panel confirminfo" style="padding-left: 15%; height: 130px; border: none; padding-top: 20px;">
                 <div class="info">
                     <span class="colorred">*</span>
-                    中文姓名：<input id="N" class="easyui-validatebox textbox" data-options="required:true,validType:'length[3,10]'"
+                    中文姓名：<input type="text" id="N" class="easyui-validatebox textbox" data-options="required:true,validType:'CHS'"
                         placeholder="中文姓名" style="width: 30%; height: 19px;" />&nbsp
                 </div>
                 <div class="info">
                     <span class="colorred">*</span>
-                    身份证号：<input id="I" class="easyui-validatebox textbox" data-options="required:true,validType:'length[18,18]'"
+                    身份证号：<input type="text" id="I" class="easyui-validatebox textbox" data-options="required:true,validType:'idcard'"
                         placeholder="取票时必须出示身份证" style="width: 30%; height: 19px;" />
                 </div>
                 <div class="info">
                     <span class="colorred">*</span>
-                    手机号码：<input id="P" class="easyui-validatebox textbox" data-options="required:true,validType:'length[11,11]'"
+                    手机号码：<input type="text" id="P" class="easyui-validatebox textbox" data-options="required:true,validType:'mobile'"
                         placeholder="接收确认信息" style="width: 30%; height: 19px;" />
                 </div>
             </div>
