@@ -21,7 +21,7 @@ namespace Travel
             switch (action)
             {
                 case "GetPrice":
-                    int tktid = int.Parse(context.Request.Form["ticketID"]);
+                    int tktid = int.Parse(context.Request.Form["SceneID"]);
                     BBuyTicket bbt = new BBuyTicket();
                     string np = bbt.Gettktname(tktid);                    
                     context.Response.Write(np);

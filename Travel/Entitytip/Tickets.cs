@@ -18,8 +18,8 @@ namespace Entitytip
         {
 
             DbHelper db = new DbHelper();
-            DbCommand cmd = db.GetSqlStringCommond("select ticketName,ticketmoney from TicketType where TicketTypeID=@TicketTypeID");
-            db.AddInParameter(cmd, "@TicketTypeID", DbType.String, Eid);
+            DbCommand cmd = db.GetSqlStringCommond("select ticketName,ticketmoney from TicketType where SceneID=@SceneID");
+            db.AddInParameter(cmd, "@SceneID", DbType.String, Eid);
             DataTable dt = db.ExecuteDataTable(cmd);
             if (dt.Rows.Count > 0)
             {
