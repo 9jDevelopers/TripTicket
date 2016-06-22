@@ -137,7 +137,7 @@
                 </div>
             </div>
             <div class="Touristagree">
-                <asp:CheckBox ID="CheckBox3" runat="server" />同意 <a class="packupdown">梅岭国家级风景名胜区协议</a>
+                
 
             </div>
 
@@ -145,7 +145,7 @@
         <div class="payfor">
             <div class="pageend">
                 <div class="money">订单总金额：<span class="Title">￥</span><span id="price" class="price">0</span></div>
-                <a id="pay" class="pay">去支付</a>
+                <a href="#" id="pay" class="pay">去支付</a>
                 <input type="hidden" id="vp" />
 
 
