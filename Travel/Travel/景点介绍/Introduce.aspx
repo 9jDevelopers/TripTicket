@@ -66,9 +66,9 @@
             <%-- 玩了介绍 --%>
             <%--交通指南--%>
             <div class="Q"> 
-                <a href="#A1" style="text-decoration:none"><div class="XQ">行程路线</div></a>
+                <%--<a href="#A1" style="text-decoration:none"><div class="XQ">行程路线</div></a>--%>
                 <a href="#A2" style="text-decoration:none"><div class="XQ">玩乐介绍</div></a>
-                <a href="#A3" style="text-decoration:none"><div class="XQ">交通指南</div></a>
+                <%--<a href="#A3" style="text-decoration:none"><div class="XQ">交通指南</div></a>--%>
                 <a href="#A4" style="text-decoration:none"><div class="XQ W">用户点评</div></a>
             </div>
             <%--<p><a name="A1"><img src="image/景点简介222_03.gif" /></a></p>--%>
@@ -91,11 +91,11 @@
                       清迈是泰国的文化重镇，亦是创意之都。入选UNESCO世界创意城市，周末夜市是大人气的城市活动，浓厚的艺文气息吸引无数游牧的创意工作者移居。慢步走逛，发现咖啡馆和独立小店，遇见令人惊喜的设计，感受清迈艺术家的风格生活，和他们创作出的古城新面貌</p>
              <p class="wl"><img id="ig3" src="" />&nbsp;<img id="ig4" src="" /></p>
             <%--交通指南--%>
-             <p><a name ="A3"><img src="image/景点简介222_08.gif" /></a></p>
+             <%--<p><a name ="A3"><img src="image/景点简介222_08.gif" /></a></p>
             
                 <div id="dituContent" class="map">
                    
-                </div>
+                </div>--%>
 
             <%-- 点评 --%>
             <p><a name="A4"><img src="image/景点简介222_10.gif" /></a></p>
