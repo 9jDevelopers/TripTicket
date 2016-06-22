@@ -60,11 +60,11 @@
   <ItemGroup>
     <Content Include="AboutUs\AboutUs.aspx" />
     <Content Include="AboutUs\css\AboutUs.css" />
-    <Content Include="AboutUs\img\435468.jpg" />
     <Content Include="AboutUs\img\u=1365080916,3639569330&amp;fm=23&amp;gp=0.jpg" />
     <Content Include="AboutUs\img\u=2231934215,783020180&amp;fm=23&amp;gp=0.jpg" />
     <Content Include="AboutUs\img\u=2883821847,27578103&amp;fm=23&amp;gp=0.jpg" />
     <Content Include="AboutUs\img\u=3092196279,740786497&amp;fm=23&amp;gp=0.jpg" />
+    <Content Include="AboutUs\img\u=3368046022,3436603152&amp;fm=23&amp;gp=0.jpg" />
     <Content Include="AboutUs\img\u=4032695306,1402838329&amp;fm=23&amp;gp=0.jpg" />
     <Content Include="Administrator\Administrator.aspx" />
     <Content Include="Administrator\Administrator.css" />
