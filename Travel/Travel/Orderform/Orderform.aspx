@@ -27,21 +27,11 @@
                 return val;
             }
         }
-        //$(function () {
-        //    var userid = 2;
-            
-        //    $.post("Orderform.ashx", { eid: userid}, function (data) {
+        //$(function () {            
+        //    $.post("Orderform.ashx", function (data) {
         //        if(data!="")
         //        {
-                    
         //            alert(data);
-                    
-                    
-        //            for (var i = 0; info[i].EntID != ""; i++)
-        //            {
-        //                $("#e1").html(info[i].EntID);
-        //            }
-                    
         //        }
 
         //    });
@@ -81,7 +71,7 @@
                             <div class="easyui-tabs divbottom" style="width: 1030px; height: 527px;">
                                 <div class="" title="全部订单">
                                     <table class="easyui-datagrid" title="全部订单" style="width:1030px;height:250px;"
-                                           data-options="singleSelect:true,pagination:true,url:'Orderform.ashx?eid=2',method:'get'">
+                                           data-options="singleSelect:true,pagination:true,url:'Orderform.ashx',method:'get'">
                                         <thead>
                                             <tr>
                                                 <th data-options="field:'EntID',width:80">订单号</th>

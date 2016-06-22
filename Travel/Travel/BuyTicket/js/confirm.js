@@ -1,10 +1,13 @@
-﻿function sent1() {
-    alert(info[0]);
+﻿
+
+function sent1() {
+    var th = $.cookie('tktholder');
+    var tn = $.cookie('tktname');
     $.post(
         "ByTkt.ashx",
         {
-            action: "Set", jtotal: info[0], jnum: info[1], jsticketname: info[2], jsticketprice: info[3], jsdate: info[4],
-            jsticketholder: info[5], jsidcardno: info[6], jstelenum: info[7], jssafe: info[8], t: "待评价"
+            action: "Set", jtotal: info[0], jnum: info[1], jsticketname: tn, jsticketprice: info[2], jsdate: info[3],
+            jsticketholder: th, jsidcardno: info[4], jstelenum: info[5], jssafe: info[6], t: "待评价"
         },
         function (data) {
             if (data != "") {
@@ -17,11 +20,13 @@
         );
 }
 function sent2() {
+    var th = $.cookie('tktholder');
+    var tn = $.cookie('tktname');
     $.post(
         "ByTkt.ashx",
         {
-            action: "Set", jtotal: info[0], jnum: info[1], jsticketname: info[2], jsticketprice: info[3], jsdate: info[4],
-            jsticketholder: info[5], jsidcardno: info[6], jstelenum: info[7], jssafe: info[8], t: "未付款"
+            action: "Set", jtotal: info[0], jnum: info[1], jsticketname: tn, jsticketprice: info[2], jsdate: info[3],
+            jsticketholder: th, jsidcardno: info[4], jstelenum: info[5], jssafe: info[6], t: "未付款"
         },
         function (data) {
             if (data != "") {
