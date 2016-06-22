@@ -58,6 +58,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AboutUs\AboutUs.aspx" />
+    <Content Include="AboutUs\css\AboutUs.css" />
     <Content Include="Administrator\Administrator.aspx" />
     <Content Include="Administrator\Administrator.css" />
     <Content Include="Administrator\Administrator.js" />
@@ -1367,6 +1369,13 @@
     <Content Include="景点介绍\Introduce.js" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs\AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Administrator\Administrator.ashx.cs">
       <DependentUpon>Administrator.ashx</DependentUpon>
     </Compile>
