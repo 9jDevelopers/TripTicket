@@ -62,6 +62,12 @@
     <Content Include="Administrator\Administrator.css" />
     <Content Include="Administrator\Administrator.js" />
     <Content Include="BuyTicket\confirm.html" />
+    <Content Include="BuyTicket\img\pppic.jpg" />
+    <Content Include="BuyTicket\img\pppic1.jpg" />
+    <Content Include="BuyTicket\img\pppic2.jpg" />
+    <Content Include="BuyTicket\img\pppic3.jpg" />
+    <Content Include="BuyTicket\img\pppic4.jpg" />
+    <Content Include="BuyTicket\img\pppic5.jpg" />
     <Content Include="BuyTicket\js\BuyTicket.js" />
     <Content Include="BuyTicket\js\confirm.js" />
     <Content Include="easyui\changelog.txt" />
