@@ -106,7 +106,7 @@
                 </ul>
             </div>
             <div class="wu">
-                <h2>交通地图/天气</h2>
+                <h2>交通地图</h2>
                 <ul>
                     <li><a href="#">百度地图</a></li>
                     <li><a href="#">列车时刻查询</a></li>

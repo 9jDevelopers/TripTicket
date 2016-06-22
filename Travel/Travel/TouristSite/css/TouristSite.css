@@ -47,11 +47,10 @@
     border-color:#dfdfe0;
 } 
 h2 {
-    width:128px;
+    width:120px;
     float:left ;
     padding-top:8px;
-    font-size:15px;
-    padding-left :2px;
+    padding-left:10px;
 }
 ul{
         float:left ;
@@ -81,7 +80,7 @@ ul li a:hover
      border-radius:5px; 
      color:#ffffff;   
 }
-a:link,a:visited
+ul li a:link,ul li a:visited
     {
         font-size:15px;
         text-align:left;
