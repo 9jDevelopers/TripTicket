@@ -2,7 +2,7 @@
     //验证汉子
     CHS: {
         validator: function (value) {
-            return /^[\u0391-\uFFE5]{2,3}$/.test(value);
+            return /^[\u0391-\uFFE5]{2,15}$/.test(value);
         },
         message: "请输入正确中文名"
     },
@@ -117,7 +117,7 @@ $("#pay").click(function () {
         var ih = $('input:radio[name="s"]:checked').val();
         var iht = ih.split("￥");
         var intHot = iht[0];
-        if (total == "" || ticketname == "" || ticketprice == "" || date == "" || ticketholder.length < 3 || ticketholder.length > 10 || idcardno.length != 18 || telenum.length != 11 || safe == "" || nnn == "") {
+        if (total == "" || ticketname == "" || ticketprice == "" || date == "" || ticketholder.length < 2 || ticketholder.length >15 || idcardno.length != 18 || telenum.length != 11 || safe == "" || nnn == "") {
             alert("支付失败 请确认身份信息");
         }
         else {
