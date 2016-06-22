@@ -21,8 +21,51 @@
 <body>
     <!--#include virtual="../Head/Head.html"-->
     <form id="form1" runat="server">
-    <div>
-    
+    <div id="doc">
+        <div id="bd">
+            <div class ="sh">
+                <div class ="ls">
+                    <div class ="zp">
+                        <img src="img/u=3368046022,3436603152&fm=23&gp=0.jpg" />
+                    </div>
+                    <div class ="jj">姓名：韩宇鹏<br />年龄：20</div>
+                </div>
+                <div class ="ls">
+                    <div class ="zp">
+                        <img src="img/u=2231934215,783020180&fm=23&gp=0.jpg" />
+                    </div>
+                    <div class ="jj">姓名：赵虎<br />年龄：20</div>
+                </div>
+            </div>
+            <div class ="sh">
+                <div class ="ls">
+                    <div class ="zp">
+                        <img src="img/u=1365080916,3639569330&fm=23&gp=0.jpg" />
+                    </div>
+                    <div class ="jj">姓名：李磊<br />年龄：20</div>
+                </div>
+                <div class ="ls">
+                    <div class ="zp">
+                        <img src="img/u=4032695306,1402838329&fm=23&gp=0.jpg" />
+                    </div>
+                    <div class ="jj">姓名：刘亮飞<br />年龄：20</div>
+                </div>
+            </div>
+            <div class ="sh">
+                <div class ="ls">
+                    <div class ="zp">
+                        <img src="img/u=3092196279,740786497&fm=23&gp=0.jpg" />
+                    </div>
+                    <div class ="jj">姓名：朱国瑞<br />年龄：20</div>
+                </div>
+                <div class ="ls">
+                    <div class ="zp">
+                        <img src="img/u=2883821847,27578103&fm=23&gp=0.jpg" />
+                    </div>
+                    <div class ="jj">姓名：陈辉<br />年龄：20</div>
+                </div>
+            </div>
+        </div>
     </div>
     </form>
     <!--#include virtual="../Tail/Tail.html"-->
