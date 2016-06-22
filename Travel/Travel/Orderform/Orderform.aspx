@@ -65,7 +65,7 @@
                     </td>
                     <td>
                         <div class="easyui-panel divright" id="aa" style="width: 1030px; height: 600px; margin-right: 50px;border:none;">
-                            <div class="divtop" style="border:1px solid #95B8E7; width: 1028px; height: 50px; margin-bottom: 20px;">
+                           <%-- <div class="divtop" style="border:1px solid #95B8E7; width: 1028px; height: 50px; margin-bottom: 20px;">
                                 您可以在线查看近一年的订单。如需查找更久之前的订单，请致电：110(免长话费) 或 119（座机）。
                             </div>
                             <div class="easyui-tabs divbottom" style="width: 1030px; height: 527px;">
@@ -121,7 +121,7 @@
                                 <div class="" title="未出行"></div>
                                 <div class="" title="待付款"></div>
                                 <div class="" title="待评价"></div>
-                            </div>
+                            </div>--%>
 
                         </div>
                     </td>
