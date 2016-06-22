@@ -36,11 +36,6 @@ namespace Travel.Head
                 uid = Convert.ToInt32(context.Session["UID"].ToString());
                 BGetInfo getif = new BGetInfo();
                 getif.BGI(uid,out Phone, out email, out username, out name, out sex, out birthday, out home,out Photo);
-                analyze(ref email);
-                analyze(ref username);
-                analyze(ref sex);
-                analyze(ref name);
-                analyze(ref home);
                 string _phone = "{\"phone\":\"" + Phone + "\",";
                 string _email = "\"email\":\"" + email + "\",";
                 string _username = "\"username\":\"" + username + "\",";
@@ -76,11 +71,6 @@ namespace Travel.Head
                 string sex = context.Request.Form["sex"];
                 string birthday = context.Request.Form["birthday"];
                 string home = context.Request.Form["home"];
-                analyze(ref email);
-                analyze(ref username);
-                analyze(ref name);
-                analyze(ref sex);
-                analyze(ref home);
                 BL.EditPI ep = new BL.EditPI();
                 if (ep.Beditpi(phone, email, username, name, sex, birthday, home, newFileName))
                 {
