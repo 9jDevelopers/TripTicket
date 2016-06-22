@@ -46,7 +46,7 @@
                 <p ><div class="GuanGuang"><font color="#808080">门票&nbsp;：</font><i id="tickname"></i></div></p>           
                                                                   <%--游玩时间--%>
                 <p class="bian"><font color="#808080">游玩时长&nbsp;：</font><i id="playtime"></i>&nbsp;&nbsp;<font color="#808080">服务语言：</font><i id="language"></i></p>
-                <p class="bian"> <font color="#808080">票价&nbsp;：</font><i id="money"></i>&nbsp;&nbsp;元 <a class="Yuyue">立刻预约</a></p>
+                <p class="bian"> <font color="#808080">票价&nbsp;：</font><i id="money"></i>&nbsp;元/人 <a class="Yuyue">立刻预约</a></p>
                 <div class="XX">
                     
                     <div class="DW">玩乐亮点</div>
