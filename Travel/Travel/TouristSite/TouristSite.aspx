@@ -26,94 +26,94 @@
             <div class="yi">
                 <h2>旅游综合</h2>
                 <ul>
-                    <li><a href="#">携程旅游网</a></li>
-                    <li><a href="#">芒果网</a></li>
-                    <li><a href="#">艺龙旅行网</a></li>
-                    <li><a href="#">蚂蜂窝</a></li>
-                    <li><a href="#">国家旅游网</a></li>
-                    <li><a href="#">去哪儿</a></li>
-                    <li><a href="#">途牛旅游网</a></li>
-                    <li><a href="#">同程网</a></li>
-                    <li><a href="#">驴评网</a></li>
-                    <li><a href="#">驴妈妈旅游网</a></li>
-                    <li><a href="#">穷游网</a></li>
-                    <li><a href="#">乐途旅游网</a></li>
-                    <li><a href="#">中国古镇网</a></li>
-                    <li><a href="#">百度旅游</a></li>
-                    <li><a href="#">欣欣旅游网</a></li>
-                    <li><a href="#">米胖旅游网</a></li>
-                    <li><a href="#">风景名胜图片</a></li>
-                    <li><a href="#">中国通用旅游</a></li>
-                    <li><a href="#">酷讯旅游网</a></li>
-                    <li><a href="#">中国国家地理</a></li>
-                    <li><a href="#">猫途鹰</a></li>
-                    <li><a href="#">悠哉旅游网</a></li>
-                    <li><a href="#">十六番香港旅游</a></li>
-                    <li><a href="#">牛助出国网</a></li>
-                    <li><a href="#">阿里旅行</a></li>
-                    <li><a href="#">一块去旅行网</a></li>
-                    <li><a href="#">爱旅行</a></li>
-                    <li><a href="#">五分旅游网</a></li>
-                    <li><a href="#">白程旅行</a></li>
+                    <li><a href="http://www.ctrip.com/">携程旅游网</a></li>
+                    <li><a href="http://www.mangocity.com/">芒果网</a></li>
+                    <li><a href="http://www.elong.com/">艺龙旅行网</a></li>
+                    <li><a href="http://www.mafengwo.cn/">蚂蜂窝</a></li>
+                    <li><a href="http://www.cnta.com/">国家旅游网</a></li>
+                    <li><a href="http://www.qunar.com/">去哪儿</a></li>
+                    <li><a href="http://www.tuniu.com/">途牛旅游网</a></li>
+                    <li><a href="http://www.ly.com/">同程网</a></li>
+                    <li><a href="http://www.lvping.com/">驴评网</a></li>
+                    <li><a href="http://www.lvmama.com/">驴妈妈旅游网</a></li>
+                    <li><a href="http://www.qyer.com/">穷游网</a></li>
+                    <li><a href="http://www.lotour.com/">乐途旅游网</a></li>
+                    <li><a href="http://www.sozhen.com/">中国古镇网</a></li>
+                    <li><a href="http://lvyou.baidu.com/">百度旅游</a></li>
+                    <li><a href="http://www.cncn.com/">欣欣旅游网</a></li>
+                    <li><a href="http://www.mipang.com/">米胖旅游网</a></li>
+                    <li><a href="http://list.image.baidu.com/t/image_category/image_travel.html">风景名胜图片</a></li>
+                    <li><a href="http://www.51766.com/">中国通用旅游</a></li>
+                    <li><a href="http://www.kuxun.cn/">酷讯旅游网</a></li>
+                    <li><a href="http://www.dili360.com/">中国国家地理</a></li>
+                    <li><a href="http://www.tripadvisor.cn/">猫途鹰</a></li>
+                    <li><a href="http://www.uzai.com/new">悠哉旅游网</a></li>
+                    <li><a href="http://www.16fan.com/">十六番香港旅游</a></li>
+                    <li><a href="http://www.niuzhu.com/">牛助出国网</a></li>
+                    <li><a href="https://www.alitrip.com/">阿里旅行</a></li>
+                    <li><a href="http://www.yikuaiqu.com/?welcome=1">一块去旅行网</a></li>
+                    <li><a href="http://www.ilvxing.com/">爱旅行</a></li>
+                    <li><a href="http://www.5fen.com/">五分旅游网</a></li>
+                    <li><a href="http://www.baicheng.com/">白程旅行</a></li>
                 </ul>
             </div>
             <div class="er">
                 <h2>旅行社</h2>
                 <ul>
-                    <li><a href="#">中青旅遨游网</a></li>
-                    <li><a href="#">中国旅行社总社</a></li>
-                    <li><a href="#">中国国际旅行社</a></li>
-                    <li><a href="#">中国康辉</a></li>
-                    <li><a href="#">锦江旅游</a></li>
-                    <li><a href="#">广之旅</a></li>
-                    <li><a href="#">南湖国旅</a></li>
-                    <li><a href="#">凯撒旅游</a></li>
-                    <li><a href="#">春秋旅行社</a></li>
+                    <li><a href="http://www.aoyou.com/">中青旅遨游网</a></li>
+                    <li><a href="http://www.ctsho.com/">中国旅行社总社</a></li>
+                    <li><a href="http://www.cits.cn/">中国国际旅行社</a></li>
+                    <li><a href="http://www.cct.cn/">中国康辉</a></li>
+                    <li><a href="http://travel.jinjiang.com/">锦江旅游</a></li>
+                    <li><a href="http://www.gzl.com.cn/">广之旅</a></li>
+                    <li><a href="http://www.nanhutravel.com/">南湖国旅</a></li>
+                    <li><a href="http://www.caissa.com.cn/">凯撒旅游</a></li>
+                    <li><a href="http://www.springtour.com/">春秋旅行社</a></li>
                 </ul>
             </div>
             <div class="san">
                 <h2>酒店/机票</h2>
                 <ul>
-                    <li><a href="#">如家酒店</a></li>
-                    <li><a href="#">锦江之星</a></li>
-                    <li><a href="#">7天连锁酒店</a></li>
-                    <li><a href="#">汉庭</a></li>
-                    <li><a href="#">速8酒店</a></li>
-                    <li><a href="#">莫泰</a></li>
-                    <li><a href="#">桔子酒店</a></li>
-                    <li><a href="#">格林豪泰</a></li>
-                    <li><a href="#">国际青年旅舍</a></li>
-                    <li><a href="#">飞友网航班动态</a></li>
-                    <li><a href="#">去哪儿机票</a></li>
-                    <li><a href="#">布丁酒店</a></li>
-                    <li><a href="#">12580</a></li>
-                    <li><a href="#">新华旅行网</a></li>
-                    <li><a href="#">爱飞国际机票</a></li>
+                    <li><a href="http://www.homeinns.com/">如家酒店</a></li>
+                    <li><a href="http://www.jinjianginns.com/">锦江之星</a></li>
+                    <li><a href="http://www.7daysinn.cn/">7天连锁酒店</a></li>
+                    <li><a href="http://www.huazhu.com/">汉庭</a></li>
+                    <li><a href="http://www.super8.com.cn/">速8酒店</a></li>
+                    <li><a href="http://www.homeinns.com/motel">莫泰</a></li>
+                    <li><a href="http://www.orangehotel.com.cn/">桔子酒店</a></li>
+                    <li><a href="http://www.998.com/shtml/99/zh/index.html">格林豪泰</a></li>
+                    <li><a href="http://www.yhachina.com/">国际青年旅舍</a></li>
+                    <li><a href="http://www.feeyo.com/vflight/">飞友网航班动态</a></li>
+                    <li><a href="http://flight.qunar.com/">去哪儿机票</a></li>
+                    <li><a href="http://www.podinns.com/">布丁酒店</a></li>
+                    <li><a href="http://jx.12580.com/jiujiang.htm">12580</a></li>
+                    <li><a href="http://www.51you.com/">新华旅行网</a></li>
+                    <li><a href="http://www.aifei.com/">爱飞国际机票</a></li>
                 </ul>
             </div>
             <div class="si">
                 <h2>自助户外游</h2>
                 <ul>
-                    <li><a href="#">驴友论坛</a></li>
-                    <li><a href="#">越野e族</a></li>
-                    <li><a href="#">磨房网</a></li>
-                    <li><a href="#">中国户外资料网</a></li>
-                    <li><a href="#">旅多多</a></li>
-                    <li><a href="#">驴友网</a></li>
-                    <li><a href="#">自行车旅行网</a></li>
-                    <li><a href="#">绿野</a></li>
-                    <li><a href="#">沙发客网</a></li>
-                    <li><a href="#">蝉游记</a></li>
+                    <li><a href="http://bbs.8264.com/">驴友论坛</a></li>
+                    <li><a href="http://bbs.fblife.com/">越野e族</a></li>
+                    <li><a href="http://www.doyouhike.net/">磨房网</a></li>
+                    <li><a href="http://bbs.8264.com/errortips.htm">中国户外资料网</a></li>
+                    <li><a href="http://www.yododo.com/">旅多多</a></li>
+                    <li><a href="http://www.traveler365.com/">驴友网</a></li>
+                    <li><a href="http://www.biketo.com/">自行车旅行网</a></li>
+                    <li><a href="http://www.lvye.cn/">绿野</a></li>
+                    <li><a href="http://www.cnsfk.com/">沙发客网</a></li>
+                    <li><a href="http://chanyouji.com/">蝉游记</a></li>
                 </ul>
             </div>
             <div class="wu">
                 <h2>交通地图</h2>
                 <ul>
-                    <li><a href="#">百度地图</a></li>
-                    <li><a href="#">列车时刻查询</a></li>
-                    <li><a href="#">谷歌地图</a></li>
-                    <li><a href="#">天气预报</a></li>
-                    <li><a href="#">长途汽车时刻查询</a></li>
+                    <li><a href="http://map.baidu.com/">百度地图</a></li>
+                    <li><a href="http://lvyou.hao123.com/huoche">列车时刻查询</a></li>
+                    <li><a href="http://www.google.cn/maps">谷歌地图</a></li>
+                    <li><a href="http://tianqi.hao123.com/">天气预报</a></li>
+                    <li><a href="http://www.trip8080.com/">长途汽车时刻查询</a></li>
                 </ul>
             </div>
         </div>
