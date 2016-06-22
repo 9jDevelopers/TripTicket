@@ -22,7 +22,6 @@
     <script>
         $(document).ready(function () {
             $("#btnReg").click(function () {
-
                 var username = $("#username").val();
                 var phone = $("#phone").val();
                 var email = $("#email").val();
@@ -41,13 +40,13 @@
                        "Reg.ashx",
                         { action: "Reg", username: $("#username").val(), phone: $("#phone").val(), email: $("#email").val(), password: $("#password").val() },
                         function (data) {
-                            if (data != "" || data != null) {
-                                alert('成功');
-                            }
+                            if (data != "" || data != null)
+                            { alert('注册成功'); }
                             else {
-                                alert('失败');
+                                alert('注册失败')
                             }
-                        });
+                        }
+                  )
                 }
 
             });

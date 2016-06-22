@@ -86,7 +86,7 @@ namespace Entitytip
         {//注册页面
             int p = Convert.ToInt32(phone);
             DbHelper db = new DbHelper();
-            DbCommand cmd = db.GetSqlStringCommond("INSERT INTO Account(Phone,username,email,password) VALUES (@phone,@username,@email,@password)");
+            DbCommand cmd = db.GetSqlStringCommond("INSERT INTO Account(Phone,username,email,userpassword) VALUES (@phone,@username,@email,@password)");
             db.AddInParameter(cmd, "@phone", DbType.String,p);
             db.AddInParameter(cmd, "@username", DbType.String, username);
             db.AddInParameter(cmd, "@email", DbType.String, email);

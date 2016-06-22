@@ -76,7 +76,7 @@
                     //上传文件的制定方式：multipart/form-data形式传递文件。
                     processData: false, //是否转换信息//false避免数据转换成查询字符串
                     error: function (request) {
-                        alert(request);
+                        alert('请将信息填写完全在保存。');
                     },
                     success: function (data) {
                         if (data == "1") {
