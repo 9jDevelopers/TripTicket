@@ -14,12 +14,12 @@ namespace Entitytip
         public string GET(int id)
         {
             DbHelper db = new DbHelper();                                          //数据访问层
-            DbCommand cmd = db.GetSqlStringCommond("select SceneName,Score from Introduce where SceneID=@SceneID");
+            DbCommand cmd = db.GetSqlStringCommond("select SceneName from Introduce where SceneID=@SceneID");
             db.AddInParameter(cmd, "@SceneID", DbType.String, id);
             DataTable dt = db.ExecuteDataTable(cmd);
             if (dt.Rows.Count > 0)
             {
-                return dt.Rows[0][0].ToString()+"$"+ dt.Rows[0][1].ToString();
+                return dt.Rows[0][0].ToString();
             }
             else
             {
@@ -29,17 +29,21 @@ namespace Entitytip
       
 
         public string userID;
-        public string Evaluationofgood;           //评价商品
-        public string evaluationservice;
+        public string description;           //评价商品
+        public string service;
+        public string experience;
+        public string judgetext;
 
-        public bool ToString(string evaluationofgood, string evaluationservice)
+        public bool ToString(string description, string service,string experience,string judgetext)
         {
             DbHelper db = new DbHelper();
 
             //数据库执行代码
-            DbCommand cmd = db.GetStoredProcCommond("interest into judgeing values (evaluationofgood ,evaluationservice)");    //此内容为储存过程的名字。
-            db.AddInParameter(cmd, "@evaluationofgood", DbType.String, evaluationofgood);
-            db.AddInParameter(cmd, "@evaluationservice", DbType.String, evaluationservice);
+            DbCommand cmd = db.GetStoredProcCommond("interest into judgeing values (description,service,experience,judgetext)");    //此内容为储存过程的名字。
+            db.AddInParameter(cmd, "@description", DbType.String, description);
+            db.AddInParameter(cmd, "@service", DbType.String, service);
+            db.AddInParameter(cmd, "@experience", DbType.String, experience);
+            db.AddInParameter(cmd, "@judgetext", DbType.String, judgetext);
             int result = db.ExecuteNonQuery(cmd);
 
             if (result == 1)
@@ -48,15 +52,6 @@ namespace Entitytip
             else
                 return false;
         }
-
-
-        public string Evaluationservice;          //评价服务
-        public string SunPhoto;                   //晒照片
-        public string onservice;                  //关于服务
-        public string Chaseratings;               //追评
-        public string describe;                   //描述
-        public string Sellerservice;              //卖家服务
-        public string logisticsservice;           //物流服务
  
     }
 }

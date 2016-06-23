@@ -16,19 +16,21 @@ namespace Travel.judge
 
         public void ProcessRequest(HttpContext context)
         {
-            string k = context.Request["i"];
-            Bjudge bj = new Bjudge();                                    //实体化Bjudge类。
             int jgname = int.Parse(context.Request.Form["jgid"]);        //1.界面交互层
+            Bjudge bj = new Bjudge();                                    //实体化Bjudge类。
+
 
             context.Response.Write(bj.get(jgname));                      //调用BL层带参函数（get（jgname））。
 
-            if(context.Request["Evaluationofgood"] != null)
+            if (context.Request["judgetext"] != null)
             {
-                string Evaluationofgood = context.Request.Form["Evaluationofgood"];
-                string Evaluationservice = context.Request.Form["Evaluationservice"];
-                
+                string description = context.Request.Form["description"];
+                string service = context.Request.Form[" service"];
+                string experience = context.Request.Form[" experience"];
+                string judgetext = context.Request.Form[" judgetext"];
 
-                if (bj.ToString(Evaluationofgood, Evaluationservice))
+
+                if (bj.ToString(description,service, experience ,judgetext))
                 {
                     context.Response.Write(1);
                 }

@@ -26,9 +26,9 @@ namespace BL
            
         }
 
-        public bool ToString(string evaluationofgood, string evaluationservice)
+        public bool ToString(string description,string service,string experience ,string judgetext )
         {
-            return td.ToString(evaluationofgood , evaluationservice);
+            return td.ToString(description, service, experience, judgetext);
         }
     }
 }

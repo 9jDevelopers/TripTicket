@@ -36,29 +36,28 @@
  
     </style>
 
-    <script>
+    <%--<script>
       jQuery(document).ready(function () {
         $(".rating-kv").rating();
       });
    </script>
-   
+   --%>
    
     <script type="text/javascript">
-            if (data != "") 
-            {
-                var ns=data.split("$");
-                $("#yh").text(ns[0]);
-                $("#hd").html(ns[1]);
-            }
+        //if (data != "") 
+        //{
+        //    var ns=data.split("$");
+        //    $("#yh").text(ns[0]);
+        //    $("#hd").html(ns[1]);
+        //}
       
         $(function () {
             var id = 1;
+            //alert();
             $.post("judge.ashx", { jgid: id }, function (data)          //jgid命名
             {
                 if (data != "") {
-                    var ns=data.split("$");
-                    $("#yh").text(ns[0]);
-                    $("#hd").html(ns[1]);
+                    $("#yh").text(data);
                 }
                 else {
                     alert();
@@ -66,54 +65,39 @@
             })
         })
 
-        $('#submitbox').click(
-           function () {
-               $.post("judge.ashx",
-                {
-                    i:$("#input-21").val()
-                },
-                      function (data) {
-                          if (data == "1") {
-                              alert("提交成功");
-                          }
-                          else {
-                              alert("提交失败");
-                          }
-                      }
-                   );
 
-       //window.onload = function () {
-       //    var star = document.getElementById("fd");
-       //    var star_li = star.getElementsByTagName("li");
-       //    var star_word = document.getElementById("fd_word");
-       //    var result = document.getElementById("result");
+               //window.onload = function () {
+               //    var star = document.getElementById("fd");
+               //    var star_li = star.getElementsByTagName("li");
+               //    var star_word = document.getElementById("fd_word");
+               //    var result = document.getElementById("result");
 
+               //    var i = 0;
+               //    var j = 0;
+               //    var len = star_li.length;
+               //    var word = ['很差', '差', '一般', "好", "很好"]
 
-       //    var i = 0;
-       //    var j = 0;
-       //    var len = star_li.length;
-       //    var word = ['很差', '差', '一般', "好", "很好"]
-
-       //    for (i = 0; i < len; i++) {
-       //        star_li[i].index = i;
-       //        star_li[i].onmouseover = function () {
-       //            star_word.style.display = "block";
-       //            star_word.innerHTML = word[this.index];
-       //            for (i = 0; i <= this.index; i++) {
-       //                star_li[i].className = "act";
-       //            }
-       //        }
-       //        star_li[i].onmouseout = function () {
-       //            star_word.style.display = "none";
-       //            for (i = 0; i < len; i++) {
-       //                star_li[i].className = "";
-       //            }
-       //        }
-       //        star_li[i].onclick = function () {
-       //            result.innerHTML = (this.index + 1) + "分";
-       //        }
-       //    } 
-       //}
+               //    for (i = 0; i < len; i++) {
+               //        star_li[i].index = i;
+               //        star_li[i].onmouseover = function () {
+               //            star_word.style.display = "block";
+               //            star_word.innerHTML = word[this.index];
+               //            for (i = 0; i <= this.index; i++) {
+               //                star_li[i].className = "act";
+               //            }
+               //        }
+               //        star_li[i].onmouseout = function () {
+               //            star_word.style.display = "none";
+               //            for (i = 0; i < len; i++) {
+               //                star_li[i].className = "";
+               //            }
+               //        }
+               //        star_li[i].onclick = function () {
+               //            result.innerHTML = (this.index + 1) + "分";
+               //        }
+               //    } 
+               //}
+           
     </script>
     
 </head>
@@ -128,21 +112,16 @@
                     <div>
                         <!--产品介绍-->
                         <div class="ij">
-                            <img src="img/u=3895186919,2942111945&fm=21&gp=0.jpg"/>
-                        </div>
-                        <div class="kl">
-                            <div>
-                                <h1 id="yh"><a href="#">
-                                    <%--<%=titlename %>--%>  <%--黄山--%></a></h1>
+                            <div style="float:left"><img src="img/u=3895186919,2942111945&fm=21&gp=0.jpg"/></div>
+                            <div style="float:left">
+                               <h1 id="yh">
+                                    <%--<%=titlename %>--%>  <%--黄山--%></h1>
                             </div>
-                            <div class="kj">出发地：上海</div>
-                            <%--<div id="hd"></div>--%>
-                           <%-- <div class="kj">日期：2016.1.15</div>--%>
                         </div>
                     </div>
                 </div>
 
-                <div class="hf"><h2>请留下你的评价！</h2></div>
+                <h2><div class="hf">请留下你的评价</div></h2>
 
                  <div class="fh">
                      <div class="gup">总体评价</div>
@@ -201,18 +180,17 @@
                     <div class="gup">点评</div>
                     <div class="sui">
                                 <div class="j1">
-                                    <div><h3>景点评价</h3></div>
+                                    <div><h4>景点评价</h4></div>
                                     <div class="b1">
-                                        <input id="mement1" class="easyui-textbox" data-options="multiline:true" value="" style="width: 100%; height: 100px" placeholder="请留下你的评价" />
+                                        <input id="mement1" class="easyui-textbox" data-options="multiline:true" value="" style="width: 100%; height: 80px" placeholder="请留下你的评价" />
                                     </div>
                                 </div>
                                 <div class="j2">
-                                    <div><h3>服务评价</h3></div>
+                                    <%--<div><h4>服务评价</h4></div>--%>
                                     <div class="b2">
-                                        <input id="mement2" class="easyui-textbox" data-options="multiline:true" value="" style="width: 100%; height:60px" placeholder="请留下你的评价" />
+                                       <%-- <input id="mement2" class="easyui-textbox" data-options="multiline:true" value="" style="width: 100%; height:80px" placeholder="请留下你的评价" />--%>
                                     </div>
                                 </div>
-                        <div class="dui"><h4><%--你已输入0字，--%>50字以上的优质点评将获得100积分！</h4></div>
                     </div>
                 </div>
 
@@ -237,7 +215,7 @@
                  </div>
 
                <div class="qwe">
-                 <div class="dy"><div class="submit"><a href="javascript:judge" class="red" id="submitbox" onclick="submitbox()">提交评价</a></div></div>
+                 <div class="dy"><div class="submit"><a href="javascript:judge" class="red"  onclick="submitbox()">提交评价</a></div></div>
              </div>
 
             <!--表三-->
@@ -265,13 +243,13 @@
              </div>
            </div>
        </form>
-    <script>
+
+   <%-- <script>
         function submitbox() {
           alert($("#input-24b").val()); 
-          alert($("#input-21b").val());
-          alert($("#input-21").val());
       }
-      </script>
+      </script>--%>
+
       <!--#include virtual="../Tail/Tail.html"-->
 </body>
  
