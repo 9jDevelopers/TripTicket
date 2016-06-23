@@ -1,4 +1,5 @@
-﻿
+﻿/// <reference path="E:\tl\TripTicket\Travel\Travel\Orderform/Orderform.aspx" />
+
 
 function sent1() {
     var th = $.cookie('tktholder');
@@ -11,7 +12,8 @@ function sent1() {
         },
         function (data) {
             if (data != "") {
-                alert(data);                
+                alert(data);
+                window.location.href = "/Orderform/Orderform.aspx";
             }
             else {
                 alert("data为空");
@@ -20,6 +22,7 @@ function sent1() {
         );
 }
 function sent2() {
+    
     var th = $.cookie('tktholder');
     var tn = $.cookie('tktname');
     $.post(
@@ -31,6 +34,7 @@ function sent2() {
         function (data) {
             if (data != "") {
                 alert(data);
+                window.location.href = "/Orderform/Orderform.aspx";
             }
             else {
                 alert("data为空");
