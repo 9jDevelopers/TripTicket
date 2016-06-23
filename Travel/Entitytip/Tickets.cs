@@ -73,7 +73,16 @@ namespace Entitytip
                     db.AddInParameter(comd, "@Status", DbType.String, wait);
                     db.AddInParameter(comd, "@Buytime", DbType.String, dtnow);
                     int dt = db.ExecuteNonQuery(comd);
-                    return "购票成功";
+                    string rttxt="";
+                    if (wait == "待评价")
+                    {
+                        rttxt= "购票成功";
+                    }
+                    else if (wait == "待支付")
+                    {
+                        rttxt= "已生成订单，请在3天内完成支付";
+                    }
+                    return "操作完成,"+rttxt;
                 }
                 else
                 {

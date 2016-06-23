@@ -11,7 +11,7 @@ function sent1() {
         },
         function (data) {
             if (data != "") {
-                alert(data);
+                alert(data);                
             }
             else {
                 alert("data为空");

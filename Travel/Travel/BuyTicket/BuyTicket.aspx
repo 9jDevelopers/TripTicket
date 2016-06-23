@@ -25,6 +25,7 @@
         var zi = getUrlParam("introduceid");
         alert(zi);
         $(function () {
+            window.location.href = "../Orderform/Orderform.aspx"
             $('input[type=text]').validatebox();
             var payfor;
             $.post("ByTkt.ashx", { action: "GetPrice", SceneID: zi }, function (data) {
