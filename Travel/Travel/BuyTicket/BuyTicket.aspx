@@ -16,7 +16,6 @@
     <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
     <script src="../easyui/jquery.easyui.min.js"></script>
     <script>
-        
         function getUrlParam(name) {
             var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
             var r = window.location.search.substr(1).match(reg);  //匹配目标参数
@@ -25,7 +24,6 @@
         var zi = getUrlParam("introduceid");
         alert(zi);
         $(function () {
-            window.location.href = "../Orderform/Orderform.aspx"
             $('input[type=text]').validatebox();
             var payfor;
             $.post("ByTkt.ashx", { action: "GetPrice", SceneID: zi }, function (data) {

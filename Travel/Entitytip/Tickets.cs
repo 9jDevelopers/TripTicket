@@ -78,7 +78,7 @@ namespace Entitytip
                     {
                         rttxt= "购票成功";
                     }
-                    else if (wait == "待支付")
+                    else if (wait == "未付款")
                     {
                         rttxt= "已生成订单，请在3天内完成支付";
                     }

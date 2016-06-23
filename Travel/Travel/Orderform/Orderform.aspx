@@ -16,9 +16,7 @@
     <script src="../References/jQuery_UI/development-bundle/external/jquery.cookie.js"></script>
     <script src="../easyui/jquery.easyui.min.js"></script>
     <script src="js/Orderform.js"></script>
-    <script>
-        
-
+    <script>        
         function formatPrice(val, row) {
             if (val == "待评价") {
                 return '<a href=../judge/judge.aspx>' + val + '</a>';
