@@ -25,9 +25,9 @@ namespace Travel.judge
             if (context.Request["judgetext"] != null)
             {
                 string description = context.Request.Form["description"];
-                string service = context.Request.Form[" service"];
-                string experience = context.Request.Form[" experience"];
-                string judgetext = context.Request.Form[" judgetext"];
+                string service = context.Request.Form["service"];
+                string experience = context.Request.Form["experience"];
+                string judgetext = context.Request.Form["judgetext"];
 
 
                 if (bj.ToString(description,service, experience ,judgetext))

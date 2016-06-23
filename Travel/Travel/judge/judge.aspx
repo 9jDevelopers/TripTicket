@@ -112,10 +112,10 @@
                     <div>
                         <!--产品介绍-->
                         <div class="ij">
-                            <div style="float:left"><img src="img/u=3895186919,2942111945&fm=21&gp=0.jpg"/></div>
-                            <div style="float:left">
-                               <h1 id="yh">
-                                    <%--<%=titlename %>--%>  <%--黄山--%></h1>
+                            <div class="ly"><img src="img/u=3895186919,2942111945&fm=21&gp=0.jpg"/></div>
+                            <div class="gb">
+                               
+                                   <a> <h1 id="yh"><%--<%=titlename %>--%>  <%--黄山--%></h1></a>
                             </div>
                         </div>
                     </div>
@@ -182,7 +182,7 @@
                                 <div class="j1">
                                     <div><h4>景点评价</h4></div>
                                     <div class="b1">
-                                        <input id="mement1" class="easyui-textbox" data-options="multiline:true" value="" style="width: 100%; height: 80px" placeholder="请留下你的评价" />
+                                        <input id="mement1" class="easyui-textbox" data-options="multiline:true" value="" style="width: 100%; height: 100px" placeholder="请留下你的评价" />
                                     </div>
                                 </div>
                                 <div class="j2">

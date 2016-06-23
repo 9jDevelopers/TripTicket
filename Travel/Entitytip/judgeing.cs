@@ -39,7 +39,7 @@ namespace Entitytip
             DbHelper db = new DbHelper();
 
             //数据库执行代码
-            DbCommand cmd = db.GetStoredProcCommond("interest into judgeing values (description,service,experience,judgetext)");    //此内容为储存过程的名字。
+            DbCommand cmd = db.GetStoredProcCommond("insert into judgeing values (description,service,experience,judgetext)");    //此内容为储存过程的名字。
             db.AddInParameter(cmd, "@description", DbType.String, description);
             db.AddInParameter(cmd, "@service", DbType.String, service);
             db.AddInParameter(cmd, "@experience", DbType.String, experience);
